@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/WoollyBunny_PC.unity
+    guid: 3bbefffe057c0c14fa528d764f05d135
+  - enabled: 1
+    path: Assets/Scenes/Chapter_01.unity
+    guid: 9e49b027a59b96f42b8a8154671f9718
+  m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

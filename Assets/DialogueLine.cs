@@ -18,10 +18,12 @@ public class DialogueLine
     public Sprite backgroundSprite;
 
     public bool isOnRight = false;
+    public bool flipSpeakerImage = false;
 
     // ====== лндекэйю яксьючыецн ======
     public string listenerCharacterName;
     public bool isListenerOnRight = false;
+    public bool flipListenerImage = false;
 
     // ====== онйюг йнккейжхнммнцн опедлерю (ме вепег хмбемрюпэ) ======
     public bool showCollectibleView = false;

@@ -198,6 +198,9 @@ public class DialogueManager : MonoBehaviour
         modelLeft.color = new Color(1f, 1f, 1f, 0f);
         modelRight.color = new Color(1f, 1f, 1f, 0f);
 
+        modelLeft.rectTransform.localScale = Vector3.one;
+        modelRight.rectTransform.localScale = Vector3.one;
+
         Sprite speakerSprite = GetSpriteByName(line.characterName);
         Sprite listenerSprite = GetSpriteByName(line.listenerCharacterName);
 
@@ -210,11 +213,13 @@ public class DialogueManager : MonoBehaviour
             {
                 modelRight.sprite = speakerSprite;
                 modelRight.color = full;
+                modelRight.rectTransform.localScale = line.flipSpeakerImage ? new Vector3(-1, 1, 1) : Vector3.one;
             }
             else
             {
                 modelLeft.sprite = speakerSprite;
                 modelLeft.color = full;
+                modelLeft.rectTransform.localScale = line.flipSpeakerImage ? new Vector3(-1, 1, 1) : Vector3.one;
             }
         }
 
@@ -224,11 +229,13 @@ public class DialogueManager : MonoBehaviour
             {
                 modelRight.sprite = listenerSprite;
                 modelRight.color = dim;
+                modelRight.rectTransform.localScale = line.flipListenerImage ? new Vector3(-1, 1, 1) : Vector3.one;
             }
             else
             {
                 modelLeft.sprite = listenerSprite;
                 modelLeft.color = dim;
+                modelLeft.rectTransform.localScale = line.flipListenerImage ? new Vector3(-1, 1, 1) : Vector3.one;
             }
         }
     }

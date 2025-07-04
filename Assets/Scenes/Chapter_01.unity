@@ -5301,8 +5301,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5335,8 +5337,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5377,8 +5381,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5415,8 +5421,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5449,8 +5457,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5485,8 +5495,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5522,8 +5534,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5560,8 +5574,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5590,8 +5606,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 267040e7d7af55d49acbdc19cd3c3bc5, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5620,8 +5638,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5651,8 +5671,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 267040e7d7af55d49acbdc19cd3c3bc5, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5682,8 +5704,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: d6f923f5e7c8f4147bb2e28b487fed4c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 1
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5716,8 +5740,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5747,8 +5773,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5781,8 +5809,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u041A\u0435\u0439\u043D"
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5818,8 +5848,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5850,8 +5882,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5883,8 +5917,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5915,8 +5951,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5956,8 +5994,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -5986,8 +6026,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 1
     collectibleTitle: "\u041F\u0440\u043E\u0449\u0430\u0439, \u0434\u043E\u0447\u043A\u0430..."
     collectibleContent: "\u041F\u0440\u043E\u0441\u0442\u0438, \u0447\u0442\u043E
@@ -6038,8 +6080,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6071,8 +6115,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6104,8 +6150,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6135,8 +6183,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6171,8 +6221,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6204,8 +6256,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6242,8 +6296,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u041A\u0435\u0439\u043D"
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6276,8 +6332,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6306,8 +6364,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u041A\u0435\u0439\u043D"
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6348,8 +6408,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6381,8 +6443,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6416,8 +6480,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6450,8 +6516,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6480,8 +6548,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6510,8 +6580,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u041A\u0435\u0439\u043D"
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6541,8 +6613,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u041A\u0435\u0439\u043D"
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6574,8 +6648,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6605,8 +6681,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6636,8 +6714,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6666,8 +6746,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u041A\u0435\u0439\u043D"
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6699,8 +6781,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6731,8 +6815,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u041A\u0435\u0439\u043D"
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6762,8 +6848,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6799,8 +6887,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u041A\u0435\u0439\u043D"
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6830,8 +6920,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6864,8 +6956,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6895,8 +6989,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6927,8 +7023,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6958,8 +7056,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -6993,8 +7093,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7024,8 +7126,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7064,8 +7168,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7095,8 +7201,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7127,8 +7235,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7160,8 +7270,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7200,8 +7312,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7234,8 +7348,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7265,8 +7381,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7299,8 +7417,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7331,8 +7451,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7365,8 +7487,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7412,8 +7536,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u041C\u0422 \u0410\u0441\u0441\u0430\u0441\u0438\u043D"
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7460,8 +7586,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u041C\u0422 \u0410\u0441\u0441\u0430\u0441\u0438\u043D"
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7495,8 +7623,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7528,8 +7658,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7560,8 +7692,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u041C\u0422 \u0410\u0441\u0441\u0430\u0441\u0438\u043D"
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7594,8 +7728,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7625,8 +7761,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u041C\u0422 \u0410\u0441\u0441\u0430\u0441\u0438\u043D"
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7658,8 +7796,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7693,8 +7833,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7724,8 +7866,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7755,8 +7899,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u041C\u0422 \u0410\u0441\u0441\u0430\u0441\u0438\u043D"
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7786,8 +7932,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7819,8 +7967,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7850,8 +8000,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u041C\u0422 \u0410\u0441\u0441\u0430\u0441\u0438\u043D"
     isListenerOnRight: 1
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7888,8 +8040,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7924,8 +8078,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7955,8 +8111,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -7986,8 +8144,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -8021,8 +8181,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -8055,8 +8217,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -8086,8 +8250,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: "\u0418\u043B\u0430\u0439"
     isListenerOnRight: 1
+    flipListenerImage: 1
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -8119,8 +8285,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -8150,8 +8318,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 1
     listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -8184,8 +8354,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -8221,8 +8393,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -8257,8 +8431,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 0
+    flipSpeakerImage: 0
     listenerCharacterName: 
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -8291,8 +8467,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 1
     listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -8327,8 +8505,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 1
     listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 
@@ -8361,8 +8541,10 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
     backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
     isOnRight: 1
+    flipSpeakerImage: 1
     listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
     isListenerOnRight: 0
+    flipListenerImage: 0
     showCollectibleView: 0
     collectibleTitle: 
     collectibleContent: 

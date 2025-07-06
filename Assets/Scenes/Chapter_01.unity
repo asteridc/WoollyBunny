@@ -4720,7 +4720,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df259a8fa80bde7459d691f46c2590e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6070,7 +6070,9 @@ MonoBehaviour:
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
       objectToActivate: {fileID: 0}
-  - text: "\xAB\u0418 \u044E\u043C\u043E\u0440, \u0438 \u0434\u0440\u0430\u043C\u0430...\xBB"
+  - text: "\xAB\u041A\u0430\u043A \u0433\u0440\u0443\u0441\u0442\u043D\u043E... \u041D\u0430\u0434\u0435\u044E\u0441\u044C,
+      \u0435\u0433\u043E \u0434\u043E\u0447\u044C \u0432\u0441\u0451 \u0435\u0449\u0451
+      \u0436\u0438\u0432\u0430.\xBB"
     index: 21
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
@@ -6102,10 +6104,10 @@ MonoBehaviour:
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
       objectToActivate: {fileID: 0}
-  - text: "\xAB\u041C\u0438\u0440\u043E\u0442\u0432\u043E\u0440\u0446\u044B. \u042D\u0442\u043E
-      \u0441\u043E\u043B\u0434\u0430\u0442\u044B \u041C\u0438\u0440\u0430. \u0417\u043D\u0430\u0447\u0438\u0442
-      \u043C\u044B \u043E\u0447\u0435\u043D\u044C \u0431\u043B\u0438\u0437\u043A\u043E
-      \u043A \u0433\u043E\u0440\u043E\u0434\u0443.\xBB"
+  - text: "\xAB\u041A\u0430\u0440\u0442\u0430? \u041E\u043D \u043F\u0440\u043E \u043A\u0430\u0440\u0442\u0443
+      \u041C\u0438\u0440\u0430? \u0417\u043D\u0430\u0447\u0438\u0442, \u043A\u0430\u0440\u0442\u0430
+      \u0441\u043F\u0440\u044F\u0442\u0430\u043D\u0430 \u0432 \u0441\u0435\u0439\u0444\u0435.
+      \u0417\u0434\u0435\u0441\u044C.\xBB"
     index: 22
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
@@ -6769,9 +6771,9 @@ MonoBehaviour:
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
       objectToActivate: {fileID: 0}
-  - text: "\u041E\u043D\u0430 \u043E\u0447\u0435\u043D\u044C \u043F\u043E\u0445\u043E\u0436\u0430
+  - text: "\u042D\u0442\u043E \u043E\u0447\u0435\u043D\u044C \u043F\u043E\u0445\u043E\u0436\u0435
       \u043D\u0430 \u043E\u0441\u0442\u0440\u043E\u0432, \u0433\u0434\u0435 \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F
-      \u041C\u0438\u0440."
+      \u041C\u0438\u0440\u2026"
     index: 41
     speakerName: "\u041A\u0435\u0439\u043D"
     characterName: "\u041A\u0435\u0439\u043D"
@@ -7371,7 +7373,8 @@ MonoBehaviour:
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
       objectToActivate: {fileID: 0}
-  - text: "\u041A\u043E\u0433\u043E \u0442\u044B \u0442\u0430\u043C \u043F\u0440\u0438\u043A\u043E\u043D\u0447\u0438\u0448\u044C?"
+  - text: "\u041A\u043E\u0433\u043E \u0442\u044B \u0441\u043E\u0431\u0440\u0430\u043B\u0441\u044F
+      \u043F\u0440\u0438\u043A\u043E\u043D\u0447\u0438\u0442\u044C?"
     index: 58
     speakerName: "\u041C\u0438\u0440\u043E\u0442\u0432\u043E\u0440\u0435\u0446"
     characterName: "\u041C\u0422 \u0410\u0441\u0441\u0430\u0441\u0438\u043D"
@@ -8564,6 +8567,1557 @@ MonoBehaviour:
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
       objectToActivate: {fileID: 0}
+  - text: "\u041E\u043D\u0438 \u043C\u043E\u043B\u0447\u0430\u043B\u0438. \u0422\u0435\u043B\u043E
+      \u041A\u0435\u0439\u043D\u0430 \u043B\u0435\u0436\u0430\u043B\u043E, \u0441\u043B\u043E\u0432\u043D\u043E
+      \u0443\u043F\u0440\u0451\u043A \u0441\u0443\u0434\u044C\u0431\u044B, \u043A\u0430\u043A
+      \u0444\u0438\u043D\u0430\u043B\u044C\u043D\u044B\u0439 \u0443\u0434\u0430\u0440
+      \u043F\u043E \u0438\u0445 \u0438 \u0431\u0435\u0437 \u0442\u043E\u0433\u043E
+      \u0438\u0441\u043A\u0430\u043B\u0435\u0447\u0435\u043D\u043D\u044B\u043C \u0434\u0443\u0448\u0430\u043C."
+    index: 91
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041C\u044B \u043D\u0435 \u043C\u043E\u0436\u0435\u043C\u2026 \u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C
+      \u0435\u0433\u043E \u0442\u0430\u043A."
+    index: 92
+    speakerName: "\u0425\u0430\u043D\u043D\u0430"
+    characterName: "\u0425\u0430\u043D\u043D\u0430"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041C\u044B \u043F\u043E\u0445\u043E\u0440\u043E\u043D\u0438\u043C \u0435\u0433\u043E.
+      \u041F\u043E\u0434 \u0441\u0442\u0430\u0440\u044B\u043C \u0434\u0443\u0431\u043E\u043C.
+      \u042F \u043E\u0431\u0435\u0449\u0430\u043B \u0435\u043C\u0443, \u0447\u0442\u043E
+      \u0435\u0441\u043B\u0438 \u043E\u043D \u0443\u043C\u0440\u0435\u0442, \u044F
+      \u043F\u043E\u0445\u043E\u0440\u043E\u043D\u044E \u0435\u0433\u043E \u0438\u043C\u0435\u043D\u043D\u043E
+      \u0442\u0430\u043C."
+    index: 93
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 24f2cb8f49005f84e98a8e8943475b2b, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: 
+    index: 94
+    speakerName: 
+    characterName: 
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 1
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: 
+    index: 95
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 1
+    choices:
+    - choiceText: "\u041E\u043D \u0431\u044B\u043B \u043C\u043E\u0438\u043C \u0434\u0440\u0443\u0433\u043E\u043C. "
+      pathPointsBloodthirsty: 0
+      pathPointsNoble: 0
+      pathPointsLove: 1
+      nextLineIndex: 96
+    - choiceText: "\u041C\u044B \u043E\u0431\u044F\u0437\u0430\u043D\u044B \u043F\u043E\u043F\u0430\u0441\u0442\u044C
+        \u0432 \u041C\u0438\u0440."
+      pathPointsBloodthirsty: 1
+      pathPointsNoble: 0
+      pathPointsLove: 0
+      nextLineIndex: 107
+    - choiceText: "\u041A\u0435\u0439\u043D \u043F\u043E\u0433\u0438\u0431 \u0441
+        \u0447\u0435\u0441\u0442\u044C\u044E. "
+      pathPointsBloodthirsty: 0
+      pathPointsNoble: 1
+      pathPointsLove: 0
+      nextLineIndex: 115
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041E\u043D \u0431\u044B\u043B \u043C\u043E\u0438\u043C \u0434\u0440\u0443\u0433\u043E\u043C.
+      \u0415\u0434\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u043C \u0434\u0440\u0443\u0433\u043E\u043C."
+    index: 96
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0425\u0430\u043D\u043D\u0430 \u0432\u043F\u0435\u0440\u0432\u044B\u0435
+      \u0443\u0432\u0438\u0434\u0435\u043B\u0430, \u043A\u0430\u043A \u043D\u0430
+      \u0433\u043B\u0430\u0437\u0430\u0445 \u0418\u043B\u0430\u044F \u0432\u044B\u0441\u0442\u0443\u043F\u0438\u043B\u0438
+      \u0441\u043A\u0443\u043F\u044B\u0435 \u0441\u043B\u0435\u0437\u044B."
+    index: 97
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041F\u043E\u0447\u0435\u043C\u0443 \u0442\u0430\u043A\u0438\u0435 \u0445\u043E\u0440\u043E\u0448\u0438\u0435
+      \u043B\u044E\u0434\u0438, \u043A\u0430\u043A \u041A\u0435\u0439\u043D, \u0443\u043C\u0438\u0440\u0430\u044E\u0442?!
+      \u041F\u043E\u0447\u0435\u043C\u0443 \u0442\u0430\u043A\u0438\u0435 \u0443\u0440\u043E\u0434\u044B
+      \u0436\u0438\u0432\u0443\u0442 \u0438 \u043D\u0435 \u0434\u043E\u0445\u043D\u0443\u0442?!.."
+    index: 98
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u2026\u0438 \u0443\u0431\u0438\u0432\u0430\u044E\u0442 \u0442\u0435\u0445,
+      \u043A\u0442\u043E \u043C\u043D\u0435 \u0434\u043E\u0440\u043E\u0433."
+    index: 99
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041E\u043D \u0441\u0436\u0430\u043B \u043A\u0443\u043B\u0430\u043A\u0438,
+      \u0431\u0443\u0434\u0442\u043E \u044D\u0442\u043E \u043C\u043E\u0433\u043B\u043E
+      \u0443\u0434\u0435\u0440\u0436\u0430\u0442\u044C \u0432\u0440\u0435\u043C\u044F."
+    index: 100
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041E\u043D \u0431\u044B \u043D\u0435 \u0445\u043E\u0442\u0435\u043B,
+      \u0447\u0442\u043E\u0431\u044B \u0442\u044B \u0442\u0430\u043A \u0441\u0435\u0431\u044F
+      \u0438\u0437\u0432\u043E\u0434\u0438\u043B."
+    index: 101
+    speakerName: "\u0425\u0430\u043D\u043D\u0430"
+    characterName: "\u0425\u0430\u043D\u043D\u0430"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0410 \u043A\u0430\u043A, \u043F\u043E-\u0442\u0432\u043E\u0435\u043C\u0443,
+      \u043D\u0430\u0434\u043E? \u0423\u043B\u044B\u0431\u043D\u0443\u0442\u044C\u0441\u044F?
+      \u0421\u043A\u0430\u0437\u0430\u0442\u044C: \xAB\u041E\u0447\u0435\u043D\u044C
+      \u0436\u0430\u043B\u044C, \u043D\u043E \u043C\u044B \u0432\u044B\u0436\u0438\u043B\u0438\xBB?!"
+    index: 102
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0418\u043B\u0430\u0439 \u043D\u0435\u043C\u043D\u043E\u0433\u043E \u043F\u043E\u043C\u043E\u043B\u0447\u0430\u043B
+      \u0438 \u0441 \u043E\u0442\u0447\u0430\u044F\u043D\u0438\u0435\u043C \u0441\u043A\u0430\u0437\u0430\u043B\u2026"
+    index: 103
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041E\u043D \u0431\u044B\u043B \u043C\u043D\u0435 \u043A\u0430\u043A
+      \u043C\u043B\u0430\u0434\u0448\u0438\u0439 \u0431\u0440\u0430\u0442."
+    index: 104
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0425\u0430\u043D\u043D\u0430 \u043D\u0435 \u0437\u043D\u0430\u043B\u0430,
+      \u043A\u0430\u043A \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0430\u0442\u044C
+      \u0441\u0432\u043E\u0435\u0433\u043E \u043D\u0430\u043F\u0430\u0440\u043D\u0438\u043A\u0430,
+      \u0432\u0435\u0434\u044C \u0435\u0451 \u0441\u0430\u043C\u0443 \u043D\u0438\u043A\u0442\u043E
+      \u043D\u0435 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u043B.
+      \u041D\u043E \u043D\u0435\u0437\u043D\u0430\u043D\u0438\u0435 \u043D\u0435
+      \u0441\u043F\u0430\u0441\u0430\u043B\u043E \u0435\u0451 \u043E\u0442 \u0432\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0435\u0439
+      \u0431\u043E\u043B\u0438, \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u0442\u0430\u043A
+      \u0436\u0435, \u043A\u0430\u043A \u0438 \u0443 \u0418\u043B\u0430\u044F, \u0437\u0430\u0441\u0442\u0430\u0432\u043B\u044F\u043B\u0430
+      \u043F\u0440\u0435\u043B\u043E\u043C\u0438\u0442\u044C\u0441\u044F \u043A \u0437\u0435\u043C\u043B\u0435
+      \u0432 \u0434\u0438\u043A\u043E\u043C \u043E\u0442\u0447\u0430\u044F\u043D\u0438\u0438."
+    index: 105
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0418\u043B\u0430\u0439 \u043C\u0435\u0434\u043B\u0435\u043D\u043D\u043E
+      \u043E\u043F\u0443\u0441\u0442\u0438\u043B\u0441\u044F \u043D\u0430 \u043A\u043E\u043B\u0435\u043D\u0438
+      \u0440\u044F\u0434\u043E\u043C \u0441 \u0442\u0435\u043B\u043E\u043C. \u041E\u043D
+      \u043C\u043E\u043B\u0447\u0430 \u043F\u0440\u0438\u043A\u0440\u044B\u043B \u041A\u0435\u0439\u043D\u0443
+      \u0433\u043B\u0430\u0437\u0430, \u0441\u043B\u043E\u0432\u043D\u043E \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u043B
+      \u0435\u043C\u0443 \u0443\u0439\u0442\u0438 \u0441\u043F\u043E\u043A\u043E\u0439\u043D\u043E."
+    index: 106
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 1
+    gotoLineIndex: 125
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041C\u044B \u043E\u0431\u044F\u0437\u0430\u043D\u044B \u043F\u043E\u043F\u0430\u0441\u0442\u044C
+      \u0432 \u041C\u0438\u0440. \u0421\u043C\u0435\u0440\u0442\u044C \u041A\u0435\u0439\u043D\u0430
+      \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u043E\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0430\u0435\u0442
+      \u044D\u0442\u043E."
+    index: 107
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0422\u044B \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u0438\u043B\u0441\u044F\u2026"
+    index: 108
+    speakerName: "\u0425\u0430\u043D\u043D\u0430"
+    characterName: "\u0425\u0430\u043D\u043D\u0430"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041E\u043D \u0437\u043D\u0430\u043B, \u043D\u0430 \u0447\u0442\u043E
+      \u0448\u0451\u043B. \u041C\u044B \u0434\u043E\u043B\u0436\u043D\u044B \u0438\u0434\u0442\u0438
+      \u0434\u0430\u043B\u044C\u0448\u0435. \u041E\u043D \u0431\u044B\u043B \u0445\u043E\u0442\u0435\u043B
+      \u044D\u0442\u043E\u0433\u043E."
+    index: 109
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0421\u043B\u043E\u0432\u0430 \u0418\u043B\u0430\u044F \u0440\u0435\u0437\u0430\u043B\u0438.
+      \u0418 \u043D\u0435 \u0442\u043E\u043B\u044C\u043A\u043E \u0425\u0430\u043D\u043D\u0443."
+    index: 110
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041D\u0435\u0443\u0436\u0435\u043B\u0438 \u0434\u043B\u044F \u0442\u0435\u0431\u044F
+      \u0446\u0435\u043B\u044C \u0432\u0430\u0436\u043D\u0435\u0435 \u0442\u0432\u043E\u0435\u0433\u043E
+      \u0434\u0440\u0443\u0433\u0430?"
+    index: 111
+    speakerName: "\u0425\u0430\u043D\u043D\u0430"
+    characterName: "\u0425\u0430\u043D\u043D\u0430"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0418\u043B\u0430\u0439 \u043E\u0442\u0432\u0435\u0442\u0438\u043B \u0443\u043A\u043B\u043E\u043D\u0447\u0438\u0432\u043E\u2026"
+    index: 112
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0415\u0441\u043B\u0438 \u043C\u044B \u0437\u0430\u0432\u044F\u0437\u043D\u0435\u043C
+      \u0432 \u0431\u043E\u043B\u0438 \u0443\u0442\u0440\u0430\u0442\u044B - \u0441\u0430\u043C\u0438
+      \u043F\u043E\u0434\u043E\u0445\u043D\u0435\u043C."
+    index: 113
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041E\u043D \u043E\u0442\u0432\u0435\u0440\u043D\u0443\u043B\u0441\u044F
+      \u0438 \u043F\u043E\u0448\u0451\u043B \u043F\u0435\u0440\u0432\u044B\u043C
+      - \u0431\u0443\u0434\u0442\u043E \u0443\u0436\u0435 \u043F\u043E\u0445\u043E\u0440\u043E\u043D\u0438\u043B
+      \u043D\u0435 \u0442\u043E\u043B\u044C\u043A\u043E \u041A\u0435\u0439\u043D\u0430,
+      \u043D\u043E \u0438 \u0442\u043E, \u0447\u0442\u043E \u0431\u043E\u043B\u0435\u043B\u043E
+      \u0443 \u043D\u0435\u0433\u043E \u0432\u043D\u0443\u0442\u0440\u0438."
+    index: 114
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 1
+    gotoLineIndex: 125
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041E\u043D \u043F\u043E\u0433\u0438\u0431 \u0441 \u0447\u0435\u0441\u0442\u044C\u044E,
+      \u0437\u043D\u0430\u044F, \u0447\u0442\u043E \u043E\u0434\u043D\u0430\u0436\u0434\u044B
+      \u0435\u0433\u043E \u041F\u0443\u0442\u044C \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u0441\u044F."
+    index: 115
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u042D\u0442\u043E \u0432\u044B\u0437\u044B\u0432\u0430\u043B\u043E \u0433\u043E\u0440\u0434\u043E\u0441\u0442\u044C
+      \u0437\u0430 \u0441\u0432\u043E\u0435\u0433\u043E \u0434\u0440\u0443\u0433\u0430,
+      \u0432\u0435\u0434\u044C \u043D\u0435\u043C\u043D\u043E\u0433\u0438\u0435 \u0433\u043E\u0442\u043E\u0432\u044B
+      \u0441\u044B\u0433\u0440\u0430\u0442\u044C \u0432 \u0440\u0443\u0441\u0441\u043A\u0443\u044E
+      \u0440\u0443\u043B\u0435\u0442\u043A\u0443 \u0441\u043E \u0421\u043C\u0435\u0440\u0442\u044C\u044E."
+    index: 116
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041E\u043D \u0432\u0441\u0435\u0433\u0434\u0430 \u0433\u043E\u0432\u043E\u0440\u0438\u043B,
+      \u0447\u0442\u043E \u043D\u0435\u043B\u044C\u0437\u044F \u0431\u043E\u044F\u0442\u044C\u0441\u044F
+      \u0436\u0438\u0442\u044C, \u043D\u0435\u043B\u044C\u0437\u044F \u0431\u043E\u044F\u0442\u044C\u0441\u044F
+      \u0441\u043C\u0435\u0440\u0442\u0438\u2026"
+    index: 117
+    speakerName: "\u0425\u0430\u043D\u043D\u0430"
+    characterName: "\u0425\u0430\u043D\u043D\u0430"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0418 \u043E\u043D \u044D\u0442\u043E \u0434\u043E\u043A\u0430\u0437\u0430\u043B."
+    index: 118
+    speakerName: "\u0425\u0430\u043D\u043D\u0430"
+    characterName: "\u0425\u0430\u043D\u043D\u0430"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0425\u0430\u043D\u043D\u0430 \u0441\u0436\u0430\u043B\u0430 \u043B\u0430\u0434\u043E\u043D\u0438,
+      \u0441\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044F \u0434\u0440\u043E\u0436\u044C."
+    index: 119
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0417\u043D\u0430\u0435\u0448\u044C\u2026 \u0438\u043D\u043E\u0433\u0434\u0430
+      \u043C\u043D\u0435 \u043A\u0430\u0437\u0430\u043B\u043E\u0441\u044C, \u0447\u0442\u043E
+      \u0432 \u0434\u0443\u0448\u0435 \u043E\u043D \u0431\u0435\u0441\u0441\u043C\u0435\u0440\u0442\u0435\u043D.
+      \u041E\u043D \u0432\u0441\u0451 \u0432\u0440\u0435\u043C\u044F \u0441\u043C\u0435\u044F\u043B\u0441\u044F.
+      \u0412\u0441\u0451 \u0432\u0440\u0435\u043C\u044F\u2026"
+    index: 120
+    speakerName: "\u0425\u0430\u043D\u043D\u0430"
+    characterName: "\u0425\u0430\u043D\u043D\u0430"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041E\u043D\u0430 \u0437\u0430\u043C\u043E\u043B\u0447\u0430\u043B\u0430.
+      \u0418\u043B\u0430\u0439 \u043D\u0435 \u043F\u0435\u0440\u0435\u0431\u0438\u0432\u0430\u043B."
+    index: 121
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041E\u043D\u0438 \u0441\u0442\u043E\u044F\u043B\u0438 - \u0434\u0432\u0430
+      \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u0430, \u0441\u043B\u0438\u0448\u043A\u043E\u043C
+      \u0443\u0441\u0442\u0430\u0432\u0448\u0438\u0445 \u0434\u043B\u044F \u0441\u043B\u0451\u0437,
+      \u043D\u043E \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u0436\u0438\u0432\u044B\u0445,
+      \u0447\u0442\u043E\u0431\u044B \u043D\u0438\u0447\u0435\u0433\u043E \u043D\u0435
+      \u0447\u0443\u0432\u0441\u0442\u0432\u043E\u0432\u0430\u0442\u044C."
+    index: 122
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0418\u043B\u0430\u0439 \u043F\u0440\u0438\u043A\u0440\u044B\u043B \u0433\u043B\u0430\u0437\u0430
+      \u041A\u0435\u0439\u043D\u0430, \u043F\u043E\u0447\u0442\u0438 \u043A\u0430\u043A
+      \u0432 \u0441\u0442\u0430\u0440\u043E\u043C \u0444\u0438\u043B\u044C\u043C\u0435,
+      \u0442\u043E\u043B\u044C\u043A\u043E \u044D\u0442\u043E \u0431\u044B\u043B\u043E
+      \u043F\u043E-\u043D\u0430\u0441\u0442\u043E\u044F\u0449\u0435\u043C\u0443."
+    index: 123
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041C\u044B \u0434\u043E\u0439\u0434\u0435\u043C. \u0420\u0430\u0434\u0438
+      \u043D\u0435\u0433\u043E."
+    index: 124
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 1
+    gotoLineIndex: 125
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041F\u043E\u0434 \u0441\u0442\u0430\u0440\u044B\u043C \u0434\u0443\u0431\u043E\u043C,
+      \u0447\u0442\u043E \u0440\u043E\u0441 \u043D\u0435\u0434\u0430\u043B\u0435\u043A\u043E
+      \u043E\u0442 \u0442\u043E\u0440\u0433\u043E\u0432\u043E\u0433\u043E \u0446\u0435\u043D\u0442\u0440\u0430,
+      \u043E\u043D\u0438 \u0432\u044B\u0440\u044B\u043B\u0438 \u043C\u043E\u0433\u0438\u043B\u0443.
+      \u0417\u0435\u043C\u043B\u044F \u0431\u044B\u043B\u0430 \u043C\u043E\u043A\u0440\u043E\u0439
+      \u0438 \u0442\u044F\u0436\u0435\u043B\u043E\u0439, \u0441\u043B\u043E\u0432\u043D\u043E
+      \u0445\u043E\u0440\u043E\u043D\u0438\u0442 \u0430\u043D\u0433\u0435\u043B\u0430.
+      \u041E\u043D\u0430 \u0431\u044B\u043B\u0430 \u043F\u0440\u043E\u043F\u0438\u0442\u0430\u043D\u0430
+      \u0431\u043E\u043B\u044C\u044E."
+    index: 125
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0418\u043B\u0430\u0439 \u043D\u0435 \u043F\u0440\u043E\u0440\u043E\u043D\u0438\u043B
+      \u043D\u0438 \u0441\u043B\u043E\u0432\u0430, \u043A\u043E\u0433\u0434\u0430
+      \u043A\u043B\u0430\u043B \u0442\u0435\u043B\u043E \u0432\u043D\u0443\u0442\u0440\u044C.
+      \u041E\u043D \u043B\u0438\u0448\u044C \u0434\u043E\u0441\u0442\u0430\u043B
+      \u043D\u043E\u0436 \u041A\u0435\u0439\u043D\u0430 \u0438 \u0432\u043E\u0442\u043A\u043D\u0443\u043B
+      \u0435\u0433\u043E \u0432 \u0437\u0435\u043C\u043B\u044E \u043A\u0430\u043A
+      \u043C\u0435\u0442\u043A\u0443, \u0447\u0442\u043E \u0437\u0434\u0435\u0441\u044C
+      \u043F\u043E\u0445\u043E\u0440\u043E\u043D\u0435\u043D \u0435\u0433\u043E \u0445\u0440\u0430\u0431\u0440\u044B\u0439
+      \u0438 \u0432\u0435\u0441\u0435\u043B\u044B\u0439 \u0434\u0440\u0443\u0433."
+    index: 126
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0425\u0430\u043D\u043D\u0430 \u0442\u0438\u0445\u043E \u043F\u0440\u043E\u043C\u043E\u043B\u0432\u0438\u043B\u0430\u2026"
+    index: 127
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041C\u044B \u043D\u0435 \u0437\u0430\u0431\u0443\u0434\u0435\u043C.
+      \u041D\u0438\u043A\u043E\u0433\u0434\u0430."
+    index: 128
+    speakerName: "\u0425\u0430\u043D\u043D\u0430"
+    characterName: "\u0425\u0430\u043D\u043D\u0430"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0415\u0441\u043B\u0438 \u044F \u0434\u043E\u0439\u0434\u0443 \u0434\u043E
+      \u043A\u043E\u043D\u0446\u0430\u2026 \u0422\u044B \u0431\u0443\u0434\u0435\u0448\u044C
+      \u0437\u043D\u0430\u0442\u044C. \u0422\u044B \u0443\u0432\u0438\u0434\u0438\u0448\u044C
+      \u044D\u0442\u043E. \u041E\u0431\u0435\u0449\u0430\u044E."
+    index: 129
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 1
+    gotoLineIndex: 131
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0422\u044B \u0431\u0443\u0434\u0435\u0448\u044C \u0433\u043E\u0440\u0434\u0438\u0442\u044C\u0441\u044F
+      \u043D\u0430\u043C\u0438, \u0434\u0440\u0443\u0433. \u041C\u044B \u0434\u043E\u0439\u0434\u0435\u043C
+      \u0434\u043E \u041C\u0438\u0440\u0430."
+    index: 130
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 1
+    gotoLineIndex: 131
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u0412\u0435\u0442\u0435\u0440 \u0432 \u043A\u0440\u043E\u043D\u0430\u0445
+      \u0434\u0443\u0431\u0430, \u043F\u043E\u0442\u0440\u0435\u0441\u043A\u0438\u0432\u0430\u043D\u0438\u0435
+      \u043A\u0430\u043C\u043D\u0435\u0439 - \u0432\u0441\u0451, \u0447\u0442\u043E
+      \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u043E\u0442 \u041A\u0435\u0439\u043D\u0430
+      \u0432 \u044D\u0442\u043E\u043C \u043C\u0435\u0441\u0442\u0435."
+    index: 131
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 1
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041E\u043D\u0438 \u0440\u0430\u0437\u0432\u0435\u0440\u043D\u0443\u043B\u0438\u0441\u044C.
+      \u041C\u0438\u0440 \u0437\u0432\u0430\u043B \u0432\u043F\u0435\u0440\u0451\u0434. "
+    index: 132
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041B\u0435\u0433\u043A\u0438\u0439 \u0432\u0435\u0442\u0435\u0440 \u043F\u0440\u043E\u0449\u0430\u043B\u044C\u043D\u043E
+      \u0448\u0435\u0432\u0435\u043B\u0438\u043B \u0438\u0445 \u0432\u043E\u043B\u043E\u0441\u044B.
+      \u041A\u0430\u0437\u0430\u043B\u043E\u0441\u044C, \u0447\u0442\u043E \u043E\u043D
+      \u043D\u0451\u0441 \u0437\u0430 \u043D\u0438\u043C\u0438 \u0447\u0435\u0439-\u0442\u043E
+      \u0442\u0438\u0445\u0438\u0439 \u0432\u0437\u0433\u043B\u044F\u0434. "
+    index: 133
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
 --- !u!114 &1700893417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8816,7 +10370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -53.097046, y: -14}
+  m_AnchoredPosition: {x: -53.097168, y: -14}
   m_SizeDelta: {x: -1721.2167, y: -351.6134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1771563315

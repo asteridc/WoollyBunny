@@ -1,5 +1,7 @@
 using UnityEngine;
 
+public enum ChoiceType { Optional, Required }
+
 [System.Serializable]
 public class DialogueLine
 {
@@ -51,6 +53,7 @@ public class DialogueLine
         public int pathPointsNoble;
         public int pathPointsLove;
         public int nextLineIndex;
+        public ChoiceType choiceType;
     }
 
     public Choice[] choices;

@@ -2,6 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
+
 
 public class DialogueManager : MonoBehaviour
 {
@@ -255,48 +257,115 @@ public class DialogueManager : MonoBehaviour
 
     private void ShowChoices(DialogueLine.Choice[] choices)
     {
-
         Debug.Log("Показываем выборы: " + choices.Length);
+
         foreach (Transform child in choicesContainer.transform)
         {
             Destroy(child.gameObject);
         }
 
-
         choicesContainer.SetActive(true);
+        Vector2[] positions = GetChoicePositions(choices.Length);
 
+        int index = 0;
         foreach (var choice in choices)
         {
             GameObject buttonObj = Instantiate(choiceButtonPrefab, choicesContainer.transform);
+            RectTransform rt = buttonObj.GetComponent<RectTransform>();
+            rt.anchoredPosition = positions[index];
+
             TextMeshProUGUI buttonText = buttonObj.GetComponentInChildren<TextMeshProUGUI>();
             buttonText.text = choice.choiceText;
-
             Button btn = buttonObj.GetComponent<Button>();
+            Image bg = buttonObj.GetComponent<Image>();
+
+            // Устанавливаем стартовые цвета — без выделения
+            buttonText.color = Color.white;
+            bg.color = new Color(0.2f, 0.2f, 0.2f); // тёмный фон или твой стандарт
+
+            // Добавляем поведение на наведение
+            AddHoverEffects(btn, bg, buttonText, choice.choiceType);
+
+            // Поведение при клике
             btn.onClick.AddListener(() => OnChoiceSelected(choice));
-            // buttonObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
+
             buttonObj.SetActive(true);
 
-            var image = buttonObj.GetComponent<Image>();
-            if (image != null)
-            {
-                image.enabled = true;
-                Debug.Log("Имэдж включен");
-            }
-
-            buttonObj.GetComponent<Button>();
-            if (btn != null)
-            {
-                btn.enabled = true;
-                Debug.Log("Баттен включен");
-            }
-            var tmp = buttonObj.GetComponentInChildren<TextMeshProUGUI>();
-            if (tmp != null)
-            {
-                tmp.enabled = true;
-                Debug.Log("Текст включен");
-            }
+            index++;
         }
+    }
 
+    private Vector2[] GetChoicePositions(int count)
+    {
+        switch (count)
+        {
+            case 2:
+                return new Vector2[]
+                {
+                new Vector2(0, 60),
+                new Vector2(0, -60)
+                };
+            case 3:
+                return new Vector2[]
+                {
+                new Vector2(0, 80),
+                new Vector2(-160, -40),
+                new Vector2(160, -40)
+                };
+            case 4:
+                return new Vector2[]
+                {
+                new Vector2(-100, 60),
+                new Vector2(100, 60),
+                new Vector2(-100, -60),
+                new Vector2(100, -60)
+                };
+            case 5:
+                return new Vector2[]
+                {
+                new Vector2(0, 100),
+                new Vector2(-120, 30),
+                new Vector2(120, 30),
+                new Vector2(-80, -60),
+                new Vector2(80, -60)
+                };
+            default:
+                return new Vector2[] { Vector2.zero };
+        }
+    }
+
+    public void AddHoverEffects(Button btn, Image bg, TextMeshProUGUI txt, ChoiceType choiceType)
+    {
+        Color baseTextColor = txt.color;
+        Color baseBGColor = bg.color;
+
+        EventTrigger trigger = btn.gameObject.AddComponent<EventTrigger>();
+
+        // Наведение
+        var pointerEnter = new EventTrigger.Entry();
+        pointerEnter.eventID = EventTriggerType.PointerEnter;
+        pointerEnter.callback.AddListener((eventData) => {
+            if (choiceType == ChoiceType.Required)
+            {
+                bg.color = new Color(1f, 0.84f, 0.4f); // янтарный
+                txt.color = Color.black;
+            }
+            else
+            {
+                bg.color = Color.white;
+                txt.color = Color.black;
+            }
+        });
+        trigger.triggers.Add(pointerEnter);
+
+        // Выход
+        var pointerExit = new EventTrigger.Entry();
+        pointerExit.eventID = EventTriggerType.PointerExit;
+        pointerExit.callback.AddListener((eventData) => {
+            bg.color = baseBGColor;
+            txt.color = baseTextColor;
+        });
+        trigger.triggers.Add(pointerExit);
     }
 
     private void OnChoiceSelected(DialogueLine.Choice choice)

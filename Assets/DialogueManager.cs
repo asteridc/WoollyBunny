@@ -120,7 +120,6 @@ public class DialogueManager : MonoBehaviour
     private void ShowLine()
     {
         DialogueLine line = lines[currentLineIndex];
-
         string finalText = line.text;
 
         if (line.hasPathConsequences && line.pathVarients != null && line.pathVarients.Length > 0)
@@ -134,7 +133,24 @@ public class DialogueManager : MonoBehaviour
                     if (variant.path == dominant && !string.IsNullOrEmpty(variant.overrideText))
                     {
                         finalText = variant.overrideText;
-                        goto End; // выходим из обоих циклов сразу
+
+                        if (variant.showStoryNotification)
+                        {
+                            ShowStoryNotification(
+                                variant.storyNotificationText,
+                                variant.storyNotificationDuration > 0 ? variant.storyNotificationDuration : 5f,
+                                variant.storyNotificationIcon,
+                                variant.storyNotificationTextColor,
+                                variant.storyNotificationIconColor,
+                                variant.storyNotificationFontSize,
+                                variant.useCustomFont ? variant.customFont : null,
+                                variant.isBold,
+                                variant.isItalic,
+                                variant.isUppercase
+                            );
+                        }
+
+                        goto End;
                     }
                 }
             }
@@ -180,6 +196,23 @@ public class DialogueManager : MonoBehaviour
 
             itemManager.ShowItemNotification(item);
         }
+
+        // Сюжетное уведомление
+            if (line.showStoryNotification)
+            {
+                ShowStoryNotification(
+                    line.storyNotificationText,
+                    line.storyNotificationDuration > 0 ? line.storyNotificationDuration : 5f,
+                    line.storyNotificationIcon,
+                    line.storyNotificationTextColor,
+                    line.storyNotificationIconColor,
+                    line.storyNotificationFontSize,
+                    line.useCustomFont ? line.customFont : null,
+                    line.isBold,
+                    line.isItalic,
+                    line.isUppercase
+                );
+            }
 
         // Просмотр коллекционного предмета (письмо и т. д.)
         if (line.showCollectibleView && collectiblePanel != null)
@@ -508,10 +541,43 @@ public class DialogueManager : MonoBehaviour
         collectiblePanel.SetActive(false);
     }
 
-    public void ShowStoryNotification(string text, float duration)
+    public TMP_FontAsset defaultFont;
+
+    public void ShowStoryNotification(
+    string text,
+    float duration,
+    Sprite icon = null,
+    Color? textColor = null,
+    Color? iconColor = null,
+    float? fontSize = null,
+    TMP_FontAsset font = null,
+    bool isBold = false,
+    bool isItalic = false,
+    bool isUppercase = false)
     {
         storyNotificationPanel.SetActive(true);
-        storyNotificationText.text = text;
+
+        string formattedText = text;
+
+        if (isUppercase)
+            formattedText = formattedText.ToUpper();
+        if (isBold)
+            formattedText = $"<b>{formattedText}</b>";
+        if (isItalic)
+            formattedText = $"<i>{formattedText}</i>";
+
+        storyNotificationText.text = formattedText;
+        storyNotificationText.fontSize = fontSize ?? storyNotificationText.fontSize;
+        storyNotificationText.color = textColor ?? Color.white;
+        storyNotificationText.font = font ?? defaultFont;
+
+        if (storyNotificationIcon != null)
+        {
+            storyNotificationIcon.sprite = icon;
+            storyNotificationIcon.color = iconColor ?? Color.white;
+            storyNotificationIcon.gameObject.SetActive(icon != null);
+        }
+
         StartCoroutine(HideStoryNotificationAfterDelay(duration));
     }
 

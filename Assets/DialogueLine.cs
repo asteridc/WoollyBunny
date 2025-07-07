@@ -1,10 +1,11 @@
 using UnityEngine;
+using TMPro;
 
 public enum ChoiceType { Optional, Required }
 public enum DominantPath { None, Bloodthirst, Nobility, Love }
 
 [System.Serializable]
-public class DialogueLine
+public class DialogueLine : IStoryNotificationSettings
 {
     [TextArea(2, 5)]
     public string text;
@@ -41,6 +42,35 @@ public class DialogueLine
     public ItemRarity itemRarity;
     public Sprite itemIcon;
 
+    [Header("Story Notification")]
+    public bool showStoryNotification;
+    [TextArea(2,4)] public string storyNotificationText;
+    public float storyNotificationDuration = 5.5f;
+    public Sprite storyNotificationIcon;
+    public Color storyNotificationTextColor = Color.white;
+    public Color storyNotificationIconColor = Color.white;
+    public float storyNotificationFontSize = 36f;
+
+    public bool isBold;
+    public bool isItalic;
+    public bool isUppercase;
+    public bool useCustomFont;
+    public TMP_FontAsset customFont;
+
+    // Ðåàëèçàöèÿ èíòåðôåéñà
+    string IStoryNotificationSettings.storyNotificationText => storyNotificationText;
+    float IStoryNotificationSettings.storyNotificationDuration => storyNotificationDuration;
+    Sprite IStoryNotificationSettings.storyNotificationIcon => storyNotificationIcon;
+    Color IStoryNotificationSettings.storyNotificationTextColor => storyNotificationTextColor;
+    Color IStoryNotificationSettings.storyNotificationIconColor => storyNotificationIconColor;
+    float IStoryNotificationSettings.storyNotificationFontSize => storyNotificationFontSize;
+
+    bool IStoryNotificationSettings.isBold => isBold;
+    bool IStoryNotificationSettings.isItalic => isItalic;
+    bool IStoryNotificationSettings.isUppercase => isUppercase;
+    bool IStoryNotificationSettings.useCustomFont => useCustomFont;
+    TMP_FontAsset IStoryNotificationSettings.customFont => customFont;
+
     // ====== ÂÛÁÎÐÛ ======
     public bool isJumpLine = false;
     public int gotoLineIndex;
@@ -48,12 +78,40 @@ public class DialogueLine
 
     // ====== ÏÎÑËÅÄÑÒÂÈß (ÂÛÁÎÐÛ Ñ ÏÓÒßÌÈ) ======
     public bool hasPathConsequences;
-
     [System.Serializable]
-    public class PathVarients
+    public class PathVarients : IStoryNotificationSettings
     {
         public DominantPath path;
         public string overrideText;
+
+        public bool showStoryNotification;
+        public string storyNotificationText;
+        public Sprite storyNotificationIcon;
+        public float storyNotificationDuration = 5.5f;
+        public Color storyNotificationTextColor = Color.white;
+        public Color storyNotificationIconColor = Color.white;
+        public float storyNotificationFontSize = 36f;
+
+        public bool useCustomFont;
+        public TMP_FontAsset customFont;
+
+        public bool isBold;
+        public bool isItalic;
+        public bool isUppercase;
+
+        // Ðåàëèçàöèÿ èíòåðôåéñà
+        string IStoryNotificationSettings.storyNotificationText => storyNotificationText;
+        float IStoryNotificationSettings.storyNotificationDuration => storyNotificationDuration;
+        Sprite IStoryNotificationSettings.storyNotificationIcon => storyNotificationIcon;
+        Color IStoryNotificationSettings.storyNotificationTextColor => storyNotificationTextColor;
+        Color IStoryNotificationSettings.storyNotificationIconColor => storyNotificationIconColor;
+        float IStoryNotificationSettings.storyNotificationFontSize => storyNotificationFontSize;
+
+        bool IStoryNotificationSettings.isBold => isBold;
+        bool IStoryNotificationSettings.isItalic => isItalic;
+        bool IStoryNotificationSettings.isUppercase => isUppercase;
+        bool IStoryNotificationSettings.useCustomFont => useCustomFont;
+        TMP_FontAsset IStoryNotificationSettings.customFont => customFont;
     }
 
     public PathVarients[] pathVarients;

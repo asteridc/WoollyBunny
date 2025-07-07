@@ -2903,6 +2903,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922892692}
   m_CullTransparentMesh: 1
+--- !u!1 &1041379836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1041379837}
+  - component: {fileID: 1041379839}
+  - component: {fileID: 1041379838}
+  m_Layer: 5
+  m_Name: story_notification_panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1041379837
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041379836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1785659678}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 4.7596436, y: 423.79498}
+  m_SizeDelta: {x: -1481.8948, y: -877.58997}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1041379838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041379836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0bffbccfb179c91439513728e5d0d9b7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1041379839
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041379836}
+  m_CullTransparentMesh: 1
 --- !u!1 &1198408817
 GameObject:
   m_ObjectHideFlags: 0
@@ -4096,7 +4171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b6c6e614df8ab478c7f9eee738cd08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodthirstPoints: 1
+  bloodthirstPoints: 0
   noblePoints: 0
   lovePoints: 0
 --- !u!1 &1514249200
@@ -5244,6 +5319,9 @@ MonoBehaviour:
   codePanelController: {fileID: 1359917872}
   codePanelUI: {fileID: 1771563315}
   itemManager: {fileID: 1710625757}
+  storyNotificationPanel: {fileID: 1041379836}
+  storyNotificationText: {fileID: 0}
+  storyNotificationIcon: {fileID: 0}
   collectiblePanel: {fileID: 1811805671}
   collectibleTitleText: {fileID: 1759159454}
   collectibleContentText: {fileID: 848434150}
@@ -5290,6 +5368,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5327,6 +5407,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5370,6 +5452,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5410,6 +5494,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5446,6 +5532,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5484,6 +5572,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5523,6 +5613,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5563,6 +5655,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5595,6 +5689,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5627,6 +5723,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5660,6 +5758,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5693,6 +5793,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5729,6 +5831,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5762,6 +5866,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5798,6 +5904,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5837,6 +5945,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5871,6 +5981,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5906,6 +6018,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5940,6 +6054,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -5983,6 +6099,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6037,6 +6155,8 @@ MonoBehaviour:
     isJumpLine: 1
     gotoLineIndex: 21
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6071,6 +6191,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6106,6 +6228,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6141,6 +6265,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6174,6 +6300,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6212,6 +6340,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6247,6 +6377,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6287,6 +6419,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6323,6 +6457,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6355,17 +6491,21 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 1
+    hasPathConsequences: 0
+    pathVarients: []
     choices:
     - choiceText: "\u041A\u0438\u043D\u0443\u0442\u044C \u043A\u0430\u043C\u0435\u043D\u044C"
       pathPointsBloodthirsty: 0
       pathPointsNoble: 0
       pathPointsLove: 0
+      pathReward: 0
       nextLineIndex: 30
       choiceType: 1
     - choiceText: "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u044F\u0449\u0438\u043A"
       pathPointsBloodthirsty: 0
       pathPointsNoble: 0
       pathPointsLove: 0
+      pathReward: 0
       nextLineIndex: 32
       choiceType: 1
     extraActions:
@@ -6401,6 +6541,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6436,6 +6578,8 @@ MonoBehaviour:
     isJumpLine: 1
     gotoLineIndex: 33
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6473,6 +6617,8 @@ MonoBehaviour:
     isJumpLine: 1
     gotoLineIndex: 33
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6509,6 +6655,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6541,6 +6689,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 1
@@ -6573,6 +6723,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6607,6 +6759,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6642,6 +6796,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6675,6 +6831,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6707,6 +6865,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6740,6 +6900,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6775,6 +6937,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6809,6 +6973,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6842,6 +7008,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6881,6 +7049,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6914,6 +7084,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6950,6 +7122,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -6983,6 +7157,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7017,6 +7193,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7050,6 +7228,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7087,6 +7267,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7120,6 +7302,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7162,6 +7346,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7195,6 +7381,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7229,6 +7417,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7264,6 +7454,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7306,6 +7498,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7342,6 +7536,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7376,6 +7572,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7412,6 +7610,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7446,6 +7646,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7482,24 +7684,29 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices:
     - choiceText: "\u0417\u0430\u0447\u0435\u043C \u0442\u044B \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u043B
         \u0432 \u043D\u0435\u0433\u043E?"
       pathPointsBloodthirsty: 0
       pathPointsNoble: 0
       pathPointsLove: 0
+      pathReward: 0
       nextLineIndex: 0
       choiceType: 0
     - choiceText: "\u041A\u0442\u043E \u0442\u0432\u043E\u0439 \u0433\u043B\u0430\u0432\u0430\u0440\u044C?"
       pathPointsBloodthirsty: 0
       pathPointsNoble: 0
       pathPointsLove: 0
+      pathReward: 0
       nextLineIndex: 0
       choiceType: 0
     - choiceText: "\u042F \u0443\u0431\u044C\u044E \u0442\u0435\u0431\u044F."
       pathPointsBloodthirsty: 0
       pathPointsNoble: 0
       pathPointsLove: 0
+      pathReward: 0
       nextLineIndex: 0
       choiceType: 0
     extraActions:
@@ -7534,24 +7741,29 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 1
+    hasPathConsequences: 0
+    pathVarients: []
     choices:
     - choiceText: "\u0417\u0430\u0447\u0435\u043C \u0442\u044B \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u043B
         \u0432 \u043D\u0435\u0433\u043E?"
       pathPointsBloodthirsty: 0
       pathPointsNoble: 0
       pathPointsLove: 0
+      pathReward: 0
       nextLineIndex: 63
       choiceType: 0
     - choiceText: "\u041A\u0442\u043E \u0442\u0432\u043E\u0439 \u0433\u043B\u0430\u0432\u0430\u0440\u044C?"
       pathPointsBloodthirsty: 0
       pathPointsNoble: 0
       pathPointsLove: 0
+      pathReward: 0
       nextLineIndex: 68
       choiceType: 0
     - choiceText: "\u042F \u0443\u0431\u044C\u044E \u0442\u0435\u0431\u044F."
       pathPointsBloodthirsty: 0
       pathPointsNoble: 0
       pathPointsLove: 0
+      pathReward: 0
       nextLineIndex: 70
       choiceType: 1
     extraActions:
@@ -7587,6 +7799,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7624,6 +7838,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7659,6 +7875,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7693,6 +7911,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7729,6 +7949,8 @@ MonoBehaviour:
     isJumpLine: 1
     gotoLineIndex: 62
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7762,6 +7984,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7797,6 +8021,8 @@ MonoBehaviour:
     isJumpLine: 1
     gotoLineIndex: 62
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7834,6 +8060,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7867,6 +8095,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7900,6 +8130,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7933,6 +8165,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -7968,6 +8202,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8001,6 +8237,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8041,6 +8279,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8079,6 +8319,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8112,6 +8354,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8145,6 +8389,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8182,6 +8428,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8218,6 +8466,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8251,6 +8501,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8286,6 +8538,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8319,6 +8573,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8355,6 +8611,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8394,6 +8652,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8432,6 +8692,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8468,6 +8730,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8506,6 +8770,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8542,6 +8808,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8580,6 +8848,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8614,6 +8884,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8652,6 +8924,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8685,6 +8959,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8718,11 +8994,14 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 1
+    hasPathConsequences: 0
+    pathVarients: []
     choices:
     - choiceText: "\u041E\u043D \u0431\u044B\u043B \u043C\u043E\u0438\u043C \u0434\u0440\u0443\u0433\u043E\u043C. "
       pathPointsBloodthirsty: 0
       pathPointsNoble: 0
       pathPointsLove: 1
+      pathReward: 3
       nextLineIndex: 96
       choiceType: 1
     - choiceText: "\u041C\u044B \u043E\u0431\u044F\u0437\u0430\u043D\u044B \u043F\u043E\u043F\u0430\u0441\u0442\u044C
@@ -8730,6 +9009,7 @@ MonoBehaviour:
       pathPointsBloodthirsty: 1
       pathPointsNoble: 0
       pathPointsLove: 0
+      pathReward: 1
       nextLineIndex: 107
       choiceType: 1
     - choiceText: "\u041A\u0435\u0439\u043D \u043F\u043E\u0433\u0438\u0431 \u0441
@@ -8737,6 +9017,7 @@ MonoBehaviour:
       pathPointsBloodthirsty: 0
       pathPointsNoble: 1
       pathPointsLove: 0
+      pathReward: 2
       nextLineIndex: 115
       choiceType: 1
     extraActions:
@@ -8772,6 +9053,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8808,6 +9091,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8844,6 +9129,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8878,6 +9165,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8913,6 +9202,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8948,6 +9239,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -8984,6 +9277,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9018,6 +9313,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9052,6 +9349,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9095,6 +9394,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9133,6 +9434,8 @@ MonoBehaviour:
     isJumpLine: 1
     gotoLineIndex: 125
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9169,6 +9472,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9202,6 +9507,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9238,6 +9545,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9272,6 +9581,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9307,6 +9618,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9340,6 +9653,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9375,6 +9690,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9413,6 +9730,8 @@ MonoBehaviour:
     isJumpLine: 1
     gotoLineIndex: 125
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9448,6 +9767,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9485,6 +9806,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9521,6 +9844,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9554,6 +9879,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9588,6 +9915,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9625,6 +9954,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9659,6 +9990,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9697,6 +10030,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9734,6 +10069,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9768,6 +10105,8 @@ MonoBehaviour:
     isJumpLine: 1
     gotoLineIndex: 125
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9809,6 +10148,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9850,6 +10191,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9883,6 +10226,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9917,16 +10262,15 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
       objectToActivate: {fileID: 0}
-  - text: "\u0415\u0441\u043B\u0438 \u044F \u0434\u043E\u0439\u0434\u0443 \u0434\u043E
-      \u043A\u043E\u043D\u0446\u0430\u2026 \u0422\u044B \u0431\u0443\u0434\u0435\u0448\u044C
-      \u0437\u043D\u0430\u0442\u044C. \u0422\u044B \u0443\u0432\u0438\u0434\u0438\u0448\u044C
-      \u044D\u0442\u043E. \u041E\u0431\u0435\u0449\u0430\u044E."
+  - text: 
     index: 129
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
@@ -9951,43 +10295,23 @@ MonoBehaviour:
     itemRarity: 3
     itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
     isJumpLine: 1
-    gotoLineIndex: 131
+    gotoLineIndex: 130
     hasChoices: 0
-    choices: []
-    extraActions:
-      showCodePanel: 0
-      showNotePanel: 0
-      stopDialogueAfterThisLine: 0
-      objectToActivate: {fileID: 0}
-  - text: "\u0422\u044B \u0431\u0443\u0434\u0435\u0448\u044C \u0433\u043E\u0440\u0434\u0438\u0442\u044C\u0441\u044F
-      \u043D\u0430\u043C\u0438, \u0434\u0440\u0443\u0433. \u041C\u044B \u0434\u043E\u0439\u0434\u0435\u043C
-      \u0434\u043E \u041C\u0438\u0440\u0430."
-    index: 130
-    speakerName: "\u0418\u043B\u0430\u0439"
-    characterName: "\u0418\u043B\u0430\u0439"
-    changeSpeakerName: 0
-    changeCharacterSprite: 0
-    changeBackground: 0
-    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
-    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
-    isOnRight: 0
-    flipSpeakerImage: 0
-    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
-    isListenerOnRight: 1
-    flipListenerImage: 1
-    showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
-    showItemNotification: 0
-    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
-    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
-      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
-    itemRarity: 3
-    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
-    isJumpLine: 1
-    gotoLineIndex: 131
-    hasChoices: 0
+    hasPathConsequences: 1
+    pathVarients:
+    - path: 1
+      overrideText: "\u0415\u0441\u043B\u0438 \u044F \u0434\u043E\u0439\u0434\u0443
+        \u0434\u043E \u043A\u043E\u043D\u0446\u0430\u2026 \u0422\u044B \u0431\u0443\u0434\u0435\u0448\u044C
+        \u0437\u043D\u0430\u0442\u044C. \u0422\u044B \u0443\u0432\u0438\u0434\u0438\u0448\u044C
+        \u044D\u0442\u043E. \u041E\u0431\u0435\u0449\u0430\u044E."
+    - path: 2
+      overrideText: "\u0422\u044B \u0431\u0443\u0434\u0435\u0448\u044C \u0433\u043E\u0440\u0434\u0438\u0442\u044C\u0441\u044F
+        \u043D\u0430\u043C\u0438, \u0434\u0440\u0443\u0433. \u041C\u044B \u0434\u043E\u0439\u0434\u0435\u043C
+        \u0434\u043E \u041C\u0438\u0440\u0430."
+    - path: 3
+      overrideText: "\u0422\u044B \u0431\u0443\u0434\u0435\u0448\u044C \u0433\u043E\u0440\u0434\u0438\u0442\u044C\u0441\u044F
+        \u043D\u0430\u043C\u0438, \u0434\u0440\u0443\u0433. \u041C\u044B \u0434\u043E\u0439\u0434\u0435\u043C
+        \u0434\u043E \u041C\u0438\u0440\u0430."
     choices: []
     extraActions:
       showCodePanel: 0
@@ -9999,7 +10323,7 @@ MonoBehaviour:
       \u043A\u0430\u043C\u043D\u0435\u0439 - \u0432\u0441\u0451, \u0447\u0442\u043E
       \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u043E\u0442 \u041A\u0435\u0439\u043D\u0430
       \u0432 \u044D\u0442\u043E\u043C \u043C\u0435\u0441\u0442\u0435."
-    index: 131
+    index: 130
     speakerName: ...
     characterName: ...
     changeSpeakerName: 1
@@ -10025,6 +10349,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -10033,6 +10359,45 @@ MonoBehaviour:
       objectToActivate: {fileID: 0}
   - text: "\u041E\u043D\u0438 \u0440\u0430\u0437\u0432\u0435\u0440\u043D\u0443\u043B\u0438\u0441\u044C.
       \u041C\u0438\u0440 \u0437\u0432\u0430\u043B \u0432\u043F\u0435\u0440\u0451\u0434. "
+    index: 131
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
+    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemRarity: 3
+    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+  - text: "\u041B\u0435\u0433\u043A\u0438\u0439 \u0432\u0435\u0442\u0435\u0440 \u043F\u0440\u043E\u0449\u0430\u043B\u044C\u043D\u043E
+      \u0448\u0435\u0432\u0435\u043B\u0438\u043B \u0438\u0445 \u0432\u043E\u043B\u043E\u0441\u044B.
+      \u041A\u0430\u0437\u0430\u043B\u043E\u0441\u044C, \u0447\u0442\u043E \u043E\u043D
+      \u043D\u0451\u0441 \u0437\u0430 \u043D\u0438\u043C\u0438 \u0447\u0435\u0439-\u0442\u043E
+      \u0442\u0438\u0445\u0438\u0439 \u0432\u0437\u0433\u043B\u044F\u0434. "
     index: 132
     speakerName: ...
     characterName: ...
@@ -10059,43 +10424,8 @@ MonoBehaviour:
     isJumpLine: 0
     gotoLineIndex: 0
     hasChoices: 0
-    choices: []
-    extraActions:
-      showCodePanel: 0
-      showNotePanel: 0
-      stopDialogueAfterThisLine: 0
-      objectToActivate: {fileID: 0}
-  - text: "\u041B\u0435\u0433\u043A\u0438\u0439 \u0432\u0435\u0442\u0435\u0440 \u043F\u0440\u043E\u0449\u0430\u043B\u044C\u043D\u043E
-      \u0448\u0435\u0432\u0435\u043B\u0438\u043B \u0438\u0445 \u0432\u043E\u043B\u043E\u0441\u044B.
-      \u041A\u0430\u0437\u0430\u043B\u043E\u0441\u044C, \u0447\u0442\u043E \u043E\u043D
-      \u043D\u0451\u0441 \u0437\u0430 \u043D\u0438\u043C\u0438 \u0447\u0435\u0439-\u0442\u043E
-      \u0442\u0438\u0445\u0438\u0439 \u0432\u0437\u0433\u043B\u044F\u0434. "
-    index: 133
-    speakerName: ...
-    characterName: ...
-    changeSpeakerName: 0
-    changeCharacterSprite: 0
-    changeBackground: 0
-    characterSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
-    backgroundSprite: {fileID: 21300000, guid: 862342ca41040d545990af60ab51c131, type: 3}
-    isOnRight: 0
-    flipSpeakerImage: 0
-    listenerCharacterName: 
-    isListenerOnRight: 0
-    flipListenerImage: 0
-    showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
-    showItemNotification: 0
-    itemName: "\u041F\u0443\u0442\u044C \u043A \u041C\u0438\u0440\u0443"
-    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
-      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
-    itemRarity: 3
-    itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
-    isJumpLine: 0
-    gotoLineIndex: 0
-    hasChoices: 0
+    hasPathConsequences: 0
+    pathVarients: []
     choices: []
     extraActions:
       showCodePanel: 0
@@ -10354,7 +10684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -53.097168, y: -13.9999695}
+  m_AnchoredPosition: {x: -53.097168, y: -13.999908}
   m_SizeDelta: {x: -1721.2167, y: -351.6134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1771563315
@@ -10552,6 +10882,7 @@ RectTransform:
   - {fileID: 1710625756}
   - {fileID: 1771563314}
   - {fileID: 1359917871}
+  - {fileID: 1041379837}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

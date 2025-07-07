@@ -1,12 +1,21 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using System.Linq;
 
 
 public class DialogueManager : MonoBehaviour
 {
+    private List<GameObject> currentChoiceButtons = new List<GameObject>();
+    private HashSet<string> usedOptionalChoices = new HashSet<string>();
+
+    private int bloodthirst = 0;
+    private int nobility = 0;
+    private int love = 0;
+
     [Header("UI Elements")]
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
@@ -34,6 +43,11 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Items")]
     public ItemManager itemManager;
+
+    [Header("Story Notification UI")]
+    public GameObject storyNotificationPanel;
+    public TextMeshProUGUI storyNotificationText;
+    public Image storyNotificationIcon;
 
     [Header("Collectible View")]
     public GameObject collectiblePanel;
@@ -107,6 +121,29 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueLine line = lines[currentLineIndex];
 
+        string finalText = line.text;
+
+        if (line.hasPathConsequences && line.pathVarients != null && line.pathVarients.Length > 0)
+        {
+            List<DominantPath> dominantPaths = GetDominantPaths();
+
+            foreach (var dominant in dominantPaths)
+            {
+                foreach (var variant in line.pathVarients)
+                {
+                    if (variant.path == dominant && !string.IsNullOrEmpty(variant.overrideText))
+                    {
+                        finalText = variant.overrideText;
+                        goto End; // выходим из обоих циклов сразу
+                    }
+                }
+            }
+        }
+
+    End:
+        dialogueText.text = finalText;
+        nameText.text = line.speakerName;
+
         if (line.extraActions.showCodePanel)
         {
             Debug.Log("Показываем кодовую панель");
@@ -121,7 +158,6 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        dialogueText.text = line.text;
         if (line.changeSpeakerName)
             nameText.text = line.speakerName;
 
@@ -189,6 +225,12 @@ public class DialogueManager : MonoBehaviour
             {
                 line.extraActions.objectToActivate.SetActive(true);
             }
+
+            if (line.choices != null && line.choices.Length > 0)
+            {
+                ShowChoices(line.choices);
+            }
+
         }
 
     }
@@ -257,41 +299,62 @@ public class DialogueManager : MonoBehaviour
 
     private void ShowChoices(DialogueLine.Choice[] choices)
     {
-        Debug.Log("Показываем выборы: " + choices.Length);
+        // Фильтрация опциональных, которые уже были выбраны
+        var filteredChoices = choices
+            .Where(c => c.choiceType != ChoiceType.Optional || !usedOptionalChoices.Contains(c.choiceText))
+            .ToArray();
 
-        foreach (Transform child in choicesContainer.transform)
-        {
-            Destroy(child.gameObject);
-        }
+        // Очистка старых кнопок
+        foreach (var obj in currentChoiceButtons)
+            Destroy(obj);
+        currentChoiceButtons.Clear();
 
         choicesContainer.SetActive(true);
-        Vector2[] positions = GetChoicePositions(choices.Length);
 
-        int index = 0;
-        foreach (var choice in choices)
+        Vector2[] positions = GetChoicePositions(filteredChoices.Length);
+
+        for (int i = 0; i < filteredChoices.Length; i++)
         {
+            var choice = filteredChoices[i];
             GameObject buttonObj = Instantiate(choiceButtonPrefab, choicesContainer.transform);
-            RectTransform rt = buttonObj.GetComponent<RectTransform>();
-            rt.anchoredPosition = positions[index];
+            currentChoiceButtons.Add(buttonObj);
 
-            TextMeshProUGUI buttonText = buttonObj.GetComponentInChildren<TextMeshProUGUI>();
+            RectTransform rect = buttonObj.GetComponent<RectTransform>();
+            rect.anchoredPosition = positions[i];
+
+            var buttonText = buttonObj.GetComponentInChildren<TextMeshProUGUI>();
             buttonText.text = choice.choiceText;
-            Button btn = buttonObj.GetComponent<Button>();
-            Image bg = buttonObj.GetComponent<Image>();
 
-            // Устанавливаем стартовые цвета — без выделения
-            buttonText.color = Color.white;
-            bg.color = new Color(0.2f, 0.2f, 0.2f); // тёмный фон или твой стандарт
+            var bg = buttonObj.GetComponent<Image>();
+            var btn = buttonObj.GetComponent<Button>();
 
-            // Добавляем поведение на наведение
+            // Стиль по умолчанию  
+            if (choice.choiceType == ChoiceType.Required)
+            {
+                bg.color = new Color(0.25f, 0.18f, 0.05f);
+                buttonText.color = new Color(1f, 0.84f, 0.4f);
+            }
+            else
+            {
+                bg.color = new Color(0.2f, 0.2f, 0.2f);
+                buttonText.color = Color.white; 
+            }
+
+            // Наведение
             AddHoverEffects(btn, bg, buttonText, choice.choiceType);
 
-            // Поведение при клике
-            btn.onClick.AddListener(() => OnChoiceSelected(choice));
+            // Логика клика
+            btn.onClick.AddListener(() =>
+            {
+                OnChoiceSelected(choice);
 
-            buttonObj.SetActive(true);
-
-            index++;
+                if (choice.choiceType == ChoiceType.Optional)
+                {
+                    usedOptionalChoices.Add(choice.choiceText);
+                    buttonObj.SetActive(false);
+                    RepositionChoices();
+                }
+            });
         }
     }
 
@@ -334,6 +397,21 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private void RepositionChoices()
+    {
+        var activeButtons = currentChoiceButtons
+            .Where(b => b != null && b.activeSelf)
+            .ToList();
+
+        Vector2[] positions = GetChoicePositions(activeButtons.Count);
+
+        for (int i = 0; i < activeButtons.Count; i++)
+        {
+            RectTransform rect = activeButtons[i].GetComponent<RectTransform>();
+            rect.anchoredPosition = positions[i];
+        }
+    }
+
     public void AddHoverEffects(Button btn, Image bg, TextMeshProUGUI txt, ChoiceType choiceType)
     {
         Color baseTextColor = txt.color;
@@ -370,9 +448,51 @@ public class DialogueManager : MonoBehaviour
 
     private void OnChoiceSelected(DialogueLine.Choice choice)
     {
+       switch (choice.pathReward)
+        {
+            case DominantPath.Bloodthirst:
+                bloodthirst++;
+                break;
+            case DominantPath.Nobility:
+                nobility++;
+                break;
+            case DominantPath.Love:
+                love++;
+                break;
+            case DominantPath.None:
+                break;
+        }
+
+        Debug.Log($"Выбран путь: {choice.pathReward}");
+        Debug.Log($"Очки путей: Кровожадность = {bloodthirst}, Благородство = {nobility}, Любовь = {love}");
+
+        var dominant = GetDominantPaths();
+        Debug.Log("Преобладающий путь(и): " + string.Join(", ", dominant));
+
+        if (choice.choiceType == ChoiceType.Optional)
+        {
+            usedOptionalChoices.Add(choice.choiceText);
+        }
         currentLineIndex = choice.nextLineIndex;
         choicesContainer.SetActive(false);
         ShowLine();
+    }
+
+    private List<DominantPath> GetDominantPaths()
+    {
+        var scores = new Dictionary<DominantPath, int>
+    {
+        { DominantPath.Bloodthirst, bloodthirst },
+        { DominantPath.Nobility, nobility },
+        { DominantPath.Love, love }
+    };
+
+        int maxScore = scores.Values.Max();
+
+        return scores
+            .Where(kv => kv.Value == maxScore)
+            .Select(kv => kv.Key)
+            .ToList();
     }
 
     private void ShowCollectibleView(string title, string content, Sprite icon)
@@ -386,5 +506,18 @@ public class DialogueManager : MonoBehaviour
     private void CloseCollectibleView()
     {
         collectiblePanel.SetActive(false);
+    }
+
+    public void ShowStoryNotification(string text, float duration)
+    {
+        storyNotificationPanel.SetActive(true);
+        storyNotificationText.text = text;
+        StartCoroutine(HideStoryNotificationAfterDelay(duration));
+    }
+
+    private IEnumerator HideStoryNotificationAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        storyNotificationPanel.SetActive(false);
     }
 }

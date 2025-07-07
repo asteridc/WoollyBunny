@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public enum ChoiceType { Optional, Required }
+public enum DominantPath { None, Bloodthirst, Nobility, Love }
 
 [System.Serializable]
 public class DialogueLine
@@ -45,6 +46,18 @@ public class DialogueLine
     public int gotoLineIndex;
     public bool hasChoices;
 
+    // ====== œŒ—À≈ƒ—“¬»ﬂ (¬€¡Œ–€ — œ”“ﬂÃ») ======
+    public bool hasPathConsequences;
+
+    [System.Serializable]
+    public class PathVarients
+    {
+        public DominantPath path;
+        public string overrideText;
+    }
+
+    public PathVarients[] pathVarients;
+
     [System.Serializable]
     public class Choice
     {
@@ -52,6 +65,7 @@ public class DialogueLine
         public int pathPointsBloodthirsty;
         public int pathPointsNoble;
         public int pathPointsLove;
+        public DominantPath pathReward = DominantPath.None;
         public int nextLineIndex;
         public ChoiceType choiceType;
     }

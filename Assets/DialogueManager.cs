@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +21,11 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Image backgroundImage;
     public Image characterImage;
+
+    [SerializeField] private Image backgroundFadeImage;
+    [SerializeField] private float fadeDuration = 2f;
+    [SerializeField] private bool clickToContinueAfterFade = true;
+    [SerializeField] private float autoContinueDelay = 1f;
 
     [Header("Character Sprites")]
     public Image modelLeft;
@@ -182,6 +187,12 @@ public class DialogueManager : MonoBehaviour
 
         if (line.changeBackground && line.backgroundSprite != null)
             backgroundImage.sprite = line.backgroundSprite;
+
+        if (line.changeBackground && line.backgroundSprite != null)
+        {
+            StartCoroutine(ChangeBackgroundWithFade(line.backgroundSprite));
+            return; // ожидание завершения анимации "тьма-свет"
+        }
 
         // Уведомление о получении предмета
         if (line.showItemNotification && itemManager != null)
@@ -585,5 +596,43 @@ public class DialogueManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         storyNotificationPanel.SetActive(false);
+    }
+
+    private IEnumerator ChangeBackgroundWithFade(Sprite newBackground)
+    {
+        // Затемнение
+        yield return StartCoroutine(FadeImage(0f, 1f, fadeDuration));
+    
+        // Смена фона
+        backgroundImage.sprite = newBackground;
+    
+        // Осветление
+        yield return StartCoroutine(FadeImage(1f, 0f, fadeDuration));
+    
+        if (clickToContinueAfterFade)
+        {
+            waitingForClick = true;
+        }
+        else
+        {
+            yield return new WaitForSeconds(autoContinueDelay);
+            ShowNextLine(); // или твоя логика показа следующей реплики
+        }
+    }
+
+    private IEnumerator FadeImage(float from, float to, float duration)
+    {
+        float timer = 0f;
+        Color c = backgroundFadeImage.color;
+    
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            float alpha = Mathf.Lerp(from, to, timer / duration);
+            backgroundFadeImage.color = new Color(c.r, c.g, c.b, alpha);
+            yield return null;
+        }
+    
+        backgroundFadeImage.color = new Color(c.r, c.g, c.b, to);
     }
 }

@@ -30,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     public Sprite eliSprite;
     public Sprite kaneSprite;
     public Sprite hannaSprite;
+    public Sprite keremSprite;
     public Sprite firstAssasinPeacekeeper;
 
     [Header("Choices UI")]
@@ -325,6 +326,7 @@ public class DialogueManager : MonoBehaviour
             case "Илай": return eliSprite;
             case "Кейн": return kaneSprite;
             case "Ханна": return hannaSprite;
+            case "Керем": return keremSprite;
             case "МТ Ассасин": return firstAssasinPeacekeeper;
             default: return null;
         }

@@ -494,7 +494,7 @@ MonoBehaviour:
   waitingForClick: 0
   instructionCountdownText: {fileID: 1742511976}
   waitBeforeCountdown: 2
-  instructionCountdownDuration: 15
+  instructionCountdownDuration: 5
 --- !u!1 &197762851
 GameObject:
   m_ObjectHideFlags: 0
@@ -3484,7 +3484,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.9608154, y: -3.6588135}
+  m_AnchoredPosition: {x: -3.9608154, y: -3.658783}
   m_SizeDelta: {x: 150.66943, y: 4.7817383}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &624267330
@@ -9798,7 +9798,7 @@ MonoBehaviour:
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
       objectToActivate: {fileID: 0}
-      showElectroSubstationMinigame: 0
+      showElectroSubstationMinigame: 1
   - text: "\u0417\u0430\u0432\u0438\u0441\u0438\u043C\u043E\u0441\u0442\u044C \u043D\u0435
       \u043E\u0442 \u043A\u0443\u0440\u0435\u043D\u0438\u044F \u0438\u043B\u0438
       \u0430\u043B\u043A\u043E\u0433\u043E\u043B\u044F, \u0430 \u043D\u0435\u0447\u0442\u043E
@@ -24051,7 +24051,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -53.097046, y: -13.999207}
+  m_AnchoredPosition: {x: -53.096924, y: -13.999237}
   m_SizeDelta: {x: -1721.2167, y: -351.6134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1771563315

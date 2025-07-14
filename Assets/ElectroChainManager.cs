@@ -205,10 +205,10 @@ public class ElectroChainManager : MonoBehaviour
 
     IEnumerator HandlePlayerDeath()
     {
-        yield return StartCoroutine(FadeFromBlack());
-        gameOverPanel.SetActive(true);
-        yield return new WaitForSeconds(1.5f);
         yield return StartCoroutine(FadeToBlack());
+        gameOverPanel.SetActive(true);
+        yield return StartCoroutine(FadeFromBlack());
+        yield return new WaitForSeconds(1.5f);
 
         DialogueManager.Instance.TriggerGameOver();
     }

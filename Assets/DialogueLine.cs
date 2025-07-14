@@ -9,7 +9,6 @@ public class DialogueLine : IStoryNotificationSettings
 {
     [TextArea(2, 5)]
     public string text;
-    public string index;
 
     public string speakerName;
     public string characterName;
@@ -28,6 +27,8 @@ public class DialogueLine : IStoryNotificationSettings
     public string listenerCharacterName;
     public bool isListenerOnRight = false;
     public bool flipListenerImage = false;
+
+ // ïîêàçûâàòü èíòåðàêòèâíûå òî÷êè
 
     // ====== ÏÎÊÀÇ ÊÎËËÅÊÖÈÎÍÍÎÃÎ ÏÐÅÄÌÅÒÀ (ÍÅ ×ÅÐÅÇ ÈÍÂÅÍÒÀÐÜ) ======
     public bool showCollectibleView = false;
@@ -114,6 +115,8 @@ public class DialogueLine : IStoryNotificationSettings
         TMP_FontAsset IStoryNotificationSettings.customFont => customFont;
     }
 
+    public bool isEndOfChapter = false;
+
     public PathVarients[] pathVarients;
 
     [System.Serializable]
@@ -133,10 +136,18 @@ public class DialogueLine : IStoryNotificationSettings
     [System.Serializable]
     public class ExtraActions
     {
+        [Header("Code Panel")]
         public bool showCodePanel = false;
         public bool showNotePanel = false;
         public bool stopDialogueAfterThisLine = false;
         public GameObject objectToActivate;
+
+        [Header("Electro Substation")]
+        public bool showElectroSubstationMinigame;
+        public bool showInteractionPoints = false;
+
+        [Header("The Final Line")]
+        public bool isEndOfChapter = false;
     }
 
     public ExtraActions extraActions;

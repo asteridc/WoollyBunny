@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 using System.Linq;
+using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 
 public class DialogueManager : MonoBehaviour
@@ -16,16 +18,22 @@ public class DialogueManager : MonoBehaviour
     private int nobility = 0;
     private int love = 0;
 
+    [Header("Тестовый запуск")]
+    [Tooltip("Номер строки (с 1), с которой начать диалог при запуске игры.")]
+    [SerializeField] private int startLineNumber = 1;
+
     [Header("UI Elements")]
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public Image backgroundImage;
     public Image characterImage;
+    public GameObject dialoguePanel;
 
     [SerializeField] private Image backgroundFadeImage;
     [SerializeField] private float fadeDuration = 2f;
     [SerializeField] private bool clickToContinueAfterFade = true;
     [SerializeField] private float autoContinueDelay = 1f;
+    public bool waitingForClick = false;
 
     [Header("Character Sprites")]
     public Image modelLeft;
@@ -38,6 +46,9 @@ public class DialogueManager : MonoBehaviour
     public Sprite keremSprite;
     public Sprite firstAssasinPeacekeeper;
 
+    [Header("Interaction")]
+    public GameObject interactionPointGroup;
+
     [Header("Choices UI")]
     public GameObject choicesContainer;
     public GameObject choiceButtonPrefab;
@@ -46,6 +57,13 @@ public class DialogueManager : MonoBehaviour
     public CodePanelController codePanelController;
     public CodePanelUI codePanelUI;
     private int currentLineIndex = 0;
+    public GameObject miniGamePanel;
+    public ElectroChainManager electroChainManager;
+    [SerializeField] public Image blackOverlay;
+    [SerializeField] public float FadeDuration = 1.5f;
+    public GameObject gameOverPanel;
+    public TextMeshProUGUI respawnCountdownText;
+    public float respawnTime = 13f;
 
     [Header("Items")]
     public ItemManager itemManager;
@@ -70,7 +88,24 @@ public class DialogueManager : MonoBehaviour
         if (collectibleCloseButton != null)
             collectibleCloseButton.onClick.AddListener(CloseCollectibleView);
 
+        // Выставляем стартовый индекс
+        currentLineIndex = Mathf.Clamp(startLineNumber - 1, 0, lines.Count - 1);
+
         ShowLine();
+    }
+
+
+    void Update()
+    {
+        if (waitingForClick && Input.GetMouseButtonDown(0))
+        {
+            waitingForClick = false;
+            dialoguePanel.SetActive(true);
+            modelLeft.gameObject.SetActive(true);
+            modelRight.gameObject.SetActive(true);
+
+            ShowLine(); // Повторный показ той же строки, теперь уже с UI
+        }
     }
 
     public void ShowNextLine()
@@ -107,7 +142,7 @@ public class DialogueManager : MonoBehaviour
         // Проверка на jump после показа строки
         if (lines[currentLineIndex].isJumpLine)
         {
-            currentLineIndex = lines[currentLineIndex].gotoLineIndex;
+            currentLineIndex = lines[currentLineIndex].gotoLineIndex - 1;
             ShowLine();
             return;
         }
@@ -116,16 +151,35 @@ public class DialogueManager : MonoBehaviour
         currentLineIndex++;
         if (currentLineIndex >= lines.Count)
         {
-            Debug.Log("Диалог завершён");
-            return;
+            ShowEndOfChapterPanel();
         }
 
         ShowLine();
     }
 
+    public void JumpToLine(int lineIndex) // в случае интерактива
+    {
+        if (lineIndex >= 0 && lineIndex < lines.Count)
+        {
+            currentLineIndex = lineIndex - 1;
+            ShowNextLine();
+        }
+        else
+        {
+            Debug.LogWarning($"JumpToLine: недопустимый индекс строки {lineIndex}");
+        }
+    }
+
     private void ShowLine()
     {
         DialogueLine line = lines[currentLineIndex];
+
+        if (line.changeBackground && line.backgroundSprite != null)
+        {
+            StartCoroutine(HandleBackgroundTransition(line));
+            return;
+        }
+
         string finalText = line.text;
 
         if (line.hasPathConsequences && line.pathVarients != null && line.pathVarients.Length > 0)
@@ -186,15 +240,6 @@ public class DialogueManager : MonoBehaviour
         if (line.changeCharacterSprite && line.characterSprite != null)
             characterImage.sprite = line.characterSprite;
 
-        if (line.changeBackground && line.backgroundSprite != null)
-            backgroundImage.sprite = line.backgroundSprite;
-
-        if (line.changeBackground && line.backgroundSprite != null)
-        {
-            StartCoroutine(ChangeBackgroundWithFade(line.backgroundSprite));
-            return; // ожидание завершения анимации "тьма-свет"
-        }
-
         // Уведомление о получении предмета
         if (line.showItemNotification && itemManager != null)
         {
@@ -210,26 +255,31 @@ public class DialogueManager : MonoBehaviour
         }
 
         // Сюжетное уведомление
-            if (line.showStoryNotification)
-            {
-                ShowStoryNotification(
-                    line.storyNotificationText,
-                    line.storyNotificationDuration > 0 ? line.storyNotificationDuration : 5f,
-                    line.storyNotificationIcon,
-                    line.storyNotificationTextColor,
-                    line.storyNotificationIconColor,
-                    line.storyNotificationFontSize,
-                    line.useCustomFont ? line.customFont : null,
-                    line.isBold,
-                    line.isItalic,
-                    line.isUppercase
-                );
-            }
+        if (line.showStoryNotification)
+        {
+            ShowStoryNotification(
+                line.storyNotificationText,
+                line.storyNotificationDuration > 0 ? line.storyNotificationDuration : 5f,
+                line.storyNotificationIcon,
+                line.storyNotificationTextColor,
+                line.storyNotificationIconColor,
+                line.storyNotificationFontSize,
+                line.useCustomFont ? line.customFont : null,
+                line.isBold,
+                line.isItalic,
+                line.isUppercase
+            );
+        }
 
         // Просмотр коллекционного предмета (письмо и т. д.)
         if (line.showCollectibleView && collectiblePanel != null)
         {
             ShowCollectibleView(line.collectibleTitle, line.collectibleContent, line.collectibleIcon);
+        }
+
+        if (line.extraActions.showInteractionPoints)
+        {
+            ShowInteractionPoints();
         }
 
         // Показываем персонажей
@@ -271,14 +321,65 @@ public class DialogueManager : MonoBehaviour
                 line.extraActions.objectToActivate.SetActive(true);
             }
 
+            if (line.extraActions.showElectroSubstationMinigame)
+            {
+                if (ElectroChainManager.Instance != null)
+                {
+                    ElectroChainManager.Instance.ShowUI();
+                }
+                else
+                {
+                    Debug.LogError("ElectroChainManager.Instance не инициализирован!");
+                }
+            }
+
             if (line.choices != null && line.choices.Length > 0)
             {
                 ShowChoices(line.choices);
             }
 
+            if (line.isEndOfChapter)
+            {
+                ShowEndOfChapterPanel();
+            }
+
         }
 
     }
+
+    public void ShowInteractionPoints()
+    {
+        if (interactionPointGroup == null)
+        {
+            Debug.LogWarning("interactionPointGroup не назначен");
+            return;
+        }
+
+        dialoguePanel.SetActive(false);
+        interactionPointGroup.SetActive(true);
+
+        var points = interactionPointGroup.GetComponentsInChildren<InteractionPoint>(true);
+
+        int shownCount = 0;
+        foreach (var point in points)
+        {
+            if (!point.wasUsed || point.isRepeatable)
+            {
+                point.Show();
+                shownCount++;
+            }
+            else
+            {
+                point.Hide();
+            }
+        }
+
+        Debug.Log($"Показано точек: {shownCount}");
+    }
+
+
+
+
 
     private void ShowCharacters(DialogueLine line)
     {
@@ -383,7 +484,7 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 bg.color = new Color(0.2f, 0.2f, 0.2f);
-                buttonText.color = Color.white; 
+                buttonText.color = Color.white;
             }
 
             // Наведение
@@ -468,7 +569,8 @@ public class DialogueManager : MonoBehaviour
         // Наведение
         var pointerEnter = new EventTrigger.Entry();
         pointerEnter.eventID = EventTriggerType.PointerEnter;
-        pointerEnter.callback.AddListener((eventData) => {
+        pointerEnter.callback.AddListener((eventData) =>
+        {
             if (choiceType == ChoiceType.Required)
             {
                 bg.color = new Color(1f, 0.84f, 0.4f); // янтарный
@@ -485,7 +587,8 @@ public class DialogueManager : MonoBehaviour
         // Выход
         var pointerExit = new EventTrigger.Entry();
         pointerExit.eventID = EventTriggerType.PointerExit;
-        pointerExit.callback.AddListener((eventData) => {
+        pointerExit.callback.AddListener((eventData) =>
+        {
             bg.color = baseBGColor;
             txt.color = baseTextColor;
         });
@@ -494,7 +597,7 @@ public class DialogueManager : MonoBehaviour
 
     private void OnChoiceSelected(DialogueLine.Choice choice)
     {
-       switch (choice.pathReward)
+        switch (choice.pathReward)
         {
             case DominantPath.Bloodthirst:
                 bloodthirst++;
@@ -519,7 +622,7 @@ public class DialogueManager : MonoBehaviour
         {
             usedOptionalChoices.Add(choice.choiceText);
         }
-        currentLineIndex = choice.nextLineIndex;
+        currentLineIndex = choice.nextLineIndex - 1;
         choicesContainer.SetActive(false);
         ShowLine();
     }
@@ -604,13 +707,13 @@ public class DialogueManager : MonoBehaviour
     {
         // Затемнение
         yield return StartCoroutine(FadeImage(0f, 1f, fadeDuration));
-    
+
         // Смена фона
         backgroundImage.sprite = newBackground;
-    
+
         // Осветление
         yield return StartCoroutine(FadeImage(1f, 0f, fadeDuration));
-    
+
         if (clickToContinueAfterFade)
         {
             waitingForClick = true;
@@ -626,7 +729,7 @@ public class DialogueManager : MonoBehaviour
     {
         float timer = 0f;
         Color c = backgroundFadeImage.color;
-    
+
         while (timer < duration)
         {
             timer += Time.deltaTime;
@@ -634,7 +737,206 @@ public class DialogueManager : MonoBehaviour
             backgroundFadeImage.color = new Color(c.r, c.g, c.b, alpha);
             yield return null;
         }
-    
+
         backgroundFadeImage.color = new Color(c.r, c.g, c.b, to);
+    }
+
+    private void FadeToBlackThenShowBackground(Sprite newBackground)
+    {
+        backgroundFadeImage.gameObject.SetActive(true);
+        backgroundFadeImage.color = new Color(0, 0, 0, 0);
+
+        backgroundFadeImage.DOFade(1f, fadeDuration).OnComplete(() =>
+        {
+            backgroundImage.sprite = newBackground;
+
+            // Осветление
+            backgroundFadeImage.DOFade(0f, fadeDuration).OnComplete(() =>
+            {
+                backgroundFadeImage.gameObject.SetActive(false);
+                // Здесь либо вызываем ShowLine(), либо ждём нажатия
+            });
+        });
+    }
+
+    private IEnumerator HandleBackgroundTransition(DialogueLine line)
+    {
+        line.changeBackground = false;
+        yield return StartCoroutine(FadeToBlack());
+
+        // Скрываем UI
+        dialoguePanel.SetActive(false);
+        modelLeft.gameObject.SetActive(false);
+        modelRight.gameObject.SetActive(false);
+
+        // Меняем фон
+        backgroundImage.sprite = line.backgroundSprite;
+
+        yield return StartCoroutine(FadeFromBlack());
+
+        if (clickToContinueAfterFade)
+        {
+            waitingForClick = true;
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+        }
+        else
+        {
+            yield return new WaitForSeconds(autoContinueDelay);
+        }
+
+        ShowLine();
+    }
+
+    private IEnumerator FadeToBlack()
+    {
+        backgroundFadeImage.raycastTarget = true;
+        Color color = backgroundFadeImage.color;
+        float elapsed = 0f;
+
+        while (elapsed < fadeDuration)
+        {
+            float t = elapsed / fadeDuration;
+            color.a = Mathf.Lerp(0f, 1f, t);
+            backgroundFadeImage.color = color;
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        color.a = 1f;
+        backgroundFadeImage.color = color;
+    }
+
+    private IEnumerator FadeFromBlack()
+    {
+        Color color = backgroundFadeImage.color;
+        float elapsed = 0f;
+
+        while (elapsed < fadeDuration)
+        {
+            float t = elapsed / fadeDuration;
+            color.a = Mathf.Lerp(1f, 0f, t);
+            backgroundFadeImage.color = color;
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        color.a = 0f;
+        backgroundFadeImage.color = color;
+        backgroundFadeImage.raycastTarget = false;
+    }
+
+    public static DialogueManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
+    public void ContinueDialogue(bool success)
+    {
+        if (success)
+        {
+            Debug.Log("Мини-игра пройдена. Продолжаем диалог.");
+            ShowNextLine(); // Или другой метод для перехода к следующей линии
+        }
+        else
+        {
+            Debug.Log("Мини-игра провалена. Можно вызвать альтернативный диалог или конец.");
+            // Например:
+            // ShowFailureLine(); // или LoadFailureDialogue();
+        }
+    }
+
+    public bool isGameOverActive = false;
+
+    public void TriggerGameOver()
+    {
+        if (isGameOverActive) return;
+        isGameOverActive = true;
+    
+        // Экран смерти уже активирован в HandlePlayerDeath
+        // Здесь только осветляем
+        blackOverlay.DOFade(0f, FadeDuration).OnComplete(() =>
+        {
+            blackOverlay.gameObject.SetActive(false);
+    
+            // Показываем таймер
+            respawnCountdownText.gameObject.SetActive(true);
+            StartCoroutine(RespawnCountdown());
+        });
+    }
+
+    IEnumerator RespawnCountdown()
+    {
+        float timer = respawnTime;
+
+        while (timer > 0)
+        {
+            respawnCountdownText.text = "0:" + Mathf.CeilToInt(timer);
+            yield return new WaitForSeconds(1f);
+            timer -= 1f;
+        }
+
+        // 7. По окончании таймера скрываем экран смерти и таймер,
+        // показываем мини-игру и сбрасываем флаг
+        respawnCountdownText.gameObject.SetActive(false);
+        ElectroChainManager.Instance.ResetMinigameState();
+        gameOverPanel.SetActive(false);
+        miniGamePanel.SetActive(true);
+
+        ResetGameOverFlag();
+
+        // Дополнительно, сюда можно добавить вызов метода рестарта мини-игры
+    }
+
+    public void ResetGameOverFlag()
+    {
+        isGameOverActive = false;
+    }
+
+    public void HideDialoguePanel()
+    {
+        dialoguePanel.SetActive(false);
+    }
+
+    public GameObject endOfChapterPanel;
+
+    public void ShowEndOfChapterPanel()
+    {
+        StartCoroutine(ShowEndOfChapterRoutine());
+    }
+
+    public void OnContinueToMainMenu()
+    {
+        StartCoroutine(OnContinueToNextChapter());
+    }
+
+    private IEnumerator ShowEndOfChapterRoutine()
+    {
+        // Плавное затемнение
+        blackOverlay.gameObject.SetActive(true);
+        yield return blackOverlay.DOFade(1f, FadeDuration).WaitForCompletion();
+
+        // Отключаем диалог и выборы
+        dialoguePanel.SetActive(false);
+        choicesContainer.SetActive(false);
+
+        // Показываем панель конца главы
+        endOfChapterPanel.SetActive(true);
+
+        // Плавное осветление
+        yield return blackOverlay.DOFade(0f, FadeDuration).WaitForCompletion();
+
+        blackOverlay.gameObject.SetActive(false);
+    }
+
+    public IEnumerator OnContinueToNextChapter()
+    {
+        float fadeDurationToMenu = 6f; // другая длительность для этой анимации
+        yield return blackOverlay.DOFade(1f, fadeDurationToMenu).WaitForCompletion();
+        SceneManager.LoadScene("woollybunny_PC");
     }
 }

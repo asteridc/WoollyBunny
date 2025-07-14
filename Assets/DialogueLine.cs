@@ -9,7 +9,6 @@ public class DialogueLine : IStoryNotificationSettings
 {
     [TextArea(2, 5)]
     public string text;
-    public string index;
 
     public string speakerName;
     public string characterName;
@@ -133,10 +132,14 @@ public class DialogueLine : IStoryNotificationSettings
     [System.Serializable]
     public class ExtraActions
     {
+        [Header("Code Panel")]
         public bool showCodePanel = false;
         public bool showNotePanel = false;
         public bool stopDialogueAfterThisLine = false;
         public GameObject objectToActivate;
+
+        [Header("Electro Substation")]
+        public bool showElectroSubstationMinigame;
     }
 
     public ExtraActions extraActions;

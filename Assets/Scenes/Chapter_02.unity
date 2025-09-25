@@ -633,17 +633,12 @@ MonoBehaviour:
   - {fileID: 1786758145}
   - {fileID: 1308318819}
   correctSequence: 03000000010000000200000004000000
-  startingTools:
-  - {fileID: 647391638}
-  - {fileID: 2117307231}
-  - {fileID: 1440865964}
-  - {fileID: 2090303566}
-  - {fileID: 729821773}
+  startingTools: []
   attemptsLeft: 3
   attemptsText: {fileID: 750699650}
-  miniGameGroup: {fileID: 148850204}
+  miniGameGroup: {fileID: 0}
   exitButton: {fileID: 442315551}
-  likeIcon: {fileID: 1407127688}
+  likeIcon: {fileID: 0}
   autoCloseDelay: 3
   electroChainUIPanel: {fileID: 458465015}
   instructionsPanel: {fileID: 1878170141}
@@ -655,7 +650,7 @@ MonoBehaviour:
   clickToContinueAfterFade: 1
   autoContinueDelay: 1
   waitingForClick: 0
-  triggerLineAfterWin: 281
+  triggerLineAfterWin: 0
   instructionCountdownText: {fileID: 748926444}
   waitBeforeCountdown: 2
   instructionCountdownDuration: 15
@@ -4776,7 +4771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fee7c761eeb703428f4ca33c44a679a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLineNumber: 1
+  startLineNumber: 46
   nameText: {fileID: 1004804791}
   dialogueText: {fileID: 1396328168}
   backgroundImage: {fileID: 1607042818}
@@ -7147,9 +7142,1007 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
+  - text: "\u041E\u043D \u043E\u0442\u043A\u0440\u044B\u043B \u0433\u043B\u0430\u0437\u0430
+      \u0432\u043E \u0432\u0442\u043E\u0440\u043E\u0439 \u0440\u0430\u0437 - \u0442\u0435\u043F\u0435\u0440\u044C
+      \u043F\u043E-\u043D\u0430\u0441\u0442\u043E\u044F\u0449\u0435\u043C\u0443."
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 1
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 32c2a9d7dd732c346b559971aad183e4, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 \u0431\u044B\u043B\u0430 \u0442\u0438\u0445\u043E\u0439.
+      \u041F\u0440\u043E\u0441\u0442\u0430\u044F \u043C\u0435\u0431\u0435\u043B\u044C,
+      \u0431\u043B\u0435\u0434\u043D\u044B\u0435 \u0441\u0442\u0435\u043D\u044B,
+      \u0437\u0430\u043D\u0430\u0432\u0435\u0441\u043A\u0430, \u0434\u0440\u043E\u0436\u0430\u0449\u0430\u044F
+      \u043E\u0442 \u0432\u0435\u0442\u0440\u0430."
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u0412\u0441\u0451 \u0432\u044B\u0433\u043B\u044F\u0434\u0435\u043B\u043E
+      \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u043D\u043E\u0440\u043C\u0430\u043B\u044C\u043D\u044B\u043C,
+      \u0431\u0443\u0434\u0442\u043E \u0441\u043E\u043D \u043F\u044B\u0442\u0430\u043B\u0441\u044F
+      \u043F\u0440\u0438\u043A\u0440\u044B\u0442\u044C\u0441\u044F \u0447\u0443\u0436\u043E\u0439
+      \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C\u044E."
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u041D\u0430 \u043A\u0440\u043E\u0432\u0430\u0442\u0438 \u043D\u0430\u043F\u0440\u043E\u0442\u0438\u0432
+      \u043B\u0435\u0436\u0430\u043B\u0430 \u0425\u0430\u043D\u043D\u0430. \u041E\u043D\u0430
+      \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u0440\u043E\u0441\u043D\u0443\u043B\u0430\u0441\u044C,
+      \u0433\u043B\u0430\u0437\u0430 \u0435\u0449\u0451 \u0431\u044B\u043B\u0438
+      \u043F\u043E\u043B\u0443\u0437\u0430\u043A\u0440\u044B\u0442\u044B."
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u0422\u044B \u0432\u043E\u0440\u043E\u0447\u0430\u043B\u0441\u044F \u0432\u0441\u044E
+      \u043D\u043E\u0447\u044C. \u0421\u043D\u0438\u043B\u043E\u0441\u044C \u0447\u0442\u043E-\u0442\u043E?"
+    speakerName: "\u0425\u0430\u043D\u043D\u0430"
+    characterName: "\u0425\u0430\u043D\u043D\u0430"
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: 
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 1
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices:
+    - choiceText: "\u0414\u0430, \u043D\u043E \u044F \u043D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u044E,
+        \u0447\u0442\u043E.."
+      pathPointsBloodthirsty: 0
+      pathPointsNoble: 0
+      pathPointsLove: 0
+      pathReward: 0
+      nextLineIndex: 52
+      choiceType: 1
+    - choiceText: "\u041F\u0440\u043E\u0441\u0442\u043E \u043A\u043E\u0448\u043C\u0430\u0440."
+      pathPointsBloodthirsty: 0
+      pathPointsNoble: 0
+      pathPointsLove: 0
+      pathReward: 0
+      nextLineIndex: 0
+      choiceType: 1
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u0414\u0430, \u043D\u043E \u044F \u0434\u043E \u043A\u043E\u043D\u0446\u0430
+      \u043D\u0435 \u043C\u043E\u0433\u0443 \u043F\u043E\u043D\u044F\u0442\u044C,
+      \u0447\u0442\u043E \u0438\u043C\u0435\u043D\u043D\u043E."
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u042F \u043F\u043E\u043C\u043D\u044E \u0442\u043E\u043B\u044C\u043A\u043E
+      \u043F\u0440\u043E\u0445\u043E\u0434.."
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u0425\u0430\u043D\u043D\u0430 \u043F\u043E\u0434\u043E\u0434\u0432\u0438\u043D\u0443\u043B\u0430\u0441\u044C,
+      \u0434\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0438\u0440\u0443\u044F \u0438\u043D\u0442\u0435\u0440\u0435\u0441
+      \u043A \u0440\u0430\u0441\u0441\u043A\u0430\u0437\u0443 \u0441\u043D\u0430.
+      \u041E\u0442 \u0441\u043E\u043D\u043B\u0438\u0432\u043E\u0441\u0442\u0438 \u043D\u0435
+      \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u0438 \u0441\u043B\u0435\u0434\u0430."
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u041F\u0440\u043E\u0445\u043E\u0434? \u041A\u0443\u0434\u0430?"
+    speakerName: "\u0425\u0430\u043D\u043D\u0430"
+    characterName: "\u0425\u0430\u043D\u043D\u0430"
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u0418\u043B\u0430\u0439 \u043E\u0442\u0447\u0435\u0442\u043B\u0438\u0432\u043E
+      \u0432\u0438\u0434\u0435\u043B \u043F\u0440\u043E\u0441\u0442\u0440\u0430\u043D\u0441\u0442\u0432\u043E,
+      \u0432 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0431\u044B\u043B, \u043D\u043E
+      \u043F\u0430\u043C\u044F\u0442\u044C \u0441\u043B\u043E\u0432\u043D\u043E \u043D\u0435
+      \u0434\u0430\u0432\u0430\u043B\u0430 \u0435\u043C\u0443 \u043E\u043F\u0438\u0441\u0430\u0442\u044C
+      \u0443\u0432\u0438\u0434\u0435\u043D\u043D\u044B\u0435 \u0430\u0431\u0435\u0440\u0440\u0430\u0446\u0438\u0438."
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u041D\u0435 \u0437\u043D\u0430\u044E\u2026 \u0412 \u041D\u0438\u043A\u0443\u0434\u0430.
+      \u042F \u043D\u0430\u0445\u043E\u0434\u0438\u043B\u0441\u044F \u0432 \u043C\u0435\u0441\u0442\u0435
+      \u0434\u043E \u0431\u043E\u043B\u0438 \u0437\u043D\u0430\u043A\u043E\u043C\u043E\u043C,
+      \u043D\u043E \u043F\u043E\u0447\u0435\u043C\u0443-\u0442\u043E \u043D\u0435
+      \u043C\u043E\u0433\u0443 \u0432\u0441\u043F\u043E\u043C\u043D\u0438\u0442\u044C,
+      \u0447\u0442\u043E \u044D\u0442\u043E \u0431\u044B\u043B\u043E \u0437\u0430
+      \u043C\u0435\u0441\u0442\u043E."
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u0412\u0440\u0435\u043C\u044F \u0437\u043D\u0430\u0442\u043D\u043E \u043F\u043E\u0442\u0430\u0441\u043A\u0430\u043B\u043E
+      \u0435\u0433\u043E."
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u0423 \u0425\u0430\u043D\u043D\u044B \u0431\u044B\u043B\u043E \u043C\u043D\u043E\u0433\u043E
+      \u0432\u043E\u043F\u0440\u043E\u0441\u043E\u0432, \u043D\u043E \u0434\u0430\u0431\u044B
+      \u043D\u0435 \u0434\u0430\u0432\u0438\u0442\u044C \u043D\u0430 \u0418\u043B\u0430\u044F,
+      \u0437\u0430\u0434\u0430\u043B\u0430 \u0432\u0441\u0435\u0433\u043E \u043E\u0434\u0438\u043D."
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u0427\u0442\u043E \u0431\u044B\u043B\u043E \u0432 \u044D\u0442\u043E\u043C
+      \u041D\u0438\u043A\u0443\u0434\u0430?"
+    speakerName: "\u0425\u0430\u043D\u043D\u0430"
+    characterName: "\u0425\u0430\u043D\u043D\u0430"
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    isListenerOnRight: 1
+    flipListenerImage: 1
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u041A\u0440\u0438\u043A\u0438. \u0418\u0441\u0442\u043E\u0448\u043D\u044B\u0435
+      \u043A\u0440\u0438\u043A\u0438 \u0434\u0443\u0448, \u043F\u044B\u0442\u0430\u044E\u0449\u0438\u0445\u0441\u044F
+      \u043C\u043D\u0435 \u0447\u0442\u043E-\u0442\u043E \u0441\u043A\u0430\u0437\u0430\u0442\u044C. "
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u041E\u0442\u0447\u0435\u0442\u043B\u0438\u0432\u043E \u043F\u043E\u043C\u043D\u044E
+      \u043B\u0438\u0448\u044C \u0441\u043B\u043E\u0432\u043E: \xAB\u0412\u0435\u0440\u043D\u0438\u0441\u044C\xBB."
+    speakerName: "\u0418\u043B\u0430\u0439"
+    characterName: "\u0418\u043B\u0430\u0439"
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 1
+    flipSpeakerImage: 1
+    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u0425\u0430\u043D\u043D\u0430 \u043D\u0435 \u043D\u0430\u0448\u043B\u0430,
+      \u0447\u0442\u043E \u043E\u0442\u0432\u0435\u0442\u0438\u0442\u044C \u043D\u0430
+      \u0442\u0430\u043A\u043E\u0435 \u043F\u043E\u0441\u043B\u0430\u043D\u0438\u0435.
+      \u0412 \u0433\u043E\u043B\u043E\u0432\u0435 \u0431\u044B\u043B\u0438 \u0442\u044B\u0441\u044F\u0447\u0438
+      \u0434\u043E\u0432\u043E\u0434\u043E\u0432, \u043D\u043E \u043D\u0438 \u043E\u0434\u0438\u043D
+      \u0438\u0437 \u043D\u0438\u0445 \u043E\u043D\u0430 \u0440\u0435\u0448\u0438\u043B\u0430
+      \u043D\u0435 \u043E\u0437\u0432\u0443\u0447\u0438\u0432\u0430\u0442\u044C."
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u0413\u0435\u0440\u043E\u0438 \u0437\u0430\u043C\u043E\u043B\u0447\u0430\u043B\u0438.
+      \u0418 \u043A\u0430\u0436\u0434\u044B\u0439 \u0431\u0443\u0434\u0442\u043E
+      \u043F\u044B\u0442\u0430\u043B\u0441\u044F \u0441\u0444\u043E\u0440\u043C\u0443\u043B\u0438\u0440\u043E\u0432\u0430\u0442\u044C
+      \u0441\u0432\u043E\u0438 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0435
+      \u043C\u044B\u0441\u043B\u0438, \u043D\u043E \u0432\u0441\u0435 \u043D\u0438\u043A\u0430\u043A
+      \u043D\u0435 \u0440\u0435\u0448\u0430\u043B\u0441\u044F \u0438\u0445 \u043E\u0433\u043B\u0430\u0441\u0438\u0442\u044C."
+    speakerName: ...
+    characterName: ...
+    changeSpeakerName: 1
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 29875e0490bb04743a90864676f3becc, type: 3}
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationIconColor: {r: 1, g: 1, b: 1, a: 1}
+    storyNotificationFontSize: 36
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    choices: []
+    extraActions:
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
   defaultFont: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   isGameOverActive: 0
-  endOfChapterPanel: {fileID: 1945700969}
+  endOfChapterPanel: {fileID: 0}
 --- !u!1 &728946701
 GameObject:
   m_ObjectHideFlags: 0

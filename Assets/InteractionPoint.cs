@@ -43,13 +43,19 @@ public class InteractionPoint : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (launchesMinigame && minigamePanel != null)
         {
             minigamePanel.SetActive(true);
-            DialogueManager.Instance.dialoguePanel.SetActive(false);
-            ElectroChainManager.Instance.ShowUI();
+            DialogueManager.Instance.HideDialoguePanel(() =>
+            {
+                minigamePanel.SetActive(true);
+                ElectroChainManager.Instance.ShowUI();
+            });
         }
         else
         {
-            DialogueManager.Instance.JumpToLine(targetLineNumber - 1);
-            DialogueManager.Instance.dialoguePanel.SetActive(true);
+            DialogueManager.Instance.HideDialoguePanel(() =>
+            {
+                DialogueManager.Instance.JumpToLine(targetLineNumber - 1);
+                DialogueManager.Instance.ShowDialoguePanel();
+            });
         }
     }
 

@@ -36,7 +36,7 @@ public class CodePanelUI : MonoBehaviour
 
     void Start()
     {
-        dialogWindow.SetActive(false);
+        DialogueManager.Instance.HideDialoguePanel();
 
         if (noteButton != null)
         {
@@ -46,12 +46,15 @@ public class CodePanelUI : MonoBehaviour
 
     public void ShowCodePanel()
     {
-        Debug.Log("🔓 CodePanelUI: Открываем панель");
-        currentInput = "";
-        inputText.text = "";
-        inputText.color = Color.white;
-        codePanel.SetActive(true);
-        dialogWindow.SetActive(false);
+        DialogueManager.Instance.HideDialoguePanel(() =>
+        {
+            Debug.Log("🔓 CodePanelUI: Открываем панель");
+            currentInput = "";
+            inputText.text = "";
+            inputText.color = Color.white;
+            codePanel.SetActive(true);
+        });
+        
     }
 
     public void OnDigitPress(string digit)
@@ -96,7 +99,7 @@ public class CodePanelUI : MonoBehaviour
         {
             Debug.Log("✅ CodePanelUI: Код верен, закрываем панель и продолжаем");
             codePanel.SetActive(false);
-            dialogWindow.SetActive(true);
+            DialogueManager.Instance.ShowDialoguePanel();
             OnCodeCorrect?.Invoke();
         }
         else

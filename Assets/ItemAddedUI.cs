@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using DG.Tweening;
 
 public class ItemAddedUI : MonoBehaviour
 {
@@ -10,29 +11,20 @@ public class ItemAddedUI : MonoBehaviour
     public Image itemIcon;
     public GameObject panel;
 
-    public List<ItemNotification> notifications; // <--- Вот они
+    [SerializeField] private CanvasGroup canvasGroup;
+
+    public List<ItemNotification> notifications;
     private int currentIndex = 0;
 
     public float displayTime = 3f;
-    private float timer;
-    private bool isShowing = false;
+
+    private Tween currentTween;
 
     void Start()
     {
         panel.SetActive(false);
-    }
-
-    void Update()
-    {
-        if (isShowing)
-        {
-            timer -= Time.deltaTime;
-            if (timer <= 0f)
-            {
-                panel.SetActive(false);
-                isShowing = false;
-            }
-        }
+        canvasGroup.alpha = 0f;
+        panel.transform.localScale = Vector3.one * 0.9f;
     }
 
     public void ShowNotification(int index)
@@ -43,28 +35,43 @@ public class ItemAddedUI : MonoBehaviour
             return;
         }
 
-        ItemNotification data = notifications[index];
-
-        itemNameText.text = data.itemName;
-        itemTypeText.text = data.itemType;
-        itemTypeText.color = GetColorByRarity(data.rarity);
-        itemIcon.sprite = data.itemIcon;
-
-        panel.SetActive(true);
-        timer = displayTime;
-        isShowing = true;
+        ShowInternal(notifications[index]);
     }
 
     public void ShowNotificationDirect(ItemNotification item)
     {
+        ShowInternal(item);
+    }
+
+    // ---------------- CORE ----------------
+
+    private void ShowInternal(ItemNotification item)
+    {
+        // Заполняем данные
         itemNameText.text = item.itemName;
         itemTypeText.text = item.itemType;
         itemTypeText.color = GetColorByRarity(item.rarity);
         itemIcon.sprite = item.itemIcon;
 
         panel.SetActive(true);
-        timer = displayTime;
-        isShowing = true;
+
+        // Убиваем прошлую анимацию
+        currentTween?.Kill();
+
+        canvasGroup.alpha = 0f;
+        panel.transform.localScale = Vector3.one * 0.9f;
+
+        // Анимация
+        currentTween = DOTween.Sequence()
+            .Append(canvasGroup.DOFade(1f, 0.35f).SetEase(Ease.OutQuad))
+            .Join(panel.transform.DOScale(1f, 0.35f).SetEase(Ease.OutQuad))
+            .AppendInterval(displayTime)
+            .Append(canvasGroup.DOFade(0f, 0.25f).SetEase(Ease.InQuad))
+            .Join(panel.transform.DOScale(0.9f, 0.25f).SetEase(Ease.InQuad))
+            .OnComplete(() =>
+            {
+                panel.SetActive(false);
+            });
     }
 
     private Color GetColorByRarity(ItemRarity rarity)
@@ -72,13 +79,14 @@ public class ItemAddedUI : MonoBehaviour
         switch (rarity)
         {
             case ItemRarity.Common: return Color.gray;
-            case ItemRarity.Rare: return new Color(0.2f, 0.6f, 1f);       // синий
-            case ItemRarity.Epic: return new Color(0.6f, 0.2f, 0.8f);     // фиолетовый
-            case ItemRarity.Legendary: return new Color(1f, 0.6f, 0f);    // оранжевый
+            case ItemRarity.Rare: return new Color(0.2f, 0.6f, 1f);
+            case ItemRarity.Epic: return new Color(0.6f, 0.2f, 0.8f);
+            case ItemRarity.Legendary: return new Color(1f, 0.6f, 0f);
             default: return Color.white;
         }
     }
 }
+
 
 public enum ItemRarity
 {

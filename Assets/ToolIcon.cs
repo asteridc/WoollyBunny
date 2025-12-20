@@ -15,7 +15,7 @@ public class ToolIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     public RectTransform RectTransform => rectTransform;
     private CanvasGroup canvasGroup;
 
-    private Vector3 originalPosition;
+    private Vector2 originalAnchoredPosition;
     public Transform originalParent;
     public ChainSlot originalParentSlot;
 
@@ -41,9 +41,9 @@ public class ToolIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        originalPosition = rectTransform.position;
+        originalAnchoredPosition = rectTransform.anchoredPosition;
         originalParent = transform.parent;
-        CurrentSlot = transform.parent.GetComponent<ChainSlot>();
+        CurrentSlot = originalParent.GetComponent<ChainSlot>();
 
         canvasGroup.blocksRaycasts = false;
 
@@ -112,8 +112,8 @@ public class ToolIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         if (!success)
         {
             // Возврат назад
-            transform.SetParent(originalParent);
-            rectTransform.position = originalPosition;
+            transform.SetParent(originalParent, false);
+            rectTransform.anchoredPosition = originalAnchoredPosition;
         }
 
         foreach (var slot in allSlots)
@@ -132,7 +132,7 @@ public class ToolIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         slot.toolInSlot = this;
     }
 
-private ChainSlot GetNearestSlot()
+    private ChainSlot GetNearestSlot()
     {
         float minDist = 40f; // Радиус автозахвата
         ChainSlot nearest = null;
@@ -149,4 +149,18 @@ private ChainSlot GetNearestSlot()
 
         return nearest;
     }
+
+    public void ReturnToOriginalSlot()
+    {
+        transform.SetParent(originalParent, false);
+        rectTransform.anchoredPosition = Vector2.zero;
+
+        CurrentSlot = originalParentSlot;
+        if (originalParentSlot != null)
+            originalParentSlot.toolInSlot = this;
+
+        iconImage.enabled = true;
+        iconImage.sprite = iconSprite;
+    }
+
 }

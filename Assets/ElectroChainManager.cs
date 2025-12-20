@@ -197,39 +197,11 @@ public class ElectroChainManager : MonoBehaviour
         {
             if (slot.toolInSlot != null)
             {
-                ToolIcon icon = slot.toolInSlot;
-
-                // Удаляем ссылку из текущего слота
+                slot.toolInSlot.ReturnToOriginalSlot();
                 slot.toolInSlot = null;
-
-                // Обнуляем ссылку на текущий слот в инструменте
-                icon.CurrentSlot = null;
-
-                // Возврат на исходную ячейку
-                if (icon.originalParent != null)
-                {
-                    icon.transform.SetParent(icon.originalParent);
-                    if (icon.RectTransform != null)
-                        icon.RectTransform.anchoredPosition = Vector2.zero;
-                    else
-                        icon.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-
-                    // Обновляем оригинальный слот (если есть)
-                    if (icon.originalParentSlot != null)
-                    {
-                        icon.originalParentSlot.toolInSlot = icon;
-                        icon.CurrentSlot = icon.originalParentSlot;
-                    }
-                }
-                else
-                {
-                    Debug.LogWarning("originalParent у ToolIcon не задан!");
-                }
-                icon.iconImage.sprite = icon.iconSprite;
-                icon.iconImage.enabled = true;
-                Debug.Log($"Возвращен {icon.toolType} на {icon.originalParent.name}");
             }
         }
+   
 
         // 3. Очистка всех целевых слотов цепи
         foreach (var slot in chainSlots)

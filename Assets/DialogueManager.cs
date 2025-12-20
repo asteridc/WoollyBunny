@@ -1,33 +1,55 @@
-using System.Collections.Generic;
-using System.Collections;
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
-using UnityEngine.EventSystems;
-using System.Linq;
 using DG.Tweening;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using TMPro;
+using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using static UnityEngine.Analytics.IAnalytic;
 
 
 public class DialogueManager : MonoBehaviour
 {
     private List<GameObject> currentChoiceButtons = new List<GameObject>();
     private HashSet<string> usedOptionalChoices = new HashSet<string>();
+    private HashSet<string> unlockedChoices = new HashSet<string>();
 
     private int bloodthirst = 0;
     private int nobility = 0;
     private int love = 0;
+    private bool specialChoiceMade = false;
 
     [Header("Тестовый запуск")]
     [Tooltip("Номер строки (с 1), с которой начать диалог при запуске игры.")]
     [SerializeField] private int startLineNumber = 1;
 
+    [Header("Runtime State")]
+    [SerializeField] private string currentBackgroundId;
+
+    [Header("Choice Runtime")]
+    private int selectedChoiceIndex = -1;
+    private DialogueLine currentChoiceLine;
+
+    public bool skipAutoStart = true;
+
     [Header("UI Elements")]
+    public string currentChapterId;
+    public string currentChapterTitle;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public Image backgroundImage;
     public Image characterImage;
+    public Image radioIcon;
     public GameObject dialoguePanel;
+
+    private Coroutine typingCoroutine;
+    private bool isTyping;
+    private string fullCurrentLine;
+    [SerializeField] private float typeDelay = 0.03f;
 
     [SerializeField] private Image backgroundFadeImage;
     [SerializeField] private float fadeDuration = 2f;
@@ -45,6 +67,23 @@ public class DialogueManager : MonoBehaviour
     public Sprite hannaSprite;
     public Sprite keremSprite;
     public Sprite firstAssasinPeacekeeper;
+    public Sprite keremRadioSprite;
+    public Sprite barsSprite;
+    public Sprite barsRadioSprite;
+    public Sprite sapfirSprite;
+    public Sprite rinaSprite;
+    public Sprite addictSpriteChapter2_1;
+    public Sprite addictSpriteChapter2_2;
+    public Sprite nonameSpriteChapter2;
+    public Sprite doerSpriteChapter2_1;
+    public Sprite doerSpriteChapter2_2;
+    public Sprite knightBesideTheDoor;
+    public Sprite knight1_Chapter2;
+    public Sprite knight2_Chapter2;
+    public Sprite knight3_Chapter2;
+    public Sprite knight4_Chapter2;
+    public Sprite maiden1_Chapter2;
+    public Sprite maulerSprite_Chapter2;
 
     [Header("Interaction")]
     public GameObject interactionPointGroup;
@@ -80,7 +119,22 @@ public class DialogueManager : MonoBehaviour
     public Image collectibleIconImage;
     public Button collectibleCloseButton;
 
-    public List<DialogueLine> lines = new List<DialogueLine>();
+    [Header("Dialogue Data")]
+    public List<DialogueChapter> chapters;
+    public DialogueChapter currentChapter;
+
+    public static bool IsReady;
+
+    
+
+    private void Awake()
+    {
+        IsReady = false;
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     void Start()
     {
@@ -88,25 +142,94 @@ public class DialogueManager : MonoBehaviour
         if (collectibleCloseButton != null)
             collectibleCloseButton.onClick.AddListener(CloseCollectibleView);
 
-        // Выставляем стартовый индекс
-        currentLineIndex = Mathf.Clamp(startLineNumber - 1, 0, lines.Count - 1);
+        IsReady = true;
 
-        ShowLine();
+        if (!skipAutoStart)
+            LoadChapter(currentChapter, startLineNumber - 1);
     }
 
+    private DialogueLine[] runtimeLines;
+
+    public void LoadChapter(DialogueChapter chapter, int lineIndex)
+    {
+        if (chapter == null) return;
+
+        currentChapter = chapter;
+
+        runtimeLines = new DialogueLine[chapter.lines.Count];
+        for (int i = 0; i < chapter.lines.Count; i++)
+            runtimeLines[i] = chapter.lines[i].Clone();
+
+        Debug.Log($"[LoadChapter] lineIndex = {lineIndex}");
+
+        currentLineIndex = Mathf.Clamp(lineIndex, 0, runtimeLines.Length - 1);
+
+        ShowDialoguePanel();
+        ShowLine();
+    }
 
     void Update()
     {
         if (waitingForClick && Input.GetMouseButtonDown(0))
         {
             waitingForClick = false;
-            dialoguePanel.SetActive(true);
+            ShowDialoguePanel();
             modelLeft.gameObject.SetActive(true);
             modelRight.gameObject.SetActive(true);
 
             ShowLine(); // Повторный показ той же строки, теперь уже с UI
         }
     }
+
+
+    private Sprite GetSpriteByName(string name)
+    {
+        switch (name)
+        {
+            case "Дисклеймер": return transparent;
+            case "Илай": return eliSprite;
+            case "Кейн": return kaneSprite;
+            case "Ханна": return hannaSprite;
+            case "Керем": return keremSprite;
+            case "МТ Ассасин": return firstAssasinPeacekeeper;
+            case "Рация (Керем)": return keremRadioSprite;
+            case "Барс": return barsSprite;
+            case "Рация (Барс)": return barsRadioSprite;
+            case "Сапфир": return sapfirSprite;
+            case "Рина": return rinaSprite;
+            case "Зависимый 1 (глава 2)": return addictSpriteChapter2_1;
+            case "Зависимый 2 (глава 2)": return addictSpriteChapter2_2;
+            case "Неизвестный": return nonameSpriteChapter2;
+            case "Вершитель 1 (глава 2)": return doerSpriteChapter2_1;
+            case "Вершитель 2 (глава 2)": return doerSpriteChapter2_2;
+            case "Рыцарь по ту сторону двери": return knightBesideTheDoor;
+            case "Рыцарь 1 (глава 2)": return knight1_Chapter2;
+            case "Рыцарь 2 (глава 2)": return knight2_Chapter2;
+            case "Рыцарь 3 (глава 2)": return knight3_Chapter2;
+            case "Рыцарь 4 (глава 2)": return knight4_Chapter2;
+            case "Дева 1 (глава 2)": return maiden1_Chapter2;
+            case "Силач (глава 2)": return maulerSprite_Chapter2;
+            default: return null;
+        }
+    }
+
+    public bool IsChoiceUnlocked(string key)
+    {
+        if (string.IsNullOrEmpty(key)) return true; // если ключ пустой — всегда открыт
+        return unlockedChoices.Contains(key);
+    }
+    private void ProcessUnlockKeys(DialogueLine line)
+    {
+        if (line.unlockChoiceKeys == null) return;
+
+        foreach (var key in line.unlockChoiceKeys)
+        {
+            if (!string.IsNullOrEmpty(key))
+                unlockedChoices.Add(key); // добавляем ключ в HashSet
+        }
+    }
+
+
 
     public void ShowNextLine()
     {
@@ -135,21 +258,35 @@ public class DialogueManager : MonoBehaviour
 
     public void OnClickNext()
     {
+        if (isTyping)
+        {
+            SkipTyping();
+            return;
+        }
+
+        // Форсированный переход
+        if (forceNextLineIndex >= 0)
+        {
+            currentLineIndex = forceNextLineIndex;
+            forceNextLineIndex = -1;
+            ShowLine();
+            return;
+        }
         // Если выбор — не продолжаем
-        if (lines[currentLineIndex].hasChoices)
+        if (runtimeLines[currentLineIndex].hasChoices)
             return;
 
         // Проверка на jump после показа строки
-        if (lines[currentLineIndex].isJumpLine)
+        if (runtimeLines[currentLineIndex].isJumpLine)
         {
-            currentLineIndex = lines[currentLineIndex].gotoLineIndex - 1;
+            currentLineIndex = runtimeLines[currentLineIndex].gotoLineIndex - 1;
             ShowLine();
             return;
         }
 
         // Переход к следующей строке по обычной логике
         currentLineIndex++;
-        if (currentLineIndex >= lines.Count)
+        if (currentLineIndex >= currentChapter.lines.Count)
         {
             ShowEndOfChapterPanel();
         }
@@ -159,7 +296,7 @@ public class DialogueManager : MonoBehaviour
 
     public void JumpToLine(int lineIndex) // в случае интерактива
     {
-        if (lineIndex >= 0 && lineIndex < lines.Count)
+        if (lineIndex >= 0 && lineIndex < currentChapter.lines.Count)
         {
             currentLineIndex = lineIndex - 1;
             ShowNextLine();
@@ -170,13 +307,81 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void ShowLine()
+    private int forceNextLineIndex = -1;
+    public GameObject guitarInteractiveUI;
+
+    public void ShowLine()
     {
-        DialogueLine line = lines[currentLineIndex];
+        DialogueLine line = runtimeLines[currentLineIndex]; 
+
+        // ============= УСЛОВИЯ ДЛЯ ЗАСКРИПТОВАННЫХ МОМЕНТОВ В СЮЖЕТЕ ============== //
+        // Выбор ответа - 1(2) + преобладающий путь => показ мыслей Илая после разговора с Ханной.
+        if (SceneManager.GetActiveScene().name == "Chapter_02")
+        {
+            if (currentLineIndex == 75 - 1)
+            {
+                if (specialChoiceMade)
+                {
+                    if (bloodthirst > love && bloodthirst > nobility)
+                    {
+                        currentLineIndex = 76 - 1;
+                        line = runtimeLines[currentLineIndex];
+                        forceNextLineIndex = 78 - 1;
+                    }
+                    else if (love > bloodthirst && love > nobility)
+                    {
+                        currentLineIndex = 77 - 1;
+                        line = runtimeLines[currentLineIndex];
+                    }
+                    else if (nobility > bloodthirst && nobility > love)
+                    {
+                        currentLineIndex = 77 - 1;
+                        line = runtimeLines[currentLineIndex];
+                    }
+                }
+                else
+                {
+                    currentLineIndex = 78 - 1;
+                    line = runtimeLines[currentLineIndex];
+                }
+            }
+        }
+
+
+        
+        
+        // Мини-сцена с гитарой в квартире //
+
+        if (SceneManager.GetActiveScene().name == "Chapter_02")
+        {
+            if (currentLineIndex == 90 - 1)
+            {
+                Debug.Log("Запуск мини-интерактива с гитарой!");
+
+                // Останавливаем показ диалога, чтобы не шло дальше
+                HideDialoguePanel();
+
+                // Включаем UI гитарного интерактива
+                guitarInteractiveUI.SetActive(true);
+
+                // Запускаем сам интерактив через скрипт на UI
+                guitarInteractiveUI.GetComponent<GuitarSceneManager>().StartGuitarScene();
+
+                // Возвращаемся из метода, чтобы не показать текст этой строки
+                return;
+            }
+        }
+
+        // ============= КОНЕЦ ЗАСКРИПТОВАННЫХ УСЛОВИЙ ============= //
+
+
 
         if (line.changeBackground && line.backgroundSprite != null)
         {
-            StartCoroutine(HandleBackgroundTransition(line));
+            HideDialoguePanel(() =>
+            {
+                StartCoroutine(HandleBackgroundTransition(line));
+            });
             return;
         }
 
@@ -217,8 +422,17 @@ public class DialogueManager : MonoBehaviour
         }
 
     End:
-        dialogueText.text = finalText;
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
+
         nameText.text = line.speakerName;
+
+        fullCurrentLine = finalText;
+        typingCoroutine = StartCoroutine(TypeLine(fullCurrentLine));
+
 
         if (line.extraActions.showCodePanel)
         {
@@ -285,6 +499,21 @@ public class DialogueManager : MonoBehaviour
         // Показываем персонажей
         ShowCharacters(line);
 
+        // Отображение иконки рации у говорящего в определенных сюжетных моментах
+        if (radioIcon != null)
+        {
+            if (line.isRadio)
+            {
+                radioIcon.gameObject.SetActive(true);
+            }
+            else
+            {
+                radioIcon.gameObject.SetActive(false);
+            }
+        }
+
+        ProcessUnlockKeys(line);
+
         // Показываем выбор
         if (line.hasChoices)
             ShowChoices(line.choices);
@@ -347,6 +576,83 @@ public class DialogueManager : MonoBehaviour
 
     }
 
+    private void StartTypewriter(string line)
+    {
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        fullCurrentLine = line;
+        typingCoroutine = StartCoroutine(TypeLine(line));
+    }
+
+    private IEnumerator TypeLine(string line)
+    {
+        isTyping = true;
+        dialogueText.text = "";
+
+        for (int i = 1; i <= line.Length; i++)
+        {
+            dialogueText.text = line.Substring(0, i);
+            yield return new WaitForSeconds(typeDelay);
+        }
+
+        isTyping = false;
+        typingCoroutine = null;
+    }
+    public void SkipTyping()
+    {
+        if (!isTyping) return;
+
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
+
+        dialogueText.text = fullCurrentLine ?? "";
+        isTyping = false;
+    }
+
+    private Tween dialogueTween;
+    [SerializeField] private CanvasGroup dialogueGroup;
+
+    public void ShowDialoguePanel()
+    {
+        dialoguePanel.SetActive(true);
+
+        dialogueTween?.Kill();
+
+        dialogueGroup.interactable = true;
+        dialogueGroup.blocksRaycasts = true;
+
+        dialogueGroup.alpha = 0f;
+        dialogueGroup.transform.localScale = Vector3.one * 0.98f;
+
+        dialogueTween = DOTween.Sequence()
+            .Append(dialogueGroup.DOFade(1f, 0.25f))
+            .Join(dialogueGroup.transform.DOScale(1f, 0.25f).SetEase(Ease.OutQuad));
+    }
+
+    public void HideDialoguePanel(System.Action onComplete = null)
+    {
+        dialogueTween?.Kill();
+
+        dialogueGroup.interactable = false;
+        dialogueGroup.blocksRaycasts = false;
+
+
+        dialogueTween = DOTween.Sequence()
+            .Append(dialogueGroup.DOFade(0f, 0.2f))
+            .Join(dialogueGroup.transform.DOScale(0.98f, 0.2f).SetEase(Ease.InQuad))
+            .OnComplete(() =>
+            {
+                dialoguePanel.SetActive(false);
+                onComplete?.Invoke();
+            });
+    }
+
+
+
     public void ShowInteractionPoints()
     {
         if (interactionPointGroup == null)
@@ -355,99 +661,183 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        dialoguePanel.SetActive(false);
-        interactionPointGroup.SetActive(true);
-
-        var points = interactionPointGroup.GetComponentsInChildren<InteractionPoint>(true);
-
-        int shownCount = 0;
-        foreach (var point in points)
+        HideDialoguePanel(() =>
         {
-            if (!point.wasUsed || point.isRepeatable)
-            {
-                point.Show();
-                shownCount++;
-            }
-            else
-            {
-                point.Hide();
-            }
-        }
+            interactionPointGroup.SetActive(true);
 
-        Debug.Log($"Показано точек: {shownCount}");
+            var points = interactionPointGroup.GetComponentsInChildren<InteractionPoint>(true);
+
+            int shownCount = 0;
+            foreach (var point in points)
+            {
+                if (!point.wasUsed || point.isRepeatable)
+                {
+                    point.Show();
+                    shownCount++;
+                }
+                else
+                {
+                    point.Hide();
+                }
+            }
+
+            Debug.Log($"Показано точек: {shownCount}");
+        });
     }
 
 
+    [SerializeField] private CanvasGroup groupLeft;
+    [SerializeField] private CanvasGroup groupRight;
 
-
+    private string prevSpeakerName = "";
+    private string prevListenerName = "";
 
     private void ShowCharacters(DialogueLine line)
     {
-        modelLeft.sprite = null;
-        modelRight.sprite = null;
-        modelLeft.color = new Color(1f, 1f, 1f, 0f);
-        modelRight.color = new Color(1f, 1f, 1f, 0f);
-
-        modelLeft.rectTransform.localScale = Vector3.one;
-        modelRight.rectTransform.localScale = Vector3.one;
-
         Sprite speakerSprite = GetSpriteByName(line.characterName);
         Sprite listenerSprite = GetSpriteByName(line.listenerCharacterName);
 
-        Color full = Color.white;
         Color dim = new Color(1f, 1f, 1f, 0.55f);
 
+        bool leftUsed =
+            (!line.isOnRight && speakerSprite != null) ||
+            (!line.isListenerOnRight && !string.IsNullOrEmpty(line.listenerCharacterName) && listenerSprite != null);
+
+        bool rightUsed =
+            (line.isOnRight && speakerSprite != null) ||
+            (line.isListenerOnRight && !string.IsNullOrEmpty(line.listenerCharacterName) && listenerSprite != null);
+
+        if (!leftUsed) RemoveCharacter(false);
+        if (!rightUsed) RemoveCharacter(true);
+
+        void AnimateCharacter(Image img, CanvasGroup grp, Sprite sprite, float scaleMagnitude, float targetAlpha, bool skipAnim, bool flip)
+        {
+            img.transform.DOKill();
+            grp.DOKill();
+
+            img.sprite = sprite;
+
+            // ---- FIX: flip только один раз, без анимации ----
+            Vector3 currentScale = img.rectTransform.localScale;
+            currentScale.x = flip ? -Mathf.Abs(currentScale.x) : Mathf.Abs(currentScale.x);
+            img.rectTransform.localScale = currentScale;
+
+            if (skipAnim)
+                return;
+
+            // ---- Анимация — только изменение размера, без вращения ----
+            Vector3 targetScale = new Vector3(
+                (flip ? -1f : 1f) * scaleMagnitude,
+                scaleMagnitude,
+                1f
+            );
+
+            img.rectTransform.DOScale(targetScale, 0.3f).SetEase(Ease.OutQuad);
+            grp.DOFade(targetAlpha, 0.3f).SetEase(Ease.OutQuad);
+        }
+
+        // -------- ГОВОРЯЩИЙ --------
         if (speakerSprite != null)
         {
-            if (line.isOnRight)
-            {
-                modelRight.sprite = speakerSprite;
-                modelRight.color = full;
-                modelRight.rectTransform.localScale = line.flipSpeakerImage ? new Vector3(-1, 1, 1) : Vector3.one;
-            }
-            else
-            {
-                modelLeft.sprite = speakerSprite;
-                modelLeft.color = full;
-                modelLeft.rectTransform.localScale = line.flipSpeakerImage ? new Vector3(-1, 1, 1) : Vector3.one;
-            }
+            Image img = line.isOnRight ? modelRight : modelLeft;
+            CanvasGroup grp = line.isOnRight ? groupRight : groupLeft;
+
+            bool sameSpeaker = line.characterName == prevSpeakerName;
+
+            AnimateCharacter(
+                img,
+                grp,
+                speakerSprite,
+                1f,           // активный размер
+                1f,           // полная альфа
+                sameSpeaker,
+                line.flipSpeakerImage
+            );
         }
 
-        if (listenerSprite != null)
+        // -------- СЛУШАЮЩИЙ --------
+        if (!string.IsNullOrEmpty(line.listenerCharacterName) && listenerSprite != null)
         {
-            if (line.isListenerOnRight)
-            {
-                modelRight.sprite = listenerSprite;
-                modelRight.color = dim;
-                modelRight.rectTransform.localScale = line.flipListenerImage ? new Vector3(-1, 1, 1) : Vector3.one;
-            }
-            else
-            {
-                modelLeft.sprite = listenerSprite;
-                modelLeft.color = dim;
-                modelLeft.rectTransform.localScale = line.flipListenerImage ? new Vector3(-1, 1, 1) : Vector3.one;
-            }
+            Image img = line.isListenerOnRight ? modelRight : modelLeft;
+            CanvasGroup grp = line.isListenerOnRight ? groupRight : groupLeft;
+
+            bool sameListener = line.listenerCharacterName == prevListenerName;
+
+            AnimateCharacter(
+                img,
+                grp,
+                listenerSprite,
+                0.95f,        // чуть меньше
+                0.55f,        // тусклый
+                sameListener,
+                line.flipListenerImage
+            );
         }
+
+        prevSpeakerName = line.characterName;
+        prevListenerName = line.listenerCharacterName;
     }
 
-    private Sprite GetSpriteByName(string name)
+
+
+
+    // --- Метод удаления персонажей ---
+    private void RemoveCharacter(bool isRight)
     {
-        switch (name)
-        {
-            case "Дисклеймер": return transparent;
-            case "Илай": return eliSprite;
-            case "Кейн": return kaneSprite;
-            case "Ханна": return hannaSprite;
-            case "Керем": return keremSprite;
-            case "МТ Ассасин": return firstAssasinPeacekeeper;
-            default: return null;
-        }
+        Image targetImage = isRight ? modelRight : modelLeft;
+        CanvasGroup targetGroup = isRight ? groupRight : groupLeft;
+
+        if (targetImage.sprite == transparent || targetGroup.alpha <= 0f) return;
+
+        targetGroup.DOFade(0f, 0.2f);
+        targetImage.rectTransform.DOScale(Vector3.zero, 0.35f).SetEase(Ease.InQuad)
+            .OnComplete(() =>
+            {
+                targetImage.sprite = transparent;
+                targetImage.rectTransform.localScale = Vector3.one;
+            });
     }
+
+
 
     private void ShowChoices(DialogueLine.Choice[] choices)
     {
-        // Фильтрация опциональных, которые уже были выбраны
-        var filteredChoices = choices
+        // Защитная проверка
+        if (choices == null || choices.Length == 0)
+        {
+            choicesContainer.SetActive(false);
+            return;
+        }
+
+        // Текущая линия (для фоллбэков и проверки)
+        var currentLine = runtimeLines[currentLineIndex];
+        currentChoiceLine = currentLine;
+        selectedChoiceIndex = -1;
+
+
+        // 1) Логическая проверка: есть ли хоть один логически доступный выбор?
+        bool anyUnlocked = currentLine.choices.Any(c => IsChoiceUnlocked(c) && (c.choiceType != ChoiceType.Optional || !usedOptionalChoices.Contains(c.choiceText)));
+        if (!anyUnlocked)
+        {
+            // Ничего доступного — делаем фоллбэк (если включён)
+            if (currentLine.useFallbackIfNoRequired)
+            {
+                Debug.Log("ShowChoices: нет доступных выборов -> фоллбэк");
+                choicesContainer.SetActive(false);
+                currentLineIndex = currentLine.fallbackLineIndex - 1;
+                ShowLine();
+                return;
+            }
+            else
+            {
+                // Если фолбэк не включён — просто не показываем кнопки
+                choicesContainer.SetActive(false);
+                return;
+            }
+        }
+
+        // 2) Фильтруем визуально: не показываем optional, которые уже использованы
+        var filteredChoices = currentLine.choices
             .Where(c => c.choiceType != ChoiceType.Optional || !usedOptionalChoices.Contains(c.choiceText))
             .ToArray();
 
@@ -470,12 +860,41 @@ public class DialogueManager : MonoBehaviour
             rect.anchoredPosition = positions[i];
 
             var buttonText = buttonObj.GetComponentInChildren<TextMeshProUGUI>();
-            buttonText.text = choice.choiceText;
-
             var bg = buttonObj.GetComponent<Image>();
             var btn = buttonObj.GetComponent<Button>();
 
-            // Стиль по умолчанию  
+            // LockImage внутри префаба (если есть)
+            var lockImage = buttonObj.transform.Find("LockImage")?.GetComponent<Image>();
+            if (lockImage != null) lockImage.gameObject.SetActive(false);
+
+            // Проверяем, логически разблокирован ли выбор
+            bool isUnlocked = IsChoiceUnlocked(choice);
+
+            if (!isUnlocked)
+            {
+                // Показываем как заблокированную кнопку (замок) — но НЕ учитываем её как доступную
+                buttonText.text = ""; // скрываем основной текст
+                btn.interactable = false;
+                bg.color = new Color(0.15f, 0.15f, 0.15f);
+
+                if (lockImage != null)
+                {
+                    // Если в Choice задан lockIcon — используем его, иначе доверяем префабному спрайту
+                    if (choice.lockImage != null)
+                        lockImage.sprite = choice.lockImage;
+
+                    lockImage.gameObject.SetActive(true);
+                    // центрируем, если нужно
+                    lockImage.rectTransform.anchoredPosition = Vector2.zero;
+                }
+
+                continue;
+            }
+
+            // Открытый вариант — отображаем полностью
+            buttonText.text = choice.choiceText;
+            btn.interactable = true;
+
             if (choice.choiceType == ChoiceType.Required)
             {
                 bg.color = new Color(0.25f, 0.18f, 0.05f);
@@ -487,23 +906,57 @@ public class DialogueManager : MonoBehaviour
                 buttonText.color = Color.white;
             }
 
-            // Наведение
             AddHoverEffects(btn, bg, buttonText, choice.choiceType);
 
-            // Логика клика
+            // Важно: захватываем локальную переменную для лямбды
+            var capturedChoice = choice;
+            var capturedButtonObj = buttonObj;
+
             btn.onClick.AddListener(() =>
             {
-                OnChoiceSelected(choice);
+                OnChoiceSelected(capturedChoice);
 
-                if (choice.choiceType == ChoiceType.Optional)
+                if (capturedChoice.choiceType == ChoiceType.Optional)
                 {
-                    usedOptionalChoices.Add(choice.choiceText);
-                    buttonObj.SetActive(false);
+                    usedOptionalChoices.Add(capturedChoice.choiceText);
+                    capturedButtonObj.SetActive(false);
                     RepositionChoices();
                 }
+
+                // После выбора проверяем фоллбэк на текущей линии
+                CheckFallbackCondition();
             });
         }
     }
+
+
+    // Возвращает, считается ли выбор логически разблокированным (для принятия решений)
+    private bool IsChoiceUnlocked(DialogueLine.Choice c)
+    {
+        if (c == null) return false;
+        if (!c.isLocked) return true;
+        if (!string.IsNullOrEmpty(c.unlockKey) && unlockedChoices.Contains(c.unlockKey)) return true;
+        return false;
+    }
+
+    // Возвращает список "доступных" choices для логики (не учитываем уже выбранные optional)
+    private List<DialogueLine.Choice> GetAvailableChoicesForLogic(DialogueLine line)
+    {
+        if (line == null || line.choices == null) return new List<DialogueLine.Choice>();
+
+        return line.choices
+            .Where(c =>
+                // не учитываем уже выбранные optional
+                (c.choiceType != ChoiceType.Optional || !usedOptionalChoices.Contains(c.choiceText))
+                // и учитываем только логически разблокированные
+                && IsChoiceUnlocked(c)
+            )
+            .ToList();
+    }
+
+
+
+
 
     private Vector2[] GetChoicePositions(int count)
     {
@@ -525,10 +978,10 @@ public class DialogueManager : MonoBehaviour
             case 4:
                 return new Vector2[]
                 {
-                new Vector2(-100, 60),
-                new Vector2(100, 60),
-                new Vector2(-100, -60),
-                new Vector2(100, -60)
+                new Vector2(-160, 60),
+                new Vector2(160, 60),
+                new Vector2(-160, -60),
+                new Vector2(160, -60)
                 };
             case 5:
                 return new Vector2[]
@@ -556,6 +1009,11 @@ public class DialogueManager : MonoBehaviour
         {
             RectTransform rect = activeButtons[i].GetComponent<RectTransform>();
             rect.anchoredPosition = positions[i];
+        }
+
+        if (activeButtons.Count == 0)
+        {
+            CheckFallbackCondition();
         }
     }
 
@@ -595,8 +1053,20 @@ public class DialogueManager : MonoBehaviour
         trigger.triggers.Add(pointerExit);
     }
 
-    private void OnChoiceSelected(DialogueLine.Choice choice)
+    private void RemoveHoverEffects(Button btn)
     {
+        var trigger = btn.GetComponent<EventTrigger>();
+        if (trigger != null)
+            Destroy(trigger);
+    }
+
+
+    public void OnChoiceSelected(DialogueLine.Choice choice)
+    {
+        selectedChoiceIndex = Array.IndexOf(
+        runtimeLines[currentLineIndex].choices,
+        choice
+        );
         switch (choice.pathReward)
         {
             case DominantPath.Bloodthirst:
@@ -618,6 +1088,13 @@ public class DialogueManager : MonoBehaviour
         var dominant = GetDominantPaths();
         Debug.Log("Преобладающий путь(и): " + string.Join(", ", dominant));
 
+        // Проверка "условного" выбора
+        if (choice.isSpecialChoice)
+        {
+            specialChoiceMade = true;
+            Debug.Log("Особый выбор совершен игроком");
+        }
+
         if (choice.choiceType == ChoiceType.Optional)
         {
             usedOptionalChoices.Add(choice.choiceText);
@@ -625,7 +1102,38 @@ public class DialogueManager : MonoBehaviour
         currentLineIndex = choice.nextLineIndex - 1;
         choicesContainer.SetActive(false);
         ShowLine();
+        CheckFallbackCondition();
     }
+
+    private void CheckFallbackCondition()
+    {
+        // Берём текущую строку (ту, в которой мы ожидаем выбор)
+        var line = runtimeLines[currentLineIndex];
+
+        // Если фолбэк не включён — ничего не делаем
+        if (!line.useFallbackIfNoRequired)
+            return;
+
+        // Список доступных для логики (не учитывая закрытые и уже выбранные optional)
+        var available = GetAvailableChoicesForLogic(line);
+
+        bool hasRequired = line.choices.Any(c => c.choiceType == ChoiceType.Required && IsChoiceUnlocked(c));
+
+        // Условие: нет доступных required и нет доступных (разблокированных и не выбранных) optional
+        if (!hasRequired && available.Count == 0)
+        {
+            Debug.Log("🟣 Fallback: нет доступных выборов — переход на " + line.fallbackLineIndex);
+            // Скрываем UI выбора на всякий случай
+            choicesContainer.SetActive(false);
+
+            // Переходим на указанную в инспекторе строку
+            currentLineIndex = line.fallbackLineIndex;
+            ShowLine();
+        }
+    }
+
+
+
 
     private List<DominantPath> GetDominantPaths()
     {
@@ -659,6 +1167,12 @@ public class DialogueManager : MonoBehaviour
 
     public TMP_FontAsset defaultFont;
 
+    [SerializeField] private CanvasGroup storyNotificationGroup;
+    [SerializeField] private float notificationFadeDuration = 0.25f;
+
+    private Coroutine storyNotificationCoroutine;
+
+
     public void ShowStoryNotification(
     string text,
     float duration,
@@ -671,8 +1185,7 @@ public class DialogueManager : MonoBehaviour
     bool isItalic = false,
     bool isUppercase = false)
     {
-        storyNotificationPanel.SetActive(true);
-
+        // --- Форматирование текста ---
         string formattedText = text;
 
         if (isUppercase)
@@ -694,14 +1207,49 @@ public class DialogueManager : MonoBehaviour
             storyNotificationIcon.gameObject.SetActive(icon != null);
         }
 
-        StartCoroutine(HideStoryNotificationAfterDelay(duration));
+        // --- Подготовка панели ---
+        storyNotificationPanel.SetActive(true);
+
+        storyNotificationGroup.DOKill();
+        storyNotificationGroup.alpha = 0f;
+
+        // (необязательно, но приятно)
+        storyNotificationPanel.transform.DOKill();
+        storyNotificationPanel.transform.localScale = Vector3.one * 0.95f;
+
+        // --- Анимация появления ---
+        storyNotificationGroup.DOFade(1f, notificationFadeDuration).SetEase(Ease.OutQuad);
+        storyNotificationPanel.transform
+            .DOScale(1f, notificationFadeDuration)
+            .SetEase(Ease.OutQuad);
+
+        // --- Планируем скрытие ---
+        if (storyNotificationCoroutine != null)
+        {
+            StopCoroutine(storyNotificationCoroutine);
+            storyNotificationCoroutine = null;
+        }
+
+        storyNotificationCoroutine =
+            StartCoroutine(HideStoryNotificationAfterDelay(duration));
     }
 
     private IEnumerator HideStoryNotificationAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        storyNotificationPanel.SetActive(false);
+
+        storyNotificationGroup.DOKill();
+        storyNotificationPanel.transform.DOKill();
+
+        storyNotificationGroup
+            .DOFade(0f, notificationFadeDuration)
+            .SetEase(Ease.InQuad)
+            .OnComplete(() =>
+            {
+                storyNotificationPanel.SetActive(false);
+            });
     }
+
 
     private IEnumerator ChangeBackgroundWithFade(Sprite newBackground)
     {
@@ -762,15 +1310,15 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator HandleBackgroundTransition(DialogueLine line)
     {
         line.changeBackground = false;
+
         yield return StartCoroutine(FadeToBlack());
 
-        // Скрываем UI
-        dialoguePanel.SetActive(false);
+        HideDialoguePanel();
         modelLeft.gameObject.SetActive(false);
         modelRight.gameObject.SetActive(false);
 
-        // Меняем фон
         backgroundImage.sprite = line.backgroundSprite;
+        currentBackgroundId = line.backgroundId; // 🔥 ВАЖНО
 
         yield return StartCoroutine(FadeFromBlack());
 
@@ -827,14 +1375,6 @@ public class DialogueManager : MonoBehaviour
 
     public static DialogueManager Instance { get; private set; }
 
-    private void Awake()
-    {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
-    }
-
     public void ContinueDialogue(bool success)
     {
         if (success)
@@ -856,13 +1396,13 @@ public class DialogueManager : MonoBehaviour
     {
         if (isGameOverActive) return;
         isGameOverActive = true;
-    
+
         // Экран смерти уже активирован в HandlePlayerDeath
         // Здесь только осветляем
         blackOverlay.DOFade(0f, FadeDuration).OnComplete(() =>
         {
             blackOverlay.gameObject.SetActive(false);
-    
+
             // Показываем таймер
             respawnCountdownText.gameObject.SetActive(true);
             StartCoroutine(RespawnCountdown());
@@ -897,11 +1437,6 @@ public class DialogueManager : MonoBehaviour
         isGameOverActive = false;
     }
 
-    public void HideDialoguePanel()
-    {
-        dialoguePanel.SetActive(false);
-    }
-
     public GameObject endOfChapterPanel;
 
     public void ShowEndOfChapterPanel()
@@ -921,7 +1456,7 @@ public class DialogueManager : MonoBehaviour
         yield return blackOverlay.DOFade(1f, FadeDuration).WaitForCompletion();
 
         // Отключаем диалог и выборы
-        dialoguePanel.SetActive(false);
+        HideDialoguePanel();
         choicesContainer.SetActive(false);
 
         // Показываем панель конца главы
@@ -939,4 +1474,111 @@ public class DialogueManager : MonoBehaviour
         yield return blackOverlay.DOFade(1f, fadeDurationToMenu).WaitForCompletion();
         SceneManager.LoadScene("woollybunny_PC");
     }
+
+    public DialogueSaveData CaptureDialogueState()
+    {
+        var data = new DialogueSaveData
+        {
+            chapterIndex = chapters.IndexOf(currentChapter),
+            lineIndex = currentLineIndex,
+            backgroundId = currentBackgroundId,
+            choiceState = CaptureChoiceState(),
+
+            nobility = nobility,
+            bloodthirst = bloodthirst,
+            love = love
+        };
+
+        return data;
+    }
+
+    public void RestoreDialogueState(DialogueSaveData data)
+    {
+        currentChapter = chapters[data.chapterIndex];
+ 
+        nobility = data.nobility;
+        bloodthirst = data.bloodthirst;
+        love = data.love;
+
+        LoadChapter(currentChapter, data.lineIndex);
+
+        if (!string.IsNullOrEmpty(data.backgroundId))
+            SetBackgroundInstant(data.backgroundId);
+
+        if (data.choiceState != null)
+            RestoreChoiceState(data.choiceState);
+    }
+
+
+    private ChoiceSaveState CaptureChoiceState()
+    {
+        if (!choicesContainer.activeSelf)
+            return null;
+
+        return new ChoiceSaveState
+        {
+            lineIndex = currentLineIndex,
+            selectedIndex = selectedChoiceIndex
+        };
+    }
+
+    private void RestoreChoiceState(ChoiceSaveState state)
+    {
+        DialogueLine line = runtimeLines[state.lineIndex];
+
+        ShowChoices(line.choices);
+
+        if (state.selectedIndex < 0)
+            return;
+
+        for (int i = 0; i < currentChoiceButtons.Count; i++)
+        {
+            var btn = currentChoiceButtons[i].GetComponent<Button>();
+            btn.interactable = false;
+
+            if (i == state.selectedIndex)
+            {
+                // визуально выделить выбранный
+                var img = currentChoiceButtons[i].GetComponent<Image>();
+                img.color = Color.white;
+            }
+        }
+    }
+
+
+
+
+
+
+    public void SetBackgroundInstant(string backgroundId)
+    {
+        if (string.IsNullOrEmpty(backgroundId))
+            return;
+
+        Sprite bg = FindBackgroundById(backgroundId);
+        if (bg == null)
+        {
+            Debug.LogWarning($"Background not found: {backgroundId}");
+            return;
+        }
+
+        backgroundImage.sprite = bg;
+        currentBackgroundId = backgroundId;
+    }
+
+    private Sprite FindBackgroundById(string id)
+    {
+        foreach (var chapter in chapters)
+        {
+            foreach (var line in chapter.lines)
+            {
+                if (line.backgroundId == id && line.backgroundSprite != null)
+                    return line.backgroundSprite;
+            }
+        }
+        return null;
+    }
+
+
+
 }

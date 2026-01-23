@@ -137,7 +137,9 @@ public class ElectroChainManager : MonoBehaviour
 
     public void UpdateAttemptsUI()
     {
-        if (attemptsText != null)
+        if (LanguageManager.CurrentLanguage == Language.English && attemptsText != null)
+            attemptsText.text = "Attempts: " + attemptsLeft.ToString();
+        if (LanguageManager.CurrentLanguage == Language.Russian && attemptsText != null)
             attemptsText.text = "Попытки: " + attemptsLeft.ToString();
     }
 
@@ -344,14 +346,17 @@ public class ElectroChainManager : MonoBehaviour
     {
         // Логика скрытия панели и продолжения сюжета
         gameObject.SetActive(false);
+
+        if (LanguageManager.CurrentLanguage == Language.Russian)
+            DialogueManager.Instance.JumpToLine(triggerLineAfterWin - 1);
+
+        else
+            DialogueManager.Instance.JumpToLine(302 - 1);
         // Вызов события или метода для продолжения сюжета
     }
 
     public void OnExitButtonClicked()
     {
-
-        DialogueManager.Instance.JumpToLine(triggerLineAfterWin - 1);
-
         ClosePanelAndContinue();
     }
 }

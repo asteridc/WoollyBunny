@@ -12,7 +12,8 @@ public class InteractionPoint : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public Color normalColor = Color.white;
     public Color hoverColor = Color.yellow;
     public float fadeDuration = 0.5f;
-    public int targetLineNumber; // номер линии, который запустить
+    public int targetLineRu;
+    public int targetLineEn;
 
     private bool isActive = true;
     [HideInInspector] public bool wasUsed = false;
@@ -53,11 +54,20 @@ public class InteractionPoint : MonoBehaviour, IPointerEnterHandler, IPointerExi
         {
             DialogueManager.Instance.HideDialoguePanel(() =>
             {
-                DialogueManager.Instance.JumpToLine(targetLineNumber - 1);
+                DialogueManager.Instance.JumpToLine(GetTargetLine());
                 DialogueManager.Instance.ShowDialoguePanel();
             });
         }
     }
+
+    private int GetTargetLine()
+    {
+        if (LanguageManager.CurrentLanguage == Language.English && targetLineEn > 0)
+            return targetLineEn - 1;
+
+        return targetLineRu - 1;
+    }
+
 
     public void ShowToolsInToolBox()
     {

@@ -123,6 +123,7 @@ public class DialogueManager : MonoBehaviour
     public List<DialogueChapter> chapters;
     public DialogueChapter currentChapter;
 
+    [SerializeField] public LocalizedStory storySelector;
     public static bool IsReady;
 
     
@@ -152,13 +153,20 @@ public class DialogueManager : MonoBehaviour
 
     public void LoadChapter(DialogueChapter chapter, int lineIndex)
     {
-        if (chapter == null) return;
+        if (chapter == null && storySelector == null) return;
 
-        currentChapter = chapter;
+        DialogueChapter resolvedChapter =
+            storySelector != null
+                ? storySelector.GetFor(chapter)
+                : chapter;
 
-        runtimeLines = new DialogueLine[chapter.lines.Count];
-        for (int i = 0; i < chapter.lines.Count; i++)
-            runtimeLines[i] = chapter.lines[i].Clone();
+        if (resolvedChapter == null) return;
+
+        currentChapter = resolvedChapter;
+
+        runtimeLines = new DialogueLine[resolvedChapter.lines.Count];
+        for (int i = 0; i < resolvedChapter.lines.Count; i++)
+            runtimeLines[i] = resolvedChapter.lines[i].Clone();
 
         Debug.Log($"[LoadChapter] lineIndex = {lineIndex}");
 

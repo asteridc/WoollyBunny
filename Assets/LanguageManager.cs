@@ -1,22 +1,59 @@
+using System;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class LanguageManager : MonoBehaviour
+public enum Language
 {
-    public void ChangeLanguage(int languageIndex)
+    Russian,
+    English
+}
+
+public static class LanguageManager
+{
+    public static Language CurrentLanguage { get; private set; }
+
+    public static event Action<Language> OnLanguageChanged;
+
+    private const string LanguageKey = "LANGUAGE";
+
+    static LanguageManager()
     {
-        switch (languageIndex)
+        LoadLanguage();
+    }
+
+    public static void SetLanguage(Language language)
+    {
+        if (CurrentLanguage == language) return;
+
+        CurrentLanguage = language;
+        PlayerPrefs.SetInt(LanguageKey, (int)language);
+        PlayerPrefs.Save();
+
+        OnLanguageChanged?.Invoke(language);
+    }
+
+    private static void LoadLanguage()
+    {
+        if (PlayerPrefs.HasKey(LanguageKey))
         {
-            case 0: // –усский
-                // ѕример: установить €зык через локализацию
-                Debug.Log("язык сменен на –усский");
-                break;
-            case 1: // јнглийский
-                Debug.Log("язык сменен на јнглийский");
-                break;
-            default:
-                Debug.Log("язык не поддерживаетс€");
-                break;
+            CurrentLanguage = (Language)PlayerPrefs.GetInt(LanguageKey);
         }
+        else
+        {
+            CurrentLanguage = DetectLanguageBySystem();
+            PlayerPrefs.SetInt(LanguageKey, (int)CurrentLanguage);
+        }
+    }
+
+    private static Language DetectLanguageBySystem()
+    {
+        var systemLang = Application.systemLanguage;
+
+        if (systemLang == SystemLanguage.Russian ||
+            systemLang == SystemLanguage.Ukrainian ||
+            systemLang == SystemLanguage.Belarusian)
+            return Language.Russian;
+
+        return Language.English;
     }
 }

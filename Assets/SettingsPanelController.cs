@@ -1,12 +1,16 @@
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class SettingsPanelController : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private Slider sfxSlider;
     [SerializeField] private TextMeshProUGUI valueText;
+    
+    [Header("Language")]
+    [SerializeField] private TextMeshProUGUI languageLabel;
 
     private const int Step = 1;
 
@@ -17,11 +21,55 @@ public class SettingsPanelController : MonoBehaviour
         UpdateValueText(value);
 
         sfxSlider.onValueChanged.AddListener(OnSliderChanged);
+
+        UpdateLanguageLabel();
     }
 
     void OnDisable()
     {
         sfxSlider.onValueChanged.RemoveListener(OnSliderChanged);
+    }
+
+    public void OnLanguageLeft()
+    {
+        SwitchLanguage(-1);
+    }
+
+    public void OnLanguageRight()
+    {
+        SwitchLanguage(1);
+    }
+
+    private void SwitchLanguage(int direction)
+    {
+        int langCount = System.Enum.GetValues(typeof(Language)).Length;
+        int currentIndex = (int)LanguageManager.CurrentLanguage;
+
+        int newIndex = (currentIndex + direction + langCount) % langCount;
+        LanguageManager.SetLanguage((Language)newIndex);
+
+        UpdateLanguageLabel();
+    }
+
+    private void UpdateLanguageLabel()
+    {
+        languageLabel.text =
+            LanguageManager.CurrentLanguage == Language.Russian
+            ? "Русский"
+            : "English";
+    }
+
+    private void OnLanguageChanged(int index)
+    {
+        switch (index)
+        {
+            case 0:
+                LanguageManager.SetLanguage(Language.Russian);
+                break;
+            case 1:
+                LanguageManager.SetLanguage(Language.English);
+                break;
+        }
     }
 
     private void OnSliderChanged(float value)

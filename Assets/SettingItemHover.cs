@@ -1,25 +1,33 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SettingItemHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class SettingItemHover : MonoBehaviour,
+    IPointerEnterHandler,
+    IPointerExitHandler
 {
-    [TextArea] public string tooltipDescription;
-    [TextArea] public string tooltipHeading;
+    [SerializeField] private TooltipData tooltipData;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (TooltipManagerInstance() != null)
-            TooltipManagerInstance().ShowTooltip(tooltipHeading, tooltipDescription, transform.position);
+        var tooltipManager = TooltipManagerInstance();
+        if (tooltipManager == null || tooltipData == null) return;
+
+        tooltipManager.ShowTooltip(
+            tooltipData,
+            transform.position
+        );
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (TooltipManagerInstance() != null)
-            TooltipManagerInstance().HideTooltip();
+        var tooltipManager = TooltipManagerInstance();
+        if (tooltipManager == null) return;
+
+        tooltipManager.HideTooltip();
     }
 
     private TooltipManager TooltipManagerInstance()
     {
-        return FindObjectOfType<TooltipManager>(); // или найди через FindObjectOfType<TooltipManager>()
+        return FindObjectOfType<TooltipManager>();
     }
 }

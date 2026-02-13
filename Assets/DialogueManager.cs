@@ -12,6 +12,12 @@ public class DialogueManager : MonoBehaviour
 {
     private List<GameObject> currentChoiceButtons = new List<GameObject>();
     private HashSet<string> usedOptionalChoices = new HashSet<string>();
+    private readonly Stack<int> dialogueHistory = new Stack<int>();
+    private Coroutine skipCoroutine;
+    private bool isSkipping = false;
+
+    [Header("Dialogue Navigation")]
+    [SerializeField] private float skipLineDelay = 0.06f;
 
     private int bloodthirst = 0;
     private int nobility = 0;
@@ -123,6 +129,8 @@ public class DialogueManager : MonoBehaviour
 
     public void OnClickNext()
     {
+        StopSkippingIfNeeded();
+
         // Если выбор — не продолжаем
         if (lines[currentLineIndex].hasChoices)
             return;
@@ -148,6 +156,22 @@ public class DialogueManager : MonoBehaviour
 
     private void ShowLine()
     {
+        ShowLine(true);
+    }
+
+    private void ShowLine(bool saveToHistory)
+    {
+        if (lines == null || lines.Count == 0)
+            return;
+
+        currentLineIndex = Mathf.Clamp(currentLineIndex, 0, lines.Count - 1);
+
+        if (saveToHistory)
+        {
+            if (dialogueHistory.Count == 0 || dialogueHistory.Peek() != currentLineIndex)
+                dialogueHistory.Push(currentLineIndex);
+        }
+
         DialogueLine line = lines[currentLineIndex];
 
         if (line.changeBackground && line.backgroundSprite != null)
@@ -311,6 +335,98 @@ public class DialogueManager : MonoBehaviour
 
         }
 
+    }
+
+    public void OnClickBack()
+    {
+        StopSkippingIfNeeded();
+
+        if (dialogueHistory.Count <= 1)
+        {
+            Debug.Log("Назад недоступно: это первая реплика.");
+            return;
+        }
+
+        dialogueHistory.Pop();
+        currentLineIndex = dialogueHistory.Peek();
+        choicesContainer.SetActive(false);
+        ShowLine(false);
+    }
+
+    public void OnClickSkip()
+    {
+        if (isSkipping || lines == null || lines.Count == 0)
+            return;
+
+        skipCoroutine = StartCoroutine(SkipDialogueFast());
+    }
+
+    private IEnumerator SkipDialogueFast()
+    {
+        isSkipping = true;
+
+        while (currentLineIndex < lines.Count)
+        {
+            DialogueLine line = lines[currentLineIndex];
+            if (RequiresPlayerAction(line))
+                break;
+
+            if (!TryMoveToNextLineIndex(line))
+                break;
+
+            ShowLine();
+            yield return new WaitForSeconds(skipLineDelay);
+        }
+
+        isSkipping = false;
+        skipCoroutine = null;
+    }
+
+    private bool TryMoveToNextLineIndex(DialogueLine line)
+    {
+        if (line.isJumpLine)
+        {
+            currentLineIndex = Mathf.Clamp(line.gotoLineIndex - 1, 0, lines.Count - 1);
+            return true;
+        }
+
+        if (currentLineIndex + 1 >= lines.Count)
+            return false;
+
+        currentLineIndex++;
+        return true;
+    }
+
+    private bool RequiresPlayerAction(DialogueLine line)
+    {
+        if (line.hasChoices)
+            return true;
+
+        if (line.changeBackground && clickToContinueAfterFade)
+            return true;
+
+        if (line.showCollectibleView)
+            return true;
+
+        if (line.extraActions == null)
+            return false;
+
+        return line.extraActions.showCodePanel
+            || line.extraActions.showNotePanel
+            || line.extraActions.showElectroSubstationMinigame
+            || line.extraActions.stopDialogueAfterThisLine;
+    }
+
+    private void StopSkippingIfNeeded()
+    {
+        if (!isSkipping)
+            return;
+
+        if (skipCoroutine != null)
+            StopCoroutine(skipCoroutine);
+
+        isSkipping = false;
+        skipCoroutine = null;
     }
 
     private void ShowCharacters(DialogueLine line)

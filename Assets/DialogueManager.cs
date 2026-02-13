@@ -3,13 +3,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static UnityEngine.Analytics.IAnalytic;
 
 
 public class DialogueManager : MonoBehaviour
@@ -17,6 +15,9 @@ public class DialogueManager : MonoBehaviour
     private List<GameObject> currentChoiceButtons = new List<GameObject>();
     private HashSet<string> usedOptionalChoices = new HashSet<string>();
     private HashSet<string> unlockedChoices = new HashSet<string>();
+    private readonly Stack<int> dialogueHistory = new Stack<int>();
+    private Coroutine skipCoroutine;
+    private bool isSkipping = false;
 
     private int bloodthirst = 0;
     private int nobility = 0;
@@ -29,6 +30,9 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Runtime State")]
     [SerializeField] private string currentBackgroundId;
+
+    [Header("Dialogue Navigation")]
+    [SerializeField] private float skipLineDelay = 0.06f;
 
     [Header("Choice Runtime")]
     private int selectedChoiceIndex = -1;
@@ -57,6 +61,22 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float autoContinueDelay = 1f;
     public bool waitingForClick = false;
 
+    [Header("Continue Hint")]
+    [SerializeField] private GameObject continueHintRoot;
+    [SerializeField] private Image continueHintIcon;
+    [SerializeField] private Color continueHintBaseColor = Color.white;
+    [SerializeField] private Color continueHintPulseColor = new Color(1f, 0.85f, 0.35f, 1f);
+    [SerializeField] private float continueHintFadeDuration = 0.35f;
+    [SerializeField] private float continueHintPulseDuration = 0.75f;
+    [SerializeField] private float continueHintScaleMultiplier = 1.06f;
+    [SerializeField] private float continueHintShowDelay = 5f;
+
+    private CanvasGroup continueHintCanvasGroup;
+    private Tween continueHintFadeTween;
+    private Tween continueHintColorTween;
+    private Tween continueHintScaleTween;
+    private Coroutine continueHintDelayCoroutine;
+
     [Header("Character Sprites")]
     public Image modelLeft;
     public Image modelRight;
@@ -84,6 +104,22 @@ public class DialogueManager : MonoBehaviour
     public Sprite knight4_Chapter2;
     public Sprite maiden1_Chapter2;
     public Sprite maulerSprite_Chapter2;
+
+    [Header("Hide Dialogue")]
+    [SerializeField] private CanvasGroup dialogueCanvasGroup;
+    [SerializeField] private float hideShowDuration = 0.35f;
+
+    [SerializeField] private Button hideButton;
+    [SerializeField] private Image hideButtonIcon;
+    private Color hideBaseColor;
+    [SerializeField] private Color hideHoverColor = Color.gray;
+
+    [SerializeField] private CanvasGroup hideTooltipGroup;
+    [SerializeField] private float tooltipFadeDuration = 0.2f;
+    [SerializeField] private float tooltipDelay = 1f;
+    private Tween tooltipTween;
+
+    private bool isDialogueHidden = false;
 
     [Header("Interaction")]
     public GameObject interactionPointGroup;
@@ -114,10 +150,11 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Collectible View")]
     public GameObject collectiblePanel;
+    [SerializeField] private CanvasGroup collectibleCanvasGroup;
     public TextMeshProUGUI collectibleTitleText;
     public TextMeshProUGUI collectibleContentText;
     public Image collectibleIconImage;
-    public Button collectibleCloseButton;
+    public bool isCollectibleOpen = false;
 
     [Header("Dialogue Data")]
     public List<DialogueChapter> chapters;
@@ -130,6 +167,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
+        hideBaseColor = hideButtonIcon.color;
         IsReady = false;
         if (Instance == null)
             Instance = this;
@@ -140,8 +178,9 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         collectiblePanel.SetActive(false);
-        if (collectibleCloseButton != null)
-            collectibleCloseButton.onClick.AddListener(CloseCollectibleView);
+
+        InitializeContinueHint();
+        SetContinueHintVisible(false, true);
 
         IsReady = true;
 
@@ -178,9 +217,18 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
+        if (!isDialogueHidden) return;
+
+        if (isCollectibleOpen && Input.GetKeyDown(KeyCode.Escape))
+        {
+            CloseCollectibleView();
+            return;
+        }
+
         if (waitingForClick && Input.GetMouseButtonDown(0))
         {
             waitingForClick = false;
+            SetContinueHintVisible(false);
             ShowDialoguePanel();
             modelLeft.gameObject.SetActive(true);
             modelRight.gameObject.SetActive(true);
@@ -266,6 +314,8 @@ public class DialogueManager : MonoBehaviour
 
     public void OnClickNext()
     {
+        StopSkippingIfNeeded();
+
         if (isTyping)
         {
             SkipTyping();
@@ -302,6 +352,200 @@ public class DialogueManager : MonoBehaviour
         ShowLine();
     }
 
+    public void OnClickBack()
+    {
+        StopSkippingIfNeeded();
+
+        if (dialogueHistory.Count <= 1)
+        {
+            Debug.Log("Назад недоступно: это первая реплика.");
+            return;
+        }
+
+        dialogueHistory.Pop();
+        currentLineIndex = dialogueHistory.Peek();
+        choicesContainer.SetActive(false);
+        ShowLine(false);
+    }
+
+    public void OnClickSkip()
+    {
+        if (isSkipping || runtimeLines == null || runtimeLines.Length == 0)
+            return;
+
+        skipCoroutine = StartCoroutine(SkipDialogueFast());
+    }
+
+    private IEnumerator SkipDialogueFast()
+    {
+        isSkipping = true;
+
+        while (currentLineIndex < runtimeLines.Length)
+        {
+            DialogueLine line = runtimeLines[currentLineIndex];
+            if (RequiresPlayerAction(line))
+                break;
+
+            if (!TryMoveToNextLineIndex(line))
+                break;
+
+            ShowLine();
+            yield return new WaitForSeconds(skipLineDelay);
+        }
+
+        isSkipping = false;
+        skipCoroutine = null;
+    }
+
+    private bool TryMoveToNextLineIndex(DialogueLine line)
+    {
+        if (line.isJumpLine)
+        {
+            currentLineIndex = Mathf.Clamp(line.gotoLineIndex - 1, 0, runtimeLines.Length - 1);
+            return true;
+        }
+
+        if (currentLineIndex + 1 >= runtimeLines.Length)
+            return false;
+
+        currentLineIndex++;
+        return true;
+    }
+
+    private bool RequiresPlayerAction(DialogueLine line)
+    {
+        if (line.hasChoices)
+            return true;
+
+        if (line.changeBackground && clickToContinueAfterFade)
+            return true;
+
+        if (line.showCollectibleView)
+            return true;
+
+        if (line.extraActions == null)
+            return false;
+
+        return line.extraActions.showCodePanel
+            || line.extraActions.showNotePanel
+            || line.extraActions.showElectroSubstationMinigame
+            || line.extraActions.stopDialogueAfterThisLine;
+    }
+
+    private void StopSkippingIfNeeded()
+    {
+        if (!isSkipping)
+            return;
+
+        if (skipCoroutine != null)
+            StopCoroutine(skipCoroutine);
+
+        isSkipping = false;
+        skipCoroutine = null;
+    }
+
+    private void InitializeContinueHint()
+    {
+        if (continueHintRoot == null)
+            return;
+
+        continueHintCanvasGroup = continueHintRoot.GetComponent<CanvasGroup>();
+        if (continueHintCanvasGroup == null)
+            continueHintCanvasGroup = continueHintRoot.AddComponent<CanvasGroup>();
+
+        if (continueHintIcon == null)
+            continueHintIcon = continueHintRoot.GetComponentInChildren<Image>();
+
+        continueHintCanvasGroup.alpha = 0f;
+        continueHintRoot.SetActive(false);
+    }
+
+    private void SetContinueHintVisible(bool visible, bool immediate = false)
+    {
+        if (continueHintRoot == null)
+            return;
+
+        if (continueHintDelayCoroutine != null)
+        {
+            StopCoroutine(continueHintDelayCoroutine);
+            continueHintDelayCoroutine = null;
+        }
+
+        continueHintFadeTween?.Kill();
+
+        if (!visible)
+        {
+            continueHintColorTween?.Kill();
+            continueHintScaleTween?.Kill();
+
+            if (continueHintIcon != null)
+            {
+                continueHintIcon.color = continueHintBaseColor;
+                continueHintIcon.rectTransform.localScale = Vector3.one;
+            }
+
+            if (immediate || continueHintCanvasGroup == null)
+            {
+                if (continueHintCanvasGroup != null)
+                    continueHintCanvasGroup.alpha = 0f;
+                continueHintRoot.SetActive(false);
+                return;
+            }
+
+            continueHintFadeTween = continueHintCanvasGroup
+                .DOFade(0f, continueHintFadeDuration)
+                .OnComplete(() => continueHintRoot.SetActive(false));
+
+            return;
+        }
+
+        if (!immediate && continueHintShowDelay > 0f)
+        {
+            continueHintRoot.SetActive(false);
+            if (continueHintCanvasGroup != null)
+                continueHintCanvasGroup.alpha = 0f;
+
+            continueHintDelayCoroutine = StartCoroutine(ShowContinueHintWithDelay());
+            return;
+        }
+
+        ShowContinueHintNow(immediate);
+    }
+
+    private IEnumerator ShowContinueHintWithDelay()
+    {
+        yield return new WaitForSeconds(continueHintShowDelay);
+        continueHintDelayCoroutine = null;
+        ShowContinueHintNow(false);
+    }
+
+    private void ShowContinueHintNow(bool immediate)
+    {
+        continueHintRoot.SetActive(true);
+
+        if (continueHintCanvasGroup != null)
+        {
+            continueHintCanvasGroup.alpha = immediate ? 1f : 0f;
+            if (!immediate)
+                continueHintFadeTween = continueHintCanvasGroup.DOFade(1f, continueHintFadeDuration);
+        }
+
+        if (continueHintIcon == null)
+            return;
+
+        continueHintIcon.color = continueHintBaseColor;
+        continueHintColorTween = continueHintIcon
+            .DOColor(continueHintPulseColor, continueHintPulseDuration)
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetEase(Ease.InOutSine);
+
+        continueHintIcon.rectTransform.localScale = Vector3.one;
+        continueHintScaleTween = continueHintIcon.rectTransform
+            .DOScale(continueHintScaleMultiplier, continueHintPulseDuration)
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetEase(Ease.InOutSine);
+    }
+
     public void JumpToLine(int lineIndex) // в случае интерактива
     {
         if (lineIndex >= 0 && lineIndex < currentChapter.lines.Count)
@@ -320,6 +564,22 @@ public class DialogueManager : MonoBehaviour
 
     public void ShowLine()
     {
+        ShowLine(true);
+    }
+
+    private void ShowLine(bool saveToHistory)
+    {
+        if (runtimeLines == null || runtimeLines.Length == 0)
+            return;
+
+        currentLineIndex = Mathf.Clamp(currentLineIndex, 0, runtimeLines.Length - 1);
+
+        if (saveToHistory)
+        {
+            if (dialogueHistory.Count == 0 || dialogueHistory.Peek() != currentLineIndex)
+                dialogueHistory.Push(currentLineIndex);
+        }
+
         DialogueLine line = runtimeLines[currentLineIndex]; 
 
         // ============= УСЛОВИЯ ДЛЯ ЗАСКРИПТОВАННЫХ МОМЕНТОВ В СЮЖЕТЕ ============== //
@@ -622,10 +882,11 @@ public class DialogueManager : MonoBehaviour
     }
 
     private Tween dialogueTween;
-    [SerializeField] private CanvasGroup dialogueGroup;
+    [SerializeField] public CanvasGroup dialogueGroup;
 
     public void ShowDialoguePanel()
     {
+        isDialogueHidden = false;
         dialoguePanel.SetActive(true);
 
         dialogueTween?.Kill();
@@ -643,6 +904,7 @@ public class DialogueManager : MonoBehaviour
 
     public void HideDialoguePanel(System.Action onComplete = null)
     {
+        isDialogueHidden = true;
         dialogueTween?.Kill();
 
         dialogueGroup.interactable = false;
@@ -659,6 +921,21 @@ public class DialogueManager : MonoBehaviour
             });
     }
 
+    [SerializeField] public GameObject hideClickCatcher;
+
+    public void OnGlobalScreenClick()
+    {
+        if (!isDialogueHidden) return;
+
+        hideClickCatcher.SetActive(false);
+        ShowDialoguePanel();
+    }
+
+    public void OnHideButtonClicked()
+    {
+        HideDialoguePanel();
+        hideClickCatcher.SetActive(true);
+    }
 
 
     public void ShowInteractionPoints()
@@ -1160,18 +1437,57 @@ public class DialogueManager : MonoBehaviour
             .ToList();
     }
 
+    [SerializeField] private GameObject[] characterObjects;
+
     private void ShowCollectibleView(string title, string content, Sprite icon)
     {
-        collectiblePanel.SetActive(true);
-        collectibleTitleText.text = title;
-        collectibleContentText.text = content;
-        collectibleIconImage.sprite = icon;
+        isCollectibleOpen = true;
+        // 1️⃣ Скрываем диалог с анимацией, а после запускаем открытие коллекции
+        HideDialoguePanel(() =>
+        {
+            // 2️⃣ Подготовка панели коллекции
+            collectiblePanel.SetActive(true);
+            collectibleCanvasGroup.alpha = 0f;
+            collectibleCanvasGroup.interactable = false;
+            collectibleCanvasGroup.blocksRaycasts = false;
+
+            // 3️⃣ Устанавливаем содержимое
+            collectibleTitleText.text = title;
+            collectibleContentText.text = content;
+            collectibleIconImage.sprite = icon;
+
+            // 5️⃣ Плавное появление текста, иконки и крестика с задержкой
+            DOTween.Sequence()
+                .AppendInterval(0.25f) // задержка, чтобы скрытие диалога успело завершиться
+                .Append(collectibleCanvasGroup.DOFade(1f, 0.25f))
+                .OnComplete(() =>
+                {
+                    collectibleCanvasGroup.interactable = true;
+                    collectibleCanvasGroup.blocksRaycasts = true;
+                });
+        });
     }
 
     private void CloseCollectibleView()
     {
-        collectiblePanel.SetActive(false);
+        if (!isCollectibleOpen) return; // защита от двойного закрытия
+
+        collectibleCanvasGroup.interactable = false;
+        collectibleCanvasGroup.blocksRaycasts = false;
+
+        collectibleCanvasGroup.DOFade(0f, 0.25f).OnComplete(() =>
+        {
+            collectiblePanel.SetActive(false);
+            isCollectibleOpen = false;
+            // 3️⃣ После скрытия коллекции — показываем диалог с анимацией
+            ShowDialoguePanel();
+        });
     }
+
+
+
+
+
 
     public TMP_FontAsset defaultFont;
 
@@ -1587,6 +1903,33 @@ public class DialogueManager : MonoBehaviour
         return null;
     }
 
+    public void OnHideHoverEnter()
+    {
+        hideButtonIcon.DOKill();
+        hideButtonIcon.DOColor(hideHoverColor, 0.2f);
 
+        tooltipTween?.Kill();
 
+        hideTooltipGroup.gameObject.SetActive(true);
+        hideTooltipGroup.alpha = 0f;
+
+        tooltipTween = DOTween.Sequence()
+            .AppendInterval(tooltipDelay)
+            .Append(hideTooltipGroup.DOFade(1f, tooltipFadeDuration));
+    }
+
+    public void OnHideHoverExit()
+    {
+        hideButtonIcon.DOKill();
+        hideButtonIcon.DOColor(hideBaseColor, 0.2f);
+
+        tooltipTween?.Kill();
+
+        hideTooltipGroup.DOKill();
+        hideTooltipGroup.DOFade(0f, 0.1f)
+            .OnComplete(() =>
+            {
+                hideTooltipGroup.gameObject.SetActive(false);
+            });
+    }
 }

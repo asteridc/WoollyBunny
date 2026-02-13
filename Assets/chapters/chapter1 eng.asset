@@ -8361,7 +8361,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -8415,7 +8415,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -8512,7 +8512,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -8567,7 +8567,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -8622,7 +8622,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -8677,7 +8677,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -8732,7 +8732,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -8788,7 +8788,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -8842,7 +8842,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -8896,7 +8896,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -8950,7 +8950,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -9004,7 +9004,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -9081,7 +9081,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -9135,7 +9135,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -9190,7 +9190,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -9245,7 +9245,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -9299,7 +9299,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -9353,7 +9353,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -9429,7 +9429,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -9483,7 +9483,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -9537,7 +9537,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -9591,7 +9591,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -9645,7 +9645,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -9699,7 +9699,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -9753,7 +9753,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -9808,7 +9808,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -9863,7 +9863,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -9918,7 +9918,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -9973,7 +9973,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10028,7 +10028,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10083,7 +10083,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -10139,7 +10139,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10193,7 +10193,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10248,7 +10248,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10303,7 +10303,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10357,7 +10357,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10411,7 +10411,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10466,7 +10466,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10520,7 +10520,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10574,7 +10574,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10628,7 +10628,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10683,7 +10683,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10737,7 +10737,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10791,7 +10791,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10846,7 +10846,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10900,7 +10900,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -10954,7 +10954,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -11017,7 +11017,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -11071,7 +11071,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -11125,7 +11125,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -11180,7 +11180,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -11234,7 +11234,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -11288,7 +11288,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -11342,7 +11342,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -11396,7 +11396,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -11450,7 +11450,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -11538,7 +11538,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -11593,7 +11593,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -11647,7 +11647,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -11701,7 +11701,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -11755,7 +11755,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -11809,7 +11809,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -11864,7 +11864,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -11918,7 +11918,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -11972,7 +11972,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -12026,7 +12026,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -12080,7 +12080,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -12134,7 +12134,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -12189,7 +12189,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -12243,7 +12243,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -12298,7 +12298,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -12353,7 +12353,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -12408,7 +12408,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -12462,7 +12462,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -12516,7 +12516,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -12570,7 +12570,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -12624,7 +12624,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -12678,7 +12678,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -12733,7 +12733,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -12788,7 +12788,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -12842,7 +12842,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -12896,7 +12896,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -12951,7 +12951,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 1
     flipSpeakerImage: 1
@@ -13006,7 +13006,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: efcab7d308024f44fb1564c26f5ad0f5, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
     isOnRight: 0
     flipSpeakerImage: 0
@@ -13061,7 +13061,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -13115,7 +13115,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -13171,7 +13171,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -13225,7 +13225,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -13279,7 +13279,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -13333,7 +13333,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 1
     flipSpeakerImage: 1
@@ -13387,7 +13387,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -13441,7 +13441,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 1
     flipSpeakerImage: 1
@@ -13495,7 +13495,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -13550,7 +13550,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -13605,7 +13605,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -13659,7 +13659,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 1
     flipSpeakerImage: 0
@@ -13713,7 +13713,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -13768,7 +13768,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 1
     flipSpeakerImage: 0
@@ -13822,7 +13822,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -13877,7 +13877,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 1
     flipSpeakerImage: 0
@@ -13931,7 +13931,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -13987,7 +13987,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 1
     flipSpeakerImage: 0
@@ -14041,7 +14041,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -14095,7 +14095,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -14149,7 +14149,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 1
     flipSpeakerImage: 0
@@ -14203,7 +14203,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -14291,7 +14291,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -14346,7 +14346,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -14401,7 +14401,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 1
     flipSpeakerImage: 0
@@ -14455,7 +14455,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -14509,7 +14509,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -14564,7 +14564,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 1
     flipSpeakerImage: 0
@@ -14618,7 +14618,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -14672,7 +14672,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -14727,7 +14727,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -14782,7 +14782,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 1
     flipSpeakerImage: 0
@@ -14837,7 +14837,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -14892,7 +14892,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -14946,7 +14946,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -15001,7 +15001,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 1
     flipSpeakerImage: 0
@@ -15055,7 +15055,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -15110,7 +15110,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -15164,7 +15164,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -15218,7 +15218,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 1
     flipSpeakerImage: 0
@@ -15273,7 +15273,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -15329,7 +15329,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -15383,7 +15383,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 1
     flipSpeakerImage: 0
@@ -15438,7 +15438,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 1
     flipSpeakerImage: 0
@@ -15493,7 +15493,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -15547,7 +15547,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -15602,7 +15602,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 7748d85e15fc8734b9719f9a0ef778af, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 696846ba92266004f9f2f5634ecf8ec3, type: 3}
     backgroundId: 3
     isOnRight: 0
     flipSpeakerImage: 0
@@ -15658,7 +15658,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -15713,7 +15713,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 1
     flipSpeakerImage: 1
@@ -15767,7 +15767,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -15822,7 +15822,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -15879,7 +15879,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -15933,7 +15933,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -15988,7 +15988,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16043,7 +16043,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16098,7 +16098,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16152,7 +16152,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 3c98e7bc91917364bb64da9c94dc4afc, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 5d955ab418690954f85c91060c5cce9c, type: 3}
     backgroundId: 5
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16206,7 +16206,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 3c98e7bc91917364bb64da9c94dc4afc, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 5d955ab418690954f85c91060c5cce9c, type: 3}
     backgroundId: 5
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16260,7 +16260,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 3c98e7bc91917364bb64da9c94dc4afc, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 5d955ab418690954f85c91060c5cce9c, type: 3}
     backgroundId: 5
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16314,7 +16314,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 3c98e7bc91917364bb64da9c94dc4afc, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 5d955ab418690954f85c91060c5cce9c, type: 3}
     backgroundId: 5
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16368,7 +16368,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 3c98e7bc91917364bb64da9c94dc4afc, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 5d955ab418690954f85c91060c5cce9c, type: 3}
     backgroundId: 5
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16422,7 +16422,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 3c98e7bc91917364bb64da9c94dc4afc, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 5d955ab418690954f85c91060c5cce9c, type: 3}
     backgroundId: 5
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16476,7 +16476,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 3c98e7bc91917364bb64da9c94dc4afc, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 5d955ab418690954f85c91060c5cce9c, type: 3}
     backgroundId: 5
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16530,7 +16530,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 3c98e7bc91917364bb64da9c94dc4afc, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 5d955ab418690954f85c91060c5cce9c, type: 3}
     backgroundId: 5
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16584,7 +16584,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 3c98e7bc91917364bb64da9c94dc4afc, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 5d955ab418690954f85c91060c5cce9c, type: 3}
     backgroundId: 5
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16653,7 +16653,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 3c98e7bc91917364bb64da9c94dc4afc, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 5d955ab418690954f85c91060c5cce9c, type: 3}
     backgroundId: 5
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16707,7 +16707,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16762,7 +16762,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16816,7 +16816,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16870,7 +16870,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -16924,7 +16924,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 1
     flipSpeakerImage: 0
@@ -16978,7 +16978,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -17032,7 +17032,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 1
     flipSpeakerImage: 0
@@ -17086,7 +17086,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 1
     flipSpeakerImage: 0
@@ -17140,7 +17140,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -17216,7 +17216,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -17270,7 +17270,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -17324,7 +17324,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 1
     flipSpeakerImage: 0
@@ -17378,7 +17378,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -17433,7 +17433,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 1
     flipSpeakerImage: 0
@@ -17488,7 +17488,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 1
     flipSpeakerImage: 0
@@ -17543,7 +17543,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -17598,7 +17598,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -17653,7 +17653,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 1
     flipSpeakerImage: 0
@@ -17707,7 +17707,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -17783,7 +17783,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -17837,7 +17837,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 1
     flipSpeakerImage: 0
@@ -17891,7 +17891,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -17946,7 +17946,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -18000,7 +18000,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 1
     flipSpeakerImage: 0
@@ -18054,7 +18054,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -18108,7 +18108,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 1
     flipSpeakerImage: 0
@@ -18162,7 +18162,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -18216,7 +18216,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 1
     flipSpeakerImage: 0
@@ -18271,7 +18271,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -18325,7 +18325,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0
@@ -18379,7 +18379,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 1
     flipSpeakerImage: 0
@@ -18434,7 +18434,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 1
     flipSpeakerImage: 0
@@ -18488,7 +18488,7 @@ MonoBehaviour:
     changeCharacterSprite: 0
     changeBackground: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 52243201ae49b924eb3eecde9590c7db, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b3164a91a9e3c3a4a96303281bebef52, type: 3}
     backgroundId: 4
     isOnRight: 0
     flipSpeakerImage: 0

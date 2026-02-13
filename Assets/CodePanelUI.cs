@@ -30,6 +30,7 @@ public class CodePanelUI : MonoBehaviour
     void Start()
     {
         DialogueManager.Instance.HideDialoguePanel();
+        DialogueManager.Instance.hideClickCatcher.SetActive(false);
 
         if (noteButton != null)
             noteButton.onClick.AddListener(ShowNote);
@@ -44,6 +45,7 @@ public class CodePanelUI : MonoBehaviour
             inputText.color = Color.white;
             codePanel.SetActive(true);
         });
+        DialogueManager.Instance.hideClickCatcher.SetActive(false);
     }
 
     public void OnDigitPress(string digit)
@@ -102,7 +104,6 @@ public class CodePanelUI : MonoBehaviour
         }
 
         wasCodePanelVisibleBeforeNote = codePanel.activeSelf;
-        codePanel.SetActive(false);
 
         collectibleViewUI.Show(noteItem);
     }
@@ -113,6 +114,7 @@ public class CodePanelUI : MonoBehaviour
 
         if (wasCodePanelVisibleBeforeNote)
             codePanel.SetActive(true);
+        DialogueManager.Instance.hideClickCatcher.SetActive(false);
     }
 
     public void ToggleNotePanel()

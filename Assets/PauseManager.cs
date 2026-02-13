@@ -100,7 +100,8 @@ public class PauseManager : MonoBehaviour
             return;
         }
 
-        Pause();
+        if (!DialogueManager.Instance.isCollectibleOpen) Pause();
+        else Debug.Log("Открыто окно коллекционного предмета");
     }
 
 

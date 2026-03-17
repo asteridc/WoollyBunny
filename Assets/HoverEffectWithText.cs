@@ -7,7 +7,7 @@ public class HoverEffectWithText : MonoBehaviour
     [SerializeField] private float showDuration = 0.35f;
     [SerializeField] private Button hoverButton;
     [SerializeField] private Image buttonIcon;
-    private Color hideBaseColor = new Color (0.5215687f, 0.4980392f, 0.4313726f, 0.2117647f);
+    private Color hideBaseColor = new Color (0.5215687f, 0.4980392f, 0.4313726f, 0.4039216f);
     [SerializeField] private Color hoverColor = Color.gray;
 
     [SerializeField] private CanvasGroup textGroup;

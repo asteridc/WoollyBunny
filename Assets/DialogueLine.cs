@@ -149,6 +149,9 @@ public class DialogueLine : IStoryNotificationSettings
     [System.Serializable]
     public class ExtraActions
     {
+        [Header("Choice Hints")]
+        public bool isImportantStoryChoice = false;
+
         [Header("Code Panel")]
         public bool showCodePanel = false;
         public bool showNotePanel = false;
@@ -237,6 +240,7 @@ public class DialogueLine : IStoryNotificationSettings
         {
             clone.extraActions = new ExtraActions
             {
+                isImportantStoryChoice = extraActions.isImportantStoryChoice,
                 showCodePanel = extraActions.showCodePanel,
                 showNotePanel = extraActions.showNotePanel,
                 stopDialogueAfterThisLine = extraActions.stopDialogueAfterThisLine,

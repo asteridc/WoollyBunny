@@ -83,9 +83,19 @@ public class CodePanelUI : MonoBehaviour
 
         inputText.text = "";
 
-        if (isCorrect)
+        if (LanguageManager.CurrentLanguage == Language.Russian && isCorrect)
         {
             codePanel.SetActive(false);
+            DialogueManager.Instance.startLineNumber = 40;
+            DialogueManager.Instance.Start();
+            DialogueManager.Instance.ShowDialoguePanel();
+            OnCodeCorrect?.Invoke();
+        }
+        if (LanguageManager.CurrentLanguage == Language.English && isCorrect)
+        {
+            codePanel.SetActive(false);
+            DialogueManager.Instance.startLineNumber = 50;
+            DialogueManager.Instance.Start();
             DialogueManager.Instance.ShowDialoguePanel();
             OnCodeCorrect?.Invoke();
         }

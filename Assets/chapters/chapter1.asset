@@ -74,6 +74,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -81,11 +82,11 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u041F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0441\u0435\u0431\u0435
-      \u0432\u0441\u0435\u043E\u0431\u0449\u0438\u0439 \u0447\u0435\u043B\u043E\u0432\u0435\u0447\u0435\u0441\u043A\u0438\u0439
-      \u043A\u043E\u043B\u043B\u0430\u043F\u0441, \u0432\u044B\u0437\u0432\u0430\u043D\u043D\u044B\u0439
-      \u043E\u0441\u0442\u0440\u043E\u0439 \u043B\u043E\u043C\u043A\u043E\u0439,
-      - \u0437\u0430\u0432\u0438\u0441\u0438\u043C\u043E\u0441\u0442\u044C\u044E."
+  - text: "\u041F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u043F\u043E\u043B\u043D\u044B\u0439
+      \u043A\u0440\u0430\u0445 \u0447\u0435\u043B\u043E\u0432\u0435\u0447\u0435\u0441\u0442\u0432\u0430
+      - \u043D\u0435 \u0438\u0437\u2011\u0437\u0430 \u0432\u043E\u0439\u043D\u044B
+      \u0438 \u043D\u0435 \u0438\u0437\u2011\u0437\u0430 \u0431\u043E\u043B\u0435\u0437\u043D\u0438,
+      \u0430 \u0438\u0437\u2011\u0437\u0430 \u043B\u043E\u043C\u043A\u0438."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -132,6 +133,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -139,18 +141,8 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u0417\u0430\u0432\u0438\u0441\u0438\u043C\u043E\u0441\u0442\u044C \u043D\u0435
-      \u043E\u0442 \u043A\u0443\u0440\u0435\u043D\u0438\u044F \u0438\u043B\u0438
-      \u0430\u043B\u043A\u043E\u0433\u043E\u043B\u044F, \u0430 \u043D\u0435\u0447\u0442\u043E
-      \u0431\u043E\u043B\u0435\u0435 \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u043E\u0433\u043E.
-      \u041E\u0442 \u044D\u0442\u043E\u0433\u043E \u0437\u0430\u0432\u0438\u0441\u0438\u0442
-      \u0432\u0441\u044F \u0436\u0438\u0437\u043D\u044C \u043D\u0430 \u0417\u0435\u043C\u043B\u0435,
-      \u0432\u0441\u044F \u043A\u0443\u043B\u044C\u0442\u0443\u0440\u0430, \u0432\u0441\u0435
-      \u0440\u0430\u0437\u0432\u043B\u0435\u0447\u0435\u043D\u0438\u044F, \u0432\u0441\u0435
-      \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u044B, \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0434\u044F\u0449\u0438\u0435
-      \u043D\u0430 \u043F\u043B\u0430\u043D\u0435\u0442\u0435 \u0437\u0430\u0432\u044F\u0437\u0430\u043D\u044B
-      \u043D\u0430 \u043E\u0434\u043D\u043E\u0439 \u0431\u043E\u043B\u044C\u0448\u043E\u0439
-      \u0437\u0430\u0432\u0438\u0441\u0438\u043C\u043E\u0441\u0442\u0438, - \u044D\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u0435."
+  - text: "\u041D\u0435 \u043E\u0442 \u0430\u043B\u043A\u043E\u0433\u043E\u043B\u044F,
+      \u043D\u0435 \u043E\u0442 \u043D\u0430\u0440\u043A\u043E\u0442\u0438\u043A\u043E\u0432."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -197,6 +189,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -204,15 +197,8 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u0412\u0441\u0435 \u0445\u0432\u0430\u043B\u0435\u043D\u043D\u044B\u0435
-      \u043D\u0430\u0448\u0438 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438
-      \u043E\u0434\u043D\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u043E \u043F\u0435\u0440\u0435\u0441\u0442\u0430\u043B\u0438
-      \u0444\u0443\u043D\u043A\u0446\u0438\u043E\u043D\u0438\u0440\u043E\u0432\u0430\u0442\u044C.
-      \u0412\u0441\u0435 \u044D\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u043D\u044B\u0435
-      \u0441\u0435\u0442\u0438 \u0432\u044B\u0432\u0435\u0434\u0435\u043D\u044B \u0438\u0437
-      \u0441\u0442\u0440\u043E\u044F. \u0421\u0432\u0435\u0442\u0430 \u043D\u0435\u0442,
-      \u0435\u0434\u044B \u0438 \u0432\u043E\u0434\u044B \u0442\u0430\u043A\u0436\u0435
-      \u043D\u0435\u0442."
+  - text: "\u041E\u0442 \u0447\u0435\u0433\u043E-\u0442\u043E \u043A\u0443\u0434\u0430
+      \u0431\u043E\u043B\u0435\u0435 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E\u0433\u043E."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -259,6 +245,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -266,10 +253,183 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u041E\u0447\u0435\u043D\u044C \u043C\u043D\u043E\u0433\u043E \u043B\u044E\u0434\u0435\u0439
-      \u043F\u043E\u0433\u0438\u0431\u043B\u043E \u0438\u0437-\u0437\u0430 \u0433\u043E\u043B\u043E\u0434\u0430,
-      \u0442\u0430\u043A \u043A\u0430\u043A \u043C\u0438\u0440 \u043D\u0435 \u0431\u044B\u043B
-      \u0433\u043E\u0442\u043E\u0432 \u043A \u0442\u0430\u043A\u043E\u043C\u0443
+  - text: "\u041E\u0442 \u044D\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u0430."
+    speakerName: ...
+    characterName: ...
+    isRadio: 0
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 0}
+    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
+    backgroundId: 0
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 0
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationIconColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationFontSize: 0
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    unlockChoiceKeys: []
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    useFallbackIfNoRequired: 0
+    fallbackLineIndex: 0
+    choices: []
+    extraActions:
+      isImportantStoryChoice: 0
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u0412\u0441\u044F \u0436\u0438\u0437\u043D\u044C \u043D\u0430 \u0417\u0435\u043C\u043B\u0435
+      \u0434\u0435\u0440\u0436\u0430\u043B\u0430\u0441\u044C \u043D\u0430 \u043D\u0435\u043C:
+      \u043A\u0443\u043B\u044C\u0442\u0443\u0440\u0430, \u0441\u0432\u044F\u0437\u044C,
+      \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0441\u0442\u0432\u043E \u0435\u0434\u044B,
+      \u043C\u0435\u0434\u0438\u0446\u0438\u043D\u0430, \u0440\u0430\u0437\u0432\u043B\u0435\u0447\u0435\u043D\u0438\u044F.
+      \u0412\u0441\u0435 \u0431\u044B\u043B\u043E \u043F\u0440\u0438\u0432\u044F\u0437\u0430\u043D\u043E
+      \u043A \u043E\u0434\u043D\u043E\u0439 \u0445\u0440\u0443\u043F\u043A\u043E\u0439
+      \u0437\u0430\u0432\u0438\u0441\u0438\u043C\u043E\u0441\u0442\u0438."
+    speakerName: ...
+    characterName: ...
+    isRadio: 0
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 0}
+    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
+    backgroundId: 0
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 0
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationIconColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationFontSize: 0
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    unlockChoiceKeys: []
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    useFallbackIfNoRequired: 0
+    fallbackLineIndex: 0
+    choices: []
+    extraActions:
+      isImportantStoryChoice: 0
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u0418 \u043E\u0434\u043D\u0430\u0436\u0434\u044B \u0432\u0441\u0435 \u0432\u043E\u0441\u0445\u0432\u0430\u043B\u044F\u0435\u043C\u044B\u0435
+      \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438 \u043E\u0442\u043A\u0430\u0437\u0430\u043B\u0438
+      \u0440\u0430\u0437\u043E\u043C."
+    speakerName: ...
+    characterName: ...
+    isRadio: 0
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 0}
+    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
+    backgroundId: 0
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 0
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationIconColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationFontSize: 0
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    unlockChoiceKeys: []
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    useFallbackIfNoRequired: 0
+    fallbackLineIndex: 0
+    choices: []
+    extraActions:
+      isImportantStoryChoice: 0
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u041C\u0438\u043B\u043B\u0438\u043E\u043D\u044B \u0443\u043C\u0435\u0440\u043B\u0438
+      \u043E\u0442 \u0433\u043E\u043B\u043E\u0434\u0430. \u041C\u0438\u0440 \u043D\u0438\u043A\u043E\u0433\u0434\u0430
+      \u043D\u0435 \u0431\u044B\u043B \u0433\u043E\u0442\u043E\u0432 \u043A \u0442\u0430\u043A\u043E\u043C\u0443
       \u043F\u043E\u0432\u043E\u0440\u043E\u0442\u0443."
     speakerName: ...
     characterName: ...
@@ -317,6 +477,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -324,13 +485,13 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u041D\u043E \u0447\u0435\u043B\u043E\u0432\u0435\u0447\u0435\u0441\u0442\u0432\u043E
-      \u0434\u0430\u0436\u0435 \u043F\u0440\u0438 \u0442\u0430\u043A\u0438\u0445
-      \u043E\u0431\u0441\u0442\u043E\u044F\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0430\u0445
-      \u0436\u0430\u0434\u043D\u043E \u0446\u0435\u043F\u043B\u044F\u0435\u0442\u0441\u044F
-      \u0437\u0430 \u043A\u0430\u0436\u0434\u0443\u044E \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C
-      \u043E\u0441\u0442\u0430\u0442\u044C\u0441\u044F \u043D\u0430 \u0417\u0435\u043C\u043B\u0435
-      \u0434\u043E\u043B\u044C\u0448\u0435 \u043F\u0440\u0435\u0434\u043D\u0430\u0437\u043D\u0430\u0447\u0435\u043D\u043D\u043E\u0433\u043E."
+  - text: "\u0418 \u0432\u0441\u0435 \u0436\u0435 \u0434\u0430\u0436\u0435 \u0432
+      \u044D\u0442\u0438\u0445 \u0443\u0441\u043B\u043E\u0432\u0438\u044F\u0445 \u0447\u0435\u043B\u043E\u0432\u0435\u0447\u0435\u0441\u0442\u0432\u043E
+      \u0446\u0435\u043F\u043B\u044F\u043B\u043E\u0441\u044C \u0437\u0430 \u043A\u0430\u0436\u0434\u044B\u0439
+      \u0448\u0430\u043D\u0441 \u043E\u0441\u0442\u0430\u0442\u044C\u0441\u044F \u043D\u0430
+      \u0417\u0435\u043C\u043B\u0435 \u0445\u043E\u0442\u044C \u043D\u0430 \u043A\u0430\u043F\u043B\u044E
+      \u0434\u043E\u043B\u044C\u0448\u0435, \u0447\u0435\u043C \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u043B\u0430
+      \u0441\u0443\u0434\u044C\u0431\u0430."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -377,6 +538,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -384,14 +546,9 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u0413\u0434\u0435-\u0442\u043E \u0432 \u043C\u0438\u0440\u0435 \u0441\u0442\u0440\u043E\u0438\u0442\u0441\u044F
-      \u043D\u043E\u0432\u044B\u0439 \u041C\u0438\u0440. \u042D\u0442\u043E \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0439
-      \u043E\u043F\u043B\u043E\u0442 \u0447\u0435\u043B\u043E\u0432\u0435\u0447\u0435\u0441\u0442\u0432\u0430,
-      \u043D\u043E \u0446\u0438\u0432\u0438\u043B\u0438\u0437\u0430\u0446\u0438\u044F
-      \u043D\u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u043D\u0430\u0440\u0443\u0448\u0435\u043D\u0430,
-      \u043E\u043D\u0430 \u0440\u0430\u0437\u0433\u0440\u043E\u043C\u043B\u0435\u043D\u0430.
-      \u041A\u0430\u0436\u0434\u044B\u0439 \u0447\u0435\u043B\u043E\u0432\u0435\u043A
-      \u0434\u0440\u0443\u0433 \u0434\u0440\u0443\u0433\u0443 - \u0432\u043E\u043B\u043A."
+  - text: "\u0413\u0434\u0435\u2011\u0442\u043E \u0441\u0442\u0440\u043E\u044F\u0442
+      \u041D\u043E\u0432\u044B\u0439 \u041C\u0438\u0440 - \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0439
+      \u043E\u043F\u043B\u043E\u0442 \u0447\u0435\u043B\u043E\u0432\u0435\u0447\u0435\u0441\u0442\u0432\u0430."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -438,6 +595,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -446,14 +604,12 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u041C\u0438\u0440 \u043D\u0435\u0441\u0442\u0430\u0431\u0438\u043B\u0435\u043D.
-      \u041D\u0438 \u0443 \u043A\u043E\u0433\u043E \u043D\u0435\u0442 \u0435\u0434\u0438\u043D\u043E\u0439
-      \u043F\u043E\u0437\u0438\u0446\u0438\u0438, \u0432\u0441\u0435 \u0441\u0442\u043E\u044F\u0442
-      \u043D\u0430 \u0441\u0432\u043E\u0435\u043C, \u0436\u0435\u0440\u0442\u0432\u0443\u044F
-      \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0439 \u0436\u0438\u0437\u043D\u044C\u044E
-      \u0440\u0430\u0434\u0438 \u043F\u0440\u0430\u0432\u0434\u044B. \u041F\u0440\u0438\u0448\u043B\u0430
-      \u043F\u043E\u0440\u0430 \u0438\u0437\u043C\u0435\u043D\u0438\u0442\u044C \u041C\u0438\u0440,
-      \u0430 \u043A\u0430\u043A \u044D\u0442\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C
-      - \u0432\u044B\u0431\u043E\u0440 \u0432\u0430\u0448."
+      \u041E\u0431\u0449\u0435\u0439 \u043F\u0440\u0430\u0432\u0434\u044B \u0431\u043E\u043B\u044C\u0448\u0435
+      \u043D\u0435\u0442. \u041A\u0430\u0436\u0434\u044B\u0439 \u0441\u0442\u043E\u0438\u0442
+      \u043D\u0430 \u0441\u0432\u043E\u0435\u043C, \u0433\u043E\u0442\u043E\u0432
+      \u043E\u0442\u0434\u0430\u0442\u044C \u0436\u0438\u0437\u043D\u044C \u0437\u0430
+      \u0442\u043E, \u0447\u0442\u043E \u0441\u0447\u0438\u0442\u0430\u0435\u0442
+      \u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u044B\u043C."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -500,6 +656,119 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u041F\u0440\u0438\u0448\u043B\u043E \u0432\u0440\u0435\u043C\u044F \u0438\u0437\u043C\u0435\u043D\u0438\u0442\u044C
+      \u041C\u0438\u0440."
+    speakerName: ...
+    characterName: ...
+    isRadio: 0
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 0}
+    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
+    backgroundId: 0
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 0
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationIconColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationFontSize: 0
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    unlockChoiceKeys: []
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    useFallbackIfNoRequired: 0
+    fallbackLineIndex: 0
+    choices: []
+    extraActions:
+      isImportantStoryChoice: 0
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: "\u041A\u0430\u043A \u0438\u043C\u0435\u043D\u043D\u043E - \u0440\u0435\u0448\u0430\u0442\u044C
+      \u0432\u0430\u043C."
+    speakerName: ...
+    characterName: ...
+    isRadio: 0
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    characterSprite: {fileID: 0}
+    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
+    backgroundId: 0
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleTitle: 
+    collectibleContent: 
+    collectibleIcon: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 0
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationIconColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationFontSize: 0
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    unlockChoiceKeys: []
+    isJumpLine: 0
+    gotoLineIndex: 0
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    useFallbackIfNoRequired: 0
+    fallbackLineIndex: 0
+    choices: []
+    extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -554,6 +823,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -608,6 +878,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -663,6 +934,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -718,6 +990,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -728,7 +1001,7 @@ MonoBehaviour:
   - text: "\u041D\u0435 \u0437\u0430\u0431\u044B\u0432\u0430\u0439\u0442\u0435, \u0443
       \u043D\u0430\u0441 \u0432\u0440\u0435\u043C\u0435\u043D\u0438 \u0434\u043E
       \u0437\u0430\u043A\u0430\u0442\u0430 \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C
-      \u043D\u0435 \u0442\u0430\u043A \u043C\u043D\u043E\u0433\u043E, \u0431\u0443\u0434\u0435\u0442
+      \u043D\u0435 \u0442\u0430\u043A \u043C\u043D\u043E\u0433\u043E. \u0411\u0443\u0434\u0435\u0442
       \u0445\u043E\u043B\u043E\u0434\u043D\u0435\u0435, \u0447\u0435\u043C \u0432\u0447\u0435\u0440\u0430."
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
@@ -776,6 +1049,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -831,6 +1105,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -889,6 +1164,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -903,7 +1179,7 @@ MonoBehaviour:
       \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u044B, \u043B\u044E\u0434\u0438
       \u0437\u0430\u043F\u043E\u043B\u043D\u044F\u043B\u0438 \u044D\u0442\u043E\u0442
       \u043A\u0440\u0430\u0441\u0438\u0432\u043E \u043E\u0431\u0443\u0441\u0442\u0440\u043E\u0435\u043D\u043D\u044B\u0439
-      \u0442\u043E\u0440\u0433\u043E\u0432\u044B\u0439 \u0446\u0435\u043D\u0442\u0440."
+      \u0442\u043E\u0440\u0433\u043E\u0432\u044B\u0439 \u0446\u0435\u043D\u0442\u0440..."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -950,6 +1226,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1006,6 +1283,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1063,6 +1341,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1119,6 +1398,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1132,10 +1412,9 @@ MonoBehaviour:
       \u043B\u0443\u0447\u0438 \u0443\u0445\u043E\u0434\u044F\u0449\u0435\u0433\u043E
       \u0441\u043E\u043B\u043D\u0446\u0430 \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u043B\u0438\u0441\u044C
       \u0438\u0437-\u0437\u0430 \u0433\u043E\u0440\u0438\u0437\u043E\u043D\u0442\u0430.
-      \u0418 \u043E\u043D\u0438 \u043E\u0441\u0432\u0435\u0442\u0438\u043B\u0438
-      \u0431\u0443\u043C\u0430\u0436\u043D\u044B\u0439 \u043B\u0438\u0441\u0442,
-      \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0431\u044B\u043B\u043E
-      \u043D\u0430\u043F\u0438\u0441\u0430\u043D\u043E \u0447\u0442\u043E-\u0442\u043E
+      \u041E\u043D\u0438 \u043E\u0441\u0432\u0435\u0442\u0438\u043B\u0438 \u0431\u0443\u043C\u0430\u0436\u043D\u044B\u0439
+      \u043B\u0438\u0441\u0442, \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u043E\u043C
+      \u0431\u044B\u043B\u043E \u043D\u0430\u043F\u0438\u0441\u0430\u043D\u043E \u0447\u0442\u043E-\u0442\u043E
       \u0432\u0440\u043E\u0434\u0435 \u043F\u0440\u043E\u0449\u0430\u043B\u044C\u043D\u043E\u0433\u043E
       \u043F\u0438\u0441\u044C\u043C\u0430."
     speakerName: ...
@@ -1184,6 +1463,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1192,7 +1472,7 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\xAB\u041A\u0430\u043A \u0433\u0440\u0443\u0441\u0442\u043D\u043E... \u041D\u0430\u0434\u0435\u044E\u0441\u044C,
-      \u0435\u0433\u043E \u0434\u043E\u0447\u044C \u0432\u0441\u0451 \u0435\u0449\u0451
+      \u0435\u0433\u043E \u0434\u043E\u0447\u044C \u0432\u0441\u0435 \u0435\u0449\u0435
       \u0436\u0438\u0432\u0430.\xBB"
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
@@ -1213,25 +1493,25 @@ MonoBehaviour:
     collectibleContent: "\u041F\u0440\u043E\u0441\u0442\u0438, \u0447\u0442\u043E
       \u043D\u0435 \u0434\u043E\u0436\u0434\u0430\u043B\u0441\u044F. \u042F \u0431\u043E\u043B\u044C\u0448\u0435
       \u0442\u0430\u043A \u043D\u0435 \u043C\u043E\u0433\u0443... \u041E\u0441\u0442\u0430\u043B\u043E\u0441\u044C
-      \u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0434\u043D\u043E \u2014 \u043F\u043E\u043F\u044B\u0442\u0430\u0442\u044C\u0441\u044F
+      \u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0434\u043D\u043E - \u043F\u043E\u043F\u044B\u0442\u0430\u0442\u044C\u0441\u044F
       \u0434\u043E\u0431\u0440\u0430\u0442\u044C\u0441\u044F \u0434\u043E \u0442\u0435\u0445,
       \u043A\u0442\u043E \u0432\u0441\u0451 \u0435\u0449\u0451 \u0432\u043E \u0447\u0442\u043E-\u0442\u043E
       \u0432\u0435\u0440\u0438\u0442 \u043D\u0430 \u044D\u0442\u043E\u0439 \u0431\u043E\u0433\u043E\u043C
       \u0437\u0430\u0431\u044B\u0442\u043E\u0439 \u043F\u043B\u0430\u043D\u0435\u0442\u0435.
-      \u041F\u043E\u043C\u043D\u0438\u0448\u044C, \u043C\u044B \u043F\u0440\u044F\u0442\u0430\u043B\u0438
+      \n\n\u041F\u043E\u043C\u043D\u0438\u0448\u044C, \u043C\u044B \u043F\u0440\u044F\u0442\u0430\u043B\u0438
       \u0435\u0434\u0443 \u0432 \u0442\u043E\u043C \u044F\u0449\u0438\u043A\u0435?.
       \u0412 \u0442\u043E\u043C, \u0433\u0434\u0435 \u0446\u0438\u0444\u0440\u044B.
       \u042F \u043F\u043E\u043C\u043D\u044E \u0442\u0443 \u0434\u0430\u0442\u0443,
       18 \u044F\u043D\u0432\u0430\u0440\u044F, \u0442\u043E\u0442 \u0434\u0435\u043D\u044C,
       \u043A\u043E\u0433\u0434\u0430 \u0442\u044B \u043F\u0435\u0440\u0432\u044B\u0439
       \u0440\u0430\u0437 \u0441\u043A\u0430\u0437\u0430\u043B\u0430... \"\u043F\u0430\u043F\u0430\"...
-      \u0422\u0430\u043A\u043E\u0432 \u0438 \u043A\u043E\u0434.\r\n\u0415\u0441\u043B\u0438
+      \u0422\u0430\u043A\u043E\u0432 \u0438 \u043A\u043E\u0434.\n\n\u0415\u0441\u043B\u0438
       \u0442\u044B \u043D\u0430\u0439\u0434\u0451\u0448\u044C \u044D\u0442\u043E
-      \u2014 \u0432\u043E\u0437\u044C\u043C\u0438 \u043A\u0430\u0440\u0442\u0443.
-      \u041E\u043D\u0430 \u043C\u043E\u0436\u0435\u0442 \u043F\u0440\u0438\u0432\u0435\u0441\u0442\u0438
+      - \u0432\u043E\u0437\u044C\u043C\u0438 \u043A\u0430\u0440\u0442\u0443. \u041E\u043D\u0430
+      \u043C\u043E\u0436\u0435\u0442 \u043F\u0440\u0438\u0432\u0435\u0441\u0442\u0438
       \u0442\u0435\u0431\u044F \u043A \u043D\u0438\u043C. \u0418\u043B\u0438 \u0445\u043E\u0442\u044F
-      \u0431\u044B \u043A \u043F\u043E\u043A\u043E\u044E.\r\n\u042F \u0443\u0441\u0442\u0430\u043B.
-      \u041F\u0440\u043E\u0441\u0442\u0438.\r"
+      \u0431\u044B \u043A \u043F\u043E\u043A\u043E\u044E.\n\n\u042F \u0443\u0441\u0442\u0430\u043B.
+      \u041F\u0440\u043E\u0441\u0442\u0438."
     collectibleIcon: {fileID: 21300000, guid: a42c8ec0ff27c024fab127cffe55cef1, type: 3}
     showItemNotification: 1
     itemName: "\u041F\u0440\u043E\u0449\u0430\u0439, \u0434\u043E\u0447\u043A\u0430..."
@@ -1262,6 +1542,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1319,6 +1600,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1376,6 +1658,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1431,6 +1714,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1490,6 +1774,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1547,6 +1832,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1604,6 +1890,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1662,6 +1949,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1720,7 +2008,7 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 0
-      nextLineIndex: 30
+      nextLineIndex: 35
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
@@ -1731,13 +2019,14 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 0
-      nextLineIndex: 32
+      nextLineIndex: 37
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
       unlockKey: 
       lockImage: {fileID: 0}
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1793,6 +2082,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1849,6 +2139,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1856,10 +2147,9 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u0425\u043E\u0442\u044F, \u044F\u0449\u0438\u043A \u0438 \u043F\u0440\u0430\u0432\u0434\u0430
-      \u0432\u044B\u0433\u043B\u044F\u0434\u0438\u0442 \u0441\u043B\u0438\u0448\u043A\u043E\u043C
-      \u043F\u043E\u0442\u0440\u0435\u043F\u0430\u043D\u043D\u044B\u043C. \u0411\u044B\u043B\u043E
-      \u0431\u044B \u0436\u0430\u043B\u043A\u043E \u0442\u0440\u0430\u0442\u0438\u0442\u044C
+  - text: "\u042F\u0449\u0438\u043A \u0438 \u043F\u0440\u0430\u0432\u0434\u0430 \u0432\u044B\u0433\u043B\u044F\u0434\u0438\u0442
+      \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u043F\u043E\u0442\u0440\u0435\u043F\u0430\u043D\u043D\u044B\u043C.
+      \u0411\u044B\u043B\u043E \u0431\u044B \u0436\u0430\u043B\u043A\u043E \u0442\u0440\u0430\u0442\u0438\u0442\u044C
       \u043D\u0430 \u043D\u0435\u0433\u043E \u043C\u0438\u043D\u0443.."
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
@@ -1898,7 +2188,7 @@ MonoBehaviour:
     customFont: {fileID: 0}
     unlockChoiceKeys: []
     isJumpLine: 1
-    gotoLineIndex: 33
+    gotoLineIndex: 38
     hasChoices: 0
     hasPathConsequences: 0
     isEndOfChapter: 0
@@ -1907,6 +2197,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -1965,6 +2256,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2019,8 +2311,9 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
-      showCodePanel: 1
-      showNotePanel: 1
+      isImportantStoryChoice: 0
+      showCodePanel: 0
+      showNotePanel: 0
       stopDialogueAfterThisLine: 1
       objectToActivate: {fileID: 0}
       showElectroSubstationMinigame: 0
@@ -2074,6 +2367,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2130,6 +2424,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2184,6 +2479,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2238,6 +2534,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2293,6 +2590,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2349,6 +2647,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2404,6 +2703,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2458,6 +2758,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2468,10 +2769,9 @@ MonoBehaviour:
   - text: "\u041D\u0435\u0442, \u041A\u0435\u0439\u043D. \u0423 \u043D\u0430\u0441
       \u043D\u0435\u0442 \u0432\u0440\u0435\u043C\u0435\u043D\u0438 \u043D\u0430
       \u043D\u043E\u0447\u043B\u0435\u0433. \u041D\u0430\u043C \u043D\u0443\u0436\u043D\u043E
-      \u043D\u0430\u0439\u0442\u0438 \u0425\u0430\u043D\u043D\u0443 \u0432 \u0441\u043E\u0441\u0435\u0434\u043D\u0435\u043C
-      \u0437\u0434\u0430\u043D\u0438\u0438 \u0438 \u0438\u0434\u0442\u0438 \u043A
-      \u041C\u0438\u0440\u0443. \u0423 \u043D\u0430\u0441 \u0431\u043E\u043B\u044C\u0448\u0435
-      \u043D\u0435 \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u0432\u0440\u0435\u043C\u0435\u043D\u0438."
+      \u043D\u0430\u0439\u0442\u0438 \u0425\u0430\u043D\u043D\u0443 \u0438 \u0438\u0434\u0442\u0438
+      \u043A \u041C\u0438\u0440\u0443. \u0423 \u043D\u0430\u0441 \u043D\u0435\u0442
+      \u0432\u0440\u0435\u043C\u0435\u043D\u0438."
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
     isRadio: 0
@@ -2518,6 +2818,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2572,6 +2873,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2629,6 +2931,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2683,6 +2986,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2738,6 +3042,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2792,6 +3097,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2850,6 +3156,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2904,6 +3211,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -2967,6 +3275,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3021,6 +3330,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3076,6 +3386,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3132,6 +3443,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3142,7 +3454,7 @@ MonoBehaviour:
   - text: "\u0418\u043B\u0430\u0439 \u043D\u0435 \u0437\u043D\u0430\u043B, \u043D\u0430\u0441\u043A\u043E\u043B\u044C\u043A\u043E
       \u043C\u0443\u0447\u0438\u0442\u0435\u043B\u044C\u043D\u0430 \u0431\u044B\u043B\u0430
       \u0435\u0433\u043E \u0441\u043C\u0435\u0440\u0442\u044C. \u041C\u0435\u0440\u0442\u0432\u043E\u0435
-      \u0442\u0435\u043B\u043E \u0434\u0440\u0443\u0433\u0430, \u0438\u0437 \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E
+      \u0442\u0435\u043B\u043E, \u0438\u0437 \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E
       \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u043B\u0430 \u0431\u0440\u044B\u0437\u0433\u0430\u0442\u044C
       \u043A\u0440\u043E\u0432\u044C, \u0437\u0430\u0441\u0442\u044B\u043B\u043E
       \u043F\u0435\u0440\u0435\u0434 \u0433\u043B\u0430\u0437\u0430\u043C\u0438 \u0438
@@ -3195,6 +3507,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3252,6 +3565,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3307,6 +3621,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3364,6 +3679,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3419,6 +3735,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3476,6 +3793,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3534,7 +3852,7 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 0
-      nextLineIndex: 69
+      nextLineIndex: 74
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
@@ -3546,7 +3864,7 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 0
-      nextLineIndex: 62
+      nextLineIndex: 67
       choiceType: 0
       isSpecialChoice: 0
       isLocked: 0
@@ -3557,13 +3875,14 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 0
-      nextLineIndex: 67
+      nextLineIndex: 72
       choiceType: 0
       isSpecialChoice: 0
       isLocked: 0
       unlockKey: 
       lockImage: {fileID: 0}
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3618,6 +3937,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3626,7 +3946,7 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u042F \u043D\u0435\u043D\u0430\u0432\u0438\u0436\u0443 \u0432\u0430\u0441,
-      \u0431\u0440\u043E\u0434\u044F\u0433! \u0412\u044B - \u0435\u0431\u0443\u0447\u0438\u0435
+      \u0431\u0440\u043E\u0434\u044F\u0433\u0438! \u0412\u044B \u0435\u0431\u0443\u0447\u0438\u0435
       \u043A\u0440\u044B\u0441\u044B, \u043D\u0435\u0434\u043E\u0441\u0442\u043E\u0439\u043D\u044B\u0435
       \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043E\u0432\u0430\u0442\u044C \u0432
       \u041D\u043E\u0432\u043E\u043C \u041C\u0438\u0440\u0435."
@@ -3676,6 +3996,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3732,6 +4053,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3787,6 +4109,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3795,7 +4118,7 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u0422\u044B \u0432\u0447\u0435\u0440\u0430 \u0440\u043E\u0434\u0438\u043B\u0441\u044F?
-      \u041D\u0430\u0445\u0443\u044F \u043C\u043D\u0435 \u0447\u044C\u0451-\u0442\u043E
+      \u041D\u0430\u0445\u0443\u044F \u043C\u043D\u0435 \u0447\u044C\u0435-\u0442\u043E
       \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043D\u0438\u0435? \u042F \u0441\u0430\u043C
       \u0441\u0435\u0431\u0435 \u0445\u043E\u0437\u044F\u0438\u043D."
     speakerName: "\u041C\u0438\u0440\u043E\u0442\u0432\u043E\u0440\u0435\u0446"
@@ -3835,7 +4158,7 @@ MonoBehaviour:
     customFont: {fileID: 0}
     unlockChoiceKeys: []
     isJumpLine: 1
-    gotoLineIndex: 61
+    gotoLineIndex: 66
     hasChoices: 0
     hasPathConsequences: 0
     isEndOfChapter: 0
@@ -3844,6 +4167,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3898,6 +4222,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -3946,7 +4271,7 @@ MonoBehaviour:
     customFont: {fileID: 0}
     unlockChoiceKeys: []
     isJumpLine: 1
-    gotoLineIndex: 61
+    gotoLineIndex: 66
     hasChoices: 0
     hasPathConsequences: 0
     isEndOfChapter: 0
@@ -3955,6 +4280,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4013,6 +4339,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4067,6 +4394,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4121,6 +4449,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4175,6 +4504,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4231,6 +4561,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4285,6 +4616,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4294,7 +4626,7 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u0412 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E \u0441\u0435\u043A\u0443\u043D\u0434\u0443
       \u0418\u043B\u0430\u0439 \u0440\u0435\u0437\u043A\u043E \u043C\u0435\u0442\u043D\u0443\u043B\u0441\u044F
-      \u0432\u043F\u0435\u0440\u0451\u0434. \u041E\u0441\u0442\u0440\u0438\u0451
+      \u0432\u043F\u0435\u0440\u0435\u0434. \u041E\u0441\u0442\u0440\u0438\u0435
       \u043D\u043E\u0436\u0430 \u043F\u043E\u0447\u0442\u0438 \u043A\u043E\u0441\u043D\u0443\u043B\u043E\u0441\u044C
       \u0432\u0440\u0430\u0433\u0430, \u043D\u043E \u0442\u043E\u0442 \u043B\u043E\u0432\u043A\u043E
       \u043E\u0442\u0448\u0430\u0442\u043D\u0443\u043B\u0441\u044F \u0438 \u0443\u0434\u0430\u0440\u043E\u043C
@@ -4346,6 +4678,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4405,6 +4738,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4459,6 +4793,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4513,6 +4848,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4571,6 +4907,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4628,6 +4965,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4682,6 +5020,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4738,6 +5077,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4792,6 +5132,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4849,6 +5190,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4858,11 +5200,9 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u041E\u043D\u0430 \u0437\u0430\u043C\u0435\u0442\u0438\u043B\u0430 \u0432\u043E\u043D\u0437\u0438\u0432\u0448\u0438\u0439\u0441\u044F
       \u0431\u043E\u043B\u0442 \u0430\u0440\u0431\u0430\u043B\u0435\u0442\u0430 \u0432
-      \u0435\u0433\u043E \u0448\u0435\u044E. \u041B\u0438\u0446\u043E \u0435\u0451
-      \u0438\u0441\u043A\u0430\u0437\u0438\u043B\u043E\u0441\u044C \u043E\u0442 \u0431\u043E\u043B\u0438,
-      \u043D\u043E \u043E\u043D\u0430 \u043F\u043E\u0434\u0430\u0432\u0438\u043B\u0430
-      \u043D\u0430\u043F\u043B\u044B\u0432\u0448\u0438\u0435 \u044D\u043C\u043E\u0446\u0438\u0438,
-      \u0447\u0442\u043E\u0431\u044B \u043F\u043E\u043C\u043E\u0447\u044C \u0418\u043B\u0430\u044E."
+      \u0435\u0433\u043E \u0448\u0435\u044E. \u041B\u0438\u0446\u043E \u0438\u0441\u043A\u0430\u0437\u0438\u043B\u043E\u0441\u044C
+      \u043E\u0442 \u0431\u043E\u043B\u0438, \u043D\u043E \u043E\u043D\u0430 \u043F\u043E\u0434\u0430\u0432\u0438\u043B\u0430
+      \u043D\u0430\u043F\u043B\u044B\u0432\u0448\u0438\u0435 \u044D\u043C\u043E\u0446\u0438\u0438."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -4909,6 +5249,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -4918,9 +5259,8 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u041E\u0441\u0442\u043E\u0440\u043E\u0436\u043D\u043E \u043E\u0441\u043C\u0430\u0442\u0440\u0438\u0432\u0430\u044F
       \u0435\u0433\u043E \u0431\u043E\u043A, \u043E\u043D\u0430 \u0441\u0442\u0430\u0440\u0430\u043B\u0430\u0441\u044C
-      \u0441\u043A\u0440\u044B\u0442\u044C \u0442\u0440\u0435\u0432\u043E\u0433\u0443
-      \u0438 \u043E\u0442\u0447\u0430\u044F\u043D\u0438\u0435, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
-      \u0442\u0435\u0440\u0437\u0430\u043B\u0438 \u0435\u0451 \u0438\u0437\u043D\u0443\u0442\u0440\u0438."
+      \u0441\u043A\u0440\u044B\u0442\u044C \u0440\u0432\u0443\u0449\u0435\u0435\u0441\u044F
+      \u043D\u0430\u0440\u0443\u0436\u0443 \u043E\u0442\u0447\u0430\u044F\u043D\u0438\u0435."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -4967,6 +5307,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5024,6 +5365,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5031,12 +5373,9 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u0415\u0433\u043E \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u043C
-      \u0436\u0435\u043B\u0430\u043D\u0438\u0435\u043C \u0431\u044B\u043B\u0430 \u0441\u043C\u0435\u0440\u0442\u044C
-      \u044D\u0442\u043E\u0433\u043E \u0443\u0431\u043B\u044E\u0434\u043A\u0430.
-      \u041E\u043D \u0443\u0431\u0438\u043B \u0435\u0433\u043E \u0441\u043E \u0441\u043F\u0438\u043D\u044B,
-      \u043F\u043E\u0442\u043E\u043C\u0443 \u0447\u0442\u043E \u0441\u0430\u043C
-      \u0431\u044B\u043B \u043D\u0430\u043F\u0443\u0433\u0430\u043D..."
+  - text: "\u041E\u043D \u0443\u0431\u0438\u043B \u041A\u0435\u0439\u043D\u0430 \u0441\u043E
+      \u0441\u043F\u0438\u043D\u044B, \u043F\u043E\u0442\u043E\u043C\u0443 \u0447\u0442\u043E
+      \u0441\u0430\u043C \u0431\u044B\u043B \u043D\u0430\u043F\u0443\u0433\u0430\u043D..."
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
     isRadio: 0
@@ -5083,6 +5422,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5091,8 +5431,8 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u0418 \u0433\u0434\u0435 \u0436\u0435 \u0442\u044B \u0442\u0435\u043F\u0435\u0440\u044C,
-      \u043A\u0440\u044B\u0441\u0430?! \u0412 \u0430\u0434\u0443, \u0431\u043B\u044F\u0442\u044C!
-      \u0412 \u0430\u0434\u0443, \u0443\u0435\u0431\u043E\u043A!"
+      \u0430?! \u0412 \u0430\u0434\u0443, \u0431\u043B\u044F\u0442\u044C! \u0412
+      \u0447\u0435\u0440\u0442\u043E\u0432\u043E\u043C \u0430\u0434\u0443!"
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
     isRadio: 0
@@ -5139,6 +5479,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5148,10 +5489,10 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u041E\u043D\u0438 \u043C\u043E\u043B\u0447\u0430\u043B\u0438. \u0422\u0435\u043B\u043E
       \u041A\u0435\u0439\u043D\u0430 \u043B\u0435\u0436\u0430\u043B\u043E, \u0441\u043B\u043E\u0432\u043D\u043E
-      \u0443\u043F\u0440\u0451\u043A \u0441\u0443\u0434\u044C\u0431\u044B, \u043A\u0430\u043A
+      \u0443\u043F\u0440\u0435\u043A \u0441\u0443\u0434\u044C\u0431\u044B, \u043A\u0430\u043A
       \u0444\u0438\u043D\u0430\u043B\u044C\u043D\u044B\u0439 \u0443\u0434\u0430\u0440
-      \u043F\u043E \u0438\u0445 \u0438 \u0431\u0435\u0437 \u0442\u043E\u0433\u043E
-      \u0438\u0441\u043A\u0430\u043B\u0435\u0447\u0435\u043D\u043D\u044B\u043C \u0434\u0443\u0448\u0430\u043C."
+      \u043F\u043E \u0438\u0445 \u0438\u0441\u043A\u0430\u043B\u0435\u0447\u0435\u043D\u043D\u044B\u043C
+      \u0434\u0443\u0448\u0430\u043C."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -5198,6 +5539,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5253,6 +5595,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5262,7 +5605,7 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u041C\u044B \u043F\u043E\u0445\u043E\u0440\u043E\u043D\u0438\u043C \u0435\u0433\u043E.
       \u041F\u043E\u0434 \u0441\u0442\u0430\u0440\u044B\u043C \u0434\u0443\u0431\u043E\u043C.
-      \u042F \u043E\u0431\u0435\u0449\u0430\u043B \u0435\u043C\u0443, \u0447\u0442\u043E
+      \u042F \u043E\u0431\u0435\u0449\u0430\u043B \u0435\u043C\u0443, \u0447\u0442\u043E,
       \u0435\u0441\u043B\u0438 \u043E\u043D \u0443\u043C\u0440\u0435\u0442, \u044F
       \u043F\u043E\u0445\u043E\u0440\u043E\u043D\u044E \u0435\u0433\u043E \u0438\u043C\u0435\u043D\u043D\u043E
       \u0442\u0430\u043C."
@@ -5312,6 +5655,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5370,7 +5714,7 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 3
-      nextLineIndex: 94
+      nextLineIndex: 99
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
@@ -5382,7 +5726,7 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 1
-      nextLineIndex: 105
+      nextLineIndex: 110
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
@@ -5394,13 +5738,14 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 2
-      nextLineIndex: 113
+      nextLineIndex: 118
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
       unlockKey: 
       lockImage: {fileID: 0}
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5456,6 +5801,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5513,6 +5859,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5570,6 +5917,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5625,6 +5973,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5681,6 +6030,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5737,6 +6087,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5747,7 +6098,7 @@ MonoBehaviour:
   - text: "\u0410 \u043A\u0430\u043A, \u043F\u043E-\u0442\u0432\u043E\u0435\u043C\u0443,
       \u043D\u0430\u0434\u043E? \u0423\u043B\u044B\u0431\u043D\u0443\u0442\u044C\u0441\u044F?
       \u0421\u043A\u0430\u0437\u0430\u0442\u044C: \xAB\u041E\u0447\u0435\u043D\u044C
-      \u0436\u0430\u043B\u044C, \u043D\u043E \u043C\u044B \u0432\u044B\u0436\u0438\u043B\u0438\xBB?"
+      \u0436\u0430\u043B\u044C, \u0437\u0430\u0442\u043E \u043C\u044B \u0432\u044B\u0436\u0438\u043B\u0438\xBB?"
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
     isRadio: 0
@@ -5794,6 +6145,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5849,6 +6201,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5904,6 +6257,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5913,15 +6267,11 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u0425\u0430\u043D\u043D\u0430 \u043D\u0435 \u0437\u043D\u0430\u043B\u0430,
       \u043A\u0430\u043A \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0430\u0442\u044C
-      \u0441\u0432\u043E\u0435\u0433\u043E \u043D\u0430\u043F\u0430\u0440\u043D\u0438\u043A\u0430,
-      \u0432\u0435\u0434\u044C \u0435\u0451 \u0441\u0430\u043C\u0443 \u043D\u0438\u043A\u0442\u043E
-      \u043D\u0435 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u043B.
-      \u041D\u043E \u043D\u0435\u0437\u043D\u0430\u043D\u0438\u0435 \u043D\u0435
-      \u0441\u043F\u0430\u0441\u0430\u043B\u043E \u0435\u0451 \u043E\u0442 \u0432\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0435\u0439
-      \u0431\u043E\u043B\u0438, \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u0442\u0430\u043A
-      \u0436\u0435, \u043A\u0430\u043A \u0438 \u0443 \u0418\u043B\u0430\u044F, \u0437\u0430\u0441\u0442\u0430\u0432\u043B\u044F\u043B\u0430
-      \u043F\u0440\u0435\u043B\u043E\u043C\u0438\u0442\u044C\u0441\u044F \u043A \u0437\u0435\u043C\u043B\u0435
-      \u0432 \u0434\u0438\u043A\u043E\u043C \u043E\u0442\u0447\u0430\u044F\u043D\u0438\u0438."
+      \u0441\u0432\u043E\u0435\u0433\u043E \u043D\u0430\u043F\u0430\u0440\u043D\u0438\u043A\u0430.
+      \u0415\u0439 \u043A\u0430\u0437\u0430\u043B\u043E\u0441\u044C, \u043B\u044E\u0431\u044B\u043C
+      \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u043C \u0441\u043B\u043E\u0432\u043E\u043C
+      \u043E\u043D\u0430 \u0442\u043E\u043B\u044C\u043A\u043E \u0440\u0430\u043D\u0438\u0442
+      \u0435\u0433\u043E."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -5968,6 +6318,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -5979,7 +6330,7 @@ MonoBehaviour:
       \u043E\u043F\u0443\u0441\u0442\u0438\u043B\u0441\u044F \u043D\u0430 \u043A\u043E\u043B\u0435\u043D\u0438
       \u0440\u044F\u0434\u043E\u043C \u0441 \u0442\u0435\u043B\u043E\u043C. \u041E\u043D
       \u043C\u043E\u043B\u0447\u0430 \u043F\u0440\u0438\u043A\u0440\u044B\u043B \u041A\u0435\u0439\u043D\u0443
-      \u0433\u043B\u0430\u0437\u0430, \u0441\u043B\u043E\u0432\u043D\u043E \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u043B
+      \u0433\u043B\u0430\u0437\u0430, \u0441\u043B\u043E\u0432\u043D\u043E \u043F\u043E\u0437\u0432\u043E\u043B\u0438\u0432
       \u0435\u043C\u0443 \u0443\u0439\u0442\u0438 \u0441\u043F\u043E\u043A\u043E\u0439\u043D\u043E."
     speakerName: ...
     characterName: ...
@@ -6027,6 +6378,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6084,6 +6436,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6138,6 +6491,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6146,9 +6500,8 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u041E\u043D \u0437\u043D\u0430\u043B, \u043D\u0430 \u0447\u0442\u043E
-      \u0448\u0451\u043B. \u041C\u044B \u0434\u043E\u043B\u0436\u043D\u044B \u0438\u0434\u0442\u0438
-      \u0434\u0430\u043B\u044C\u0448\u0435. \u041E\u043D \u0431\u044B\u043B \u0445\u043E\u0442\u0435\u043B
-      \u044D\u0442\u043E\u0433\u043E."
+      \u0448\u0435\u043B. \u041C\u044B \u0434\u043E\u043B\u0436\u043D\u044B \u0438\u0434\u0442\u0438
+      \u0434\u0430\u043B\u044C\u0448\u0435."
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
     isRadio: 0
@@ -6195,6 +6548,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6202,8 +6556,7 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u0421\u043B\u043E\u0432\u0430 \u0418\u043B\u0430\u044F \u0440\u0435\u0437\u0430\u043B\u0438.
-      \u0418 \u043D\u0435 \u0442\u043E\u043B\u044C\u043A\u043E \u0425\u0430\u043D\u043D\u0443."
+  - text: "\u0421\u043B\u043E\u0432\u0430 \u0418\u043B\u0430\u044F \u0440\u0435\u0437\u0430\u043B\u0438."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -6250,6 +6603,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6257,9 +6611,8 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u041D\u0435\u0443\u0436\u0435\u043B\u0438 \u0434\u043B\u044F \u0442\u0435\u0431\u044F
-      \u0446\u0435\u043B\u044C \u0432\u0430\u0436\u043D\u0435\u0435 \u0442\u0432\u043E\u0435\u0433\u043E
-      \u0434\u0440\u0443\u0433\u0430?"
+  - text: "\u041D\u0435\u0443\u0436\u0435\u043B\u0438 \u0446\u0435\u043B\u044C \u0432\u0430\u0436\u043D\u0435\u0435
+      \u0442\u0432\u043E\u0435\u0433\u043E \u0434\u0440\u0443\u0433\u0430?"
     speakerName: "\u0425\u0430\u043D\u043D\u0430"
     characterName: "\u0425\u0430\u043D\u043D\u0430"
     isRadio: 0
@@ -6306,6 +6659,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6360,6 +6714,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6416,6 +6771,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6423,8 +6779,8 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u041E\u043D \u043E\u0442\u0432\u0435\u0440\u043D\u0443\u043B\u0441\u044F
-      \u0438 \u043F\u043E\u0448\u0451\u043B \u043F\u0435\u0440\u0432\u044B\u043C
+  - text: "\u041E\u043D \u0440\u0430\u0437\u0432\u0435\u0440\u043D\u0443\u043B\u0441\u044F
+      \u0438 \u043F\u043E\u0448\u0435\u043B \u043F\u0435\u0440\u0432\u044B\u043C
       - \u0431\u0443\u0434\u0442\u043E \u0443\u0436\u0435 \u043F\u043E\u0445\u043E\u0440\u043E\u043D\u0438\u043B
       \u043D\u0435 \u0442\u043E\u043B\u044C\u043A\u043E \u041A\u0435\u0439\u043D\u0430,
       \u043D\u043E \u0438 \u0442\u043E, \u0447\u0442\u043E \u0431\u043E\u043B\u0435\u043B\u043E
@@ -6475,6 +6831,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6531,6 +6888,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6538,11 +6896,11 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u042D\u0442\u043E \u0432\u044B\u0437\u044B\u0432\u0430\u043B\u043E \u0433\u043E\u0440\u0434\u043E\u0441\u0442\u044C
-      \u0437\u0430 \u0441\u0432\u043E\u0435\u0433\u043E \u0434\u0440\u0443\u0433\u0430,
+  - text: "\u042D\u0442\u043E \u0432\u044B\u0437\u044B\u0432\u0430\u043B\u043E \u0443
+      \u0418\u043B\u0430\u044F \u0433\u043E\u0440\u0434\u043E\u0441\u0442\u044C,
       \u0432\u0435\u0434\u044C \u043D\u0435\u043C\u043D\u043E\u0433\u0438\u0435 \u0433\u043E\u0442\u043E\u0432\u044B
       \u0441\u044B\u0433\u0440\u0430\u0442\u044C \u0432 \u0440\u0443\u0441\u0441\u043A\u0443\u044E
-      \u0440\u0443\u043B\u0435\u0442\u043A\u0443 \u0441\u043E \u0421\u043C\u0435\u0440\u0442\u044C\u044E."
+      \u0440\u0443\u043B\u0435\u0442\u043A\u0443 \u0441\u043E \u0441\u043C\u0435\u0440\u0442\u044C\u044E."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -6589,6 +6947,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6646,6 +7005,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6700,6 +7060,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6755,6 +7116,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6765,8 +7127,8 @@ MonoBehaviour:
   - text: "\u0417\u043D\u0430\u0435\u0448\u044C\u2026 \u0438\u043D\u043E\u0433\u0434\u0430
       \u043C\u043D\u0435 \u043A\u0430\u0437\u0430\u043B\u043E\u0441\u044C, \u0447\u0442\u043E
       \u0432 \u0434\u0443\u0448\u0435 \u043E\u043D \u0431\u0435\u0441\u0441\u043C\u0435\u0440\u0442\u0435\u043D.
-      \u041E\u043D \u0432\u0441\u0451 \u0432\u0440\u0435\u043C\u044F \u0441\u043C\u0435\u044F\u043B\u0441\u044F.
-      \u0412\u0441\u0451 \u0432\u0440\u0435\u043C\u044F\u2026"
+      \u041E\u043D \u0432\u0441\u0435 \u0432\u0440\u0435\u043C\u044F \u0441\u043C\u0435\u044F\u043B\u0441\u044F.
+      \u0412\u0441\u0435 \u0432\u0440\u0435\u043C\u044F\u2026"
     speakerName: "\u0425\u0430\u043D\u043D\u0430"
     characterName: "\u0425\u0430\u043D\u043D\u0430"
     isRadio: 0
@@ -6813,6 +7175,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6868,6 +7231,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6877,7 +7241,7 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u041E\u043D\u0438 \u0441\u0442\u043E\u044F\u043B\u0438 - \u0434\u0432\u0430
       \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u0430, \u0441\u043B\u0438\u0448\u043A\u043E\u043C
-      \u0443\u0441\u0442\u0430\u0432\u0448\u0438\u0445 \u0434\u043B\u044F \u0441\u043B\u0451\u0437,
+      \u0443\u0441\u0442\u0430\u0432\u0448\u0438\u0445 \u0434\u043B\u044F \u0441\u043B\u0435\u0437,
       \u043D\u043E \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u0436\u0438\u0432\u044B\u0445,
       \u0447\u0442\u043E\u0431\u044B \u043D\u0438\u0447\u0435\u0433\u043E \u043D\u0435
       \u0447\u0443\u0432\u0441\u0442\u0432\u043E\u0432\u0430\u0442\u044C."
@@ -6927,6 +7291,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -6985,6 +7350,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7040,6 +7406,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7053,9 +7420,8 @@ MonoBehaviour:
       \u043E\u043D\u0438 \u0432\u044B\u0440\u044B\u043B\u0438 \u043C\u043E\u0433\u0438\u043B\u0443.
       \u0417\u0435\u043C\u043B\u044F \u0431\u044B\u043B\u0430 \u043C\u043E\u043A\u0440\u043E\u0439
       \u0438 \u0442\u044F\u0436\u0435\u043B\u043E\u0439, \u0441\u043B\u043E\u0432\u043D\u043E
-      \u0445\u043E\u0440\u043E\u043D\u0438\u0442 \u0430\u043D\u0433\u0435\u043B\u0430.
-      \u041E\u043D\u0430 \u0431\u044B\u043B\u0430 \u043F\u0440\u043E\u043F\u0438\u0442\u0430\u043D\u0430
-      \u0431\u043E\u043B\u044C\u044E."
+      \u0433\u043E\u0442\u043E\u0432\u0438\u043B\u0430\u0441\u044C \u0445\u043E\u0440\u043E\u043D\u0438\u0442\u044C
+      \u0430\u043D\u0433\u0435\u043B\u0430."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -7102,6 +7468,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7112,12 +7479,12 @@ MonoBehaviour:
   - text: "\u0418\u043B\u0430\u0439 \u043D\u0435 \u043F\u0440\u043E\u0440\u043E\u043D\u0438\u043B
       \u043D\u0438 \u0441\u043B\u043E\u0432\u0430, \u043A\u043E\u0433\u0434\u0430
       \u043A\u043B\u0430\u043B \u0442\u0435\u043B\u043E \u0432\u043D\u0443\u0442\u0440\u044C.
-      \u041E\u043D \u043B\u0438\u0448\u044C \u0434\u043E\u0441\u0442\u0430\u043B
-      \u043D\u043E\u0436 \u041A\u0435\u0439\u043D\u0430 \u0438 \u0432\u043E\u0442\u043A\u043D\u0443\u043B
-      \u0435\u0433\u043E \u0432 \u0437\u0435\u043C\u043B\u044E \u043A\u0430\u043A
-      \u043C\u0435\u0442\u043A\u0443, \u0447\u0442\u043E \u0437\u0434\u0435\u0441\u044C
-      \u043F\u043E\u0445\u043E\u0440\u043E\u043D\u0435\u043D \u0435\u0433\u043E \u0445\u0440\u0430\u0431\u0440\u044B\u0439
-      \u0438 \u0432\u0435\u0441\u0435\u043B\u044B\u0439 \u0434\u0440\u0443\u0433."
+      \u041E\u043D \u0434\u043E\u0441\u0442\u0430\u043B \u043D\u043E\u0436 \u041A\u0435\u0439\u043D\u0430
+      \u0438 \u0432\u043E\u0442\u043A\u043D\u0443\u043B \u0435\u0433\u043E \u0432
+      \u0437\u0435\u043C\u043B\u044E \u043A\u0430\u043A \u043C\u0435\u0442\u043A\u0443,
+      \u0447\u0442\u043E \u0437\u0434\u0435\u0441\u044C \u043F\u043E\u0445\u043E\u0440\u043E\u043D\u0435\u043D
+      \u0435\u0433\u043E \u0445\u0440\u0430\u0431\u0440\u044B\u0439 \u0438 \u0432\u0435\u0441\u0435\u043B\u044B\u0439
+      \u0434\u0440\u0443\u0433."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -7164,6 +7531,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7218,6 +7586,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7273,6 +7642,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7362,7 +7732,7 @@ MonoBehaviour:
         \u0434\u043E \u041C\u0438\u0440\u0430."
       showStoryNotification: 1
       storyNotificationText: "\u041F\u0443\u0442\u044C \u041B\u044E\u0431\u0432\u0438"
-      storyNotificationIcon: {fileID: 21300000, guid: 9b946dff4c65c544389086e6cf6eedf9, type: 3}
+      storyNotificationIcon: {fileID: 21300000, guid: 5afc3791f4243f84b917ed23852c1c1d, type: 3}
       storyNotificationDuration: 5.5
       storyNotificationTextColor: {r: 0.726415, g: 0.1610449, b: 0.615479, a: 1}
       storyNotificationIconColor: {r: 0.726415, g: 0.1610449, b: 0.615479, a: 1}
@@ -7376,6 +7746,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7430,6 +7801,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7439,7 +7811,7 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u0412\u0435\u0442\u0435\u0440 \u0432 \u043A\u0440\u043E\u043D\u0430\u0445
       \u0434\u0443\u0431\u0430, \u043F\u043E\u0442\u0440\u0435\u0441\u043A\u0438\u0432\u0430\u043D\u0438\u0435
-      \u043A\u0430\u043C\u043D\u0435\u0439 - \u0432\u0441\u0451, \u0447\u0442\u043E
+      \u043A\u0430\u043C\u043D\u0435\u0439 - \u0432\u0441\u0435, \u0447\u0442\u043E
       \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u043E\u0442 \u041A\u0435\u0439\u043D\u0430
       \u0432 \u044D\u0442\u043E\u043C \u043C\u0435\u0441\u0442\u0435."
     speakerName: ...
@@ -7488,6 +7860,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7496,7 +7869,7 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u041E\u043D\u0438 \u0440\u0430\u0437\u0432\u0435\u0440\u043D\u0443\u043B\u0438\u0441\u044C.
-      \u041C\u0438\u0440 \u0437\u0432\u0430\u043B \u0432\u043F\u0435\u0440\u0451\u0434. "
+      \u041C\u0438\u0440 \u0437\u0432\u0430\u043B \u0432\u043F\u0435\u0440\u0435\u0434. "
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -7543,6 +7916,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7553,7 +7927,7 @@ MonoBehaviour:
   - text: "\u041B\u0435\u0433\u043A\u0438\u0439 \u0432\u0435\u0442\u0435\u0440 \u043F\u0440\u043E\u0449\u0430\u043B\u044C\u043D\u043E
       \u0448\u0435\u0432\u0435\u043B\u0438\u043B \u0438\u0445 \u0432\u043E\u043B\u043E\u0441\u044B.
       \u041A\u0430\u0437\u0430\u043B\u043E\u0441\u044C, \u0447\u0442\u043E \u043E\u043D
-      \u043D\u0451\u0441 \u0437\u0430 \u043D\u0438\u043C\u0438 \u0447\u0435\u0439-\u0442\u043E
+      \u043D\u0435\u0441 \u0437\u0430 \u043D\u0438\u043C\u0438 \u0447\u0435\u0439-\u0442\u043E
       \u0442\u0438\u0445\u0438\u0439 \u0432\u0437\u0433\u043B\u044F\u0434. "
     speakerName: ...
     characterName: ...
@@ -7601,6 +7975,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7663,6 +8038,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7767,6 +8143,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7826,6 +8203,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7882,6 +8260,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7940,6 +8319,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -7947,11 +8327,10 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u041D\u043E \u0418\u043B\u0430\u0439 \u0437\u043D\u0430\u043B: \u0432
-      \u043A\u0430\u0436\u0434\u043E\u043C \u043E\u0433\u043D\u0435, \u0447\u0442\u043E
-      \u0433\u043E\u0440\u0438\u0442 \u043F\u043E \u043D\u043E\u0447\u0430\u043C,
-      \u0435\u0441\u0442\u044C \u0447\u044C\u044F-\u0442\u043E \u0441\u0433\u043E\u0440\u0435\u0432\u0448\u0430\u044F
-      \u0442\u0430\u0439\u043D\u0430."
+  - text: "\u0418\u043B\u0430\u0439 \u0437\u043D\u0430\u043B: \u0432 \u043A\u0430\u0436\u0434\u043E\u043C
+      \u043E\u0433\u043D\u0435, \u0447\u0442\u043E \u0433\u043E\u0440\u0438\u0442
+      \u043F\u043E \u043D\u043E\u0447\u0430\u043C, \u0435\u0441\u0442\u044C \u0447\u044C\u044F-\u0442\u043E
+      \u0441\u0433\u043E\u0440\u0435\u0432\u0448\u0430\u044F \u0442\u0430\u0439\u043D\u0430..."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -7998,6 +8377,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8006,7 +8386,7 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u041C\u0438\u0440 \u0434\u0435\u0440\u0436\u0430\u043B\u0441\u044F \u043D\u0430
-      \u043A\u043E\u0441\u0442\u044F\u0445, \u0438 \u0432\u0441\u0451, \u0447\u0442\u043E
+      \u043A\u043E\u0441\u0442\u044F\u0445, \u0438 \u0432\u0441\u0435, \u0447\u0442\u043E
       \u043A\u0430\u0437\u0430\u043B\u043E\u0441\u044C \u0434\u043E\u0441\u0442\u0438\u0436\u0435\u043D\u0438\u0435\u043C,
       \u043C\u043E\u0433\u043B\u043E \u043E\u0431\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F
       \u0446\u0435\u043F\u044F\u043C\u0438."
@@ -8056,6 +8436,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8072,7 +8453,7 @@ MonoBehaviour:
       \u0448\u0430\u0433\u0438 \u0434\u0432\u0443\u0445 \u0443\u0441\u0442\u0430\u0432\u0448\u0438\u0445,
       \u043C\u043E\u043B\u0447\u0430 \u0438\u0434\u0443\u0449\u0438\u0445 \u043A
       \u0433\u043E\u0440\u043E\u0434\u0443 \u043B\u044E\u0434\u0435\u0439, \u0432
-      \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0432\u0441\u0451 \u0438\u0437\u043C\u0435\u043D\u0438\u0442\u0441\u044F."
+      \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0432\u0441\u0435 \u0438\u0437\u043C\u0435\u043D\u0438\u0442\u0441\u044F."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -8119,6 +8500,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8175,6 +8557,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8229,6 +8612,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8283,6 +8667,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8341,7 +8726,7 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 0
-      nextLineIndex: 144
+      nextLineIndex: 149
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
@@ -8352,13 +8737,14 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 0
-      nextLineIndex: 167
+      nextLineIndex: 172
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
       unlockKey: 
       lockImage: {fileID: 0}
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8366,7 +8752,7 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u041D\u0435 \u0437\u043D\u0430\u044E. \u0412 \u0422\u0451\u043C\u043D\u044B\u0439
+  - text: "\u041D\u0435 \u0437\u043D\u0430\u044E. \u0412 \u0422\u0435\u043C\u043D\u044B\u0439
       \u0434\u0435\u043D\u044C \u0438\u0445 \u043D\u0435 \u0431\u044B\u043B\u043E
       \u0434\u043E\u043C\u0430. \u0417\u0430 \u0434\u0432\u0430 \u0434\u043D\u044F
       \u0434\u043E \u044D\u0442\u043E\u0433\u043E \u043E\u043D\u0438 \u0441\u043A\u0430\u0437\u0430\u043B\u0438,
@@ -8417,6 +8803,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8475,6 +8862,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8485,7 +8873,7 @@ MonoBehaviour:
   - text: "\u041A\u043E\u0433\u0434\u0430 \u043D\u0430\u0447\u0430\u043B\u0430\u0441\u044C
       \u043F\u0430\u043D\u0438\u043A\u0430\u2026 \u044F \u043D\u0435 \u0441\u0442\u0430\u043B
       \u0436\u0434\u0430\u0442\u044C. \u041F\u0440\u043E\u0441\u0442\u043E \u0441\u043E\u0431\u0440\u0430\u043B
-      \u0432\u0441\u0451, \u0447\u0442\u043E \u043C\u043E\u0433, \u0438 \u0443\u0448\u0451\u043B."
+      \u0432\u0441\u0435, \u0447\u0442\u043E \u043C\u043E\u0433, \u0438 \u0443\u0448\u0451\u043B."
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
     isRadio: 0
@@ -8532,6 +8920,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8540,8 +8929,8 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u0425\u0430\u043D\u043D\u0430 \u0447\u0443\u0442\u044C \u043F\u0440\u0438\u0449\u0443\u0440\u0438\u043B\u0430\u0441\u044C.
-      \u0412 \u0435\u0451 \u0432\u0437\u0433\u043B\u044F\u0434\u0435 \u043F\u0440\u043E\u043C\u0435\u043B\u044C\u043A\u043D\u0443\u043B\u043E
-      \u0447\u0442\u043E-\u0442\u043E \u2013 \u0442\u043E \u043B\u0438 \u0441\u043E\u043C\u043D\u0435\u043D\u0438\u0435,
+      \u0412 \u0435\u0435 \u0432\u0437\u0433\u043B\u044F\u0434\u0435 \u043F\u0440\u043E\u043C\u0435\u043B\u044C\u043A\u043D\u0443\u043B\u043E
+      \u0447\u0442\u043E-\u0442\u043E - \u0442\u043E \u043B\u0438 \u0441\u043E\u043C\u043D\u0435\u043D\u0438\u0435,
       \u0442\u043E \u043B\u0438 \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u0435."
     speakerName: ...
     characterName: ...
@@ -8589,6 +8978,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8644,6 +9034,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8702,7 +9093,7 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 1
-      nextLineIndex: 150
+      nextLineIndex: 155
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
@@ -8714,13 +9105,14 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 2
-      nextLineIndex: 158
+      nextLineIndex: 163
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
       unlockKey: 
       lockImage: {fileID: 0}
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8752,18 +9144,18 @@ MonoBehaviour:
     itemType: 
     itemRarity: 0
     itemIcon: {fileID: 0}
-    showStoryNotification: 0
-    storyNotificationText: 
-    storyNotificationDuration: 0
-    storyNotificationIcon: {fileID: 0}
-    storyNotificationTextColor: {r: 0, g: 0, b: 0, a: 0}
-    storyNotificationIconColor: {r: 0, g: 0, b: 0, a: 0}
-    storyNotificationFontSize: 0
+    showStoryNotification: 1
+    storyNotificationText: "\u041A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u043E\u0441\u0442\u044C+"
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 21300000, guid: ecb8f2060a9833c438a13ccb3ed3addb, type: 3}
+    storyNotificationTextColor: {r: 0.679245, g: 0.0736917, b: 0.0736917, a: 1}
+    storyNotificationIconColor: {r: 0.679245, g: 0.0736917, b: 0.0736917, a: 1}
+    storyNotificationFontSize: 42
     isBold: 0
     isItalic: 0
-    isUppercase: 0
-    useCustomFont: 0
-    customFont: {fileID: 0}
+    isUppercase: 1
+    useCustomFont: 1
+    customFont: {fileID: 11400000, guid: fe36550777514754683c4c571761ce43, type: 2}
     unlockChoiceKeys: []
     isJumpLine: 0
     gotoLineIndex: 0
@@ -8775,6 +9167,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8829,6 +9222,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8884,6 +9278,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8939,6 +9334,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -8994,6 +9390,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9005,8 +9402,8 @@ MonoBehaviour:
       \u043D\u0435\u0431\u043E\u043B\u044C\u0448\u0443\u044E \u043F\u0430\u0443\u0437\u0443,
       \u0447\u0442\u043E\u0431\u044B \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u044F\u044F
       \u0444\u0440\u0430\u0437\u0430 \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u043B\u0430
-      \u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440 \u043D\u0430 \u044D\u0442\u0443
-      \u043D\u0435\u043F\u0440\u0438\u044F\u0442\u043D\u0443\u044E \u0442\u0435\u043C\u0443."
+      \u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440 \u043D\u0430 \u043D\u0435\u043F\u0440\u0438\u044F\u0442\u043D\u0443\u044E
+      \u0442\u0435\u043C\u0443."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -9053,6 +9450,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9060,7 +9458,7 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u041C\u043D\u0435 \u043D\u0430\u0434\u043E \u0438\u0434\u0442\u0438 \u0432\u043F\u0435\u0440\u0451\u0434,
+  - text: "\u041D\u0430\u0434\u043E \u0438\u0434\u0442\u0438 \u0432\u043F\u0435\u0440\u0435\u0434,
       \u0430 \u043D\u0435 \u043D\u0430\u0437\u0430\u0434."
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
@@ -9108,6 +9506,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9119,7 +9518,7 @@ MonoBehaviour:
       \u0438\u0445 \u043F\u043B\u0435\u0447. \u041D\u0438\u043A\u0442\u043E \u0431\u043E\u043B\u044C\u0448\u0435
       \u043D\u0435 \u0437\u0430\u0433\u043E\u0432\u043E\u0440\u0438\u043B: \u0432
       \u044D\u0442\u043E\u0439 \u0442\u0438\u0448\u0438\u043D\u0435 \u043A\u0430\u0436\u0434\u044B\u0439
-      \u043D\u0451\u0441 \u0432 \u0441\u0435\u0431\u0435 \u0441\u0432\u043E\u0451."
+      \u043D\u0435\u0441 \u0432 \u0441\u0435\u0431\u0435 \u0441\u0432\u043E\u0451."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -9157,7 +9556,7 @@ MonoBehaviour:
     customFont: {fileID: 0}
     unlockChoiceKeys: []
     isJumpLine: 1
-    gotoLineIndex: 215
+    gotoLineIndex: 220
     hasChoices: 0
     hasPathConsequences: 0
     isEndOfChapter: 0
@@ -9166,6 +9565,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9200,18 +9600,18 @@ MonoBehaviour:
     itemType: 
     itemRarity: 0
     itemIcon: {fileID: 0}
-    showStoryNotification: 0
-    storyNotificationText: 
-    storyNotificationDuration: 0
-    storyNotificationIcon: {fileID: 0}
-    storyNotificationTextColor: {r: 0, g: 0, b: 0, a: 0}
-    storyNotificationIconColor: {r: 0, g: 0, b: 0, a: 0}
-    storyNotificationFontSize: 0
+    showStoryNotification: 1
+    storyNotificationText: "\u0411\u043B\u0430\u0433\u043E\u0440\u043E\u0434\u0441\u0442\u0432\u043E+"
+    storyNotificationDuration: 5.5
+    storyNotificationIcon: {fileID: 21300000, guid: 9b946dff4c65c544389086e6cf6eedf9, type: 3}
+    storyNotificationTextColor: {r: 0.1839623, g: 0.69843, b: 1, a: 1}
+    storyNotificationIconColor: {r: 0.1839623, g: 0.69843, b: 1, a: 1}
+    storyNotificationFontSize: 42
     isBold: 0
     isItalic: 0
-    isUppercase: 0
-    useCustomFont: 0
-    customFont: {fileID: 0}
+    isUppercase: 1
+    useCustomFont: 1
+    customFont: {fileID: 11400000, guid: fe36550777514754683c4c571761ce43, type: 2}
     unlockChoiceKeys: []
     isJumpLine: 0
     gotoLineIndex: 0
@@ -9223,6 +9623,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9231,8 +9632,8 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u0422\u043E\u0433\u0434\u0430 \u0434\u0443\u043C\u0430\u043B, \u0447\u0442\u043E
-      \u0432\u0441\u0451 \u043E\u043A\u0430\u0436\u0435\u0442\u0441\u044F \u043D\u0435
-      \u0442\u0430\u043A \u0441\u0435\u0440\u044C\u0451\u0437\u043D\u043E, \u0447\u0442\u043E
+      \u0432\u0441\u0435 \u043E\u043A\u0430\u0436\u0435\u0442\u0441\u044F \u043D\u0435
+      \u0442\u0430\u043A \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u043E, \u0447\u0442\u043E
       \u044F \u0441\u043F\u0440\u0430\u0432\u043B\u044E\u0441\u044C..."
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
@@ -9280,6 +9681,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9337,6 +9739,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9346,7 +9749,7 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u0425\u0430\u043D\u043D\u0430 \u0441\u043B\u0443\u0448\u0430\u043B\u0430
       \u043C\u043E\u043B\u0447\u0430. \u0417\u0430\u0442\u0435\u043C \u0432\u0434\u0440\u0443\u0433
-      \u043F\u043E\u0447\u0442\u0438 \u0448\u0451\u043F\u043E\u0442\u043E\u043C \u0441\u043A\u0430\u0437\u0430\u043B\u0430\u2026"
+      \u043F\u043E\u0447\u0442\u0438 \u0448\u0435\u043F\u043E\u0442\u043E\u043C \u0441\u043A\u0430\u0437\u0430\u043B\u0430\u2026"
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -9393,6 +9796,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9449,6 +9853,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9464,7 +9869,7 @@ MonoBehaviour:
       \u0438 \u0432 \u044D\u0442\u043E\u0442 \u043A\u043E\u0440\u043E\u0442\u043A\u0438\u0439
       \u043C\u0438\u0433 \u0418\u043B\u0430\u0439 \u0443\u0432\u0438\u0434\u0435\u043B,
       \u0447\u0435\u0433\u043E \u0442\u043E\u043B\u044C\u043A\u043E \u0441\u0442\u043E\u0438\u0442
-      \u0435\u0451 \u043D\u0435\u0432\u0438\u043D\u043D\u044B\u0439 \u0432\u0437\u0433\u043B\u044F\u0434."
+      \u0435\u0435 \u043D\u0435\u0432\u0438\u043D\u043D\u044B\u0439 \u0432\u0437\u0433\u043B\u044F\u0434."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -9511,6 +9916,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9565,6 +9971,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9623,6 +10030,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9631,7 +10039,7 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u0418\u043B\u0430\u0439 \u043D\u0435 \u0441\u043A\u0430\u0437\u0430\u043B,
-      \u043D\u0430\u0441\u0447\u0451\u0442 \u0447\u0435\u0433\u043E \u0425\u0430\u043D\u043D\u0430
+      \u043D\u0430\u0441\u0447\u0435\u0442 \u0447\u0435\u0433\u043E \u0425\u0430\u043D\u043D\u0430
       \u043F\u0440\u0430\u0432\u0430. \u041D\u043E, \u043A\u0430\u0436\u0435\u0442\u0441\u044F,
       \u0432\u043F\u0435\u0440\u0432\u044B\u0435 \u0437\u0430 \u0434\u043E\u043B\u0433\u043E\u0435
       \u0432\u0440\u0435\u043C\u044F \u0435\u043C\u0443 \u0437\u0430\u0445\u043E\u0442\u0435\u043B\u043E\u0441\u044C
@@ -9673,7 +10081,7 @@ MonoBehaviour:
     customFont: {fileID: 0}
     unlockChoiceKeys: []
     isJumpLine: 1
-    gotoLineIndex: 184
+    gotoLineIndex: 189
     hasChoices: 0
     hasPathConsequences: 0
     isEndOfChapter: 0
@@ -9682,6 +10090,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9740,6 +10149,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9747,8 +10157,8 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u041E\u043D \u0447\u0443\u0442\u044C \u043E\u0442\u0432\u0451\u043B \u0432\u0437\u0433\u043B\u044F\u0434.
-      \u041B\u0438\u0446\u043E \u0441\u0442\u0430\u043B\u043E \u0436\u0451\u0441\u0442\u0447\u0435,
+  - text: "\u041E\u043D \u0447\u0443\u0442\u044C \u043E\u0442\u0432\u0435\u043B \u0432\u0437\u0433\u043B\u044F\u0434.
+      \u041B\u0438\u0446\u043E \u0441\u0442\u0430\u043B\u043E \u0436\u0435\u0441\u0442\u0447\u0435,
       \u0431\u0443\u0434\u0442\u043E \u043E\u043D \u0433\u043E\u0442\u043E\u0432\u0438\u043B\u0441\u044F
       \u043A \u0447\u0435\u043C\u0443-\u0442\u043E \u043D\u0435\u0438\u0437\u0431\u0435\u0436\u043D\u043E\u043C\u0443."
     speakerName: ...
@@ -9797,6 +10207,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9856,6 +10267,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9864,8 +10276,8 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u042F \u043E\u0441\u0442\u0430\u043B\u0441\u044F \u0434\u043E\u043C\u0430.
-      \u0428\u043A\u043E\u043B\u0430, \u0443\u0447\u0451\u0431\u0430\u2026 \u0421\u043A\u0430\u0437\u0430\u043B\u0438,
-      \u0447\u0442\u043E \u0432\u0435\u0440\u043D\u0443\u0442\u0441\u044F \u0431\u044B\u0441\u0442\u0440\u043E."
+      \u0421\u043A\u0430\u0437\u0430\u043B\u0438, \u0447\u0442\u043E \u0432\u0435\u0440\u043D\u0443\u0442\u0441\u044F
+      \u0431\u044B\u0441\u0442\u0440\u043E."
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
     isRadio: 0
@@ -9912,6 +10324,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9968,6 +10381,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -9976,8 +10390,8 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u0418\u043C\u0435\u043D\u043D\u043E \u0432 \u0442\u0443 \u043D\u043E\u0447\u044C
-      \u0432\u0441\u0451 \u0438 \u043D\u0430\u0447\u0430\u043B\u043E\u0441\u044C.
-      \u0422\u0451\u043C\u043D\u044B\u0439 \u0434\u0435\u043D\u044C. \u042D\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u0435\u0441\u043A\u0438\u0435
+      \u0432\u0441\u0435 \u0438 \u043D\u0430\u0447\u0430\u043B\u043E\u0441\u044C.
+      \u0422\u0435\u043C\u043D\u044B\u0439 \u0434\u0435\u043D\u044C. \u042D\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u0435\u0441\u043A\u0438\u0435
       \u0432\u0441\u043F\u043B\u0435\u0441\u043A\u0438, \u0431\u0435\u0441\u043F\u043E\u0440\u044F\u0434\u043A\u0438,
       \u0443\u0436\u0430\u0441."
     speakerName: "\u0418\u043B\u0430\u0439"
@@ -10026,6 +10440,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10035,7 +10450,7 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u0410\u0432\u0438\u0430\u0440\u0435\u0439\u0441 \u0443\u043F\u0430\u043B.
       \u0421\u0442\u043E\u043B\u043A\u043D\u043E\u0432\u0435\u043D\u0438\u0435 \u0434\u0432\u0443\u0445
-      \u0441\u0430\u043C\u043E\u043B\u0451\u0442\u043E\u0432 \u0432 \u043D\u0435\u0431\u0435
+      \u0441\u0430\u043C\u043E\u043B\u0435\u0442\u043E\u0432 \u0432 \u043D\u0435\u0431\u0435
       - \u0438 \u043E\u0434\u0438\u043D \u0438\u0437 \u043D\u0438\u0445 \u0431\u044B\u043B
       \u0438\u0445."
     speakerName: "\u0418\u043B\u0430\u0439"
@@ -10084,6 +10499,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10142,6 +10558,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10198,6 +10615,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10205,8 +10623,8 @@ MonoBehaviour:
       showElectroSubstationMinigame: 0
       showInteractionPoints: 0
       isEndOfChapter: 0
-  - text: "\u042F \u0443\u0437\u043D\u0430\u043B \u043E\u0431\u043E \u0432\u0441\u0451\u043C
-      \u0438\u0437 \u043F\u0438\u0441\u044C\u043C\u0430\u2026 \u043E\u0442 \u0442\u0451\u0442\u0443\u0448\u043A\u0438.
+  - text: "\u042F \u0443\u0437\u043D\u0430\u043B \u043E\u0431\u043E \u0432\u0441\u0435\u043C
+      \u0438\u0437 \u043F\u0438\u0441\u044C\u043C\u0430\u2026 \u043E\u0442 \u0442\u0435\u0442\u0443\u0448\u043A\u0438.
       \u041E\u043D\u0430 \u0436\u0434\u0430\u043B\u0430 \u0438\u0445 \u043D\u0430
       \u043C\u0430\u0442\u0435\u0440\u0438\u043A\u0435."
     speakerName: "\u0418\u043B\u0430\u0439"
@@ -10255,6 +10673,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10263,7 +10682,7 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u041E\u043D\u0430 \u0442\u043E\u0436\u0435 \u0443\u043C\u0435\u0440\u043B\u0430.
-      \u0415\u0449\u0451 \u0434\u043E \u0442\u043E\u0433\u043E, \u043A\u0430\u043A
+      \u0415\u0449\u0435 \u0434\u043E \u0442\u043E\u0433\u043E, \u043A\u0430\u043A
       \u044F \u043F\u043E\u043A\u0438\u043D\u0443\u043B \u0431\u0443\u043D\u043A\u0435\u0440.
       \u0412\u043E\u0437\u0440\u0430\u0441\u0442\u2026 \u0418\u043B\u0438 \u0441\u0435\u0440\u0434\u0446\u0435."
     speakerName: "\u0418\u043B\u0430\u0439"
@@ -10346,6 +10765,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10354,7 +10774,7 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u041C\u043D\u0435 \u0436\u0430\u043B\u044C... \u041F\u0440\u0430\u0432\u0434\u0430.
-      \u042F \u043D\u0435 \u0437\u043D\u0430\u043B\u0430, \u0447\u0442\u043E \u0432\u0441\u0451
+      \u042F \u043D\u0435 \u0437\u043D\u0430\u043B\u0430, \u0447\u0442\u043E \u0432\u0441\u0435
       \u0442\u0430\u043A."
     speakerName: "\u0425\u0430\u043D\u043D\u0430"
     characterName: "\u0425\u0430\u043D\u043D\u0430"
@@ -10402,6 +10822,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10410,7 +10831,7 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u0422\u044B \u043D\u0435 \u043E\u0431\u044F\u0437\u0430\u043D\u0430 \u0431\u044B\u043B\u0430
-      \u0437\u043D\u0430\u0442\u044C. \u042D\u0442\u043E \u043C\u043E\u0451 \u043F\u0440\u043E\u0448\u043B\u043E\u0435,
+      \u0437\u043D\u0430\u0442\u044C. \u042D\u0442\u043E \u043C\u043E\u0435 \u043F\u0440\u043E\u0448\u043B\u043E\u0435,
       \u044F \u043D\u0430\u0443\u0447\u0438\u043B\u0441\u044F \u043D\u043E\u0441\u0438\u0442\u044C
       \u0435\u0433\u043E."
     speakerName: "\u0418\u043B\u0430\u0439"
@@ -10459,6 +10880,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10513,6 +10935,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10572,6 +10995,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10628,6 +11052,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10684,6 +11109,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10740,6 +11166,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10750,8 +11177,8 @@ MonoBehaviour:
   - text: "\u0418\u043B\u0430\u0439 \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u043B
       \u0432 \u0441\u0442\u043E\u0440\u043E\u043D\u0443. \u041B\u0438\u0446\u043E
       \u0437\u0430\u0436\u0433\u043B\u043E\u0441\u044C \u043E\u0442\u0431\u043B\u0435\u0441\u043A\u043E\u043C
-      \u043B\u0443\u043D\u044B \u2013 \u043C\u0440\u0430\u0447\u043D\u044B\u043C,
-      \u043A\u0430\u043A \u0441\u0430\u043C \u0432\u043E\u043F\u0440\u043E\u0441."
+      \u043B\u0443\u043D\u044B - \u043C\u0440\u0430\u0447\u043D\u044B\u043C, \u043A\u0430\u043A
+      \u0441\u0430\u043C \u0432\u043E\u043F\u0440\u043E\u0441."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -10798,6 +11225,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10856,7 +11284,7 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 0
-      nextLineIndex: 187
+      nextLineIndex: 192
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
@@ -10867,7 +11295,7 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 0
-      nextLineIndex: 193
+      nextLineIndex: 198
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
@@ -10878,13 +11306,14 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 0
-      nextLineIndex: 196
+      nextLineIndex: 201
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
       unlockKey: 
       lockImage: {fileID: 0}
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10942,6 +11371,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -10999,6 +11429,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11054,6 +11485,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11110,6 +11542,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11165,6 +11598,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11210,7 +11644,7 @@ MonoBehaviour:
     customFont: {fileID: 0}
     unlockChoiceKeys: []
     isJumpLine: 1
-    gotoLineIndex: 201
+    gotoLineIndex: 206
     hasChoices: 0
     hasPathConsequences: 0
     isEndOfChapter: 0
@@ -11219,6 +11653,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11275,6 +11710,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11330,6 +11766,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11378,7 +11815,7 @@ MonoBehaviour:
     customFont: {fileID: 11400000, guid: 3cde542709f222c48b6356ebf2d3f351, type: 2}
     unlockChoiceKeys: []
     isJumpLine: 1
-    gotoLineIndex: 201
+    gotoLineIndex: 206
     hasChoices: 0
     hasPathConsequences: 0
     isEndOfChapter: 0
@@ -11387,6 +11824,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11444,6 +11882,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11499,6 +11938,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11553,6 +11993,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11608,6 +12049,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11663,6 +12105,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11674,7 +12117,7 @@ MonoBehaviour:
       \u043E\u0442\u0432\u0435\u043B\u0430 \u0432\u0437\u0433\u043B\u044F\u0434.
       \u0422\u0435\u043C\u0430 \u0431\u044B\u043B\u0430 \u0431\u043E\u043B\u0435\u0437\u043D\u0435\u043D\u043D\u043E\u0439,
       \u043D\u043E \u043E\u043D\u0430 \u0441\u043C\u043E\u0433\u043B\u0430 \u043D\u0435
-      \u0441\u0431\u0435\u0436\u0430\u0442\u044C \u043E\u0442 \u043D\u0435\u0451."
+      \u0441\u0431\u0435\u0436\u0430\u0442\u044C \u043E\u0442 \u043D\u0435\u0435."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -11721,6 +12164,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11779,6 +12223,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11788,9 +12233,9 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u041A\u043E\u0433\u0434\u0430 \u043D\u0430\u0447\u0430\u043B\u0441\u044F
       \u0445\u0430\u043E\u0441, \u043E\u043D\u2026 \u043F\u044B\u0442\u0430\u043B\u0441\u044F
-      \u0437\u0430\u0449\u0438\u0442\u0438\u0442\u044C \u043D\u0430\u0441. \u0423\u0448\u0451\u043B
+      \u0437\u0430\u0449\u0438\u0442\u0438\u0442\u044C \u043D\u0430\u0441. \u0423\u0448\u0435\u043B
       \u0437\u0430 \u0434\u0440\u043E\u0432\u0430\u043C\u0438 \u043D\u043E\u0447\u044C\u044E
-      \u2013 \u0438 \u0431\u043E\u043B\u044C\u0448\u0435 \u043D\u0435 \u0432\u0435\u0440\u043D\u0443\u043B\u0441\u044F."
+      - \u0438 \u0431\u043E\u043B\u044C\u0448\u0435 \u043D\u0435 \u0432\u0435\u0440\u043D\u0443\u043B\u0441\u044F."
     speakerName: "\u0425\u0430\u043D\u043D\u0430"
     characterName: "\u0425\u0430\u043D\u043D\u0430"
     isRadio: 0
@@ -11837,6 +12282,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11893,6 +12339,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -11949,6 +12396,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12004,6 +12452,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12012,7 +12461,7 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u0425\u0430\u043D\u043D\u0430 \u0441\u0442\u0430\u0440\u0430\u043B\u0430\u0441\u044C
-      \u0441\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0442\u044C \u0441\u043B\u0451\u0437\u044B."
+      \u0441\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0442\u044C \u0441\u043B\u0435\u0437\u044B."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -12059,6 +12508,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12115,6 +12565,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12123,7 +12574,7 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u0422\u0438\u0448\u0438\u043D\u0430 \u043B\u0435\u0433\u043B\u0430 \u043C\u0435\u0436\u0434\u0443
-      \u043D\u0438\u043C\u0438, \u0442\u0451\u043F\u043B\u0430\u044F \u0438 \u043A\u043E\u043B\u044E\u0447\u0430\u044F,
+      \u043D\u0438\u043C\u0438, \u0442\u0435\u043F\u043B\u0430\u044F \u0438 \u043A\u043E\u043B\u044E\u0447\u0430\u044F,
       \u043A\u0430\u043A \u043E\u0434\u0435\u044F\u043B\u043E, \u0432 \u043A\u043E\u0442\u043E\u0440\u043E\u0435
       \u043D\u0435 \u0445\u043E\u0447\u0435\u0442\u0441\u044F \u0437\u0430\u0432\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0442\u044C\u0441\u044F."
     speakerName: ...
@@ -12172,6 +12623,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12182,7 +12634,7 @@ MonoBehaviour:
   - text: "\u042F \u0431\u044B\u043B\u0430 \u0434\u0435\u0432\u0447\u043E\u043D\u043A\u043E\u0439,
       \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u0432\u0435\u0440\u0438\u043B\u0430,
       \u0447\u0442\u043E \u043A\u0442\u043E-\u0442\u043E \u0431\u0443\u0434\u0435\u0442
-      \u0435\u0451 \u0437\u0430\u0449\u0438\u0449\u0430\u0442\u044C. \u0410 \u0442\u0435\u043F\u0435\u0440\u044C
+      \u0435\u0435 \u0437\u0430\u0449\u0438\u0449\u0430\u0442\u044C. \u0410 \u0442\u0435\u043F\u0435\u0440\u044C
       \u0443\u0447\u0443\u0441\u044C \u0437\u0430\u0449\u0438\u0449\u0430\u0442\u044C
       \u0441\u0435\u0431\u044F \u0441\u0430\u043C\u0430."
     speakerName: "\u0425\u0430\u043D\u043D\u0430"
@@ -12231,6 +12683,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12288,6 +12741,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12343,6 +12797,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12353,8 +12808,8 @@ MonoBehaviour:
   - text: "\xAB\u0416\u0438\u0432\u0430\xBB\u2026 \u0418\u043D\u043E\u0433\u0434\u0430
       \u044D\u0442\u043E \u0437\u0432\u0443\u0447\u0438\u0442 \u043A\u0430\u043A
       \u043E\u0431\u0432\u0438\u043D\u0435\u043D\u0438\u0435. \u041D\u043E, \u043C\u043E\u0436\u0435\u0442
-      \u0431\u044B\u0442\u044C\u2026 \u044D\u0442\u043E \u0432\u0441\u0451, \u0447\u0442\u043E
-      \u0443 \u043D\u0430\u0441 \u0438 \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C."
+      \u0431\u044B\u0442\u044C\u2026 \u044D\u0442\u043E \u0432\u0441\u0435, \u0447\u0442\u043E
+      \u0443 \u043D\u0430\u0441 \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C."
     speakerName: "\u0425\u0430\u043D\u043D\u0430"
     characterName: "\u0425\u0430\u043D\u043D\u0430"
     isRadio: 0
@@ -12401,6 +12856,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12460,6 +12916,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12518,6 +12975,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12575,6 +13033,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12634,6 +13093,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12643,7 +13103,7 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u0422\u0438\u0448\u0438\u043D\u0430 \u0432 \u044D\u0442\u043E\u043C \u043C\u0435\u0441\u0442\u0435
       \u0431\u044B\u043B\u0430 \u0434\u0440\u0443\u0433\u043E\u0439. \u041D\u0435
-      \u0442\u0440\u0435\u0432\u043E\u0436\u043D\u043E\u0439, \u0430 \u043D\u0430\u043F\u0440\u044F\u0436\u0451\u043D\u043D\u043E\u0439."
+      \u0442\u0440\u0435\u0432\u043E\u0436\u043D\u043E\u0439, \u0430 \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u043D\u043E\u0439."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -12690,6 +13150,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12746,6 +13207,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12800,6 +13262,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12856,6 +13319,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12912,6 +13376,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -12968,6 +13433,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13028,6 +13494,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13086,6 +13553,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13142,6 +13610,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13196,6 +13665,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13254,6 +13724,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13310,6 +13781,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13321,9 +13793,7 @@ MonoBehaviour:
       \u0446\u0435\u0440\u0431\u0435\u0440. \u0417\u0430\u043F\u043E\u043C\u043D\u0438\u0442\u0435
       \u044D\u0442\u043E \u0438\u043C\u044F, \u043F\u043E\u043A\u0430 \u043E\u043D\u043E
       \u043D\u0435 \u0441\u0442\u0430\u043B\u043E \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u043C,
-      \u0447\u0442\u043E \u0432\u044B \u0443\u0441\u043B\u044B\u0448\u0430\u043B\u0438
-      \u043F\u0435\u0440\u0435\u0434 \u0442\u0435\u043C, \u043A\u0430\u043A \u0432\u0430\u0441
-      \u0432\u044B\u0448\u0432\u044B\u0440\u043D\u0443\u043B\u0438 \u043E\u0431\u0440\u0430\u0442\u043D\u043E."
+      \u0447\u0442\u043E \u0432\u044B \u0443\u0441\u043B\u044B\u0448\u0430\u043B\u0438."
     speakerName: "\u041A\u0435\u0440\u0435\u043C"
     characterName: "\u041A\u0435\u0440\u0435\u043C"
     isRadio: 0
@@ -13370,6 +13840,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13424,6 +13895,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13485,6 +13957,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13540,6 +14013,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13594,6 +14068,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13651,6 +14126,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13709,7 +14185,7 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 2
-      nextLineIndex: 237
+      nextLineIndex: 242
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
@@ -13721,7 +14197,7 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 1
-      nextLineIndex: 243
+      nextLineIndex: 248
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
@@ -13733,13 +14209,14 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 3
-      nextLineIndex: 252
+      nextLineIndex: 257
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
       unlockKey: 
       lockImage: {fileID: 0}
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13799,6 +14276,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13857,6 +14335,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13916,6 +14395,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -13972,6 +14452,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14029,6 +14510,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14078,7 +14560,7 @@ MonoBehaviour:
     customFont: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
     unlockChoiceKeys: []
     isJumpLine: 1
-    gotoLineIndex: 259
+    gotoLineIndex: 264
     hasChoices: 0
     hasPathConsequences: 0
     isEndOfChapter: 0
@@ -14087,6 +14569,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14144,6 +14627,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14153,7 +14637,7 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u0422\u044B \u0445\u043E\u0447\u0435\u0448\u044C, \u0447\u0442\u043E\u0431\u044B
       \u044F \u0440\u0430\u0437\u0432\u0435\u0440\u043D\u0443\u043B\u0441\u044F \u0438
-      \u043F\u043E\u0448\u0451\u043B \u043E\u0431\u0440\u0430\u0442\u043D\u043E,
+      \u043F\u043E\u0448\u0435\u043B \u043E\u0431\u0440\u0430\u0442\u043D\u043E,
       \u0434\u0430? "
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
@@ -14201,6 +14685,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14260,6 +14745,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14268,8 +14754,8 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u0421\u043C\u0435\u043B\u044B\u0439, \u0434\u0430? \u0414\u0443\u043C\u0430\u0435\u0448\u044C,
-      \u0435\u0441\u043B\u0438 \u043D\u0430\u043E\u0440\u0451\u0448\u044C, \u0432\u044B
-      \u0432\u0441\u0435 \u0442\u0443\u0442 \u043E\u0431\u043E\u0441\u0440\u0451\u043C\u0441\u044F
+      \u0435\u0441\u043B\u0438 \u043D\u0430\u043E\u0440\u0435\u0448\u044C, \u0432\u044B
+      \u0432\u0441\u0435 \u0442\u0443\u0442 \u043E\u0431\u043E\u0441\u0440\u0435\u043C\u0441\u044F
       \u043E\u0442 \u0441\u0442\u0440\u0430\u0445\u0430 \u0438 \u043F\u0440\u043E\u043F\u0443\u0441\u0442\u0438\u043C
       \u0442\u0435\u0431\u044F?"
     speakerName: "\u041A\u0435\u0440\u0435\u043C"
@@ -14318,6 +14804,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14377,6 +14864,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14434,6 +14922,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14492,6 +14981,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14551,6 +15041,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14599,7 +15090,7 @@ MonoBehaviour:
     customFont: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
     unlockChoiceKeys: []
     isJumpLine: 1
-    gotoLineIndex: 260
+    gotoLineIndex: 265
     hasChoices: 0
     hasPathConsequences: 0
     isEndOfChapter: 0
@@ -14608,6 +15099,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14666,6 +15158,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14720,6 +15213,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14775,6 +15269,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14834,6 +15329,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14895,6 +15391,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14951,6 +15448,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -14999,7 +15497,7 @@ MonoBehaviour:
     customFont: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
     unlockChoiceKeys: []
     isJumpLine: 1
-    gotoLineIndex: 260
+    gotoLineIndex: 265
     hasChoices: 0
     hasPathConsequences: 0
     isEndOfChapter: 0
@@ -15008,6 +15506,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15066,6 +15565,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15123,6 +15623,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15182,6 +15683,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15190,13 +15692,13 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u0421\u043F\u0440\u0430\u0432\u0430, \u0437\u0430 \u043F\u043E\u0432\u043E\u0440\u043E\u0442\u043E\u043C
-      \u0443\u043A\u0440\u0435\u043F\u043B\u0451\u043D\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u043E\u0440\u0430,
+      \u0443\u043A\u0440\u0435\u043F\u043B\u0435\u043D\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u043E\u0440\u0430,
       \u0432\u0438\u0434\u043D\u0435\u043B\u0430\u0441\u044C \u0441\u0442\u0430\u0440\u0430\u044F
       \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u0430\u044F
       \u0431\u0443\u0434\u043A\u0430 - \u043E\u0431\u043B\u0435\u0437\u043B\u0430\u044F,
       \u0432\u0441\u044F \u0432 \u0441\u043B\u0435\u0434\u0430\u0445 \u0441\u0430\u0436\u0438
-      \u0438 \u0437\u0430\u043F\u0451\u043A\u0448\u0435\u0433\u043E\u0441\u044F \u043C\u0430\u0441\u043B\u0430.
-      \u041E\u0442 \u043D\u0435\u0451 \u0442\u044F\u043D\u0443\u043B\u0438\u0441\u044C
+      \u0438 \u0437\u0430\u043F\u0435\u043A\u0448\u0435\u0433\u043E\u0441\u044F \u043C\u0430\u0441\u043B\u0430.
+      \u041E\u0442 \u043D\u0435\u0435 \u0442\u044F\u043D\u0443\u043B\u0438\u0441\u044C
       \u043F\u0440\u043E\u0432\u043E\u0434\u0430 \u0432\u0433\u043B\u0443\u0431\u044C
       \u0431\u0435\u0442\u043E\u043D\u043D\u043E\u0433\u043E \u043F\u0435\u0440\u0438\u043C\u0435\u0442\u0440\u0430."
     speakerName: ...
@@ -15245,6 +15747,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15253,8 +15756,8 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u0412\u043E\u0442 \u0438 \u043F\u043E\u0434\u0441\u0442\u0430\u043D\u0446\u0438\u044F.
-      \u0412\u044B\u0433\u043B\u044F\u0434\u0438\u0442\u2026 \u043D\u0430\u0434\u0451\u0436\u043D\u043E.
-      \u0412 \u0441\u043C\u044B\u0441\u043B\u0435, \u043D\u0430\u0434\u0451\u0436\u043D\u043E
+      \u0412\u044B\u0433\u043B\u044F\u0434\u0438\u0442\u2026 \u043D\u0430\u0434\u0435\u0436\u043D\u043E.
+      \u0412 \u0441\u043C\u044B\u0441\u043B\u0435, \u043D\u0430\u0434\u0435\u0436\u043D\u043E
       \u0440\u0430\u0437\u0432\u0430\u043B\u0438\u0442\u0441\u044F."
     speakerName: "\u0425\u0430\u043D\u043D\u0430"
     characterName: "\u0425\u0430\u043D\u043D\u0430"
@@ -15302,6 +15805,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15310,8 +15814,7 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u041E\u0433\u043E, \u043A\u0430\u043A \u044D\u0442\u0430 \u0440\u0430\u0437\u0432\u0430\u043B\u044E\u0445\u0430
-      \u0435\u0449\u0451 \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442? \u0410
-      \u043C\u043E\u0436\u0435\u0442, \u0443\u0436\u0435 \u043D\u0435\u0442."
+      \u0435\u0449\u0435 \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442? "
     speakerName: "\u0418\u043B\u0430\u0439"
     characterName: "\u0418\u043B\u0430\u0439"
     isRadio: 0
@@ -15358,6 +15861,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15417,6 +15921,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15427,7 +15932,7 @@ MonoBehaviour:
   - text: "\u041D\u0430 \u0434\u0432\u0435\u0440\u0438 \u0432\u0438\u0441\u0435\u043B\u0430
       \u0433\u0440\u044F\u0437\u043D\u0430\u044F \u0442\u0430\u0431\u043B\u0438\u0447\u043A\u0430
       \u0441 \u043D\u0430\u0434\u043F\u0438\u0441\u044C\u044E \u043A\u0440\u0430\u0441\u043A\u043E\u0439:\r\n\xAB\u041D\u0415
-      \u0412\u041B\u0415\u0417\u0410\u0419. \u0423\u0411\u042C\u0401\u0422.\xBB"
+      \u0412\u041B\u0415\u0417\u0410\u0419. \u0423\u0411\u042C\u0415\u0422.\xBB"
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -15474,6 +15979,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15528,6 +16034,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15587,6 +16094,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15647,6 +16155,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15709,6 +16218,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15763,6 +16273,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15817,6 +16328,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15872,6 +16384,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15928,6 +16441,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -15982,6 +16496,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16039,6 +16554,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16093,6 +16609,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16147,6 +16664,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16258,6 +16776,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16312,6 +16831,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16369,6 +16889,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16427,6 +16948,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16483,6 +17005,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16539,6 +17062,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16594,6 +17118,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16603,7 +17128,7 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u041E\u043D \u043E\u0433\u043B\u044F\u0434\u0435\u043B\u0441\u044F \u043F\u043E
       \u0441\u0442\u043E\u0440\u043E\u043D\u0430\u043C, \u043C\u043E\u043B\u044F\u0441\u044C,
-      \u0447\u0442\u043E \u043D\u0435\u043F\u043E\u0434\u0430\u043B\u0451\u043A\u0443
+      \u0447\u0442\u043E \u043D\u0435\u043F\u043E\u0434\u0430\u043B\u0435\u043A\u0443
       \u043D\u0435\u0442 \u0441\u043E\u043B\u0434\u0430\u0442."
     speakerName: ...
     characterName: ...
@@ -16651,6 +17176,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16707,6 +17233,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16764,6 +17291,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16822,7 +17350,7 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 0
-      nextLineIndex: 290
+      nextLineIndex: 295
       choiceType: 0
       isSpecialChoice: 0
       isLocked: 0
@@ -16833,13 +17361,14 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 0
-      nextLineIndex: 302
+      nextLineIndex: 307
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
       unlockKey: 
       lockImage: {fileID: 0}
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16895,6 +17424,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -16951,6 +17481,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17008,6 +17539,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17064,6 +17596,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17122,6 +17655,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17181,6 +17715,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17239,6 +17774,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17248,7 +17784,7 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u042F \u043F\u043E\u043D\u0438\u043C\u0430\u044E, \u043C\u0435\u0440\u044B
       \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438...
-      \u041D\u043E \u0432\u0441\u0451 \u0440\u0430\u0432\u043D\u043E, \u0442\u044F\u0436\u0435\u043B\u043E,
+      \u041D\u043E \u0432\u0441\u0435 \u0440\u0430\u0432\u043D\u043E, \u0442\u044F\u0436\u0435\u043B\u043E,
       \u043A\u043E\u0433\u0434\u0430 \u043F\u0440\u043E\u0441\u0442\u043E \u0442\u0430\u043A
       \u043E\u0442\u043A\u0430\u0437\u044B\u0432\u0430\u044E\u0442."
     speakerName: "\u0425\u0430\u043D\u043D\u0430"
@@ -17297,6 +17833,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17353,6 +17890,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17411,7 +17949,7 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 0
-      nextLineIndex: 300
+      nextLineIndex: 305
       choiceType: 0
       isSpecialChoice: 0
       isLocked: 0
@@ -17422,13 +17960,14 @@ MonoBehaviour:
       pathPointsNoble: 0
       pathPointsLove: 0
       pathReward: 0
-      nextLineIndex: 289
+      nextLineIndex: 294
       choiceType: 1
       isSpecialChoice: 0
       isLocked: 0
       unlockKey: 
       lockImage: {fileID: 0}
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17483,6 +18022,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17529,7 +18069,7 @@ MonoBehaviour:
     customFont: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
     unlockChoiceKeys: []
     isJumpLine: 1
-    gotoLineIndex: 299
+    gotoLineIndex: 304
     hasChoices: 0
     hasPathConsequences: 0
     isEndOfChapter: 0
@@ -17538,6 +18078,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17592,6 +18133,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17600,8 +18142,7 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u041A\u0435\u0440\u0435\u043C \u0443\u043B\u044B\u0431\u043D\u0443\u043B\u0441\u044F
-      \u0418\u043B\u0430\u044E, \u0434\u0430\u0432\u043D\u043E \u0435\u0433\u043E
-      \u0442\u0430\u043A \u043D\u0435 \u0440\u0430\u0434\u043E\u0432\u0430\u043B\u0438."
+      \u0418\u043B\u0430\u044E."
     speakerName: ...
     characterName: ...
     isRadio: 0
@@ -17648,6 +18189,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17704,6 +18246,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17761,6 +18304,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17817,6 +18361,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17872,6 +18417,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17880,7 +18426,7 @@ MonoBehaviour:
       showInteractionPoints: 0
       isEndOfChapter: 0
   - text: "\u041D\u0443 \u0430 \u0433\u0434\u0435 \u0432\u0430\u043C \u0436\u0438\u0442\u044C-\u0442\u043E?
-      \u041A\u043E\u043D\u0435\u0447\u043D\u043E \u043A\u0432\u0430\u0440\u0442\u0438\u0440\u0443."
+      \u041A\u043E\u043D\u0435\u0447\u043D\u043E, \u043A\u0432\u0430\u0440\u0442\u0438\u0440\u0443."
     speakerName: "\u041A\u0435\u0440\u0435\u043C"
     characterName: "\u041A\u0435\u0440\u0435\u043C"
     isRadio: 0
@@ -17927,6 +18473,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -17986,6 +18533,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -18040,6 +18588,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -18095,6 +18644,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -18152,6 +18702,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0
@@ -18209,6 +18760,7 @@ MonoBehaviour:
     fallbackLineIndex: 0
     choices: []
     extraActions:
+      isImportantStoryChoice: 0
       showCodePanel: 0
       showNotePanel: 0
       stopDialogueAfterThisLine: 0

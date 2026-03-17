@@ -26,7 +26,7 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Тестовый запуск")]
     [Tooltip("Номер строки (с 1), с которой начать диалог при запуске игры.")]
-    [SerializeField] private int startLineNumber = 1;
+    [SerializeField] public int startLineNumber = 1;
 
     [Header("Runtime State")]
     [SerializeField] private string currentBackgroundId;
@@ -76,6 +76,7 @@ public class DialogueManager : MonoBehaviour
     private Tween continueHintColorTween;
     private Tween continueHintScaleTween;
     private Coroutine continueHintDelayCoroutine;
+    private int continueHintRequestVersion;
 
     [Header("Character Sprites")]
     public Image modelLeft;
@@ -128,6 +129,14 @@ public class DialogueManager : MonoBehaviour
     public GameObject choicesContainer;
     public GameObject choiceButtonPrefab;
 
+    [Header("Story Hints")]
+    [SerializeField] private Sprite bloodthirstHintIcon;
+    [SerializeField] private Sprite nobilityHintIcon;
+    [SerializeField] private Sprite loveHintIcon;
+    [SerializeField] private Sprite importantChoiceHintIcon;
+    [SerializeField] private Sprite transparentHintIcon;
+    [SerializeField] private string choiceHintIconObjectName = "HintIcon";
+
     [Header("Other Elements")]
     public CodePanelController codePanelController;
     public CodePanelUI codePanelUI;
@@ -175,7 +184,7 @@ public class DialogueManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    void Start()
+    public void Start()
     {
         collectiblePanel.SetActive(false);
 
@@ -188,7 +197,7 @@ public class DialogueManager : MonoBehaviour
             LoadChapter(currentChapter, startLineNumber - 1);
     }
 
-    private DialogueLine[] runtimeLines;
+    public DialogueLine[] runtimeLines;
 
     public void LoadChapter(DialogueChapter chapter, int lineIndex)
     {
@@ -315,6 +324,7 @@ public class DialogueManager : MonoBehaviour
     public void OnClickNext()
     {
         StopSkippingIfNeeded();
+        SetContinueHintVisible(false);
 
         if (isTyping)
         {
@@ -454,7 +464,7 @@ public class DialogueManager : MonoBehaviour
             continueHintCanvasGroup = continueHintRoot.AddComponent<CanvasGroup>();
 
         if (continueHintIcon == null)
-            continueHintIcon = continueHintRoot.GetComponentInChildren<Image>();
+            continueHintIcon = continueHintRoot.GetComponentInChildren<Image>(true);
 
         continueHintCanvasGroup.alpha = 0f;
         continueHintRoot.SetActive(false);
@@ -470,6 +480,8 @@ public class DialogueManager : MonoBehaviour
             StopCoroutine(continueHintDelayCoroutine);
             continueHintDelayCoroutine = null;
         }
+
+        continueHintRequestVersion++;
 
         continueHintFadeTween?.Kill();
 
@@ -505,17 +517,27 @@ public class DialogueManager : MonoBehaviour
             if (continueHintCanvasGroup != null)
                 continueHintCanvasGroup.alpha = 0f;
 
-            continueHintDelayCoroutine = StartCoroutine(ShowContinueHintWithDelay());
+            continueHintDelayCoroutine = StartCoroutine(ShowContinueHintWithDelay(continueHintRequestVersion, currentLineIndex));
             return;
         }
 
         ShowContinueHintNow(immediate);
     }
 
-    private IEnumerator ShowContinueHintWithDelay()
+    private IEnumerator ShowContinueHintWithDelay(int requestVersion, int requestLineIndex)
     {
         yield return new WaitForSeconds(continueHintShowDelay);
         continueHintDelayCoroutine = null;
+
+        if (requestVersion != continueHintRequestVersion)
+            yield break;
+
+        if (runtimeLines == null || currentLineIndex != requestLineIndex)
+            yield break;
+
+        if (isTyping || isDialogueHidden)
+            yield break;
+
         ShowContinueHintNow(false);
     }
 
@@ -571,6 +593,8 @@ public class DialogueManager : MonoBehaviour
     {
         if (runtimeLines == null || runtimeLines.Length == 0)
             return;
+
+        SetContinueHintVisible(false);
 
         currentLineIndex = Mathf.Clamp(currentLineIndex, 0, runtimeLines.Length - 1);
 
@@ -635,6 +659,52 @@ public class DialogueManager : MonoBehaviour
                 // Запускаем сам интерактив через скрипт на UI
                 guitarInteractiveUI.GetComponent<GuitarSceneManager>().StartGuitarScene();
 
+                // Возвращаемся из метода, чтобы не показать текст этой строки
+                return;
+            }
+        }
+
+
+
+        // Показ мини-игры с кодовой панелью //
+        if (SceneManager.GetActiveScene().name == "Chapter_01")
+        {
+            if (LanguageManager.CurrentLanguage == Language.Russian && currentLineIndex == 39 - 1)
+            {
+                Debug.Log("Показ мини-игры с кодовой панелью!");
+                // Скрываем диалоговую панель
+                HideDialoguePanel(() =>
+                {
+                    // Показываем кодовую панель
+                    if (codePanelUI != null)
+                    {
+                        codePanelUI.ShowCodePanel();
+                    }
+                    else
+                    {
+                        Debug.LogError("codePanelUI не найден в сцене!");
+                    }
+                });
+                // Возвращаемся из метода, чтобы не показать текст этой строки
+                return;
+            }
+
+            if (LanguageManager.CurrentLanguage == Language.English && currentLineIndex == 49 - 1)
+            {
+                Debug.Log("Показ мини-игры с кодовой панелью!");
+                // Скрываем диалоговую панель
+                HideDialoguePanel(() =>
+                {
+                    // Показываем кодовую панель
+                    if (codePanelUI != null)
+                    {
+                        codePanelUI.ShowCodePanel();
+                    }
+                    else
+                    {
+                        Debug.LogError("codePanelUI не найден в сцене!");
+                    }
+                });
                 // Возвращаемся из метода, чтобы не показать текст этой строки
                 return;
             }
@@ -839,6 +909,16 @@ public class DialogueManager : MonoBehaviour
             {
                 ShowEndOfChapterPanel();
             }
+            
+
+            bool canGoToNextReplicaByClick = !line.hasChoices
+        && !line.showCollectibleView
+        && (line.extraActions == null || (!line.extraActions.showCodePanel
+            && !line.extraActions.showNotePanel
+            && !line.extraActions.showElectroSubstationMinigame
+            && !line.extraActions.stopDialogueAfterThisLine));
+
+            SetContinueHintVisible(canGoToNextReplicaByClick);
 
         }
 
@@ -1180,6 +1260,8 @@ public class DialogueManager : MonoBehaviour
             buttonText.text = choice.choiceText;
             btn.interactable = true;
 
+            ConfigureChoiceHintIcon(buttonObj, choice, currentLine);
+
             if (choice.choiceType == ChoiceType.Required)
             {
                 bg.color = new Color(0.25f, 0.18f, 0.05f);
@@ -1239,7 +1321,73 @@ public class DialogueManager : MonoBehaviour
             .ToList();
     }
 
+    private void ConfigureChoiceHintIcon(GameObject buttonObj, DialogueLine.Choice choice, DialogueLine line)
+    {
+        Image hintImage = buttonObj.transform.Find(choiceHintIconObjectName)?.GetComponent<Image>();
+        if (hintImage == null)
+            return;
 
+        if (!StoryHintsSettings.IsEnabled)
+        {
+            hintImage.enabled = false;
+            hintImage.sprite = transparentHintIcon != null ? transparentHintIcon : transparent;
+            return;
+        }
+
+        Sprite hintSprite = GetChoiceHintSprite(choice, line);
+        hintImage.enabled = true;
+        hintImage.sprite = hintSprite != null
+            ? hintSprite
+            : (transparentHintIcon != null ? transparentHintIcon : transparent);
+    }
+
+    private Sprite GetChoiceHintSprite(DialogueLine.Choice choice, DialogueLine line)
+    {
+        if (line != null && line.extraActions != null && line.extraActions.isImportantStoryChoice)
+            return importantChoiceHintIcon;
+
+        DominantPath rewardPath = ResolveChoiceRewardPath(choice);
+        switch (rewardPath)
+        {
+            case DominantPath.Bloodthirst:
+                return bloodthirstHintIcon;
+            case DominantPath.Nobility:
+                return nobilityHintIcon;
+            case DominantPath.Love:
+                return loveHintIcon;
+            default:
+                return transparentHintIcon != null ? transparentHintIcon : transparent;
+        }
+    }
+
+    private DominantPath ResolveChoiceRewardPath(DialogueLine.Choice choice)
+    {
+        if (choice == null)
+            return DominantPath.None;
+
+        if (choice.pathReward != DominantPath.None)
+            return choice.pathReward;
+
+        int blood = Mathf.Max(0, choice.pathPointsBloodthirsty);
+        int noble = Mathf.Max(0, choice.pathPointsNoble);
+        int lovePoints = Mathf.Max(0, choice.pathPointsLove);
+
+        int maxPoints = Mathf.Max(blood, noble, lovePoints);
+        if (maxPoints <= 0)
+            return DominantPath.None;
+
+        int maxCount = 0;
+        if (blood == maxPoints) maxCount++;
+        if (noble == maxPoints) maxCount++;
+        if (lovePoints == maxPoints) maxCount++;
+
+        if (maxCount > 1)
+            return DominantPath.None;
+
+        if (blood == maxPoints) return DominantPath.Bloodthirst;
+        if (noble == maxPoints) return DominantPath.Nobility;
+        return DominantPath.Love;
+    }
 
 
 
@@ -1352,7 +1500,9 @@ public class DialogueManager : MonoBehaviour
         runtimeLines[currentLineIndex].choices,
         choice
         );
-        switch (choice.pathReward)
+        DominantPath rewardPath = ResolveChoiceRewardPath(choice);
+
+        switch (rewardPath)
         {
             case DominantPath.Bloodthirst:
                 bloodthirst++;
@@ -1367,7 +1517,7 @@ public class DialogueManager : MonoBehaviour
                 break;
         }
 
-        Debug.Log($"Выбран путь: {choice.pathReward}");
+        Debug.Log($"Выбран путь: {rewardPath}");
         Debug.Log($"Очки путей: Кровожадность = {bloodthirst}, Благородство = {nobility}, Любовь = {love}");
 
         var dominant = GetDominantPaths();

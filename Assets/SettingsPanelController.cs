@@ -12,6 +12,10 @@ public class SettingsPanelController : MonoBehaviour
     [Header("Language")]
     [SerializeField] private TextMeshProUGUI languageLabel;
 
+    [Header("Story Hints")]
+    [SerializeField] private TextMeshProUGUI storyHintsOnText;
+    [SerializeField] private TextMeshProUGUI storyHintsOffText;
+
     private const int Step = 1;
 
     void OnEnable()
@@ -23,6 +27,7 @@ public class SettingsPanelController : MonoBehaviour
         sfxSlider.onValueChanged.AddListener(OnSliderChanged);
 
         UpdateLanguageLabel();
+        UpdateStoryHintsLabel();
     }
 
     void OnDisable()
@@ -39,6 +44,17 @@ public class SettingsPanelController : MonoBehaviour
     {
         SwitchLanguage(1);
     }
+
+    public void OnStoryHintsLeft()
+    {
+        ToggleStoryHints();
+    }
+
+    public void OnStoryHintsRight()
+    {
+        ToggleStoryHints();
+    }
+
 
     private void SwitchLanguage(int direction)
     {
@@ -59,7 +75,65 @@ public class SettingsPanelController : MonoBehaviour
             : "English";
     }
 
-    private void OnLanguageChanged(int index)
+    private void ToggleStoryHints()
+    {
+	    bool isOffShown = storyHintsOffText != null && storyHintsOffText.gameObject.activeSelf;
+   	    bool isOnShown = storyHintsOnText != null && storyHintsOnText.gameObject.activeSelf;
+    	
+    	if (isOffShown)
+   	    {
+    	    storyHintsOnText?.gameObject.SetActive(true);
+    	    storyHintsOffText?.gameObject.SetActive(false);
+    	    StoryHintsSettings.EnableHintsFunction();
+   	        return;
+   	    }
+
+        if (isOnShown)
+        {
+            storyHintsOnText?.gameObject.SetActive(false);
+            storyHintsOffText?.gameObject.SetActive(true);
+            StoryHintsSettings.DisableHintsFunction();
+            return;
+        }
+
+        bool nextState = !StoryHintsSettings.IsEnabled;
+        storyHintsOnText?.gameObject.SetActive(nextState);
+        storyHintsOffText?.gameObject.SetActive(!nextState);
+
+        if (nextState)
+        {
+             StoryHintsSettings.EnableHintsFunction();
+        }
+        else
+        {
+             StoryHintsSettings.DisableHintsFunction();
+        }
+    }
+   
+        private void UpdateStoryHintsLabel()
+         {
+             bool isOffShown = storyHintsOffText != null && storyHintsOffText.gameObject.activeSelf;
+              bool isOnShown = storyHintsOnText != null && storyHintsOnText.gameObject.activeSelf;
+   
+            if (isOffShown)
+                  {
+                     StoryHintsSettings.DisableHintsFunction();
+                      return;
+                 }
+   
+             if (isOnShown)
+                  {
+                      StoryHintsSettings.EnableHintsFunction();
+                      return;
+                  }
+    
+            bool enabled = StoryHintsSettings.IsEnabled;
+             storyHintsOnText?.gameObject.SetActive(enabled);
+              storyHintsOffText?.gameObject.SetActive(!enabled);
+          }
+
+
+private void OnLanguageChanged(int index)
     {
         switch (index)
         {

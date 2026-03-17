@@ -194,16 +194,17 @@ public class ElectroChainManager : MonoBehaviour
         attemptsLeft--;
         UpdateAttemptsUI(); // предполагается, что есть UI-текст для отображения попыток
 
-        // 2. Возвращаем все инструменты на начальные позиции
+        // 2. Возврат всех инструментов
         foreach (var slot in chainSlots)
         {
             if (slot.toolInSlot != null)
             {
-                slot.toolInSlot.ReturnToOriginalSlot();
+                ToolIcon icon = slot.toolInSlot;
                 slot.toolInSlot = null;
+                slot.currentTool = ToolType.None;
+                icon.ReturnToOriginalSlot();
             }
         }
-   
 
         // 3. Очистка всех целевых слотов цепи
         foreach (var slot in chainSlots)
@@ -307,29 +308,9 @@ public class ElectroChainManager : MonoBehaviour
             if (slot.toolInSlot != null)
             {
                 ToolIcon icon = slot.toolInSlot;
-
-                // Удаляем ссылку из слота
                 slot.toolInSlot = null;
                 slot.currentTool = ToolType.None;
-
-                // Возврат в оригинальный слот
-                if (icon.originalParent != null)
-                {
-                    icon.transform.SetParent(icon.originalParent);
-                    if (icon.RectTransform != null)
-                        icon.RectTransform.anchoredPosition = Vector2.zero;
-                    else
-                        icon.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-
-                    if (icon.originalParentSlot != null)
-                    {
-                        icon.originalParentSlot.toolInSlot = icon;
-                        icon.CurrentSlot = icon.originalParentSlot;
-                    }
-                }
-
-                icon.iconImage.sprite = icon.iconSprite;
-                icon.iconImage.enabled = true;
+                icon.ReturnToOriginalSlot();
             }
         }
 

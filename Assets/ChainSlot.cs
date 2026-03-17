@@ -29,11 +29,17 @@ public class ChainSlot : MonoBehaviour, IDropHandler
             highlightImage.enabled = false;
     }
 
-    void Start()
+    void OnEnable()
     {
-        ToolIcon.allSlots.Add(this);
+        if (!ToolIcon.allSlots.Contains(this))
+            ToolIcon.allSlots.Add(this);
         if (highlightImage != null)
             highlightImage.enabled = false;
+    }
+
+    void OnDisable()
+    {
+        ToolIcon.allSlots.Remove(this);
     }
 
     public ToolType currentTool = ToolType.None;
@@ -61,44 +67,7 @@ public class ChainSlot : MonoBehaviour, IDropHandler
         var dragTool = draggedObj.GetComponent<ToolIcon>();
         if (dragTool == null) return;
 
-        // Если этот слот уже занят — убираем старый инструмент
-        if (toolInSlot != null)
-        {
-            ToolIcon oldTool = toolInSlot;
-
-            // Убираем ссылки
-            oldTool.CurrentSlot = null;
-            toolInSlot = null;
-            currentTool = ToolType.None;
-
-            // Возвращаем старый инструмент в ящик
-            oldTool.transform.SetParent(oldTool.originalParent, false);
-            oldTool.rectTransform.anchoredPosition = Vector2.zero;
-        }
-
-        // Освобождаем предыдущий слот нового инструмента
-        if (dragTool.CurrentSlot != null)
-        {
-            dragTool.CurrentSlot.toolInSlot = null;
-            dragTool.CurrentSlot.currentTool = ToolType.None;
-            dragTool.CurrentSlot = null;
-        }
-
-        // Обновляем ссылки
-        dragTool.CurrentSlot = this;
-        toolInSlot = dragTool;
-        currentTool = dragTool.toolType;
-
-        // Перемещаем иконку
-        dragTool.transform.SetParent(transform, false);
-        dragTool.rectTransform.anchoredPosition = Vector2.zero;
-
-        // Убираем подсветку со всех слотов
-        foreach (var slot in ToolIcon.allSlots)
-            slot.SetHighlight(false);
-
-        // Проверка цепи
-        chainManager?.CheckChainComplete();
+        dragTool.HandleDropOnSlot(this);
     }
 
     public void SetHighlight(bool show)

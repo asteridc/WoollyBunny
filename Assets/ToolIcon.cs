@@ -18,6 +18,8 @@ public class ToolIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private Vector2 originalAnchoredPosition;
     public Transform originalParent;
     public ChainSlot originalParentSlot;
+    private bool originalSlotInitialized = false;
+    private bool dropHandledThisFrame = false;
 
     public static List<ChainSlot> allSlots = new List<ChainSlot>();
 
@@ -29,6 +31,19 @@ public class ToolIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     void Start()
     {
+        InitializeOriginalSlotIfNeeded();
+    }
+
+    void OnEnable()
+    {
+        InitializeOriginalSlotIfNeeded();
+    }
+
+    private void InitializeOriginalSlotIfNeeded()
+    {
+        if (originalSlotInitialized)
+            return;
+
         if (originalParent == null)
             originalParent = transform.parent;
 
@@ -37,6 +52,17 @@ public class ToolIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
         if (rectTransform == null)
             rectTransform = GetComponent<RectTransform>();
+
+        if (originalParentSlot != null && originalParentSlot.toolInSlot == null)
+        {
+            originalParentSlot.toolInSlot = this;
+            originalParentSlot.currentTool = toolType;
+        }
+
+        if (CurrentSlot == null)
+            CurrentSlot = originalParentSlot;
+
+        originalSlotInitialized = true;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -68,68 +94,65 @@ public class ToolIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         canvasGroup.blocksRaycasts = true;
 
+        if (dropHandledThisFrame)
+        {
+            dropHandledThisFrame = false;
+            ClearHighlights();
+            return;
+        }
+
         ChainSlot targetSlot = GetNearestSlot();
         bool success = false;
 
         if (targetSlot != null)
         {
-            // Если слот пуст — просто вставляем
-            if (targetSlot.toolInSlot == null)
-            {
-                MoveToSlot(targetSlot);
-                success = true;
-            }
-            else
-            {
-                // Обмен
-                ToolIcon otherIcon = targetSlot.toolInSlot;
-                ChainSlot fromSlot = CurrentSlot;
-
-                // Обмен позиций
-                if (otherIcon == null)
-                {
-                    Debug.LogError("otherIcon is null в OnEndDrag");
-                }
-                else if (fromSlot == null)
-                {
-                    Debug.LogError("fromSlot is null в OnEndDrag");
-                }
-                else
-                {
-                    otherIcon.transform.SetParent(fromSlot.transform);
-                }
-
-                otherIcon.rectTransform.position = fromSlot.transform.position;
-                otherIcon.CurrentSlot = fromSlot;
-                fromSlot.toolInSlot = otherIcon;
-
-                // Переместить текущую
-                MoveToSlot(targetSlot);
-                success = true;
-            }
+            success = TryPlaceInSlot(targetSlot, allowSwap: true);
         }
 
         if (!success)
         {
             // Возврат назад
-            transform.SetParent(originalParent, false);
-            rectTransform.anchoredPosition = originalAnchoredPosition;
+            ReturnToStartSlot();
         }
 
-        foreach (var slot in allSlots)
-            slot.SetHighlight(false);
+        ClearHighlights();
     }
 
-    private void MoveToSlot(ChainSlot slot)
+    private bool TryPlaceInSlot(ChainSlot slot, bool allowSwap)
+    {
+        if (slot == null)
+            return false;
+
+        if (slot.toolInSlot != null && slot.toolInSlot != this)
+        {
+            if (!allowSwap || CurrentSlot == null)
+                return false;
+
+            ToolIcon otherIcon = slot.toolInSlot;
+            ChainSlot fromSlot = CurrentSlot;
+
+            // Перемещаем другой инструмент в исходный слот
+            otherIcon.PlaceInSlot(fromSlot);
+        }
+
+        PlaceInSlot(slot);
+        return true;
+    }
+
+    private void PlaceInSlot(ChainSlot slot)
     {
         if (CurrentSlot != null)
+        {
             CurrentSlot.toolInSlot = null;
+            CurrentSlot.currentTool = ToolType.None;
+        }
 
         transform.SetParent(slot.transform, false);
         rectTransform.anchoredPosition = Vector2.zero;
 
         CurrentSlot = slot;
         slot.toolInSlot = this;
+        slot.currentTool = toolType;
     }
 
     private ChainSlot GetNearestSlot()
@@ -152,15 +175,74 @@ public class ToolIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void ReturnToOriginalSlot()
     {
-        transform.SetParent(originalParent, false);
-        rectTransform.anchoredPosition = Vector2.zero;
+        InitializeOriginalSlotIfNeeded();
 
-        CurrentSlot = originalParentSlot;
+        if (CurrentSlot != null && CurrentSlot != originalParentSlot)
+        {
+            CurrentSlot.toolInSlot = null;
+            CurrentSlot.currentTool = ToolType.None;
+        }
+
         if (originalParentSlot != null)
+        {
+            transform.SetParent(originalParentSlot.transform, false);
+            rectTransform.anchoredPosition = Vector2.zero;
+
+            CurrentSlot = originalParentSlot;
             originalParentSlot.toolInSlot = this;
+            originalParentSlot.currentTool = toolType;
+        }
+        else if (originalParent != null)
+        {
+            transform.SetParent(originalParent, false);
+            rectTransform.anchoredPosition = Vector2.zero;
+            CurrentSlot = originalParent.GetComponent<ChainSlot>();
+            if (CurrentSlot != null)
+            {
+                CurrentSlot.toolInSlot = this;
+                CurrentSlot.currentTool = toolType;
+            }
+        }
 
         iconImage.enabled = true;
         iconImage.sprite = iconSprite;
+    }
+
+    public void HandleDropOnSlot(ChainSlot slot)
+    {
+        dropHandledThisFrame = true;
+
+        bool placed = TryPlaceInSlot(slot, allowSwap: true);
+        if (!placed)
+            ReturnToStartSlot();
+
+        ClearHighlights();
+        slot?.chainManager?.CheckChainComplete();
+    }
+
+    private void ReturnToStartSlot()
+    {
+        if (CurrentSlot != null)
+        {
+            CurrentSlot.toolInSlot = null;
+            CurrentSlot.currentTool = ToolType.None;
+        }
+
+        transform.SetParent(originalParent, false);
+        rectTransform.anchoredPosition = originalAnchoredPosition;
+
+        CurrentSlot = originalParent != null ? originalParent.GetComponent<ChainSlot>() : null;
+        if (CurrentSlot != null)
+        {
+            CurrentSlot.toolInSlot = this;
+            CurrentSlot.currentTool = toolType;
+        }
+    }
+
+    private void ClearHighlights()
+    {
+        foreach (var slot in allSlots)
+            slot.SetHighlight(false);
     }
 
 }

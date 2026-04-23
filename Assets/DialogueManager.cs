@@ -201,16 +201,13 @@ public class DialogueManager : MonoBehaviour
 
     public void LoadChapter(DialogueChapter chapter, int lineIndex)
     {
-        if (chapter == null && storySelector == null) return;
-
-        DialogueChapter resolvedChapter =
-            storySelector != null
-                ? storySelector.GetFor(chapter)
-                : chapter;
+        DialogueChapter resolvedChapter = ResolveChapterForCurrentLanguage(chapter);
 
         if (resolvedChapter == null) return;
 
         currentChapter = resolvedChapter;
+        currentChapterId = resolvedChapter.ChapterId;
+        currentChapterTitle = GetChapterLabel(resolvedChapter.ChapterNumber);
 
         runtimeLines = new DialogueLine[resolvedChapter.lines.Count];
         for (int i = 0; i < resolvedChapter.lines.Count; i++)
@@ -218,10 +215,102 @@ public class DialogueManager : MonoBehaviour
 
         Debug.Log($"[LoadChapter] lineIndex = {lineIndex}");
 
-        currentLineIndex = Mathf.Clamp(lineIndex, 0, runtimeLines.Length - 1);
+        currentLineIndex = runtimeLines.Length > 0
+            ? Mathf.Clamp(lineIndex, 0, runtimeLines.Length - 1)
+            : 0;
 
         ShowDialoguePanel();
         ShowLine();
+    }
+
+    private DialogueChapter ResolveChapterForCurrentLanguage(DialogueChapter chapter)
+    {
+        DialogueChapter stableChapter = ResolveStableChapter(chapter);
+
+        if (stableChapter == null)
+            return null;
+
+        if (storySelector == null)
+            return stableChapter;
+
+        DialogueChapter localizedChapter = storySelector.GetFor(stableChapter);
+        return localizedChapter != null ? localizedChapter : stableChapter;
+    }
+
+    private DialogueChapter ResolveStableChapter(DialogueChapter chapter)
+    {
+        if (chapter == null)
+            return GetDefaultSceneChapter();
+
+        DialogueChapter chapterFromId = FindChapterById(chapter.ChapterId);
+        if (chapterFromId != null)
+            return chapterFromId;
+
+        return chapter;
+    }
+
+    private DialogueChapter ResolveChapterFromSave(DialogueSaveData data)
+    {
+        if (data == null)
+            return null;
+
+        DialogueChapter stableChapter = FindChapterById(data.chapterId);
+
+        if (stableChapter == null)
+            stableChapter = FindChapterByLegacyIndex(data.chapterIndex);
+
+        if (stableChapter == null)
+            stableChapter = GetDefaultSceneChapter();
+
+        return ResolveChapterForCurrentLanguage(stableChapter);
+    }
+
+    private DialogueChapter FindChapterById(string chapterId)
+    {
+        if (string.IsNullOrWhiteSpace(chapterId) || chapters == null)
+            return null;
+
+        return chapters.FirstOrDefault(chapter =>
+            chapter != null && chapter.MatchesChapterId(chapterId));
+    }
+
+    private DialogueChapter FindChapterByLegacyIndex(int chapterIndex)
+    {
+        if (chapters == null || chapterIndex < 0 || chapterIndex >= chapters.Count)
+            return null;
+
+        return chapters[chapterIndex];
+    }
+
+    private DialogueChapter GetDefaultSceneChapter()
+    {
+        if (currentChapter != null)
+        {
+            DialogueChapter currentSceneChapter = FindChapterById(currentChapter.ChapterId);
+            if (currentSceneChapter != null)
+                return currentSceneChapter;
+
+            return currentChapter;
+        }
+
+        return chapters != null && chapters.Count > 0
+            ? chapters[0]
+            : null;
+    }
+
+    private int GetStableChapterIndex(DialogueChapter chapter)
+    {
+        DialogueChapter stableChapter = ResolveStableChapter(chapter);
+        return chapters != null ? chapters.IndexOf(stableChapter) : -1;
+    }
+
+    private string GetChapterLabel(int chapterNumber)
+    {
+        string prefix = LanguageManager.CurrentLanguage == Language.English
+            ? "Chapter"
+            : "Глава";
+
+        return $"{prefix} {chapterNumber}";
     }
 
     void Update()
@@ -1962,9 +2051,13 @@ public class DialogueManager : MonoBehaviour
 
     public DialogueSaveData CaptureDialogueState()
     {
+        DialogueChapter stableChapter = ResolveStableChapter(currentChapter);
+
         var data = new DialogueSaveData
         {
-            chapterIndex = chapters.IndexOf(currentChapter),
+            chapterId = stableChapter != null ? stableChapter.ChapterId : string.Empty,
+            chapterNumber = stableChapter != null ? stableChapter.ChapterNumber : 0,
+            chapterIndex = GetStableChapterIndex(stableChapter),
             lineIndex = currentLineIndex,
             backgroundId = currentBackgroundId,
             choiceState = CaptureChoiceState(),
@@ -1979,13 +2072,21 @@ public class DialogueManager : MonoBehaviour
 
     public void RestoreDialogueState(DialogueSaveData data)
     {
-        currentChapter = chapters[data.chapterIndex];
- 
+        if (data == null)
+            return;
+
+        DialogueChapter restoredChapter = ResolveChapterFromSave(data);
+        if (restoredChapter == null)
+        {
+            Debug.LogError("[SAVE] Failed to resolve chapter for save data.");
+            return;
+        }
+
         nobility = data.nobility;
         bloodthirst = data.bloodthirst;
         love = data.love;
 
-        LoadChapter(currentChapter, data.lineIndex);
+        LoadChapter(restoredChapter, data.lineIndex);
 
         if (!string.IsNullOrEmpty(data.backgroundId))
             SetBackgroundInstant(data.backgroundId);
@@ -2009,6 +2110,9 @@ public class DialogueManager : MonoBehaviour
 
     private void RestoreChoiceState(ChoiceSaveState state)
     {
+        if (runtimeLines == null || state.lineIndex < 0 || state.lineIndex >= runtimeLines.Length)
+            return;
+
         DialogueLine line = runtimeLines[state.lineIndex];
 
         ShowChoices(line.choices);

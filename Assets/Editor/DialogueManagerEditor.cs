@@ -6,6 +6,8 @@ using UnityEngine;
 public class DialogueChapterEditor : Editor
 {
     private ReorderableList list;
+    private SerializedProperty chapterIdProp;
+    private SerializedProperty chapterNumberProp;
     private SerializedProperty linesProp;
     private SerializedObject so;
 
@@ -14,9 +16,10 @@ public class DialogueChapterEditor : Editor
     private void OnEnable()
     {
         so = serializedObject;
+        chapterIdProp = so.FindProperty("chapterId");
+        chapterNumberProp = so.FindProperty("chapterNumber");
         linesProp = so.FindProperty("lines");
 
-        // Кэшируем поля один раз
         fields = new string[]
         {
             "text","speakerName","characterName","isRadio","changeSpeakerName",
@@ -42,18 +45,19 @@ public class DialogueChapterEditor : Editor
         list.elementHeightCallback = index =>
         {
             var element = linesProp.GetArrayElementAtIndex(index);
-            float h = EditorGUIUtility.singleLineHeight + 6;
+            float height = EditorGUIUtility.singleLineHeight + 6;
 
             if (element.isExpanded)
             {
-                foreach (var f in fields)
+                foreach (var field in fields)
                 {
-                    var p = element.FindPropertyRelative(f);
-                    if (p != null) h += EditorGUI.GetPropertyHeight(p, true) + 4;
+                    var property = element.FindPropertyRelative(field);
+                    if (property != null)
+                        height += EditorGUI.GetPropertyHeight(property, true) + 4;
                 }
             }
 
-            return h + 4;
+            return height + 4;
         };
 
         list.drawElementCallback = (rect, index, active, focused) =>
@@ -64,7 +68,8 @@ public class DialogueChapterEditor : Editor
             var text = element.FindPropertyRelative("text");
 
             string preview = text.stringValue;
-            if (preview.Length > 40) preview = preview.Substring(0, 40) + "...";
+            if (preview.Length > 40)
+                preview = preview.Substring(0, 40) + "...";
 
             Rect foldRect = new(rect.x, rect.y + 2, rect.width, EditorGUIUtility.singleLineHeight);
 
@@ -75,7 +80,6 @@ public class DialogueChapterEditor : Editor
                 true
             );
 
-            // ПКМ меню
             if (Event.current.type == EventType.ContextClick && foldRect.Contains(Event.current.mousePosition))
             {
                 GenericMenu menu = new GenericMenu();
@@ -98,19 +102,24 @@ public class DialogueChapterEditor : Editor
                 Event.current.Use();
             }
 
-            if (!element.isExpanded) return;
+            if (!element.isExpanded)
+                return;
 
             float y = rect.y + EditorGUIUtility.singleLineHeight + 6;
 
-            foreach (var f in fields)
+            foreach (var field in fields)
             {
-                var p = element.FindPropertyRelative(f);
-                if (p != null)
-                {
-                    float ph = EditorGUI.GetPropertyHeight(p, true);
-                    EditorGUI.PropertyField(new Rect(rect.x + 10, y, rect.width - 20, ph), p, true);
-                    y += ph + 4;
-                }
+                var property = element.FindPropertyRelative(field);
+                if (property == null)
+                    continue;
+
+                float propertyHeight = EditorGUI.GetPropertyHeight(property, true);
+                EditorGUI.PropertyField(
+                    new Rect(rect.x + 10, y, rect.width - 20, propertyHeight),
+                    property,
+                    true
+                );
+                y += propertyHeight + 4;
             }
         };
     }
@@ -119,12 +128,14 @@ public class DialogueChapterEditor : Editor
     {
         so.Update();
 
+        EditorGUILayout.PropertyField(chapterIdProp);
+        EditorGUILayout.PropertyField(chapterNumberProp);
+        EditorGUILayout.Space();
+
         list.DoLayoutList();
 
         if (so.ApplyModifiedProperties())
-        {
             EditorUtility.SetDirty(target);
-        }
     }
 
     private void Copy(int targetIndex, int sourceIndex)
@@ -132,30 +143,52 @@ public class DialogueChapterEditor : Editor
         var src = linesProp.GetArrayElementAtIndex(sourceIndex);
         var dst = linesProp.GetArrayElementAtIndex(targetIndex);
 
-        SerializedProperty s = src.Copy();
-        SerializedProperty d = dst.Copy();
+        SerializedProperty source = src.Copy();
+        SerializedProperty destination = dst.Copy();
 
-        int depth = s.depth;
+        int depth = source.depth;
         bool enterChildren = true;
 
-        while (s.Next(enterChildren))
+        while (source.Next(enterChildren))
         {
-            if (s.depth <= depth) break;
-            d.Next(enterChildren);
+            if (source.depth <= depth)
+                break;
+
+            destination.Next(enterChildren);
             enterChildren = false;
 
-            switch (s.propertyType)
+            switch (source.propertyType)
             {
-                case SerializedPropertyType.Integer: d.intValue = s.intValue; break;
-                case SerializedPropertyType.Boolean: d.boolValue = s.boolValue; break;
-                case SerializedPropertyType.Float: d.floatValue = s.floatValue; break;
-                case SerializedPropertyType.String: d.stringValue = s.stringValue; break;
-                case SerializedPropertyType.Color: d.colorValue = s.colorValue; break;
-                case SerializedPropertyType.ObjectReference: d.objectReferenceValue = s.objectReferenceValue; break;
-                case SerializedPropertyType.Enum: d.enumValueIndex = s.enumValueIndex; break;
-                case SerializedPropertyType.Vector2: d.vector2Value = s.vector2Value; break;
-                case SerializedPropertyType.Vector3: d.vector3Value = s.vector3Value; break;
-                case SerializedPropertyType.Vector4: d.vector4Value = s.vector4Value; break;
+                case SerializedPropertyType.Integer:
+                    destination.intValue = source.intValue;
+                    break;
+                case SerializedPropertyType.Boolean:
+                    destination.boolValue = source.boolValue;
+                    break;
+                case SerializedPropertyType.Float:
+                    destination.floatValue = source.floatValue;
+                    break;
+                case SerializedPropertyType.String:
+                    destination.stringValue = source.stringValue;
+                    break;
+                case SerializedPropertyType.Color:
+                    destination.colorValue = source.colorValue;
+                    break;
+                case SerializedPropertyType.ObjectReference:
+                    destination.objectReferenceValue = source.objectReferenceValue;
+                    break;
+                case SerializedPropertyType.Enum:
+                    destination.enumValueIndex = source.enumValueIndex;
+                    break;
+                case SerializedPropertyType.Vector2:
+                    destination.vector2Value = source.vector2Value;
+                    break;
+                case SerializedPropertyType.Vector3:
+                    destination.vector3Value = source.vector3Value;
+                    break;
+                case SerializedPropertyType.Vector4:
+                    destination.vector4Value = source.vector4Value;
+                    break;
             }
         }
     }

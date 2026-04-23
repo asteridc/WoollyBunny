@@ -8438,6 +8438,8 @@ MonoBehaviour:
   chapters:
   - {fileID: 11400000, guid: 55f75f37454acf44c925db934537becf, type: 2}
   - {fileID: 11400000, guid: 5712ac423d016aa4aad4d8e24b5d3469, type: 2}
+  - {fileID: 11400000, guid: e86fcd1fa1c91dd4eae5bbb09d2e6940, type: 2}
+  - {fileID: 11400000, guid: 3f8fe747399cefc4cb9f008542a5178f, type: 2}
   currentChapter: {fileID: 11400000, guid: 5712ac423d016aa4aad4d8e24b5d3469, type: 2}
   storySelector: {fileID: 724851149}
   runtimeLines: []

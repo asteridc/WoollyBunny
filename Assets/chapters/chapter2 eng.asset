@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9a490f4d85d594f92ae4c36b0923b7, type: 3}
   m_Name: chapter2 eng
   m_EditorClassIdentifier: 
+  chapterId: chapter_02
+  chapterNumber: 2
   lines:
   - text: He opened his eyes - and saw light.
     speakerName: ...

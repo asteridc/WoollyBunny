@@ -18,7 +18,13 @@ public class SaveSlotUI : MonoBehaviour
 
     private void OnEnable()
     {
+        LanguageManager.OnLanguageChanged += OnLanguageChanged;
         StartCoroutine(DelayedRefresh());
+    }
+
+    private void OnDisable()
+    {
+        LanguageManager.OnLanguageChanged -= OnLanguageChanged;
     }
 
     // Обновление с задержкой, чтобы UI успел прогрузиться
@@ -53,15 +59,48 @@ public class SaveSlotUI : MonoBehaviour
         string json = File.ReadAllText(SavePath);
         GameSaveData data = JsonUtility.FromJson<GameSaveData>(json);
 
-        chapterText.text = $"Глава {data.dialogueData.chapterIndex + 1}";
+        chapterText.text = GetSaveTitle(data.dialogueData);
         timeText.text = data.saveTime;
 
         screenshotImage.color = Color.gray; // временный фон
     }
 
+    private void OnLanguageChanged(Language language)
+    {
+        Refresh();
+    }
+
+    private string GetSaveTitle(DialogueSaveData dialogueData)
+    {
+        if (dialogueData == null)
+            return LanguageManager.CurrentLanguage == Language.English ? "New Game" : "Новая игра";
+
+        int chapterNumber = GetChapterNumber(dialogueData);
+        string prefix = LanguageManager.CurrentLanguage == Language.English ? "Chapter" : "Глава";
+
+        return chapterNumber > 0
+            ? $"{prefix} {chapterNumber}"
+            : $"{prefix} ?";
+    }
+
+    private int GetChapterNumber(DialogueSaveData dialogueData)
+    {
+        if (dialogueData == null)
+            return 0;
+
+        if (dialogueData.chapterNumber > 0)
+            return dialogueData.chapterNumber;
+
+        return dialogueData.chapterIndex >= 0
+            ? dialogueData.chapterIndex + 1
+            : 0;
+    }
+
     private void SetEmpty()
     {
-        chapterText.text = "Пустой слот";
+        chapterText.text = LanguageManager.CurrentLanguage == Language.English
+            ? "Empty Slot"
+            : "Пустой слот";
         timeText.text = "";
         screenshotImage.color = new Color(1, 1, 1, 0f); // прозрачный
     }

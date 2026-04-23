@@ -4,6 +4,8 @@ using System.Collections.Generic;
 [System.Serializable]
 public class DialogueSaveData
 {
+    public string chapterId;
+    public int chapterNumber;
     public int chapterIndex;
     public int lineIndex;
     public string backgroundId;

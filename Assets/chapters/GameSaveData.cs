@@ -9,6 +9,7 @@ public class GameSaveData
     public string sceneName;
     public DialogueSaveData dialogueData;
     public string saveTime;
+    public string saveLanguage;
 
     // --- мнбне ---
     public List<LoopSaveState> loops = new List<LoopSaveState>();
@@ -23,3 +24,4 @@ public class LoopSaveState
     public string id;
     public bool active;
 }
+

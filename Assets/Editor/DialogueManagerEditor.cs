@@ -7,6 +7,8 @@ public class DialogueChapterEditor : Editor
 {
     private ReorderableList list;
     private SerializedProperty linesProp;
+    private SerializedProperty chapterIdProp;
+    private SerializedProperty chapterIndexProp;
     private SerializedObject so;
 
     private string[] fields;
@@ -14,6 +16,8 @@ public class DialogueChapterEditor : Editor
     private void OnEnable()
     {
         so = serializedObject;
+        chapterIdProp = so.FindProperty("chapterId");
+        chapterIndexProp = so.FindProperty("chapterIndex");
         linesProp = so.FindProperty("lines");
 
         // Кэшируем поля один раз
@@ -119,6 +123,13 @@ public class DialogueChapterEditor : Editor
     {
         so.Update();
 
+        if (chapterIdProp != null)
+            EditorGUILayout.PropertyField(chapterIdProp);
+        if (chapterIndexProp != null)
+            EditorGUILayout.PropertyField(chapterIndexProp);
+
+        EditorGUILayout.Space(6);
+
         list.DoLayoutList();
 
         if (so.ApplyModifiedProperties())
@@ -160,3 +171,4 @@ public class DialogueChapterEditor : Editor
         }
     }
 }
+

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9a490f4d85d594f92ae4c36b0923b7, type: 3}
   m_Name: chapter1 eng
   m_EditorClassIdentifier: 
+  chapterId: chapter1 eng
+  chapterIndex: 0
   lines:
   - text: This story is a work of fiction. It explores themes of dependency, loss
       of control, and difficult moral choices. Some scenes may be emotionally intense.

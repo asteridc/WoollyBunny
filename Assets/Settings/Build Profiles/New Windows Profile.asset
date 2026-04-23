@@ -28,7 +28,7 @@ MonoBehaviour:
     m_path: Assets/Scenes/Chapter_02.unity
   - m_enabled: 0
     m_path: Assets/Scenes/Testing/CombatTest.unity
-  m_HasScriptingDefines: 0
+  m_HasScriptingDefines: 1
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings:

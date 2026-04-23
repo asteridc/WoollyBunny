@@ -1,4 +1,5 @@
-п»їusing UnityEngine;
+using UnityEngine;
+using System;
 using UnityEngine.SceneManagement;
 using System.IO;
 using System.Collections;
@@ -25,7 +26,7 @@ public class SaveManager : MonoBehaviour
 
     private IEnumerator CaptureScreenshot(int slot)
     {
-        // 1. РЎРєСЂС‹РІР°РµРј UI РїР°СѓР·С‹ Рё РјРµРЅСЋ СЃРѕС…СЂР°РЅРµРЅРёСЏ
+        // 1. Скрываем UI паузы и меню сохранения
         bool wasPauseVisible = PauseManager.Instance.IsPaused;
         if (PauseManager.Instance != null && PauseManager.Instance.IsPaused)
         {
@@ -33,11 +34,11 @@ public class SaveManager : MonoBehaviour
         }
 
 
-        // 2. Р–РґС‘Рј РѕРґРёРЅ РєР°РґСЂ, С‡С‚РѕР±С‹ РІСЃС‘ РѕР±РЅРѕРІРёР»РѕСЃСЊ
+        // 2. Ждём один кадр, чтобы всё обновилось
         yield return null;
         yield return new WaitForEndOfFrame();
 
-        // 3. Р‘РµСЂС‘Рј СЃРєСЂРёРЅС€РѕС‚
+        // 3. Берём скриншот
         int width = Screen.width;
         int height = Screen.height;
         Texture2D tex = new Texture2D(width, height, TextureFormat.RGB24, false);
@@ -64,8 +65,10 @@ public class SaveManager : MonoBehaviour
         var data = new GameSaveData
         {
             sceneName = "Chapter_01",
-            dialogueData = null, // РґРёР°Р»РѕРі РЅР°С‡РЅС‘С‚СЃСЏ СЃ РЅР°С‡Р°Р»Р°
+            dialogueData = null, // диалог начнётся с начала
             saveTime = System.DateTime.Now.ToString("dd.MM.yyyy HH:mm"),
+
+            saveLanguage = LanguageManager.CurrentLanguage.ToString(),
 
             electroMinigameActive = false,
             guitarMinigameActive = false,
@@ -88,6 +91,8 @@ public class SaveManager : MonoBehaviour
             sceneName = SceneManager.GetActiveScene().name,
             dialogueData = dm.CaptureDialogueState(),
             saveTime = System.DateTime.Now.ToString("dd.MM.yyyy HH:mm"),
+
+            saveLanguage = LanguageManager.CurrentLanguage.ToString(),
 
             electroMinigameActive =
                 ElectroChainManager.Instance != null &&
@@ -126,13 +131,15 @@ public class SaveManager : MonoBehaviour
         string json = File.ReadAllText(path);
         GameSaveData data = JsonUtility.FromJson<GameSaveData>(json);
 
-        // рџ”№ РЎРєСЂС‹РІР°РµРј РїР°СѓР·Сѓ РґРѕ СЃРєСЂРёРЅР°
+        ApplySavedLanguage(data);
+
+        // ?? Скрываем паузу до скрина
         if (PauseManager.Instance != null)
             PauseManager.Instance.HideInstant();
 
         Time.timeScale = 1f;
 
-        // рџ”№ РќРѕРІР°СЏ СЃС†РµРЅР°
+        // ?? Новая сцена
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != data.sceneName)
         {
             UnityEngine.SceneManagement.SceneManager.sceneLoaded += (scene, mode) =>
@@ -145,14 +152,14 @@ public class SaveManager : MonoBehaviour
         }
         else
         {
-            // рџ”№ РўР° Р¶Рµ СЃС†РµРЅР° вЂ” СЏРІРЅРѕ СЃР±СЂРѕСЃРёС‚СЊ UI Рё РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РґРёР°Р»РѕРі
+            // ?? Та же сцена — явно сбросить UI и восстановить диалог
             if (PauseManager.Instance != null)
                 PauseManager.Instance.HideInstant();
             if (data.dialogueData != null)
                 StartCoroutine(RestoreDialogueWhenReady(data.dialogueData));
         }
 
-        // рџ”№ РЎРєСЂРёРЅС€РѕС‚ РїРѕСЃР»Рµ СЃРєСЂС‹С‚РёСЏ UI
+        // ?? Скриншот после скрытия UI
         StartCoroutine(CaptureScreenshotAfterFrame(slot));
     }
 
@@ -165,7 +172,7 @@ public class SaveManager : MonoBehaviour
 
     private IEnumerator LoadRoutine(GameSaveData data)
     {
-        // 1пёЏвѓЈ Р—Р°РіСЂСѓР·РєР° СЃС†РµРЅС‹
+        // 1?? Загрузка сцены
         if (SceneManager.GetActiveScene().name != data.sceneName)
         {
             SceneManager.LoadScene(data.sceneName);
@@ -173,18 +180,18 @@ public class SaveManager : MonoBehaviour
             yield return null;
         }
 
-        // 2пёЏвѓЈ Р–РґС‘Рј DialogueManager
+        // 2?? Ждём DialogueManager
         while (DialogueManager.Instance == null)
             yield return null;
 
-        // 3пёЏвѓЈ РЎР‘Р РћРЎ РњРР Рђ Р”Рћ Р’РћРЎРЎРўРђРќРћР’Р›Р•РќРРЇ
+        // 3?? СБРОС МИРА ДО ВОССТАНОВЛЕНИЯ
         ResetWorld();
         ResetLoops();
 
-        // 4пёЏвѓЈ Р’РћРЎРЎРўРђРќРћР’Р›Р•РќРР• Р”РРђР›РћР“Рђ (РљР›Р®Р§Р•Р’РћР• РњР•РЎРўРћ)
+        // 4?? ВОССТАНОВЛЕНИЕ ДИАЛОГА (КЛЮЧЕВОЕ МЕСТО)
         StartCoroutine(RestoreDialogueWhenReady(data.dialogueData));
 
-        // 5пёЏвѓЈ Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ Р»СѓРїРѕРІ РџРћРЎР›Р• РґРёР°Р»РѕРіР°
+        // 5?? Восстановление лупов ПОСЛЕ диалога
         var registry = LoopRegistry.Instance;
         if (registry != null)
         {
@@ -205,13 +212,13 @@ public class SaveManager : MonoBehaviour
 
     private IEnumerator RestoreAfterLoad(GameSaveData data)
     {
-        // Р–РґС‘Рј РѕРґРёРЅ РєР°РґСЂ, С‡С‚РѕР±С‹ СЃС†РµРЅР° РїСЂРѕРіСЂСѓР·РёР»Р°СЃСЊ
+        // Ждём один кадр, чтобы сцена прогрузилась
         yield return null;
 
-        // Р’РѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµРј РґРёР°Р»РѕРі
+        // Восстанавливаем диалог
         DialogueManager.Instance.RestoreDialogueState(data.dialogueData);
 
-        // Р•СЃР»Рё РµСЃС‚СЊ UI РґР»СЏ РґРёР°Р»РѕРіР° вЂ” РІРєР»СЋС‡Р°РµРј
+        // Если есть UI для диалога — включаем
         DialogueManager.Instance.ShowDialoguePanel();
         DialogueManager.Instance.ShowLine();
     }
@@ -228,7 +235,7 @@ public class SaveManager : MonoBehaviour
 
     private void ResetWorld()
     {
-        // РјРёРЅРё-РёРіСЂС‹
+        // мини-игры
         if (ElectroChainManager.Instance != null)
             ElectroChainManager.Instance.ClosePanelAndContinue();
 
@@ -255,10 +262,21 @@ public class SaveManager : MonoBehaviour
         DialogueManager.Instance.RestoreDialogueState(data);
     }
 
+    private void ApplySavedLanguage(GameSaveData data)
+    {
+        if (data == null || string.IsNullOrEmpty(data.saveLanguage))
+            return;
 
+        if (Enum.TryParse(data.saveLanguage, true, out Language saveLanguage))
+            LanguageManager.SetLanguage(saveLanguage);
+    }
 
     private string GetPath(int slot)
     {
         return Application.persistentDataPath + $"/save_{slot}.json";
     }
 }
+
+
+
+

@@ -222,13 +222,35 @@ public class ElectroChainManager : MonoBehaviour
 
     IEnumerator HandlePlayerDeath()
     {
+        ResetFadeOverlay();
         yield return StartCoroutine(FadeToBlack());
         gameOverPanel.SetActive(true);
+        yield return StartCoroutine(FadeFromBlack());
         DialogueManager.Instance.TriggerGameOver();
+    }
+
+    private void ResetFadeOverlay()
+    {
+        if (backgroundFadeImage == null)
+            return;
+
+        if (!backgroundFadeImage.gameObject.activeSelf)
+            backgroundFadeImage.gameObject.SetActive(true);
+
+        Color color = backgroundFadeImage.color;
+        color.a = 0f;
+        backgroundFadeImage.color = color;
+        backgroundFadeImage.raycastTarget = false;
     }
 
     private IEnumerator FadeToBlack()
     {
+        if (backgroundFadeImage == null)
+            yield break;
+
+        if (!backgroundFadeImage.gameObject.activeSelf)
+            backgroundFadeImage.gameObject.SetActive(true);
+
         backgroundFadeImage.raycastTarget = true;
         Color color = backgroundFadeImage.color;
         float elapsed = 0f;
@@ -248,6 +270,12 @@ public class ElectroChainManager : MonoBehaviour
 
     private IEnumerator FadeFromBlack()
     {
+        if (backgroundFadeImage == null)
+            yield break;
+
+        if (!backgroundFadeImage.gameObject.activeSelf)
+            backgroundFadeImage.gameObject.SetActive(true);
+
         Color color = backgroundFadeImage.color;
         float elapsed = 0f;
 

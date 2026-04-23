@@ -1623,7 +1623,7 @@ MonoBehaviour:
   triggerLineAfterWin: 281
   instructionCountdownText: {fileID: 1742511976}
   waitBeforeCountdown: 2
-  instructionCountdownDuration: 15
+  instructionCountdownDuration: 3
 --- !u!1 &156534454
 GameObject:
   m_ObjectHideFlags: 0
@@ -20788,7 +20788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fee7c761eeb703428f4ca33c44a679a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLineNumber: 1
+  startLineNumber: 270
   currentBackgroundId: 0
   skipLineDelay: 0.2
   skipAutoStart: 0

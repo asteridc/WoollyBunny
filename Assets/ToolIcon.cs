@@ -44,23 +44,29 @@ public class ToolIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         if (originalSlotInitialized)
             return;
 
-        if (originalParent == null)
-            originalParent = transform.parent;
+        Transform currentParent = transform.parent;
+        ChainSlot currentParentSlot = currentParent != null
+            ? currentParent.GetComponent<ChainSlot>()
+            : null;
 
-        if (originalParentSlot == null)
-            originalParentSlot = GetComponentInParent<ChainSlot>();
+        if (currentParent != null)
+            originalParent = currentParent;
+
+        if (currentParentSlot == null)
+            currentParentSlot = GetComponentInParent<ChainSlot>();
+
+        if (currentParentSlot != null)
+            originalParentSlot = currentParentSlot;
 
         if (rectTransform == null)
             rectTransform = GetComponent<RectTransform>();
 
-        if (originalParentSlot != null && originalParentSlot.toolInSlot == null)
+        if (originalParentSlot != null)
         {
             originalParentSlot.toolInSlot = this;
             originalParentSlot.currentTool = toolType;
-        }
-
-        if (CurrentSlot == null)
             CurrentSlot = originalParentSlot;
+        }
 
         originalSlotInitialized = true;
     }
@@ -71,7 +77,8 @@ public class ToolIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         originalParent = transform.parent;
         CurrentSlot = originalParent.GetComponent<ChainSlot>();
 
-        canvasGroup.blocksRaycasts = false;
+        if (canvasGroup != null)
+            canvasGroup.blocksRaycasts = false;
 
         foreach (var slot in allSlots)
             slot.SetHighlight(true);
@@ -92,7 +99,8 @@ public class ToolIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        canvasGroup.blocksRaycasts = true;
+        if (canvasGroup != null)
+            canvasGroup.blocksRaycasts = true;
 
         if (dropHandledThisFrame)
         {

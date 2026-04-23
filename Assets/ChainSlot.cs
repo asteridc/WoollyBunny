@@ -33,6 +33,9 @@ public class ChainSlot : MonoBehaviour, IDropHandler
     {
         if (!ToolIcon.allSlots.Contains(this))
             ToolIcon.allSlots.Add(this);
+
+        RefreshStateFromHierarchy();
+
         if (highlightImage != null)
             highlightImage.enabled = false;
     }
@@ -56,6 +59,21 @@ public class ChainSlot : MonoBehaviour, IDropHandler
     {
         currentTool = ToolType.None;
         toolInSlot = null;
+    }
+
+    public void RefreshStateFromHierarchy()
+    {
+        ToolIcon childTool = GetComponentInChildren<ToolIcon>(true);
+
+        if (childTool == null || childTool.gameObject == gameObject)
+        {
+            ClearTool();
+            return;
+        }
+
+        toolInSlot = childTool;
+        currentTool = childTool.toolType;
+        childTool.CurrentSlot = this;
     }
 
 

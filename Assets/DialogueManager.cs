@@ -1866,21 +1866,31 @@ public class DialogueManager : MonoBehaviour
 
     public bool isGameOverActive = false;
 
+    private void ResetBlackOverlay()
+    {
+        if (blackOverlay == null)
+            return;
+
+        if (!blackOverlay.gameObject.activeSelf)
+            blackOverlay.gameObject.SetActive(true);
+
+        Color color = blackOverlay.color;
+        color.a = 0f;
+        blackOverlay.color = color;
+        blackOverlay.raycastTarget = false;
+    }
+
     public void TriggerGameOver()
     {
         if (isGameOverActive) return;
         isGameOverActive = true;
 
-        // Экран смерти уже активирован в HandlePlayerDeath
-        // Здесь только осветляем
-        blackOverlay.DOFade(0f, FadeDuration).OnComplete(() =>
-        {
-            blackOverlay.gameObject.SetActive(false);
+        ResetBlackOverlay();
 
-            // Показываем таймер
+        if (respawnCountdownText != null)
             respawnCountdownText.gameObject.SetActive(true);
-            StartCoroutine(RespawnCountdown());
-        });
+
+        StartCoroutine(RespawnCountdown());
     }
 
     IEnumerator RespawnCountdown()
@@ -1900,6 +1910,7 @@ public class DialogueManager : MonoBehaviour
         ElectroChainManager.Instance.ResetMinigameState();
         gameOverPanel.SetActive(false);
         miniGamePanel.SetActive(true);
+        ResetBlackOverlay();
 
         ResetGameOverFlag();
 

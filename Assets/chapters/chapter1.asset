@@ -2132,7 +2132,7 @@ MonoBehaviour:
     customFont: {fileID: 0}
     unlockChoiceKeys: []
     isJumpLine: 1
-    gotoLineIndex: 33
+    gotoLineIndex: 38
     hasChoices: 0
     hasPathConsequences: 0
     isEndOfChapter: 0

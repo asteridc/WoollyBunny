@@ -16,8 +16,14 @@ public class SaveSlotUI : MonoBehaviour
     private string SavePath =>
         Application.persistentDataPath + $"/save_{slotIndex}.json";
 
+    private void Awake()
+    {
+        DisableChapterTextLocalization();
+    }
+
     private void OnEnable()
     {
+        DisableChapterTextLocalization();
         LanguageManager.OnLanguageChanged += OnLanguageChanged;
         StartCoroutine(DelayedRefresh());
     }
@@ -67,7 +73,17 @@ public class SaveSlotUI : MonoBehaviour
 
     private void OnLanguageChanged(Language language)
     {
-        Refresh();
+        StartCoroutine(DelayedRefresh());
+    }
+
+    private void DisableChapterTextLocalization()
+    {
+        if (chapterText == null)
+            return;
+
+        LocalizedText localizedText = chapterText.GetComponent<LocalizedText>();
+        if (localizedText != null && localizedText.enabled)
+            localizedText.enabled = false;
     }
 
     private string GetSaveTitle(DialogueSaveData dialogueData)

@@ -33,6 +33,14 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Dialogue Navigation")]
     [SerializeField] private float skipLineDelay = 0.06f;
+    [SerializeField] private Button skipButton;
+    [SerializeField] private Graphic skipButtonGraphic;
+    [SerializeField] private Graphic skipButtonIcon;
+    [SerializeField] private Color skipButtonActiveColor = new Color(1f, 0.85f, 0.35f, 1f);
+    [SerializeField] private Color skipButtonActiveIconColor = new Color(1f, 0.95f, 0.65f, 1f);
+
+    private Color skipButtonInactiveColor = Color.white;
+    private Color skipButtonInactiveIconColor = Color.white;
 
     [Header("Choice Runtime")]
     private int selectedChoiceIndex = -1;
@@ -188,6 +196,7 @@ public class DialogueManager : MonoBehaviour
     {
         collectiblePanel.SetActive(false);
 
+        InitializeSkipButtonVisuals();
         InitializeContinueHint();
         SetContinueHintVisible(false, true);
 
@@ -201,6 +210,7 @@ public class DialogueManager : MonoBehaviour
 
     public void LoadChapter(DialogueChapter chapter, int lineIndex)
     {
+        StopSkippingIfNeeded();
         DialogueChapter resolvedChapter = ResolveChapterForCurrentLanguage(chapter);
 
         if (resolvedChapter == null) return;
@@ -469,20 +479,28 @@ public class DialogueManager : MonoBehaviour
 
     public void OnClickSkip()
     {
-        if (isSkipping || runtimeLines == null || runtimeLines.Length == 0)
+        if (runtimeLines == null || runtimeLines.Length == 0)
             return;
+
+        TryCacheSkipButtonFromCurrentSelection();
+
+        if (isSkipping)
+        {
+            StopSkippingIfNeeded();
+            return;
+        }
 
         skipCoroutine = StartCoroutine(SkipDialogueFast());
     }
 
     private IEnumerator SkipDialogueFast()
     {
-        isSkipping = true;
+        SetSkippingState(true);
 
         while (currentLineIndex < runtimeLines.Length)
         {
             DialogueLine line = runtimeLines[currentLineIndex];
-            if (RequiresPlayerAction(line))
+            if (RequiresPlayerAction(line) || NextStoryStepRequiresPlayerAction(currentLineIndex))
                 break;
 
             if (!TryMoveToNextLineIndex(line))
@@ -492,7 +510,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(skipLineDelay);
         }
 
-        isSkipping = false;
+        SetSkippingState(false);
         skipCoroutine = null;
     }
 
@@ -513,10 +531,16 @@ public class DialogueManager : MonoBehaviour
 
     private bool RequiresPlayerAction(DialogueLine line)
     {
+        if (line == null)
+            return true;
+
+        if (IsScriptedInteractionLine(currentLineIndex))
+            return true;
+
         if (line.hasChoices)
             return true;
 
-        if (line.changeBackground && clickToContinueAfterFade)
+        if (line.changeBackground)
             return true;
 
         if (line.showCollectibleView)
@@ -528,19 +552,189 @@ public class DialogueManager : MonoBehaviour
         return line.extraActions.showCodePanel
             || line.extraActions.showNotePanel
             || line.extraActions.showElectroSubstationMinigame
+            || line.extraActions.showInteractionPoints
             || line.extraActions.stopDialogueAfterThisLine;
     }
 
     private void StopSkippingIfNeeded()
     {
-        if (!isSkipping)
+        if (!isSkipping && skipCoroutine == null)
             return;
 
         if (skipCoroutine != null)
             StopCoroutine(skipCoroutine);
 
-        isSkipping = false;
+        SetSkippingState(false);
         skipCoroutine = null;
+    }
+
+    private bool NextStoryStepRequiresPlayerAction(int lineIndex)
+    {
+        int nextLineIndex = GetNextStoryStepLineIndex(lineIndex);
+        if (!IsValidRuntimeLineIndex(nextLineIndex))
+            return false;
+
+        return RequiresPlayerAction(runtimeLines[nextLineIndex], nextLineIndex);
+    }
+
+    private bool RequiresPlayerAction(DialogueLine line, int lineIndex)
+    {
+        if (line == null)
+            return true;
+
+        if (IsScriptedInteractionLine(lineIndex))
+            return true;
+
+        if (line.hasChoices || line.changeBackground || line.showCollectibleView)
+            return true;
+
+        if (line.extraActions == null)
+            return false;
+
+        return line.extraActions.showCodePanel
+            || line.extraActions.showNotePanel
+            || line.extraActions.showElectroSubstationMinigame
+            || line.extraActions.showInteractionPoints
+            || line.extraActions.stopDialogueAfterThisLine;
+    }
+
+    private int GetNextStoryStepLineIndex(int lineIndex)
+    {
+        if (!IsValidRuntimeLineIndex(lineIndex))
+            return -1;
+
+        DialogueLine line = runtimeLines[lineIndex];
+        if (line != null && line.isJumpLine)
+            return Mathf.Clamp(line.gotoLineIndex - 1, 0, runtimeLines.Length - 1);
+
+        int nextLineIndex = lineIndex + 1;
+        return nextLineIndex < runtimeLines.Length ? nextLineIndex : -1;
+    }
+
+    private bool IsValidRuntimeLineIndex(int lineIndex)
+    {
+        return runtimeLines != null
+            && lineIndex >= 0
+            && lineIndex < runtimeLines.Length;
+    }
+
+    private bool IsScriptedInteractionLine(int lineIndex)
+    {
+        if (lineIndex < 0)
+            return false;
+
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        if (sceneName == "Chapter_02" && lineIndex == 90 - 1)
+            return true;
+
+        if (sceneName != "Chapter_01")
+            return false;
+
+        if (LanguageManager.CurrentLanguage == Language.Russian && lineIndex == 39 - 1)
+            return true;
+
+        return LanguageManager.CurrentLanguage == Language.English && lineIndex == 49 - 1;
+    }
+
+    private void SetSkippingState(bool skipping)
+    {
+        isSkipping = skipping;
+        UpdateSkipButtonVisualState();
+    }
+
+    private void InitializeSkipButtonVisuals()
+    {
+        ResolveSkipButtonReferences();
+
+        if (skipButtonGraphic != null)
+            skipButtonInactiveColor = skipButtonGraphic.color;
+
+        if (skipButtonIcon != null)
+            skipButtonInactiveIconColor = skipButtonIcon.color;
+
+        UpdateSkipButtonVisualState();
+    }
+
+    private void TryCacheSkipButtonFromCurrentSelection()
+    {
+        if (EventSystem.current == null || EventSystem.current.currentSelectedGameObject == null)
+            return;
+
+        Button selectedButton = EventSystem.current.currentSelectedGameObject.GetComponentInParent<Button>();
+        if (selectedButton == null)
+            return;
+
+        skipButton = selectedButton;
+        ResolveSkipButtonReferences();
+
+        if (!isSkipping)
+        {
+            if (skipButtonGraphic != null)
+                skipButtonInactiveColor = skipButtonGraphic.color;
+
+            if (skipButtonIcon != null)
+                skipButtonInactiveIconColor = skipButtonIcon.color;
+        }
+
+        UpdateSkipButtonVisualState();
+    }
+
+    private void ResolveSkipButtonReferences()
+    {
+        if (skipButton == null)
+        {
+            Button[] buttons = FindObjectsByType<Button>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            foreach (Button button in buttons)
+            {
+                if (!IsSkipButton(button))
+                    continue;
+
+                skipButton = button;
+                break;
+            }
+        }
+
+        if (skipButton == null)
+            return;
+
+        if (skipButtonGraphic == null)
+            skipButtonGraphic = skipButton.targetGraphic != null
+                ? skipButton.targetGraphic
+                : skipButton.GetComponent<Graphic>();
+
+        if (skipButtonIcon == null)
+        {
+            Graphic[] graphics = skipButton.GetComponentsInChildren<Graphic>(true);
+            skipButtonIcon = graphics.FirstOrDefault(graphic =>
+                graphic != null
+                && graphic != skipButtonGraphic
+                && graphic.gameObject != skipButton.gameObject);
+        }
+    }
+
+    private bool IsSkipButton(Button button)
+    {
+        if (button == null)
+            return false;
+
+        for (int i = 0; i < button.onClick.GetPersistentEventCount(); i++)
+        {
+            if (button.onClick.GetPersistentTarget(i) == this
+                && button.onClick.GetPersistentMethodName(i) == nameof(OnClickSkip))
+                return true;
+        }
+
+        return false;
+    }
+
+    private void UpdateSkipButtonVisualState()
+    {
+        if (skipButtonGraphic != null)
+            skipButtonGraphic.color = isSkipping ? skipButtonActiveColor : skipButtonInactiveColor;
+
+        if (skipButtonIcon != null)
+            skipButtonIcon.color = isSkipping ? skipButtonActiveIconColor : skipButtonInactiveIconColor;
     }
 
     private void InitializeContinueHint()
@@ -733,7 +927,7 @@ public class DialogueManager : MonoBehaviour
         
         // Мини-сцена с гитарой в квартире //
 
-        if (SceneManager.GetActiveScene().name == "Chapter_02")
+        if (SceneManager.GetActiveScene().name == "Chapter_02" && IsScriptedInteractionLine(currentLineIndex))
         {
             if (currentLineIndex == 90 - 1)
             {
@@ -756,7 +950,7 @@ public class DialogueManager : MonoBehaviour
 
 
         // Показ мини-игры с кодовой панелью //
-        if (SceneManager.GetActiveScene().name == "Chapter_01")
+        if (SceneManager.GetActiveScene().name == "Chapter_01" && IsScriptedInteractionLine(currentLineIndex))
         {
             if (LanguageManager.CurrentLanguage == Language.Russian && currentLineIndex == 39 - 1)
             {
@@ -856,12 +1050,13 @@ public class DialogueManager : MonoBehaviour
         }
 
         nameText.text = line.speakerName;
+        DialogueLine.ExtraActions extraActions = line.extraActions;
 
         fullCurrentLine = finalText;
         typingCoroutine = StartCoroutine(TypeLine(fullCurrentLine));
 
 
-        if (line.extraActions.showCodePanel)
+        if (extraActions != null && extraActions.showCodePanel)
         {
             Debug.Log("Показываем кодовую панель");
             if (codePanelUI != null)
@@ -918,7 +1113,7 @@ public class DialogueManager : MonoBehaviour
             ShowCollectibleView(line.collectibleTitle, line.collectibleContent, line.collectibleIcon);
         }
 
-        if (line.extraActions.showInteractionPoints)
+        if (extraActions != null && extraActions.showInteractionPoints)
         {
             ShowInteractionPoints();
         }
@@ -946,9 +1141,9 @@ public class DialogueManager : MonoBehaviour
             ShowChoices(line.choices);
 
         // Дополнительные действия
-        if (line.extraActions != null)
+        if (extraActions != null)
         {
-            if (line.extraActions.showCodePanel)
+            if (extraActions.showCodePanel)
             {
                 if (codePanelUI != null)
                 {
@@ -959,25 +1154,25 @@ public class DialogueManager : MonoBehaviour
                     Debug.LogError("codePanelUI is not assigned in DialogueManager!");
                 }
 
-                if (line.extraActions.stopDialogueAfterThisLine)
+                if (extraActions.stopDialogueAfterThisLine)
                     return;
             }
 
-            if (line.extraActions.showNotePanel)
+            if (extraActions.showNotePanel)
             {
-                CodePanelUI codePanel = FindObjectOfType<CodePanelUI>();
+                CodePanelUI codePanel = FindFirstObjectByType<CodePanelUI>();
                 if (codePanel != null)
                 {
                     codePanel.ToggleNotePanel();
                 }
             }
 
-            if (line.extraActions.objectToActivate != null)
+            if (extraActions.objectToActivate != null)
             {
-                line.extraActions.objectToActivate.SetActive(true);
+                extraActions.objectToActivate.SetActive(true);
             }
 
-            if (line.extraActions.showElectroSubstationMinigame)
+            if (extraActions.showElectroSubstationMinigame)
             {
                 if (ElectroChainManager.Instance != null)
                 {
@@ -1002,10 +1197,11 @@ public class DialogueManager : MonoBehaviour
 
             bool canGoToNextReplicaByClick = !line.hasChoices
         && !line.showCollectibleView
-        && (line.extraActions == null || (!line.extraActions.showCodePanel
-            && !line.extraActions.showNotePanel
-            && !line.extraActions.showElectroSubstationMinigame
-            && !line.extraActions.stopDialogueAfterThisLine));
+        && (extraActions == null || (!extraActions.showCodePanel
+            && !extraActions.showNotePanel
+            && !extraActions.showElectroSubstationMinigame
+            && !extraActions.showInteractionPoints
+            && !extraActions.stopDialogueAfterThisLine));
 
             SetContinueHintVisible(canGoToNextReplicaByClick);
 
@@ -1073,6 +1269,7 @@ public class DialogueManager : MonoBehaviour
 
     public void HideDialoguePanel(System.Action onComplete = null)
     {
+        StopSkippingIfNeeded();
         isDialogueHidden = true;
         dialogueTween?.Kill();
 

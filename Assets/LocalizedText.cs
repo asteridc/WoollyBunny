@@ -8,14 +8,21 @@ public class LocalizedText : MonoBehaviour
 
     private TextMeshProUGUI text;
 
-    void Awake()
+    private void Awake()
     {
         text = GetComponent<TextMeshProUGUI>();
+    }
+
+    private void OnEnable()
+    {
+        if (text == null)
+            text = GetComponent<TextMeshProUGUI>();
+
         LanguageManager.OnLanguageChanged += UpdateText;
         UpdateText(LanguageManager.CurrentLanguage);
     }
 
-    void OnDestroy()
+    private void OnDisable()
     {
         LanguageManager.OnLanguageChanged -= UpdateText;
     }

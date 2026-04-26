@@ -8348,9 +8348,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fee7c761eeb703428f4ca33c44a679a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLineNumber: 566
+  startLineNumber: 1
   currentBackgroundId: 6
   skipLineDelay: 0.2
+  skipButton: {fileID: 1599440839}
+  skipButtonGraphic: {fileID: 1599440842}
+  skipButtonIcon: {fileID: 1599440842}
+  skipButtonActiveColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
+  skipButtonActiveIconColor: {r: 1, g: 0.8509804, b: 0.34901962, a: 1}
   skipAutoStart: 0
   currentChapterId: 1
   currentChapterTitle: "\u0413\u043B\u0430\u0432\u0430 2 - \"\u042D\u043B\u0438\u0437\u0438\u0443\u043C\""
@@ -13865,7 +13870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1089819082
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13882,7 +13887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -675.91003, y: 152.14001}
+  m_AnchoredPosition: {x: -639.5, y: 117.2}
   m_SizeDelta: {x: 68, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1089819083
@@ -13897,7 +13902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.92156863}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!114 &1089819084
@@ -13913,7 +13918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14509805, g: 0.13725491, b: 0.1254902, a: 1}
+  m_Color: {r: 0.52156866, g: 0.49803922, b: 0.43137255, a: 0.40392157}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

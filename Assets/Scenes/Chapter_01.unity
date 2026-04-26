@@ -1620,7 +1620,7 @@ MonoBehaviour:
   clickToContinueAfterFade: 1
   autoContinueDelay: 1
   waitingForClick: 0
-  triggerLineAfterWin: 281
+  triggerLineAfterWin: 286
   instructionCountdownText: {fileID: 1742511976}
   waitBeforeCountdown: 2
   instructionCountdownDuration: 3
@@ -20788,9 +20788,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fee7c761eeb703428f4ca33c44a679a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLineNumber: 270
+  startLineNumber: 1
   currentBackgroundId: 0
   skipLineDelay: 0.2
+  skipButton: {fileID: 156534459}
+  skipButtonGraphic: {fileID: 156534456}
+  skipButtonIcon: {fileID: 156534456}
+  skipButtonActiveColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
+  skipButtonActiveIconColor: {r: 1, g: 0.8509804, b: 0.34901962, a: 1}
   skipAutoStart: 0
   currentChapterId: 0
   currentChapterTitle: "\u0413\u043B\u0430\u0432\u0430 1 - \"\u041C\u0438\u0440\""

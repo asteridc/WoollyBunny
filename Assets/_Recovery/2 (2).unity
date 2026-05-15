@@ -2642,8 +2642,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 468, y: -135}
-  m_SizeDelta: {x: 670, y: 1160.708}
+  m_AnchoredPosition: {x: 512, y: -135}
+  m_SizeDelta: {x: 700, y: 1160.708}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &236060077
 CanvasGroup:
@@ -17467,8 +17467,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -468, y: -135}
-  m_SizeDelta: {x: 670, y: 1160.708}
+  m_AnchoredPosition: {x: -512, y: -135}
+  m_SizeDelta: {x: 700, y: 1160.708}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1482546033
 MonoBehaviour:
@@ -20822,10 +20822,10 @@ MonoBehaviour:
   modelLeft: {fileID: 1482546033}
   modelRight: {fileID: 236060074}
   transparent: {fileID: 21300000, guid: 5d44efab882a8bb49ac93d70eb8dddc4, type: 3}
-  eliSprite: {fileID: 21300000, guid: 4eb751d72b6fef749a0382d7770354b3, type: 3}
-  kaneSprite: {fileID: 21300000, guid: 4a7eba1aea591654b97ce631d5de7eac, type: 3}
-  hannaSprite: {fileID: 21300000, guid: 41acce5103a33c74495f36148c9b5ac3, type: 3}
-  keremSprite: {fileID: 21300000, guid: d801c3f3ca6ae5647b6f1ce0bec91f40, type: 3}
+  eliSprite: {fileID: 21300000, guid: 267040e7d7af55d49acbdc19cd3c3bc5, type: 3}
+  kaneSprite: {fileID: 21300000, guid: 2c219a8a9305a5c49b3dd8d87684166c, type: 3}
+  hannaSprite: {fileID: 21300000, guid: d6f923f5e7c8f4147bb2e28b487fed4c, type: 3}
+  keremSprite: {fileID: 21300000, guid: fdf93ab4ade3a2b41bb25ed370f51454, type: 3}
   firstAssasinPeacekeeper: {fileID: 21300000, guid: 30c12c0e77300a145bb12b1c0763e30e, type: 3}
   keremRadioSprite: {fileID: 0}
   barsSprite: {fileID: 0}

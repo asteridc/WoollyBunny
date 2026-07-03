@@ -24,6 +24,7 @@ public class DialogueChapterEditor : Editor
         {
             "text","speakerName","characterName","isRadio","changeSpeakerName",
             "changeCharacterSprite","changeBackground","characterSprite","backgroundSprite", "backgroundId",
+            "backgroundTransition",
             "isOnRight","flipSpeakerImage","listenerCharacterName","isListenerOnRight",
             "flipListenerImage","showCollectibleView","collectibleTitle","collectibleContent",
             "collectibleIcon","showItemNotification","itemName","itemType","itemRarity",

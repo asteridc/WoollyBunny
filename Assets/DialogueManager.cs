@@ -54,6 +54,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public Image backgroundImage;
+    [SerializeField] private Image backgroundTransitionImage;
     public Image characterImage;
     public Image radioIcon;
     public GameObject dialoguePanel;
@@ -341,6 +342,7 @@ public class DialogueManager : MonoBehaviour
             modelLeft.gameObject.SetActive(true);
             modelRight.gameObject.SetActive(true);
 
+            Debug.Log($"Click after fade = {currentLineIndex}");
             ShowLine(); // Повторный показ той же строки, теперь уже с UI
         }
     }
@@ -874,6 +876,7 @@ public class DialogueManager : MonoBehaviour
 
     private void ShowLine(bool saveToHistory)
     {
+        Debug.Log($"ShowLine: currentLineIndex = {currentLineIndex}");
         if (runtimeLines == null || runtimeLines.Length == 0)
             return;
 
@@ -997,16 +1000,27 @@ public class DialogueManager : MonoBehaviour
 
 
 
-        if (line.changeBackground && line.backgroundSprite != null)
+        if (line.changeBackground && line.backgroundSprite != null && !illustrationTransitionCompleted)
         {
             HideDialoguePanel(() =>
             {
-                StartCoroutine(HandleBackgroundTransition(line));
+                switch (line.backgroundTransition)
+                {
+                    case BackgroundTransitionType.LocationFade:
+                        StartCoroutine(HandleLocationTransition(line));
+                        break;
+
+                    case BackgroundTransitionType.IllustrationFade:
+                        StartCoroutine(HandleIllustrationTransition(line));
+                        break;
+                }
             });
+
             return;
         }
 
         string finalText = line.text;
+
 
         if (line.hasPathConsequences && line.pathVarients != null && line.pathVarients.Length > 0)
         {
@@ -1206,7 +1220,7 @@ public class DialogueManager : MonoBehaviour
             SetContinueHintVisible(canGoToNextReplicaByClick);
 
         }
-
+        illustrationTransitionCompleted = false;
     }
 
     private void StartTypewriter(string line)
@@ -2067,7 +2081,7 @@ public class DialogueManager : MonoBehaviour
         });
     }
 
-    private IEnumerator HandleBackgroundTransition(DialogueLine line)
+    private IEnumerator HandleLocationTransition(DialogueLine line)
     {
         line.changeBackground = false;
 
@@ -2093,6 +2107,68 @@ public class DialogueManager : MonoBehaviour
         }
 
         ShowLine();
+    }
+
+    private bool illustrationTransitionCompleted = false;
+
+    private IEnumerator HandleIllustrationTransition(DialogueLine line)
+    {
+        Debug.Log($"Fade line = {currentLineIndex}");
+        backgroundTransitionImage.DOKill();
+        backgroundImage.DOKill();
+
+        backgroundTransitionImage.sprite = line.backgroundSprite;
+
+        Color top = backgroundTransitionImage.color;
+        top.a = 0f;
+        backgroundTransitionImage.color = top;
+
+        Color bottom = backgroundImage.color;
+        bottom.a = 1f;
+        backgroundImage.color = bottom;
+
+        Sequence sequence = DOTween.Sequence();
+
+        sequence.Join(backgroundTransitionImage.DOFade(1f, 1.2f).SetEase(Ease.InOutSine));
+        sequence.Join(backgroundImage.DOFade(0f, 1.2f).SetEase(Ease.InOutSine));
+
+        yield return sequence.WaitForCompletion();
+        illustrationTransitionCompleted = true;
+
+        backgroundImage.sprite = line.backgroundSprite;
+
+        backgroundImage.color = Color.white;
+
+        Color c = backgroundTransitionImage.color;
+        c.a = 0f;
+        backgroundTransitionImage.color = c;
+
+        ShowDialoguePanel();
+        nameText.text = line.speakerName;
+
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+
+        fullCurrentLine = line.text;
+        typingCoroutine = StartCoroutine(TypeLine(fullCurrentLine));
+
+        ShowCharacters(line);
+
+        if (line.changeCharacterSprite && line.characterSprite != null)
+            characterImage.sprite = line.characterSprite;
+
+        if (clickToContinueAfterFade)
+        {
+            waitingForClick = true;
+        }
+        else
+        {
+            yield return new WaitForSeconds(autoContinueDelay);
+            ShowLine();
+        }
+        Debug.Log($"Fade finished = {currentLineIndex}");
     }
 
     private IEnumerator FadeToBlack()

@@ -4,6 +4,12 @@ using TMPro;
 public enum ChoiceType { Optional, Required }
 public enum DominantPath { None, Bloodthirst, Nobility, Love }
 
+public enum BackgroundTransitionType
+{
+    LocationFade,    
+    IllustrationFade  
+}
+
 [System.Serializable]
 public class DialogueLine : IStoryNotificationSettings
 {
@@ -17,6 +23,8 @@ public class DialogueLine : IStoryNotificationSettings
     public bool changeSpeakerName = true;
     public bool changeCharacterSprite = false;
     public bool changeBackground = false;
+
+    public BackgroundTransitionType backgroundTransition = BackgroundTransitionType.LocationFade;
 
     public Sprite characterSprite;
     public Sprite backgroundSprite;

@@ -8386,24 +8386,24 @@ MonoBehaviour:
   kaneSprite: {fileID: 21300000, guid: 4a7eba1aea591654b97ce631d5de7eac, type: 3}
   hannaSprite: {fileID: 21300000, guid: 41acce5103a33c74495f36148c9b5ac3, type: 3}
   keremSprite: {fileID: 21300000, guid: d801c3f3ca6ae5647b6f1ce0bec91f40, type: 3}
-  firstAssasinPeacekeeper: {fileID: 21300000, guid: f59769d1d74ba3147ba2176f6f389a5b, type: 3}
+  firstAssasinPeacekeeper: {fileID: 21300000, guid: 30c12c0e77300a145bb12b1c0763e30e, type: 3}
   keremRadioSprite: {fileID: 21300000, guid: fd0a1051508227744856da1d6cd6f5c4, type: 3}
   barsSprite: {fileID: 21300000, guid: c1ed3762cb539924c9f084eec2465e19, type: 3}
   barsRadioSprite: {fileID: 21300000, guid: cb8d308bcc017944baebdd7418f88963, type: 3}
-  sapfirSprite: {fileID: 21300000, guid: dabc9383a501f63448f07c122867557c, type: 3}
-  rinaSprite: {fileID: 21300000, guid: c46aaa86ecc550744a4020194ccf1acb, type: 3}
-  addictSpriteChapter2_1: {fileID: 21300000, guid: b6f90d5260668964d9bad2a5ff08388a, type: 3}
-  addictSpriteChapter2_2: {fileID: 21300000, guid: 50c70343860aa274bb1ae6c1aaa50a59, type: 3}
-  nonameSpriteChapter2: {fileID: 21300000, guid: 309c7aec9897448428e3ea7aeb3f84d8, type: 3}
-  doerSpriteChapter2_1: {fileID: 21300000, guid: 314089a0964c9e94db141a2335c1804d, type: 3}
-  doerSpriteChapter2_2: {fileID: 21300000, guid: f3dd8dee7cc94034ebf7125c30ea260b, type: 3}
+  sapfirSprite: {fileID: 21300000, guid: 1fb27338427e2ab499288e71201f05dc, type: 3}
+  rinaSprite: {fileID: 21300000, guid: 4769e9f298586a448ade4f70da88f327, type: 3}
+  addictSpriteChapter2_1: {fileID: 21300000, guid: d1074c6aff509c545b880657ee1b6e44, type: 3}
+  addictSpriteChapter2_2: {fileID: 21300000, guid: d7f3d1097b6d4cb43872cc5f9ed077bb, type: 3}
+  nonameSpriteChapter2: {fileID: 21300000, guid: 35a24049d0ffac645ab0feee97ce2b47, type: 3}
+  doerSpriteChapter2_1: {fileID: 21300000, guid: 561f42f0d872d9642a62c2d6b6710778, type: 3}
+  doerSpriteChapter2_2: {fileID: 21300000, guid: 5b496c79a02e76645b097dafb89ba1b2, type: 3}
   knightBesideTheDoor: {fileID: 21300000, guid: 09128e2459fc2e545be7d4a86a5276fd, type: 3}
-  knight1_Chapter2: {fileID: 21300000, guid: 21e9015b1d1b8c74eb720c294169d165, type: 3}
-  knight2_Chapter2: {fileID: 21300000, guid: 4c20f6db0dd499e4892025e93e89cf28, type: 3}
-  knight3_Chapter2: {fileID: 21300000, guid: 801daf4e5e62a2b40a929eaa1ce43d87, type: 3}
-  knight4_Chapter2: {fileID: 21300000, guid: e1c1e2aaa18198d428b8353bec72d2ba, type: 3}
-  maiden1_Chapter2: {fileID: 21300000, guid: c812d7d66a5a3a24e97777700bdc4b41, type: 3}
-  maulerSprite_Chapter2: {fileID: 21300000, guid: a4da6105c8b06664c81623d095865b12, type: 3}
+  knight1_Chapter2: {fileID: 21300000, guid: 63309f95a7616c946979f8c248a49be0, type: 3}
+  knight2_Chapter2: {fileID: 21300000, guid: 46fdb3d5000a195418939edbf86403f8, type: 3}
+  knight3_Chapter2: {fileID: 21300000, guid: 94c26aa24d04abf44adb8dc16bb1a362, type: 3}
+  knight4_Chapter2: {fileID: 21300000, guid: 6770ec76291f0894fbf1d89d16f119ab, type: 3}
+  maiden1_Chapter2: {fileID: 21300000, guid: 23003a47e1f43fa4e89414c83e5328a3, type: 3}
+  maulerSprite_Chapter2: {fileID: 21300000, guid: c9c27700fdfdf484fabcb717fba294f9, type: 3}
   dialogueCanvasGroup: {fileID: 306370783}
   hideShowDuration: 0.35
   hideButton: {fileID: 1467998591}

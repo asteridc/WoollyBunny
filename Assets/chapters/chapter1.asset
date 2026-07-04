@@ -3222,18 +3222,18 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: ?...
     speakerName: "\u0418\u043B\u0430\u0439"
-    characterName: "\u0418\u043B\u0430\u0439"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: 6f55c789aa1d3ca4b875296f2635806f, type: 3}
+    backgroundId: i3
     isOnRight: 0
     flipSpeakerImage: 0
-    listenerCharacterName: "\u041A\u0435\u0439\u043D"
+    listenerCharacterName: 
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
@@ -3294,8 +3294,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: 6f55c789aa1d3ca4b875296f2635806f, type: 3}
+    backgroundId: i3
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -3343,18 +3343,18 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u041A\u0445.."
     speakerName: "\u041A\u0435\u0439\u043D"
-    characterName: "\u041A\u0435\u0439\u043D"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: 6f55c789aa1d3ca4b875296f2635806f, type: 3}
+    backgroundId: i3
     isOnRight: 1
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    listenerCharacterName: 
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
@@ -3400,18 +3400,18 @@ MonoBehaviour:
   - text: "\u0418\u043B\u0430\u0439...\u0443\u0431\u0435\u0439 \u044D\u0442\u0443
       \u043A\u0440\u044B\u0441\u0443..."
     speakerName: "\u041A\u0435\u0439\u043D"
-    characterName: "\u041A\u0435\u0439\u043D"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: 6f55c789aa1d3ca4b875296f2635806f, type: 3}
+    backgroundId: i3
     isOnRight: 1
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    listenerCharacterName: 
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
@@ -3462,11 +3462,11 @@ MonoBehaviour:
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -3530,8 +3530,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -3589,8 +3589,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -3639,18 +3639,18 @@ MonoBehaviour:
   - text: "\u041A\u043E\u0433\u043E \u0442\u044B \u0441\u043E\u0431\u0440\u0430\u043B\u0441\u044F
       \u043F\u0440\u0438\u043A\u043E\u043D\u0447\u0438\u0442\u044C?"
     speakerName: "\u041C\u0438\u0440\u043E\u0442\u0432\u043E\u0440\u0435\u0446"
-    characterName: "\u041C\u0422 \u0410\u0441\u0441\u0430\u0441\u0438\u043D"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 1
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    listenerCharacterName: 
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
@@ -3702,8 +3702,8 @@ MonoBehaviour:
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
     backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
     backgroundId: 0
@@ -10397,18 +10397,18 @@ MonoBehaviour:
       \u0440\u0438\u0441\u043A\u0443 - \u0447\u0430\u0441\u0442\u044C \u0438\u0445
       \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u0430."
     speakerName: "\u0418\u043B\u0430\u0439"
-    characterName: "\u0418\u043B\u0430\u0439"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
-    backgroundId: 2
+    backgroundSprite: {fileID: 21300000, guid: 7a066a1cd01f3f047958caa2d79d27a3, type: 3}
+    backgroundId: i4
     isOnRight: 0
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    listenerCharacterName: 
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
@@ -10455,18 +10455,18 @@ MonoBehaviour:
       \u0421\u043A\u0430\u0437\u0430\u043B\u0438, \u0447\u0442\u043E \u0432\u0435\u0440\u043D\u0443\u0442\u0441\u044F
       \u0431\u044B\u0441\u0442\u0440\u043E."
     speakerName: "\u0418\u043B\u0430\u0439"
-    characterName: "\u0418\u043B\u0430\u0439"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
-    backgroundId: 2
+    backgroundSprite: {fileID: 21300000, guid: 7a066a1cd01f3f047958caa2d79d27a3, type: 3}
+    backgroundId: i4
     isOnRight: 0
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    listenerCharacterName: 
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
@@ -10520,8 +10520,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
-    backgroundId: 2
+    backgroundSprite: {fileID: 21300000, guid: 7a066a1cd01f3f047958caa2d79d27a3, type: 3}
+    backgroundId: i4
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -10573,18 +10573,18 @@ MonoBehaviour:
       \u0432\u0441\u043F\u043B\u0435\u0441\u043A\u0438, \u0431\u0435\u0441\u043F\u043E\u0440\u044F\u0434\u043A\u0438,
       \u0443\u0436\u0430\u0441."
     speakerName: "\u0418\u043B\u0430\u0439"
-    characterName: "\u0418\u043B\u0430\u0439"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
-    backgroundId: 2
+    backgroundSprite: {fileID: 21300000, guid: 3e3814971fa6b33448dd69af1b9f6a1b, type: 3}
+    backgroundId: i5
     isOnRight: 0
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    listenerCharacterName: 
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
@@ -10633,18 +10633,18 @@ MonoBehaviour:
       - \u0438 \u043E\u0434\u0438\u043D \u0438\u0437 \u043D\u0438\u0445 \u0431\u044B\u043B
       \u0438\u0445."
     speakerName: "\u0418\u043B\u0430\u0439"
-    characterName: "\u0418\u043B\u0430\u0439"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
-    backgroundId: 2
+    backgroundSprite: {fileID: 21300000, guid: 3e3814971fa6b33448dd69af1b9f6a1b, type: 3}
+    backgroundId: i5
     isOnRight: 0
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    listenerCharacterName: 
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
@@ -10693,18 +10693,18 @@ MonoBehaviour:
       \u043D\u0435 \u0434\u043E\u043B\u0435\u0442\u0435\u043B\u0438 \u0432\u0441\u0435\u0433\u043E
       \u043D\u0438\u0447\u0435\u0433\u043E."
     speakerName: "\u0418\u043B\u0430\u0439"
-    characterName: "\u0418\u043B\u0430\u0439"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
-    backgroundId: 2
+    backgroundSprite: {fileID: 21300000, guid: 3e3814971fa6b33448dd69af1b9f6a1b, type: 3}
+    backgroundId: i5
     isOnRight: 0
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    listenerCharacterName: 
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
@@ -10755,8 +10755,8 @@ MonoBehaviour:
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
     backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2

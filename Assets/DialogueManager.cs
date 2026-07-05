@@ -181,7 +181,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] public LocalizedStory storySelector;
     public static bool IsReady;
 
-    
+
+    public bool IsDialogueTransitioning { get; private set; }
+
+
 
     private void Awake()
     {
@@ -1004,6 +1007,7 @@ public class DialogueManager : MonoBehaviour
         {
             HideDialoguePanel(() =>
             {
+                Debug.Log("CALLBACK");
                 switch (line.backgroundTransition)
                 {
                     case BackgroundTransitionType.LocationFade:
@@ -1289,16 +1293,26 @@ public class DialogueManager : MonoBehaviour
 
         dialogueGroup.interactable = false;
         dialogueGroup.blocksRaycasts = false;
-
+        IsDialogueTransitioning = true;
 
         dialogueTween = DOTween.Sequence()
-            .Append(dialogueGroup.DOFade(0f, 0.2f))
-            .Join(dialogueGroup.transform.DOScale(0.98f, 0.2f).SetEase(Ease.InQuad))
-            .OnComplete(() =>
-            {
-                dialoguePanel.SetActive(false);
-                onComplete?.Invoke();
-            });
+    .Append(dialogueGroup.DOFade(0f, 0.2f))
+    .Join(dialogueGroup.transform.DOScale(0.98f, 0.2f))
+    .OnStart(() =>
+    {
+        Debug.Log("START");
+    })
+    .OnKill(() =>
+    {
+        Debug.Log("KILLED");
+    })
+    .OnComplete(() =>
+    {
+        Debug.Log("COMPLETE");
+        IsDialogueTransitioning = false;
+        dialoguePanel.SetActive(false);
+        onComplete?.Invoke();
+    });
     }
 
     [SerializeField] public GameObject hideClickCatcher;
@@ -2113,6 +2127,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator HandleIllustrationTransition(DialogueLine line)
     {
+        Debug.Log("START TRANSITION");
         Debug.Log($"Fade line = {currentLineIndex}");
         backgroundTransitionImage.DOKill();
         backgroundImage.DOKill();

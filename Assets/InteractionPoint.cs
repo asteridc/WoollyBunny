@@ -55,7 +55,8 @@ public class InteractionPoint : MonoBehaviour, IPointerEnterHandler, IPointerExi
             DialogueManager.Instance.HideDialoguePanel(() =>
             {
                 DialogueManager.Instance.JumpToLine(GetTargetLine());
-                DialogueManager.Instance.ShowDialoguePanel();
+                if (!DialogueManager.Instance.IsDialogueTransitioning)
+                    DialogueManager.Instance.ShowDialoguePanel();
             });
         }
     }

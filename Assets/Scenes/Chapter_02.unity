@@ -1465,6 +1465,7 @@ RectTransform:
   m_Children:
   - {fileID: 1279687066}
   - {fileID: 724851144}
+  - {fileID: 1587769870}
   - {fileID: 1607042817}
   - {fileID: 1147341964}
   - {fileID: 1164935095}
@@ -8348,7 +8349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fee7c761eeb703428f4ca33c44a679a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLineNumber: 150
+  startLineNumber: 3
   currentBackgroundId: 6
   skipLineDelay: 0.2
   skipButton: {fileID: 1599440839}
@@ -8362,6 +8363,7 @@ MonoBehaviour:
   nameText: {fileID: 1102392971}
   dialogueText: {fileID: 1036846551}
   backgroundImage: {fileID: 1607042818}
+  backgroundTransitionImage: {fileID: 1587769871}
   characterImage: {fileID: 1147341965}
   radioIcon: {fileID: 1089819084}
   dialoguePanel: {fileID: 306370781}
@@ -12643,7 +12645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4555180746224299492, guid: 1d5ab824d60f3154280d0496ee86683a, type: 3}
       propertyPath: targetLineRu
-      value: 21
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4555180746224299492, guid: 1d5ab824d60f3154280d0496ee86683a, type: 3}
       propertyPath: minigamePanel
@@ -13771,7 +13773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1088760464
 Light:
   m_ObjectHideFlags: 0
@@ -13846,7 +13848,7 @@ Transform:
   m_GameObject: {fileID: 1088760463}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -1513, y: 3, z: -874}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14622,7 +14624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4555180746224299492, guid: 1d5ab824d60f3154280d0496ee86683a, type: 3}
       propertyPath: targetLineRu
-      value: 25
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 4555180746224299492, guid: 1d5ab824d60f3154280d0496ee86683a, type: 3}
       propertyPath: minigamePanel
@@ -19882,6 +19884,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555345439}
   m_CullTransparentMesh: 1
+--- !u!1 &1587769869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1587769870}
+  - component: {fileID: 1587769872}
+  - component: {fileID: 1587769871}
+  m_Layer: 5
+  m_Name: ch2_illustration
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1587769870
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587769869}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 110026945}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1587769871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587769869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e1e6d871d1165364cb5d27f4eb64d542, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1587769872
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587769869}
+  m_CullTransparentMesh: 1
 --- !u!1 &1589154656
 GameObject:
   m_ObjectHideFlags: 0
@@ -20441,7 +20518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 47867614c7d983b408c7cfc1995f4c89, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e4277f03ad63e4540b2e39ff6ba89bfa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -23388,7 +23465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4555180746224299492, guid: 1d5ab824d60f3154280d0496ee86683a, type: 3}
       propertyPath: targetLineRu
-      value: 17
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 4555180746224299492, guid: 1d5ab824d60f3154280d0496ee86683a, type: 3}
       propertyPath: minigamePanel
@@ -23464,11 +23541,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8743339529534473465, guid: 1d5ab824d60f3154280d0496ee86683a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -233
+      value: -413
       objectReference: {fileID: 0}
     - target: {fileID: 8743339529534473465, guid: 1d5ab824d60f3154280d0496ee86683a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -256
+      value: -299
       objectReference: {fileID: 0}
     - target: {fileID: 8743339529534473465, guid: 1d5ab824d60f3154280d0496ee86683a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

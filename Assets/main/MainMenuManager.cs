@@ -14,6 +14,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private CanvasGroup savePanel;
     [SerializeField] private CanvasGroup settingsPanel;
     [SerializeField] private CanvasGroup chapterSelectPanel;
+    [SerializeField] private CanvasGroup statisticsPanel;
 
     [Header("Animation")]
     [SerializeField] private float panelFadeDuration = 0.75f;
@@ -40,6 +41,7 @@ public class MainMenuManager : MonoBehaviour
         // Overlay-панели изначально скрыты
         HidePanelInstant(settingsPanel);
         HidePanelInstant(chapterSelectPanel);
+        HidePanelInstant(statisticsPanel);
 
         Time.timeScale = 1f;
     }
@@ -91,6 +93,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void OnNewGameClicked()
     {
+        SaveManager.Instance.CreateNewGameSave(0);
         UnityEngine.SceneManagement.SceneManager.LoadScene("Chapter_01");
     }
 
@@ -124,6 +127,17 @@ public class MainMenuManager : MonoBehaviour
     public void OnBackFromChapterSelect()
     {
         StartCoroutine(ClosePanel(chapterSelectPanel));
+        activePanel = null;
+    }
+
+    public void OnStatisticsClicked()
+    {
+        OpenPanel(statisticsPanel);
+    }
+
+    public void OnBackFromStatistics()
+    {
+        StartCoroutine(ClosePanel(statisticsPanel));
         activePanel = null;
     }
 

@@ -1,0 +1,33 @@
+{
+    "statistics": {
+        "totalPlayTime": 0.0,
+        "firstLaunchDate": "",
+        "gameLaunches": 0,
+        "completedSideMissions": 0,
+        "foundCaches": 0,
+        "choicesMade": 0
+    },
+    "sceneName": "Chapter_01",
+    "dialogueData": {
+        "chapterId": "chapter_01",
+        "chapterNumber": 1,
+        "chapterIndex": 0,
+        "lineIndex": 70,
+        "backgroundId": "0",
+        "nobility": 0,
+        "bloodthirst": 0,
+        "love": 0,
+        "choiceState": {
+            "lineIndex": 0,
+            "choiceIndex": 0,
+            "selectedIndex": 0
+        }
+    },
+    "saveTime": "14.07.2026 15:03",
+    "loops": [],
+    "electroMinigameActive": true,
+    "guitarMinigameActive": false,
+    "backgroundImage": {
+        "instanceID": 0
+    }
+}

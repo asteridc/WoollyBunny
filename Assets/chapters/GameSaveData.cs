@@ -6,6 +6,8 @@ using UnityEngine.UI;
 [Serializable]
 public class GameSaveData
 {
+    public StatisticsData statistics;
+
     public string sceneName;
     public DialogueSaveData dialogueData;
     public string saveTime;

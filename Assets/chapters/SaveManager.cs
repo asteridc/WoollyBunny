@@ -60,6 +60,7 @@ public class SaveManager : MonoBehaviour
     public void CreateNewGameSave(int slot)
     {
         Debug.Log($"[SAVE MANAGER] CreateNewGameSave slot {slot}");
+        Debug.Log(Application.persistentDataPath);
 
         var data = new GameSaveData
         {
@@ -69,13 +70,31 @@ public class SaveManager : MonoBehaviour
 
             electroMinigameActive = false,
             guitarMinigameActive = false,
-            loops = new System.Collections.Generic.List<LoopSaveState>()
+            loops = new System.Collections.Generic.List<LoopSaveState>(),
+
         };
 
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(GetPath(slot), json);
     }
 
+
+    private StatisticsData LoadStatistics(int slot)
+    {
+        string path = GetPath(slot);
+
+        if (!File.Exists(path))
+            return new StatisticsData();
+
+        string json = File.ReadAllText(path);
+
+        GameSaveData oldData = JsonUtility.FromJson<GameSaveData>(json);
+
+        if (oldData.statistics == null)
+            oldData.statistics = new StatisticsData();
+
+        return oldData.statistics;
+    }
 
     public void SaveGame(int slot)
     {
@@ -96,6 +115,8 @@ public class SaveManager : MonoBehaviour
             guitarMinigameActive =
                 dm.guitarInteractiveUI != null &&
                 dm.guitarInteractiveUI.activeSelf,
+
+            statistics = StatisticsManager.Instance.GetStatistics(),
         };
 
         var registry = LoopRegistry.Instance;
@@ -125,6 +146,11 @@ public class SaveManager : MonoBehaviour
 
         string json = File.ReadAllText(path);
         GameSaveData data = JsonUtility.FromJson<GameSaveData>(json);
+
+        if (StatisticsManager.Instance != null)
+        {
+            StatisticsManager.Instance.SetStatistics(data.statistics);
+        }
 
         // 🔹 Скрываем паузу до скрина
         if (PauseManager.Instance != null)

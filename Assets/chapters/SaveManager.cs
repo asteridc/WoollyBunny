@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
 using System.Collections;
@@ -7,6 +8,15 @@ using UnityEngine.Rendering;
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance;
+    private const string ChapterProgressFileName = "chapter_progress.json";
+
+    [Serializable]
+    private class ChapterProgressData
+    {
+        public int highestUnlockedChapterNumber = 1;
+    }
+
+    private ChapterProgressData chapterProgressCache;
 
     private void Awake()
     {
@@ -22,6 +32,37 @@ public class SaveManager : MonoBehaviour
         Debug.Log("[SAVE MANAGER] Awake");
     }
 
+
+    public bool IsChapterUnlocked(int chapterNumber)
+    {
+        if (chapterNumber <= 1)
+            return true;
+
+        return LoadChapterProgress().highestUnlockedChapterNumber >= chapterNumber;
+    }
+
+    public void MarkChapterCompleted(DialogueChapter chapter)
+    {
+        if (chapter == null)
+            return;
+
+        MarkChapterCompleted(chapter.ChapterNumber);
+    }
+
+    public void MarkChapterCompleted(int chapterNumber)
+    {
+        if (chapterNumber < 1)
+            return;
+
+        ChapterProgressData data = LoadChapterProgress();
+        int nextUnlockedChapter = Mathf.Max(data.highestUnlockedChapterNumber, chapterNumber + 1);
+
+        if (nextUnlockedChapter == data.highestUnlockedChapterNumber)
+            return;
+
+        data.highestUnlockedChapterNumber = nextUnlockedChapter;
+        SaveChapterProgress(data);
+    }
 
     private IEnumerator CaptureScreenshot(int slot)
     {
@@ -287,4 +328,48 @@ public class SaveManager : MonoBehaviour
     {
         return Application.persistentDataPath + $"/save_{slot}.json";
     }
+    private string GetChapterProgressPath()
+    {
+        return Path.Combine(Application.persistentDataPath, ChapterProgressFileName);
+    }
+
+    private ChapterProgressData LoadChapterProgress()
+    {
+        if (chapterProgressCache != null)
+            return chapterProgressCache;
+
+        string path = GetChapterProgressPath();
+
+        if (!File.Exists(path))
+        {
+            chapterProgressCache = new ChapterProgressData();
+            return chapterProgressCache;
+        }
+
+        try
+        {
+            string json = File.ReadAllText(path);
+            chapterProgressCache = JsonUtility.FromJson<ChapterProgressData>(json) ?? new ChapterProgressData();
+        }
+        catch (Exception ex)
+        {
+            Debug.LogWarning($"[SAVE MANAGER] Failed to read chapter progress, using defaults. {ex.Message}");
+            chapterProgressCache = new ChapterProgressData();
+        }
+
+        if (chapterProgressCache.highestUnlockedChapterNumber < 1)
+            chapterProgressCache.highestUnlockedChapterNumber = 1;
+
+        return chapterProgressCache;
+    }
+
+    private void SaveChapterProgress(ChapterProgressData data)
+    {
+        if (data == null)
+            return;
+
+        chapterProgressCache = data;
+        File.WriteAllText(GetChapterProgressPath(), JsonUtility.ToJson(data, true));
+    }
+
 }

@@ -1,3 +1,13 @@
+## Response Rules
+
+- Keep responses concise.
+- Do not explain obvious things.
+- Before coding, provide only a short plan (3-5 bullets).
+- Do not refactor unrelated systems.
+- Do not create new architecture without approval.
+- Prefer minimal changes. 
+
+
 \# Woolly Bunny Development Rules
 
 

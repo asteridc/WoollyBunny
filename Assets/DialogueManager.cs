@@ -2320,6 +2320,9 @@ public class DialogueManager : MonoBehaviour
         // Отключаем диалог и выборы
         HideDialoguePanel();
         choicesContainer.SetActive(false);
+        if (SaveManager.Instance != null)
+            SaveManager.Instance.MarkChapterCompleted(currentChapter);
+
 
         // Показываем панель конца главы
         endOfChapterPanel.SetActive(true);

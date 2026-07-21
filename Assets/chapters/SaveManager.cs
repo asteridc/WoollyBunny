@@ -62,6 +62,12 @@ public class SaveManager : MonoBehaviour
 
         data.highestUnlockedChapterNumber = nextUnlockedChapter;
         SaveChapterProgress(data);
+
+        if (StatisticsManager.Instance != null)
+        {
+            StatisticsManager.Instance.SetStoryLevel(chapterNumber);
+            StatisticsManager.Instance.AddCompletedChapter();
+        }
     }
 
     private IEnumerator CaptureScreenshot(int slot)
@@ -103,11 +109,22 @@ public class SaveManager : MonoBehaviour
         Debug.Log($"[SAVE MANAGER] CreateNewGameSave slot {slot}");
         Debug.Log(Application.persistentDataPath);
 
+        if (StatisticsManager.Instance != null)
+            StatisticsManager.Instance.AddGameLaunch();
+
         var data = new GameSaveData
         {
             sceneName = "Chapter_01",
             dialogueData = null, // диалог начнётся с начала
             saveTime = System.DateTime.Now.ToString("dd.MM.yyyy HH:mm"),
+            statistics =
+                StatisticsManager.Instance != null
+                    ? StatisticsManager.Instance.GetStatistics()
+                    : new StatisticsData
+                    {
+                        firstLaunchDate = System.DateTime.Now.ToString("dd.MM.yyyy HH:mm"),
+                        gameLaunches = 1
+                    },
 
             electroMinigameActive = false,
             guitarMinigameActive = false,
@@ -157,7 +174,10 @@ public class SaveManager : MonoBehaviour
                 dm.guitarInteractiveUI != null &&
                 dm.guitarInteractiveUI.activeSelf,
 
-            statistics = StatisticsManager.Instance.GetStatistics(),
+            statistics =
+                StatisticsManager.Instance != null
+                    ? StatisticsManager.Instance.GetStatistics()
+                    : new StatisticsData(),
         };
 
         var registry = LoopRegistry.Instance;
@@ -188,9 +208,13 @@ public class SaveManager : MonoBehaviour
         string json = File.ReadAllText(path);
         GameSaveData data = JsonUtility.FromJson<GameSaveData>(json);
 
+        if (data.statistics == null)
+            data.statistics = new StatisticsData();
+
         if (StatisticsManager.Instance != null)
         {
             StatisticsManager.Instance.SetStatistics(data.statistics);
+            StatisticsManager.Instance.AddGameLaunch();
         }
 
         // 🔹 Скрываем паузу до скрина

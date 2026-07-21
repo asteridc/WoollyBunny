@@ -1,4 +1,4 @@
-using UnityEngine;
+п»їusing UnityEngine;
 
 public enum HeroPath
 {
@@ -21,7 +21,7 @@ public class HeroStats : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // сохраняем при смене сцен
+            DontDestroyOnLoad(gameObject); // СЃРѕС…СЂР°РЅСЏРµРј РїСЂРё СЃРјРµРЅРµ СЃС†РµРЅ
         }
         else
         {
@@ -44,6 +44,9 @@ public class HeroStats : MonoBehaviour
                 break;
         }
 
-        Debug.Log($"Добавлено {amount} очков к пути {path}");
+        if (StatisticsManager.Instance != null)
+            StatisticsManager.Instance.AddPathPoints((DominantPath)path, amount);
+
+        Debug.Log($"Р”РѕР±Р°РІР»РµРЅРѕ {amount} РѕС‡РєРѕРІ Рє РїСѓС‚Рё {path}");
     }
 }

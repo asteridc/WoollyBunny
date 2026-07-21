@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+п»їusing System.Collections.Generic;
 using UnityEngine;
 
 public class ItemManager : MonoBehaviour
@@ -15,7 +15,7 @@ public class ItemManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // сохраняется между сценами
+            DontDestroyOnLoad(gameObject); // СЃРѕС…СЂР°РЅСЏРµС‚СЃСЏ РјРµР¶РґСѓ СЃС†РµРЅР°РјРё
         }
         else
         {
@@ -30,18 +30,21 @@ public class ItemManager : MonoBehaviour
             collectedItemNames.Add(item.itemName);
             collectedItems.Add(item);
 
-            Debug.Log("Предмет добавлен: " + item.itemName);
+            if (StatisticsManager.Instance != null)
+                StatisticsManager.Instance.AddCollectedItem();
+
+            Debug.Log("РџСЂРµРґРјРµС‚ РґРѕР±Р°РІР»РµРЅ: " + item.itemName);
 
             if (itemUI != null)
             {
                 itemUI.ShowNotificationDirect(item);
             }
 
-            // Здесь можно сделать запись в сохранение
+            // Р—РґРµСЃСЊ РјРѕР¶РЅРѕ СЃРґРµР»Р°С‚СЊ Р·Р°РїРёСЃСЊ РІ СЃРѕС…СЂР°РЅРµРЅРёРµ
         }
         else
         {
-            Debug.Log("Этот предмет уже был найден: " + item.itemName);
+            Debug.Log("Р­С‚РѕС‚ РїСЂРµРґРјРµС‚ СѓР¶Рµ Р±С‹Р» РЅР°Р№РґРµРЅ: " + item.itemName);
         }
     }
 
@@ -66,3 +69,4 @@ public class ItemManager : MonoBehaviour
             Debug.LogWarning("Item UI is not assigned!");
     }
 }
+

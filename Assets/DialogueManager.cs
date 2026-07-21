@@ -1834,6 +1834,12 @@ public class DialogueManager : MonoBehaviour
         Debug.Log($"Выбран путь: {rewardPath}");
         Debug.Log($"Очки путей: Кровожадность = {bloodthirst}, Благородство = {nobility}, Любовь = {love}");
 
+        if (StatisticsManager.Instance != null)
+        {
+            StatisticsManager.Instance.AddChoice();
+            StatisticsManager.Instance.AddPathPoints(rewardPath, 1);
+        }
+
         var dominant = GetDominantPaths();
         Debug.Log("Преобладающий путь(и): " + string.Join(", ", dominant));
 

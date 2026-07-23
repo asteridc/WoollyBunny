@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
 using System.Collections;
@@ -7,6 +8,15 @@ using UnityEngine.Rendering;
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance;
+    private const string ChapterProgressFileName = "chapter_progress.json";
+
+    [Serializable]
+    private class ChapterProgressData
+    {
+        public int highestUnlockedChapterNumber = 1;
+    }
+
+    private ChapterProgressData chapterProgressCache;
 
     private void Awake()
     {
@@ -22,6 +32,43 @@ public class SaveManager : MonoBehaviour
         Debug.Log("[SAVE MANAGER] Awake");
     }
 
+
+    public bool IsChapterUnlocked(int chapterNumber)
+    {
+        if (chapterNumber <= 1)
+            return true;
+
+        return LoadChapterProgress().highestUnlockedChapterNumber >= chapterNumber;
+    }
+
+    public void MarkChapterCompleted(DialogueChapter chapter)
+    {
+        if (chapter == null)
+            return;
+
+        MarkChapterCompleted(chapter.ChapterNumber);
+    }
+
+    public void MarkChapterCompleted(int chapterNumber)
+    {
+        if (chapterNumber < 1)
+            return;
+
+        ChapterProgressData data = LoadChapterProgress();
+        int nextUnlockedChapter = Mathf.Max(data.highestUnlockedChapterNumber, chapterNumber + 1);
+
+        if (nextUnlockedChapter == data.highestUnlockedChapterNumber)
+            return;
+
+        data.highestUnlockedChapterNumber = nextUnlockedChapter;
+        SaveChapterProgress(data);
+
+        //if (StatisticsManager.Instance != null)
+        //{
+        //    StatisticsManager.Instance.SetStoryLevel(chapterNumber);
+        //    StatisticsManager.Instance.AddCompletedChapter();
+        //}
+    }
 
     private IEnumerator CaptureScreenshot(int slot)
     {
@@ -60,22 +107,52 @@ public class SaveManager : MonoBehaviour
     public void CreateNewGameSave(int slot)
     {
         Debug.Log($"[SAVE MANAGER] CreateNewGameSave slot {slot}");
+        Debug.Log(Application.persistentDataPath);
+
+        //if (StatisticsManager.Instance != null)
+        //    StatisticsManager.Instance.AddGameLaunch();
 
         var data = new GameSaveData
         {
             sceneName = "Chapter_01",
             dialogueData = null, // диалог начнётся с начала
             saveTime = System.DateTime.Now.ToString("dd.MM.yyyy HH:mm"),
+            //statistics =
+            //    StatisticsManager.Instance != null
+            //        ? StatisticsManager.Instance.GetStatistics()
+            //        : new StatisticsData
+            //        {
+            //            firstLaunchDate = System.DateTime.Now.ToString("dd.MM.yyyy HH:mm"),
+            //            gameLaunches = 1
+            //        },
 
             electroMinigameActive = false,
             guitarMinigameActive = false,
-            loops = new System.Collections.Generic.List<LoopSaveState>()
+            loops = new System.Collections.Generic.List<LoopSaveState>(),
+
         };
 
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(GetPath(slot), json);
     }
 
+
+    //private StatisticsData LoadStatistics(int slot)
+    //{
+    //    string path = GetPath(slot);
+
+    //    if (!File.Exists(path))
+    //        return new StatisticsData();
+
+    //    string json = File.ReadAllText(path);
+
+    //    GameSaveData oldData = JsonUtility.FromJson<GameSaveData>(json);
+
+    //    if (oldData.statistics == null)
+    //        oldData.statistics = new StatisticsData();
+
+    //    return oldData.statistics;
+    //}
 
     public void SaveGame(int slot)
     {
@@ -96,6 +173,11 @@ public class SaveManager : MonoBehaviour
             guitarMinigameActive =
                 dm.guitarInteractiveUI != null &&
                 dm.guitarInteractiveUI.activeSelf,
+
+            //statistics =
+            //    StatisticsManager.Instance != null
+            //        ? StatisticsManager.Instance.GetStatistics()
+            //        : new StatisticsData(),
         };
 
         var registry = LoopRegistry.Instance;
@@ -125,6 +207,15 @@ public class SaveManager : MonoBehaviour
 
         string json = File.ReadAllText(path);
         GameSaveData data = JsonUtility.FromJson<GameSaveData>(json);
+
+        //if (data.statistics == null)
+        //    data.statistics = new StatisticsData();
+
+        //if (StatisticsManager.Instance != null)
+        //{
+        //    StatisticsManager.Instance.SetStatistics(data.statistics);
+        //    StatisticsManager.Instance.AddGameLaunch();
+        //}
 
         // 🔹 Скрываем паузу до скрина
         if (PauseManager.Instance != null)
@@ -261,4 +352,48 @@ public class SaveManager : MonoBehaviour
     {
         return Application.persistentDataPath + $"/save_{slot}.json";
     }
+    private string GetChapterProgressPath()
+    {
+        return Path.Combine(Application.persistentDataPath, ChapterProgressFileName);
+    }
+
+    private ChapterProgressData LoadChapterProgress()
+    {
+        if (chapterProgressCache != null)
+            return chapterProgressCache;
+
+        string path = GetChapterProgressPath();
+
+        if (!File.Exists(path))
+        {
+            chapterProgressCache = new ChapterProgressData();
+            return chapterProgressCache;
+        }
+
+        try
+        {
+            string json = File.ReadAllText(path);
+            chapterProgressCache = JsonUtility.FromJson<ChapterProgressData>(json) ?? new ChapterProgressData();
+        }
+        catch (Exception ex)
+        {
+            Debug.LogWarning($"[SAVE MANAGER] Failed to read chapter progress, using defaults. {ex.Message}");
+            chapterProgressCache = new ChapterProgressData();
+        }
+
+        if (chapterProgressCache.highestUnlockedChapterNumber < 1)
+            chapterProgressCache.highestUnlockedChapterNumber = 1;
+
+        return chapterProgressCache;
+    }
+
+    private void SaveChapterProgress(ChapterProgressData data)
+    {
+        if (data == null)
+            return;
+
+        chapterProgressCache = data;
+        File.WriteAllText(GetChapterProgressPath(), JsonUtility.ToJson(data, true));
+    }
+
 }

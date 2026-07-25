@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     public static PauseManager Instance;
+    [SerializeField] private BackpackItemsPanel backpack;
 
     [Header("Root")]
-    [SerializeField] private CanvasGroup pauseRoot;
+    [SerializeField] public CanvasGroup pauseRoot;
 
     [Header("Panels")]
     [SerializeField] private CanvasGroup mainPanel;
@@ -66,6 +67,12 @@ public class PauseManager : MonoBehaviour
             !Input.GetKeyDown(KeyCode.Space))
             return;
 
+        if (BackpackItemsPanel.Instance != null && BackpackItemsPanel.Instance.isOpen)
+        {
+            BackpackItemsPanel.Instance.Hide();
+            return;
+        }
+
         // 1️⃣ Если активно подтверждение выхода
         if (isExitConfirmActive)
         {
@@ -75,7 +82,7 @@ public class PauseManager : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
-                HideExitConfirm();
+               HideExitConfirm();
             }
             return;
         }
@@ -100,8 +107,22 @@ public class PauseManager : MonoBehaviour
             return;
         }
 
-        if (!DialogueManager.Instance.isCollectibleOpen) Pause();
-        else Debug.Log("Открыто окно коллекционного предмета");
+        if (BackpackItemsPanel.Instance != null && BackpackItemsPanel.Instance.isOpen)
+        {
+            BackpackItemsPanel.Instance.Hide();
+            return;
+        }
+
+
+        if (DialogueManager.Instance != null && DialogueManager.Instance.isCollectibleOpen)
+        {
+            Debug.Log("Открыто окно коллекционного предмета");
+            return;
+        }
+
+
+        Pause();
+
     }
 
 

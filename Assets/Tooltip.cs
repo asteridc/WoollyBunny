@@ -48,8 +48,8 @@ public class Tooltip : MonoBehaviour
         canvasGroup.alpha = 0f;
         rect.localScale = Vector3.one * 0.9f;
 
-        canvasGroup.DOFade(1, fadeDuration);
-        rect.DOScale(1, fadeDuration).SetEase(Ease.OutBack);
+        canvasGroup.DOFade(1, fadeDuration).SetUpdate(true);
+        rect.DOScale(1, fadeDuration).SetEase(Ease.OutBack).SetUpdate(true);
         isVisible = true;
     }
 
@@ -59,7 +59,7 @@ public class Tooltip : MonoBehaviour
         isVisible = false;
         canvasGroup.DOKill();
 
-        canvasGroup.DOFade(0, fadeDuration).OnComplete(() => gameObject.SetActive(false));
+        canvasGroup.DOFade(0, fadeDuration).OnComplete(() => gameObject.SetActive(false)).SetUpdate(true);
 
     }
 

@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 4725944408231986971}
   - component: {fileID: 2919615210609193322}
   m_Layer: 5
-  m_Name: "\u043A\u0430\u0440\u0442\u0430 (\u0420\u0435\u0432\u043E\u043B\u044E\u0446\u0438\u043E\u043D\u0435\u0440)"
+  m_Name: "\u043A\u0430\u0440\u0442\u0430 (\u041A\u0430\u0440\u0430\u0442\u0435\u043B\u044C)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.088777125, g: 0.28392148, b: 0.5377358, a: 1}
+  m_Color: {r: 0.45208028, g: 0, b: 0.5283019, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -665,8 +665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -134.46204, y: -305.3272}
-  m_SizeDelta: {x: 45, y: 45}
+  m_AnchoredPosition: {x: -134.86, y: -305.33}
+  m_SizeDelta: {x: 36, y: 36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2330495856524817529
 CanvasRenderer:
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25de61786c0eef94a8f067773881c176, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ecb8f2060a9833c438a13ccb3ed3addb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -772,9 +772,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0412\u044B\u0441\u0442\u0440\u0435\u043B \u0421\u0442\u0438\u0440\u0430\u0442\u0435\u043B\u044F
-    \u0441 \u0448\u0430\u043D\u0441\u043E\u043C 3% \u043D\u0430\u043D\u043E\u0441\u0438\u0442
-    \u0442\u0440\u043E\u0439\u043D\u043E\u0439 \u0443\u0440\u043E\u043D."
+  m_text: "\u0412\u044B\u0441\u0442\u0440\u0435\u043B \u0432 \u0433\u043E\u043B\u043E\u0432\u0443
+    \u043C\u0433\u043D\u043E\u0432\u0435\u043D\u043D\u043E \u0434\u043E\u0431\u0438\u0432\u0430\u0435\u0442
+    \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u043E\u0432 \u0441 \u0443\u0440\u043E\u0432\u043D\u0435\u043C
+    \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F \u043D\u0438\u0436\u0435 15%."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3a1f716603c5fab40a412e1f5d3a5f9e, type: 2}
   m_sharedMaterial: {fileID: -362943841761185241, guid: 3a1f716603c5fab40a412e1f5d3a5f9e, type: 2}
@@ -858,10 +859,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4e3cca31ec2f845b660c0e40ccea61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
-  russianText: "\u0412\u044B\u0441\u0442\u0440\u0435\u043B \u0421\u0442\u0438\u0440\u0430\u0442\u0435\u043B\u044F
-    \u0441 \u0448\u0430\u043D\u0441\u043E\u043C 3% \u043D\u0430\u043D\u043E\u0441\u0438\u0442
-    \u0442\u0440\u043E\u0439\u043D\u043E\u0439 \u0443\u0440\u043E\u043D."
-  englishText: The Eraser has a 3% chance to deal triple damage.
+  russianText: "\u0412\u044B\u0441\u0442\u0440\u0435\u043B \u0432 \u0433\u043E\u043B\u043E\u0432\u0443
+    \u043C\u0433\u043D\u043E\u0432\u0435\u043D\u043D\u043E \u0434\u043E\u0431\u0438\u0432\u0430\u0435\u0442
+    \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u043E\u0432 \u0441 \u0443\u0440\u043E\u0432\u043D\u0435\u043C
+    \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F \u043D\u0438\u0436\u0435 15%."
+  englishText: Headshots instantly execute enemies below 15% health.
 --- !u!1 &2069659862937199016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,7 +1478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 18
+  m_text: 27
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3a1f716603c5fab40a412e1f5d3a5f9e, type: 2}
   m_sharedMaterial: {fileID: -362943841761185241, guid: 3a1f716603c5fab40a412e1f5d3a5f9e, type: 2}
@@ -1628,7 +1630,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041E\u043D \u0441\u043C\u043E\u0436\u0435\u0442 \u0443\u0434\u0438\u0432\u0438\u0442\u044C"
+  m_text: "\u041F\u0440\u0438\u0433\u043E\u0432\u043E\u0440"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3a1f716603c5fab40a412e1f5d3a5f9e, type: 2}
   m_sharedMaterial: {fileID: -362943841761185241, guid: 3a1f716603c5fab40a412e1f5d3a5f9e, type: 2}
@@ -1712,8 +1714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4e3cca31ec2f845b660c0e40ccea61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
-  russianText: "\u041E\u043D \u0441\u043C\u043E\u0436\u0435\u0442 \u0443\u0434\u0438\u0432\u0438\u0442\u044C"
-  englishText: It might surprise you
+  russianText: "\u041F\u0440\u0438\u0433\u043E\u0432\u043E\u0440"
+  englishText: Execution
 --- !u!1 &3277278917030379782
 GameObject:
   m_ObjectHideFlags: 0
@@ -2077,6 +2079,7 @@ GameObject:
   - component: {fileID: 7890645281964577313}
   - component: {fileID: 8299690661519436530}
   - component: {fileID: 4412327391306480830}
+  - component: {fileID: 296097964919789946}
   m_Layer: 5
   m_Name: type
   m_TagString: Untagged
@@ -2131,7 +2134,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0420\u0435\u0434\u043A\u0438\u0439 \u043F\u0438\u0441\u0442\u043E\u043B\u0435\u0442"
+  m_text: "\u042D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0439 \u043F\u0438\u0441\u0442\u043E\u043B\u0435\u0442"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3a1f716603c5fab40a412e1f5d3a5f9e, type: 2}
   m_sharedMaterial: {fileID: -362943841761185241, guid: 3a1f716603c5fab40a412e1f5d3a5f9e, type: 2}
@@ -2140,8 +2143,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292454972
-  m_fontColor: {r: 0.23629406, g: 0.6679933, b: 0.8490566, a: 1}
+    rgba: 4294901977
+  m_fontColor: {r: 0.85074615, g: 0, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2215,8 +2218,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4e3cca31ec2f845b660c0e40ccea61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
-  russianText: "\u0420\u0435\u0434\u043A\u0438\u0439 \u043F\u0438\u0441\u0442\u043E\u043B\u0435\u0442"
-  englishText: Rare pistol
+  russianText: "\u042D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0439 \u043F\u0438\u0441\u0442\u043E\u043B\u0435\u0442"
+  englishText: Epic pistol
+--- !u!114 &296097964919789946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6308666178893401025}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 5, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &6462678711262710515
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,7 +2376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0420\u0435\u0432\u043E\u043B\u044E\u0446\u0438\u043E\u043D\u0435\u0440"
+  m_text: "\u041A\u0430\u0440\u0430\u0442\u0435\u043B\u044C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3a1f716603c5fab40a412e1f5d3a5f9e, type: 2}
   m_sharedMaterial: {fileID: -362943841761185241, guid: 3a1f716603c5fab40a412e1f5d3a5f9e, type: 2}
@@ -2442,8 +2460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4e3cca31ec2f845b660c0e40ccea61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
-  russianText: "\u0420\u0435\u0432\u043E\u043B\u044E\u0446\u0438\u043E\u043D\u0435\u0440"
-  englishText: Revolutionary
+  russianText: "\u041A\u0430\u0440\u0430\u0442\u0435\u043B\u044C"
+  englishText: The Punisher
 --- !u!1 &7090798733905596425
 GameObject:
   m_ObjectHideFlags: 0

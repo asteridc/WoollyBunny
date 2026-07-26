@@ -2,7 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 
 [RequireComponent(typeof(CanvasGroup))]
-public class WeaponOverview : MonoBehaviour
+public class ResourcesOverview : MonoBehaviour
 {
     [Header("Animation")]
     [SerializeField] private float showDuration = 0.35f;

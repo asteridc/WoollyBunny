@@ -15,9 +15,9 @@ public class UICursor : MonoBehaviour
         {
             cursor.DOKill();
 
-            cursor.DOScale(0.85f, 0.05f)
+            cursor.DOScale(0.65f, 0.05f)
                 .OnComplete(() =>
-                    cursor.DOScale(1f, 0.08f));
+                    cursor.DOScale(0.75f, 0.08f));
         }
 
     }

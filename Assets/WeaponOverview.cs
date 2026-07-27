@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(CanvasGroup))]
@@ -13,6 +14,23 @@ public class WeaponOverview : MonoBehaviour
 
     private Vector2 shownPosition;
     private Vector2 hiddenPosition;
+
+    [SerializeField] private TMPro.TextMeshProUGUI weaponNameRu;
+    [SerializeField] private TMPro.TextMeshProUGUI weaponNameEn;
+    [SerializeField] private TMPro.TextMeshProUGUI damage;
+    [SerializeField] private TMPro.TextMeshProUGUI rarityRu;
+    [SerializeField] private TMPro.TextMeshProUGUI rarityEn;
+    [SerializeField] private Color colorRarity;
+    [SerializeField] private TMPro.TextMeshProUGUI typeRu;
+    [SerializeField] private TMPro.TextMeshProUGUI typeEn;
+    [SerializeField] private TMPro.TextMeshProUGUI descriptionRu;
+    [SerializeField] private TMPro.TextMeshProUGUI descriptionEn;
+    [SerializeField] private UnityEngine.UI.Image icon;
+    [SerializeField] private TMPro.TextMeshProUGUI headMultiplier;
+    [SerializeField] private TMPro.TextMeshProUGUI torsoMultiplier;
+    [SerializeField] private TMPro.TextMeshProUGUI armsMultiplier;
+    [SerializeField] private TMPro.TextMeshProUGUI legsMultiplier;
+
 
     private bool isVisible;
 
@@ -31,12 +49,36 @@ public class WeaponOverview : MonoBehaviour
         canvasGroup.interactable = false;
     }
 
-    public void Show()
+    public void Show(WeaponOverviewData data)
     {
         if (isVisible)
-            return;
+            Hide();
 
         isVisible = true;
+
+        damage.text = data.damage.ToString();
+        
+        if (LanguageManager.CurrentLanguage == Language.Russian)
+        {
+            weaponNameRu.text = data.weaponNameRu;
+            rarityRu.text = data.rarityRu;
+            rarityRu.color = data.rarityColor;
+            typeRu.text = data.typeRu;
+            descriptionRu.text = data.descriptionRu;
+        }
+        else
+        {
+            weaponNameEn.text = data.weaponNameEn;
+            rarityEn.text = data.rarityEn;
+            rarityEn.color = data.rarityColor;
+            typeEn.text = data.typeEn;
+            descriptionEn.text = data.descriptionEn;
+        }
+        icon.sprite = data.icon;
+        headMultiplier.text = data.headMultiplier.ToString();
+        torsoMultiplier.text = data.torsoMultiplier.ToString();
+        armsMultiplier.text = data.armsMultiplier.ToString();
+        legsMultiplier.text = data.legsMultiplier.ToString();
 
         rect.DOKill();
         canvasGroup.DOKill();

@@ -15,6 +15,7 @@ public class BackpackItemsPanel : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private WeaponOverview weaponOverview;
+    [SerializeField] private WeaponOverviewData overviewData;
     [SerializeField] private MeleeOverview meleeOverview;
     [SerializeField] private ResourcesOverview resourcesOverview;
 

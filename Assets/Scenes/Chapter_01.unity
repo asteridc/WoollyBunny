@@ -19344,7 +19344,7 @@ MonoBehaviour:
     legsMultiplier: 0.7
     descriptionRu: 
     descriptionEn: 
-  meleeOverview: {fileID: 0}
+  meleeOverview: {fileID: 899597997}
   resourcesOverview: {fileID: 0}
   leftButton: {fileID: 869991435}
   rightButton: {fileID: 27870596}
@@ -21909,16 +21909,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877853160}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1450674046}
+  m_Father: {fileID: 899597991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115.1, y: 15}
+  m_AnchoredPosition: {x: 113.899994, y: -475.00003}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &877853162
@@ -22313,6 +22313,7 @@ RectTransform:
   - {fileID: 1859575942}
   - {fileID: 764806389}
   - {fileID: 245903729}
+  - {fileID: 877853161}
   - {fileID: 1450674046}
   - {fileID: 374668489}
   - {fileID: 926597025}
@@ -22406,8 +22407,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da8d56eca1fe571438c0e778cc1f58b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeleeOverview
-  showDuration: 0.35
-  hiddenOffset: 500
+  showDuration: 0.3
+  hiddenOffset: 600
   weaponNameRu: {fileID: 1945827346}
   weaponNameEn: {fileID: 1945827346}
   damage: {fileID: 1859575945}
@@ -35855,14 +35856,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 877853161}
+  m_Children: []
   m_Father: {fileID: 899597991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 229, y: -490.00003}
-  m_SizeDelta: {x: 661.0095, y: 100}
+  m_AnchoredPosition: {x: 257.9, y: -490.00003}
+  m_SizeDelta: {x: 584.4596, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1450674047
 MonoBehaviour:

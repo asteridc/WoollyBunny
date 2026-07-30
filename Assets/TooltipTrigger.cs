@@ -11,9 +11,12 @@ public class TooltipTrigger : MonoBehaviour,
 
 
     [Header("Overview")]
-    [SerializeField] private bool canOpenOverview;
+    [SerializeField] private bool canOpenWeaponOverview;
+    [SerializeField] private bool canOpenMeleeOverview;
     [SerializeField] private WeaponOverview weaponOverview;
     [SerializeField] private WeaponOverviewData overviewData;
+    [SerializeField] private MeleeOverview meleeOverview;
+    [SerializeField] private MeleeOverviewData meleeOverviewData;
 
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -30,13 +33,20 @@ public class TooltipTrigger : MonoBehaviour,
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (!canOpenOverview)
+        if (!canOpenWeaponOverview && !canOpenMeleeOverview)
             return;
 
 
-        if (eventData.button == PointerEventData.InputButton.Left)
+
+        if (eventData.button == PointerEventData.InputButton.Left && canOpenWeaponOverview)
         {
             weaponOverview.Show(overviewData);
         }
+
+        if (eventData.button == PointerEventData.InputButton.Left && canOpenMeleeOverview)
+        {
+            meleeOverview.Show(meleeOverviewData);
+        }
+
     }
 }

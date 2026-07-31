@@ -7,6 +7,7 @@ using TMPro;
 public class BackpackItemsPanel : MonoBehaviour
 {
     public static BackpackItemsPanel Instance;
+    [SerializeField] private BackpackSectionController sectionController;
 
     [Header("Animation")]
     [SerializeField] private float fadeDuration = 0.15f;
@@ -104,8 +105,12 @@ public class BackpackItemsPanel : MonoBehaviour
 
     public void Show()
     {
+        
         isOpen = true;
         gameObject.SetActive(true);
+
+        if (sectionController != null)
+            sectionController.OpenItemsSection();
 
         canvasGroup.DOKill();
         rect.DOKill();

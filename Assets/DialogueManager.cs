@@ -2332,6 +2332,23 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator OnContinueToNextChapter()
     {
+        // Выдаем опыт за завершенную главу
+        Debug.Log($"[DialogueManager] OnContinueToNextChapter начата");
+        Debug.Log($"[DialogueManager] currentChapter: {(currentChapter != null ? currentChapter.ChapterNumber.ToString() : "NULL")}");
+        Debug.Log($"[DialogueManager] SaveManager.Instance: {(SaveManager.Instance != null ? "EXISTS" : "NULL")}");
+
+        if (currentChapter != null && SaveManager.Instance != null)
+        {
+            SaveManager.Instance.MarkChapterCompleted(currentChapter.ChapterNumber);
+            Debug.Log($"[DialogueManager] Опыт выдан за главу {currentChapter.ChapterNumber}");
+            // Даем время на сохранение данных аккаунта
+            yield return new WaitForSeconds(0.5f);
+        }
+        else
+        {
+            Debug.LogError($"[DialogueManager] Не могли выдать опыт: currentChapter={currentChapter != null}, SaveManager={SaveManager.Instance != null}");
+        }
+
         float fadeDurationToMenu = 6f; // другая длительность для этой анимации
         yield return blackOverlay.DOFade(1f, fadeDurationToMenu).WaitForCompletion();
         SceneManager.LoadScene("woollybunny_PC");

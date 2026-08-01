@@ -32,6 +32,16 @@ public class SaveManager : MonoBehaviour
         Debug.Log("[SAVE MANAGER] Awake");
     }
 
+    public static SaveManager GetOrCreate()
+    {
+        if (Instance != null)
+            return Instance;
+
+        Debug.LogWarning("[SaveManager] Instance был null, создаем новый GameObject...");
+        GameObject go = new GameObject("SaveManager");
+        return go.AddComponent<SaveManager>();
+    }
+
 
     public bool IsChapterUnlocked(int chapterNumber)
     {
@@ -51,6 +61,7 @@ public class SaveManager : MonoBehaviour
 
     public void MarkChapterCompleted(int chapterNumber)
     {
+        Debug.Log($"[SaveManager] MarkChapterCompleted вызвана для главы {chapterNumber}");
         if (chapterNumber < 1)
             return;
 
@@ -58,16 +69,32 @@ public class SaveManager : MonoBehaviour
         int nextUnlockedChapter = Mathf.Max(data.highestUnlockedChapterNumber, chapterNumber + 1);
 
         if (nextUnlockedChapter == data.highestUnlockedChapterNumber)
+        {
+            Debug.Log($"[SaveManager] Глава {chapterNumber} уже была завершена, пропускаем");
             return;
+        }
 
         data.highestUnlockedChapterNumber = nextUnlockedChapter;
         SaveChapterProgress(data);
 
-        //if (StatisticsManager.Instance != null)
-        //{
-        //    StatisticsManager.Instance.SetStoryLevel(chapterNumber);
-        //    StatisticsManager.Instance.AddCompletedChapter();
-        //}
+        // Добавляем опыт Сюжета в аккаунт (вне слотов)
+        AccountManager accountMgr = AccountManager.Instance;
+        if (accountMgr == null)
+        {
+            Debug.LogWarning($"[SaveManager] AccountManager.Instance == null, попытка создать...");
+            accountMgr = AccountManager.GetOrCreate();
+        }
+
+        if (accountMgr != null)
+        {
+            Debug.Log($"[SaveManager] AccountManager найден, добавляем опыт...");
+            accountMgr.AddChapterExperience(chapterNumber);
+            Debug.Log($"[SaveManager] Завершена глава {chapterNumber}, выдан опыт в аккаунт!");
+        }
+        else
+        {
+            Debug.LogError($"[SaveManager] AccountManager не найден даже после попытки создания!");
+        }
     }
 
     private IEnumerator CaptureScreenshot(int slot)
@@ -173,11 +200,6 @@ public class SaveManager : MonoBehaviour
             guitarMinigameActive =
                 dm.guitarInteractiveUI != null &&
                 dm.guitarInteractiveUI.activeSelf,
-
-            //statistics =
-            //    StatisticsManager.Instance != null
-            //        ? StatisticsManager.Instance.GetStatistics()
-            //        : new StatisticsData(),
         };
 
         var registry = LoopRegistry.Instance;
@@ -199,7 +221,6 @@ public class SaveManager : MonoBehaviour
         File.WriteAllText(GetPath(slot), json);
     }
 
-
     public void LoadGame(int slot)
     {
         string path = GetPath(slot);
@@ -208,14 +229,8 @@ public class SaveManager : MonoBehaviour
         string json = File.ReadAllText(path);
         GameSaveData data = JsonUtility.FromJson<GameSaveData>(json);
 
-        //if (data.statistics == null)
-        //    data.statistics = new StatisticsData();
-
-        //if (StatisticsManager.Instance != null)
-        //{
-        //    StatisticsManager.Instance.SetStatistics(data.statistics);
-        //    StatisticsManager.Instance.AddGameLaunch();
-        //}
+        // Уровень Сюжета загружается из AccountData, а не из слота
+        // Он уже загружен в AccountManager при инициализации
 
         // 🔹 Скрываем паузу до скрина
         if (PauseManager.Instance != null)

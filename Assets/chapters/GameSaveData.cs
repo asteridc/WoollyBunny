@@ -10,11 +10,10 @@ public class GameSaveData
     public DialogueSaveData dialogueData;
     public string saveTime;
 
-    // --- мнбне ---
     public List<LoopSaveState> loops = new List<LoopSaveState>();
     public bool electroMinigameActive;
     public bool guitarMinigameActive;
-    public Image backgroundImage; 
+    public Image backgroundImage;
 }
 
 [Serializable]

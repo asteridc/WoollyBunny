@@ -47,12 +47,27 @@ public class MeleeOverview : MonoBehaviour
 
     public void Show(MeleeOverviewData data)
     {
+        if (data == null)
+        {
+            Debug.LogError("[MeleeOverview] Получены пустые данные оружия.");
+            return;
+        }
+
         if (isVisible)
             return;
 
         isVisible = true;
 
-        damage.text = data.damage.ToString();
+        int scaledDamage = data.damage;
+
+        if (AccountManager.Instance != null)
+        {
+            scaledDamage =
+                AccountManager.Instance.GetScaledWeaponDamage(data.damage);
+        }
+
+        damage.text = scaledDamage.ToString();
+
         if (LanguageManager.CurrentLanguage == Language.Russian)
         {
             weaponNameRu.text = data.weaponNameRu;

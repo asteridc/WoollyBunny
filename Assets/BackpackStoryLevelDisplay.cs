@@ -1,111 +1,135 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class BackpackStoryLevelDisplay : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Slider experienceProgressSlider;
     [SerializeField] private Image sliderFillImage;
+
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private TextMeshProUGUI experienceText;
+    [SerializeField] private TextMeshProUGUI requiredExperienceText;
 
     [Header("Colors")]
     [SerializeField] private Color normalFillColor = Color.yellow;
     [SerializeField] private Color levelUpFillColor = Color.green;
 
     private Coroutine levelUpCoroutine;
+    private AccountManager accountManager;
 
     private void Start()
     {
-        if (AccountManager.Instance != null)
-        {
-            AccountManager.Instance.OnStoryExperienceChanged += UpdateDisplay;
-            AccountManager.Instance.OnStoryLevelChanged += OnLevelChanged;
-            AccountManager.Instance.OnStoryLevelUp += OnLevelUp;
-        }
+        accountManager = AccountManager.GetOrCreate();
 
-        UpdateDisplay(0);
+        accountManager.OnStoryExperienceChanged += HandleExperienceChanged;
+        accountManager.OnStoryLevelChanged += HandleLevelChanged;
+        accountManager.OnStoryLevelUp += HandleLevelUp;
+
+        Refresh();
+    }
+
+    private void OnEnable()
+    {
+        // Рюкзак может открываться после изменения уровня.
+        if (AccountManager.Instance != null)
+            Refresh();
     }
 
     private void OnDestroy()
     {
-        if (AccountManager.Instance != null)
+        if (accountManager != null)
         {
-            AccountManager.Instance.OnStoryExperienceChanged -= UpdateDisplay;
-            AccountManager.Instance.OnStoryLevelChanged -= OnLevelChanged;
-            AccountManager.Instance.OnStoryLevelUp -= OnLevelUp;
+            accountManager.OnStoryExperienceChanged -= HandleExperienceChanged;
+            accountManager.OnStoryLevelChanged -= HandleLevelChanged;
+            accountManager.OnStoryLevelUp -= HandleLevelUp;
         }
 
         if (levelUpCoroutine != null)
             StopCoroutine(levelUpCoroutine);
     }
 
-    private void UpdateDisplay(int currentExp)
+    private void HandleExperienceChanged(int _)
     {
-        if (AccountManager.Instance == null)
-            return;
-
-        int level = AccountManager.Instance.GetCurrentLevel();
-        float progress = AccountManager.Instance.GetLevelProgressPercent();
-        int expUntilNext = AccountManager.Instance.GetExperienceUntilNextLevel();
-        int expRequired = AccountManager.Instance.GetExperienceRequiredForNextLevel();
-
-        // Обновляем слайдер
-        if (experienceProgressSlider != null)
-        {
-            experienceProgressSlider.value = progress;
-        }
-
-        // Обновляем цвет слайдера
-        if (sliderFillImage != null)
-        {
-            sliderFillImage.color = normalFillColor;
-        }
-
-        // Обновляем текст уровня - просто число
-        if (levelText != null)
-            levelText.text = $"{level}";
-
-        // Обновляем текст опыта - просто число текущего опыта + требуемого за уровень
-        if (experienceText != null)
-        {
-            if (level >= 20)
-                experienceText.text = $"МАКС";
-            else
-                experienceText.text = $"{expUntilNext} / {expRequired} XP";
-        }
-
-        Debug.Log($"[BackpackStoryLevelDisplay] Уровень {level}, опыт {currentExp}/{expRequired}, прогресс {progress:P0}");
+        Refresh();
     }
 
-    private void OnLevelChanged(int newLevel)
+    private void HandleLevelChanged(int _)
     {
-        if (levelText != null)
-            levelText.text = $"УС: {newLevel}/20";
-
-        Debug.Log($"[Backpack] Уровень Сюжета повышен до {newLevel}");
+        Refresh();
     }
 
-    private void OnLevelUp()
+    private void HandleLevelUp()
     {
-        // Вспышка зелёного цвета при повышении уровня
+        Refresh();
+
         if (levelUpCoroutine != null)
             StopCoroutine(levelUpCoroutine);
 
         levelUpCoroutine = StartCoroutine(LevelUpFlash());
     }
 
-    private System.Collections.IEnumerator LevelUpFlash()
+    private void Refresh()
+    {
+        if (AccountManager.Instance == null)
+            return;
+
+        int level = AccountManager.Instance.GetCurrentLevel();
+        int currentExperience =
+            AccountManager.Instance.GetCurrentExperience();
+
+        int requiredExperience =
+            AccountManager.Instance.GetExperienceRequiredForNextLevel();
+
+        float progress =
+            AccountManager.Instance.GetLevelProgressPercent();
+
+        if (levelText != null)
+            levelText.text = level.ToString();
+
+        if (experienceProgressSlider != null)
+        {
+            experienceProgressSlider.minValue = 0f;
+            experienceProgressSlider.maxValue = 1f;
+            experienceProgressSlider.value = progress;
+        }
+
+        if (sliderFillImage != null)
+            sliderFillImage.color = normalFillColor;
+
+        bool isMaxLevel = level >= 20;
+
+        if (experienceText != null)
+        {
+            experienceText.text = isMaxLevel
+                ? string.Empty
+                : currentExperience.ToString();
+        }
+
+        if (requiredExperienceText != null)
+        {
+            requiredExperienceText.text = isMaxLevel
+                ? "MAX"
+                : $"/ {requiredExperience} XP";
+        }
+
+        Debug.Log(
+            $"[BackpackStoryLevelDisplay] " +
+            $"Level: {level}, XP: {currentExperience}/{requiredExperience}");
+    }
+
+    private IEnumerator LevelUpFlash()
     {
         if (sliderFillImage == null)
             yield break;
 
-        // Меняем цвет на зелёный
         sliderFillImage.color = levelUpFillColor;
-        yield return new WaitForSeconds(0.5f);
 
-        // Возвращаем обратно
+        yield return new WaitForSecondsRealtime(0.5f);
+
         sliderFillImage.color = normalFillColor;
+        levelUpCoroutine = null;
     }
 }

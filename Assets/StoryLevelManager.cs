@@ -5,6 +5,8 @@ public class StoryLevelManager : MonoBehaviour
 {
     public static StoryLevelManager Instance { get; private set; }
 
+    private const int MaxStoryLevel = 20;
+
     [SerializeField] private StoryLevelData storyLevelData;
 
     public event Action<int> OnLevelChanged;
@@ -58,6 +60,9 @@ public class StoryLevelManager : MonoBehaviour
 
     public void AddStoryExperience(int amount)
     {
+        if (amount <= 0)
+            return;
+
         int previousLevel = storyLevelData.currentLevel;
         storyLevelData.AddExperience(amount);
 
@@ -68,7 +73,8 @@ public class StoryLevelManager : MonoBehaviour
             OnLevelChanged?.Invoke(storyLevelData.currentLevel);
             OnLevelUp?.Invoke();
 
-            Debug.Log($"[StoryLevel] Уровень повышен до {storyLevelData.currentLevel}!");
+            Debug.Log(
+                $"[StoryLevel] Уровень повышен до {storyLevelData.currentLevel}!");
         }
     }
 
@@ -93,53 +99,88 @@ public class StoryLevelManager : MonoBehaviour
 
     public float GetHealthMultiplier()
     {
-        // На каждом уровне здоровье повышается на 30%
-        // Уровень 1: 1.0x
-        // Уровень 2: 1.3x
-        // Уровень 3: 1.69x
-        float baseMultiplier = 1.0f;
-        for (int i = 1; i < storyLevelData.currentLevel; i++)
-        {
-            baseMultiplier *= 1.3f;
-        }
-        return baseMultiplier;
+        // Линейный рост: +15% максимального здоровья за уровень.
+        return 1f + (GetSafeLevel() - 1) * 0.15f;
     }
 
     public float GetEnergyMultiplier()
     {
-        // На каждом уровне энергия повышается на 5%
-        // Уровень 1: 1.0x
-        // Уровень 2: 1.05x
-        // Уровень 3: 1.1025x
-        float baseMultiplier = 1.0f;
-        for (int i = 1; i < storyLevelData.currentLevel; i++)
-        {
-            baseMultiplier *= 1.05f;
-        }
-        return baseMultiplier;
+        // Линейный рост: +5% максимальной энергии за уровень.
+        return 1f + (GetSafeLevel() - 1) * 0.05f;
     }
 
     public float GetWeaponDamageMultiplier()
     {
-        // На каждом уровне урон оружия повышается на 40%
-        // Уровень 1: 1.0x
-        // Уровень 2: 1.4x
-        // Уровень 3: 1.96x
-        float baseMultiplier = 1.0f;
-        for (int i = 1; i < storyLevelData.currentLevel; i++)
+        int level = GetSafeLevel();
+        float bonus = 0f;
+
+        for (int unlockedLevel = 2;
+             unlockedLevel <= level;
+             unlockedLevel++)
         {
-            baseMultiplier *= 1.4f;
+            bonus += GetWeaponDamageBonusForLevel(unlockedLevel);
         }
-        return baseMultiplier;
+
+        return 1f + bonus;
+    }
+
+    public int GetScaledHealth(int baseHealth)
+    {
+        return ScaleWholeNumber(baseHealth, GetHealthMultiplier());
+    }
+
+    public int GetScaledEnergy(int baseEnergy)
+    {
+        return ScaleWholeNumber(baseEnergy, GetEnergyMultiplier());
+    }
+
+    public int GetScaledWeaponDamage(int baseDamage)
+    {
+        return ScaleWholeNumber(baseDamage, GetWeaponDamageMultiplier());
+    }
+
+    public float GetScaledWeaponDamage(float baseDamage)
+    {
+        return Mathf.Max(0f, baseDamage * GetWeaponDamageMultiplier());
     }
 
     public void SetData(StoryLevelData data)
     {
-        storyLevelData = data;
+        storyLevelData = data ?? new StoryLevelData();
     }
 
     public StoryLevelData GetData()
     {
         return storyLevelData;
+    }
+
+    private int GetSafeLevel()
+    {
+        if (storyLevelData == null)
+            return 1;
+
+        return Mathf.Clamp(storyLevelData.currentLevel, 1, MaxStoryLevel);
+    }
+
+    private static float GetWeaponDamageBonusForLevel(int level)
+    {
+        if (level <= 5)
+            return 0.20f;
+
+        if (level <= 10)
+            return 0.15f;
+
+        if (level <= 15)
+            return 0.10f;
+
+        return 0.05f;
+    }
+
+    private static int ScaleWholeNumber(int baseValue, float multiplier)
+    {
+        if (baseValue <= 0)
+            return 0;
+
+        return Mathf.Max(1, Mathf.RoundToInt(baseValue * multiplier));
     }
 }

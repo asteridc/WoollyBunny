@@ -49,15 +49,47 @@ public class WeaponOverview : MonoBehaviour
         canvasGroup.interactable = false;
     }
 
+    private int GetDisplayedDamage(WeaponOverviewData data)
+    {
+        if (data == null)
+            return 0;
+
+        if (AccountManager.Instance == null)
+            return data.damage;
+
+        return AccountManager.Instance.GetScaledWeaponDamage(data.damage);
+    }
+
     public void Show(WeaponOverviewData data)
     {
+        if (data == null)
+        {
+            Debug.LogError("[WeaponOverview] Получены пустые данные оружия.");
+            return;
+        }
+
         if (isVisible)
             Hide();
 
         isVisible = true;
 
-        damage.text = data.damage.ToString();
-        
+        int scaledDamage = data.damage;
+
+        if (AccountManager.Instance != null)
+        {
+            scaledDamage =
+                AccountManager.Instance.GetScaledWeaponDamage(data.damage);
+        }
+
+        damage.text = scaledDamage.ToString();
+
+        Debug.Log(
+$"[WeaponOverview] Base damage: {data.damage}, " +
+$"Level: {AccountManager.Instance?.GetCurrentLevel()}, " +
+$"Multiplier: {AccountManager.Instance?.GetWeaponDamageMultiplier()}, " +
+$"Final damage: {scaledDamage}");
+
+
         if (LanguageManager.CurrentLanguage == Language.Russian)
         {
             weaponNameRu.text = data.weaponNameRu;

@@ -18,9 +18,12 @@ public class TooltipTrigger : MonoBehaviour,
     [SerializeField] private MeleeOverview meleeOverview;
     [SerializeField] private MeleeOverviewData meleeOverviewData;
 
+    [SerializeField] private TMPro.TextMeshProUGUI damageText;
+
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        UpdateDamageDisplay();
         tooltip.Show();
     }
 
@@ -48,5 +51,47 @@ public class TooltipTrigger : MonoBehaviour,
             meleeOverview.Show(meleeOverviewData);
         }
 
+    }
+
+    private void UpdateDamageDisplay()
+    {
+        if (damageText == null)
+            return;
+
+
+        // Дальнобойное оружие
+        if (canOpenWeaponOverview && overviewData != null)
+        {
+            int damage = overviewData.damage;
+
+            if (AccountManager.Instance != null)
+            {
+                damage =
+                    AccountManager.Instance.GetScaledWeaponDamage(damage);
+            }
+
+            damageText.text = damage.ToString();
+            return;
+        }
+
+
+        // Холодное оружие
+        if (canOpenMeleeOverview && meleeOverviewData != null)
+        {
+            int damage = meleeOverviewData.damage;
+
+            if (AccountManager.Instance != null)
+            {
+                damage =
+                    AccountManager.Instance.GetScaledWeaponDamage(damage);
+            }
+
+            damageText.text = damage.ToString();
+            return;
+        }
+
+
+        // Если это не оружие
+        damageText.text = "";
     }
 }

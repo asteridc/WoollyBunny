@@ -147,23 +147,57 @@ public class AccountManager : MonoBehaviour
 
     public float GetHealthMultiplier()
     {
-        return StoryLevelManager.Instance != null 
-            ? StoryLevelManager.Instance.GetHealthMultiplier() 
-            : 1.0f;
+        int level = Mathf.Clamp(GetCurrentLevel(), 1, 20);
+        return 1f + (level - 1) * 0.15f;
     }
 
     public float GetEnergyMultiplier()
     {
-        return StoryLevelManager.Instance != null 
-            ? StoryLevelManager.Instance.GetEnergyMultiplier() 
-            : 1.0f;
+        int level = Mathf.Clamp(GetCurrentLevel(), 1, 20);
+        return 1f + (level - 1) * 0.05f;
     }
 
     public float GetWeaponDamageMultiplier()
     {
-        return StoryLevelManager.Instance != null 
-            ? StoryLevelManager.Instance.GetWeaponDamageMultiplier() 
-            : 1.0f;
+        int level = Mathf.Clamp(GetCurrentLevel(), 1, 20);
+        float bonus = 0f;
+
+        for (int unlockedLevel = 2;
+             unlockedLevel <= level;
+             unlockedLevel++)
+        {
+            if (unlockedLevel <= 5)
+                bonus += 0.20f;
+            else if (unlockedLevel <= 10)
+                bonus += 0.15f;
+            else if (unlockedLevel <= 15)
+                bonus += 0.10f;
+            else
+                bonus += 0.05f;
+        }
+
+        return 1f + bonus;
+    }
+
+    public int GetScaledHealth(int baseHealth)
+    {
+        return Mathf.Max(
+            1,
+            Mathf.RoundToInt(baseHealth * GetHealthMultiplier()));
+    }
+
+    public int GetScaledEnergy(int baseEnergy)
+    {
+        return Mathf.Max(
+            1,
+            Mathf.RoundToInt(baseEnergy * GetEnergyMultiplier()));
+    }
+
+    public int GetScaledWeaponDamage(int baseDamage)
+    {
+        return Mathf.Max(
+            1,
+            Mathf.RoundToInt(baseDamage * GetWeaponDamageMultiplier()));
     }
 
     public StoryLevelData GetStoryLevelData()

@@ -60,6 +60,9 @@ public class StoryLevelData
 
     public float GetLevelProgressPercent()
     {
+        Debug.Log(
+            $"[StoryLevelData] Level={currentLevel}, XP={storyExperience}, Required={GetExperienceRequiredForNextLevel()}");
+
         if (currentLevel >= 20)
             return 1f;
 

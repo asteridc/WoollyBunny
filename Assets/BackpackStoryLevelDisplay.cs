@@ -12,6 +12,10 @@ public class BackpackStoryLevelDisplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private TextMeshProUGUI experienceText;
     [SerializeField] private TextMeshProUGUI requiredExperienceText;
+    [SerializeField] private TextMeshProUGUI healthText;
+    [SerializeField] private TextMeshProUGUI maxHealthText;
+    [SerializeField] private TextMeshProUGUI energyText;
+    [SerializeField] private TextMeshProUGUI maxEnergyText;
 
     [Header("Colors")]
     [SerializeField] private Color normalFillColor = Color.yellow;
@@ -86,6 +90,15 @@ public class BackpackStoryLevelDisplay : MonoBehaviour
         float progress =
             AccountManager.Instance.GetLevelProgressPercent();
 
+        int hp =
+            AccountManager.Instance.GetScaledHealth(100);
+        int maxhp =
+            AccountManager.Instance.GetScaledHealth(100);
+        int energy =
+            AccountManager.Instance.GetScaledEnergy(100);
+        int maxenergy =
+            AccountManager.Instance.GetScaledEnergy(100);
+
         if (levelText != null)
             levelText.text = level.ToString();
 
@@ -94,6 +107,10 @@ public class BackpackStoryLevelDisplay : MonoBehaviour
             experienceProgressSlider.minValue = 0f;
             experienceProgressSlider.maxValue = 1f;
             experienceProgressSlider.value = progress;
+            Debug.Log(
+    $"Slider after assign: {experienceProgressSlider.value}, " +
+    $"Min: {experienceProgressSlider.minValue}, " +
+    $"Max: {experienceProgressSlider.maxValue}");
         }
 
         if (sliderFillImage != null)
@@ -115,9 +132,42 @@ public class BackpackStoryLevelDisplay : MonoBehaviour
                 : $"/ {requiredExperience} XP";
         }
 
+        if (healthText != null)
+        {
+            healthText.text = isMaxLevel
+                ? string.Empty
+                : hp.ToString();
+        }
+
+        if (maxHealthText != null)
+        {
+            maxHealthText.text = isMaxLevel
+                ? "MAX"
+                : $"/ {maxhp}";
+        }
+
+        if (energyText != null)
+        {
+            energyText.text = isMaxLevel
+                ? string.Empty
+                : energy.ToString();
+        }
+
+        if (maxEnergyText != null)
+        {
+            maxEnergyText.text = isMaxLevel
+                ? "MAX"
+                : $"/ {maxenergy}";
+        }
+
         Debug.Log(
             $"[BackpackStoryLevelDisplay] " +
             $"Level: {level}, XP: {currentExperience}/{requiredExperience}");
+
+        Debug.Log(
+            $"Current xp = {currentExperience}, " +
+            $"Required xp = {requiredExperience}, " +
+            $"Progress = {progress}");
     }
 
     private IEnumerator LevelUpFlash()

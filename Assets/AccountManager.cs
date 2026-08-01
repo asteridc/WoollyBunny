@@ -148,7 +148,7 @@ public class AccountManager : MonoBehaviour
     public float GetHealthMultiplier()
     {
         int level = Mathf.Clamp(GetCurrentLevel(), 1, 20);
-        return 1f + (level - 1) * 0.15f;
+        return 1f + (level - 1) * 0.30f;
     }
 
     public float GetEnergyMultiplier()

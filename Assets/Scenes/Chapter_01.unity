@@ -6991,14 +6991,14 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 264882972}
   m_FillRect: {fileID: 170931669}
   m_HandleRect: {fileID: 264882971}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
+  m_MaxValue: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8986,7 +8986,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 143.24, y: -50}
-  m_SizeDelta: {x: 0, y: 50}
+  m_SizeDelta: {x: 82.48, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &402930482
 MonoBehaviour:
@@ -29325,6 +29325,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217223178}
     m_Modifications:
+    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 3277278917030379782, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_Name
       value: "tooltip (\u041A\u0430\u0440\u0430\u0442\u0435\u043B\u044C)"
@@ -29444,10 +29448,6 @@ PrefabInstance:
     - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -372.82855
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
       propertyPath: m_SizeDelta.x
@@ -30354,6 +30354,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217223178}
     m_Modifications:
+    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_SizeDelta.x
       value: 48.5957
@@ -30563,10 +30567,6 @@ PrefabInstance:
     - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -392.0285
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
       propertyPath: m_SizeDelta.x
@@ -40533,6 +40533,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217223178}
     m_Modifications:
+    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_SizeDelta.x
       value: 47
@@ -40729,10 +40733,6 @@ PrefabInstance:
     - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -372.82843
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
       propertyPath: m_SizeDelta.x
@@ -41401,7 +41401,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 88.725, y: -50}
-  m_SizeDelta: {x: 0, y: 50}
+  m_SizeDelta: {x: 16.55, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1536643526
 MonoBehaviour:
@@ -51961,7 +51961,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1126210197}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0
+  m_Size: 0.73115814
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

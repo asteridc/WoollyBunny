@@ -2735,6 +2735,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!1 &110026944
 GameObject:
   m_ObjectHideFlags: 0
@@ -4454,6 +4455,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &168855509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5584,6 +5586,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &215509645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5801,6 +5804,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &229029532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7392,6 +7396,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &257720188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8217,6 +8222,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &279323813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11225,6 +11231,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &385305655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13868,6 +13875,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &504047545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14817,6 +14825,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &520576742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18525,6 +18534,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &680911351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19490,7 +19500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fee7c761eeb703428f4ca33c44a679a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLineNumber: 1
+  startLineNumber: 660
   currentBackgroundId: 6
   skipLineDelay: 0.2
   skipButton: {fileID: 1599440839}
@@ -22789,6 +22799,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &877813418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25434,6 +25445,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &962417211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28578,6 +28590,7 @@ MonoBehaviour:
     descriptionRu: "\"\u0418\u043B\u0430\u0439, \u043D\u0430\u0439\u0434\u0438 \u041C\u0438\u0440...
       \u0440\u0430\u0434\u0438 \u043D\u0430\u0441.\""
     descriptionEn: '"Eli, find the World... for us."'
+  damageText: {fileID: 0}
 --- !u!114 &1085735183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30285,6 +30298,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1593948954}
     m_Modifications:
+    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_SizeDelta.x
       value: 48.5957
@@ -30494,10 +30511,6 @@ PrefabInstance:
     - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -392.0285
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
       propertyPath: m_SizeDelta.x
@@ -32206,6 +32219,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &1176644637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32710,6 +32724,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &1181154307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36188,6 +36203,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &1327489065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36386,6 +36402,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!1 &1341194594
 GameObject:
   m_ObjectHideFlags: 0
@@ -37634,6 +37651,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &1374578578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37826,6 +37844,7 @@ MonoBehaviour:
   sliderFillImage: {fileID: 859511372}
   levelText: {fileID: 1034360234}
   experienceText: {fileID: 180996807}
+  requiredExperienceText: {fileID: 0}
   normalFillColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   levelUpFillColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &1406316537
@@ -39561,6 +39580,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &1456758095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41699,6 +41719,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!225 &1525045900
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -42732,6 +42753,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &1558494713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43043,6 +43065,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &1582295608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43089,6 +43112,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1593948954}
     m_Modifications:
+    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 3277278917030379782, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_Name
       value: "tooltip (\u041A\u0430\u0440\u0430\u0442\u0435\u043B\u044C)"
@@ -43208,10 +43235,6 @@ PrefabInstance:
     - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -372.82855
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
       propertyPath: m_SizeDelta.x
@@ -44304,6 +44327,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &1605481257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44804,6 +44828,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &1624208691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45571,6 +45596,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &1658892732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45695,6 +45721,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &1664308934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50221,6 +50248,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!1 &1867471215
 GameObject:
   m_ObjectHideFlags: 0
@@ -50798,6 +50826,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!1 &1877425043
 GameObject:
   m_ObjectHideFlags: 0
@@ -51779,6 +51808,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &1924131423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53772,6 +53802,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &2026754007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55561,6 +55592,7 @@ MonoBehaviour:
     damage: 0
     descriptionRu: 
     descriptionEn: 
+  damageText: {fileID: 0}
 --- !u!114 &2109596770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56349,6 +56381,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1593948954}
     m_Modifications:
+    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_SizeDelta.x
       value: 47
@@ -56545,10 +56581,6 @@ PrefabInstance:
     - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -372.82843
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
       propertyPath: m_SizeDelta.x

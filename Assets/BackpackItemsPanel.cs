@@ -9,6 +9,10 @@ public class BackpackItemsPanel : MonoBehaviour
     public static BackpackItemsPanel Instance;
     [SerializeField] private BackpackSectionController sectionController;
 
+    [Header("Transition")]
+    [SerializeField] private CanvasGroup screenFade;
+    [SerializeField] private float fadeTime = 0.25f;
+
     [Header("Animation")]
     [SerializeField] private float fadeDuration = 0.15f;
     [SerializeField] private float scaleDuration = 0.25f;
@@ -105,32 +109,48 @@ public class BackpackItemsPanel : MonoBehaviour
 
     public void Show()
     {
-        
         isOpen = true;
-        gameObject.SetActive(true);
 
-        if (sectionController != null)
-            sectionController.OpenItemsSection();
-
+        screenFade.DOKill();
         canvasGroup.DOKill();
         rect.DOKill();
 
-        canvasGroup.alpha = 0;
-        rect.localScale = Vector3.one * 0.95f;
+        screenFade.alpha = 0;
 
-        canvasGroup.DOFade(1, fadeDuration).SetUpdate(true);
-        rect.DOScale(1, scaleDuration)
-            .SetEase(Ease.OutBack)
-            .SetUpdate(true);
+        screenFade.DOFade(1f, fadeTime)
+            .SetUpdate(true)
+            .OnComplete(() =>
+            {
+                gameObject.SetActive(true);
+
+                if (sectionController != null)
+                    sectionController.OpenItemsSection();
+
+                HideAllOverviews();
+                HideAllTexts();
+
+                currentTab = ItemType.Weapons;
+                InitializeTab(currentTab);
+
+
+                canvasGroup.alpha = 0;
+                rect.localScale = Vector3.one * 0.95f;
+
+                canvasGroup.DOFade(1, fadeTime)
+                    .SetUpdate(true);
+
+                rect.DOScale(1, scaleDuration)
+                    .SetEase(Ease.OutBack)
+                    .SetUpdate(true);
+
+                screenFade.DOFade(0, fadeTime)
+                    .SetDelay(0.1f)
+                    .SetUpdate(true);
+            });
+
 
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
-
-        HideAllOverviews();
-        HideAllTexts();
-
-        currentTab = ItemType.Weapons;
-        InitializeTab(currentTab);
     }
 
     public void Hide()
@@ -140,10 +160,29 @@ public class BackpackItemsPanel : MonoBehaviour
         HideAllOverviews();
         HideAllTexts();
 
+        screenFade.DOKill();
         canvasGroup.DOKill();
         rect.DOKill();
 
-        canvasGroup.DOFade(0, fadeDuration).SetUpdate(true);
+
+        screenFade.DOFade(1f, fadeTime)
+            .SetUpdate(true)
+            .OnComplete(() =>
+            {
+                canvasGroup.DOFade(0, fadeTime)
+                    .SetUpdate(true);
+
+                rect.DOScale(0.95f, scaleDuration)
+                    .SetEase(Ease.InBack)
+                    .SetUpdate(true)
+                    .OnComplete(() =>
+                    {
+                        screenFade.DOFade(0, fadeTime)
+                            .SetUpdate(true);
+                    });
+            });
+
+
 
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;

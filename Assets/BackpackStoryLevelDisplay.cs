@@ -32,6 +32,7 @@ public class BackpackStoryLevelDisplay : MonoBehaviour
         accountManager.OnStoryLevelChanged += HandleLevelChanged;
         accountManager.OnStoryLevelUp += HandleLevelUp;
 
+
         Refresh();
     }
 

@@ -1,6 +1,7 @@
-using UnityEngine;
-using System.IO;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
 
 public class AccountManager : MonoBehaviour
 {
@@ -51,20 +52,36 @@ public class AccountManager : MonoBehaviour
 
     public void LoadAccountData()
     {
-        string path = Path.Combine(Application.persistentDataPath, ACCOUNT_DATA_FILE);
+        string path = Path.Combine(
+            Application.persistentDataPath,
+            ACCOUNT_DATA_FILE);
 
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
             accountData = JsonUtility.FromJson<AccountData>(json);
+
             if (accountData == null)
                 accountData = new AccountData();
         }
         else
         {
             accountData = new AccountData();
-            SaveAccountData();
         }
+
+        if (accountData.storyLevelData == null)
+            accountData.storyLevelData = new StoryLevelData();
+
+        if (accountData == null)
+            accountData = new AccountData();
+
+        if (accountData.storyLevelData == null)
+            accountData.storyLevelData = new StoryLevelData();
+
+        if (accountData.rewardedChapterNumbers == null)
+            accountData.rewardedChapterNumbers = new System.Collections.Generic.List<int>();
+
+        SaveAccountData();
     }
 
     public void SaveAccountData()
@@ -95,11 +112,107 @@ public class AccountManager : MonoBehaviour
 
     public void AddChapterExperience(int chapterNumber)
     {
-        Debug.Log($"[AccountManager] AddChapterExperience вызвана для главы {chapterNumber}");
-        int experienceReward = GetExperienceRewardForChapter(chapterNumber);
-        Debug.Log($"[AccountManager] Опыт за главу {chapterNumber}: {experienceReward}");
-        AddStoryExperience(experienceReward);
-        Debug.Log($"[AccountManager] Опыт добавлен. Текущее УС: {accountData.storyLevelData.currentLevel}, Опыт: {accountData.storyLevelData.storyExperience}");
+        TryGrantChapterExperience(chapterNumber);
+    }
+
+    public bool TryGrantChapterExperience(int chapterNumber)
+    {
+        if (chapterNumber < 1)
+        {
+            Debug.LogWarning(
+                $"[AccountManager] Некорректный номер главы: {chapterNumber}");
+
+            return false;
+        }
+
+        if (accountData.rewardedChapterNumbers.Contains(chapterNumber))
+        {
+            Debug.Log(
+                $"[AccountManager] Опыт за главу {chapterNumber} уже был выдан.");
+
+            return false;
+        }
+
+        int reward = GetExperienceRewardForChapter(chapterNumber);
+
+        // Сначала фиксируем награду, затем начисляем опыт.
+        accountData.rewardedChapterNumbers.Add(chapterNumber);
+
+        int previousLevel = accountData.storyLevelData.currentLevel;
+
+        accountData.storyLevelData.AddExperience(reward);
+
+        UpdateStoryLevelManager();
+        SaveAccountData();
+
+        OnStoryExperienceChanged?.Invoke(
+            accountData.storyLevelData.storyExperience);
+
+        if (accountData.storyLevelData.currentLevel > previousLevel)
+        {
+            OnStoryLevelChanged?.Invoke(
+                accountData.storyLevelData.currentLevel);
+
+            OnStoryLevelUp?.Invoke();
+        }
+
+        Debug.Log(
+            $"[AccountManager] Выдано {reward} XP за главу {chapterNumber}.");
+
+        return true;
+    }
+
+    public int SynchronizeCompletedChapterRewards(IEnumerable<int> completedChapters)
+    {
+        if (completedChapters == null)
+        {
+            Debug.LogWarning(
+                "[AccountManager] Список пройденных глав отсутствует.");
+
+            return 0;
+        }
+
+        int totalGrantedExperience = 0;
+
+        foreach (int chapterNumber in completedChapters)
+        {
+            if (chapterNumber <= 0)
+                continue;
+
+            if (accountData.rewardedChapterNumbers.Contains(chapterNumber))
+            {
+                continue;
+            }
+
+            int reward = GetExperienceRewardForChapter(chapterNumber);
+
+            accountData.rewardedChapterNumbers.Add(chapterNumber);
+
+            accountData.storyLevelData.AddExperience(reward);
+            totalGrantedExperience += reward;
+
+            Debug.Log(
+                $"[AccountManager] Восстановлена награда за главу " +
+                $"{chapterNumber}: +{reward} XP.");
+        }
+
+        if (totalGrantedExperience <= 0)
+            return 0;
+
+        UpdateStoryLevelManager();
+        SaveAccountData();
+
+        OnStoryExperienceChanged?.Invoke(
+            accountData.storyLevelData.storyExperience);
+
+        OnStoryLevelChanged?.Invoke(
+            accountData.storyLevelData.currentLevel);
+
+        Debug.Log(
+            $"[AccountManager] Синхронизация завершена. " +
+            $"Начислено: {totalGrantedExperience} XP.");
+
+        return totalGrantedExperience;
     }
 
     private int GetExperienceRewardForChapter(int chapterNumber)
@@ -148,13 +261,13 @@ public class AccountManager : MonoBehaviour
     public float GetHealthMultiplier()
     {
         int level = Mathf.Clamp(GetCurrentLevel(), 1, 20);
-        return 1f + (level - 1) * 0.30f;
+        return Mathf.Pow(1.30f, level - 1); // +30%
     }
 
     public float GetEnergyMultiplier()
     {
         int level = Mathf.Clamp(GetCurrentLevel(), 1, 20);
-        return 1f + (level - 1) * 0.05f;
+        return Mathf.Pow(1.05f, level - 1); // +5%
     }
 
     public float GetWeaponDamageMultiplier()

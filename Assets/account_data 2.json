@@ -1,0 +1,33 @@
+{
+    "storyLevelData": {
+        "currentLevel": 3,
+        "storyExperience": 110,
+        "totalStoryExperience": 1350,
+        "experienceRequiredForLevel": [
+            0,
+            500,
+            740,
+            1020,
+            1360,
+            1800,
+            2300,
+            2900,
+            3600,
+            4400,
+            5300,
+            6300,
+            7400,
+            8600,
+            9900,
+            11300,
+            12800,
+            14400,
+            16100,
+            18000
+        ]
+    },
+    "rewardedChapterNumbers": [
+        1,
+        2
+    ]
+}

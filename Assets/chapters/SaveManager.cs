@@ -32,6 +32,13 @@ public class SaveManager : MonoBehaviour
         Debug.Log("[SAVE MANAGER] Awake");
     }
 
+    private IEnumerator Start()
+    {
+        yield return null;
+
+        SynchronizeCompletedChapterExperience();
+    }
+
     public static SaveManager GetOrCreate()
     {
         if (Instance != null)
@@ -61,40 +68,99 @@ public class SaveManager : MonoBehaviour
 
     public void MarkChapterCompleted(int chapterNumber)
     {
-        Debug.Log($"[SaveManager] MarkChapterCompleted вызвана для главы {chapterNumber}");
+        Debug.Log(
+            $"[SaveManager] MarkChapterCompleted вызвана для главы {chapterNumber}");
+
         if (chapterNumber < 1)
             return;
 
         ChapterProgressData data = LoadChapterProgress();
-        int nextUnlockedChapter = Mathf.Max(data.highestUnlockedChapterNumber, chapterNumber + 1);
 
-        if (nextUnlockedChapter == data.highestUnlockedChapterNumber)
+        int nextUnlockedChapter = Mathf.Max(
+            data.highestUnlockedChapterNumber,
+            chapterNumber + 1);
+
+        bool progressChanged =
+            nextUnlockedChapter > data.highestUnlockedChapterNumber;
+
+        if (progressChanged)
         {
-            Debug.Log($"[SaveManager] Глава {chapterNumber} уже была завершена, пропускаем");
-            return;
-        }
+            data.highestUnlockedChapterNumber = nextUnlockedChapter;
+            SaveChapterProgress(data);
 
-        data.highestUnlockedChapterNumber = nextUnlockedChapter;
-        SaveChapterProgress(data);
-
-        // Добавляем опыт Сюжета в аккаунт (вне слотов)
-        AccountManager accountMgr = AccountManager.Instance;
-        if (accountMgr == null)
-        {
-            Debug.LogWarning($"[SaveManager] AccountManager.Instance == null, попытка создать...");
-            accountMgr = AccountManager.GetOrCreate();
-        }
-
-        if (accountMgr != null)
-        {
-            Debug.Log($"[SaveManager] AccountManager найден, добавляем опыт...");
-            accountMgr.AddChapterExperience(chapterNumber);
-            Debug.Log($"[SaveManager] Завершена глава {chapterNumber}, выдан опыт в аккаунт!");
+            Debug.Log(
+                $"[SaveManager] Глава {chapterNumber} отмечена завершённой. " +
+                $"Открыта глава {nextUnlockedChapter}.");
         }
         else
         {
-            Debug.LogError($"[SaveManager] AccountManager не найден даже после попытки создания!");
+            Debug.Log(
+                $"[SaveManager] Глава {chapterNumber} уже была завершена.");
         }
+
+        // Награду проверяем всегда, даже если глава была завершена раньше.
+        AccountManager accountManager = AccountManager.GetOrCreate();
+
+        if (accountManager == null)
+        {
+            Debug.LogError(
+                "[SaveManager] Не удалось получить AccountManager.");
+
+            return;
+        }
+
+        bool rewardGranted =
+            accountManager.TryGrantChapterExperience(chapterNumber);
+
+        if (rewardGranted)
+        {
+            Debug.Log(
+                $"[SaveManager] Выдан опыт за главу {chapterNumber}.");
+        }
+    }
+
+    public void SynchronizeCompletedChapterExperience()
+    {
+        ChapterProgressData progressData = LoadChapterProgress();
+
+        int highestUnlockedChapter =
+            Mathf.Max(1, progressData.highestUnlockedChapterNumber);
+
+        int highestCompletedChapter =
+            highestUnlockedChapter - 1;
+
+        if (highestCompletedChapter < 1)
+        {
+            Debug.Log(
+                "[SaveManager] Нет завершённых глав для синхронизации опыта.");
+
+            return;
+        }
+
+        AccountManager accountManager = AccountManager.GetOrCreate();
+
+        if (accountManager == null)
+        {
+            Debug.LogError(
+                "[SaveManager] Не удалось получить AccountManager " +
+                "для синхронизации наград.");
+
+            return;
+        }
+
+        int rewardedCount = 0;
+
+        for (int chapterNumber = 1;
+             chapterNumber <= highestCompletedChapter;
+             chapterNumber++)
+        {
+            if (accountManager.TryGrantChapterExperience(chapterNumber))
+                rewardedCount++;
+        }
+
+        Debug.Log(
+            $"[SaveManager] Синхронизация наград завершена. " +
+            $"Новых наград: {rewardedCount}.");
     }
 
     private IEnumerator CaptureScreenshot(int slot)

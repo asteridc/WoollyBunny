@@ -19500,7 +19500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fee7c761eeb703428f4ca33c44a679a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLineNumber: 660
+  startLineNumber: 1
   currentBackgroundId: 6
   skipLineDelay: 0.2
   skipButton: {fileID: 1599440839}
@@ -30298,10 +30298,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1593948954}
     m_Modifications:
-    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 75
-      objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_SizeDelta.x
       value: 48.5957
@@ -30511,6 +30507,10 @@ PrefabInstance:
     - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -392.0285
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
       propertyPath: m_SizeDelta.x
@@ -37845,6 +37845,10 @@ MonoBehaviour:
   levelText: {fileID: 1034360234}
   experienceText: {fileID: 180996807}
   requiredExperienceText: {fileID: 0}
+  healthText: {fileID: 0}
+  maxHealthText: {fileID: 0}
+  energyText: {fileID: 0}
+  maxEnergyText: {fileID: 0}
   normalFillColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   levelUpFillColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &1406316537
@@ -43112,10 +43116,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1593948954}
     m_Modifications:
-    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 75
-      objectReference: {fileID: 0}
     - target: {fileID: 3277278917030379782, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_Name
       value: "tooltip (\u041A\u0430\u0440\u0430\u0442\u0435\u043B\u044C)"
@@ -43235,6 +43235,10 @@ PrefabInstance:
     - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -372.82855
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
       propertyPath: m_SizeDelta.x
@@ -56381,10 +56385,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1593948954}
     m_Modifications:
-    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 75
-      objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_SizeDelta.x
       value: 47
@@ -56581,6 +56581,10 @@ PrefabInstance:
     - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -372.82843
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180325211377476470, guid: 77bfd05b4e3b9ec4ca481cef760d6f41, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
       propertyPath: m_SizeDelta.x

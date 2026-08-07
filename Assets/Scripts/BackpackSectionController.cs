@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class BackpackSectionController : MonoBehaviour
 {
+    [Header("Input")]
+    [SerializeField] private GameObject backpackRoot;
+
     [Header("Sections")]
     [Tooltip("CanvasGroup секций в том же порядке, что и вкладки.")]
     [SerializeField] private CanvasGroup[] sections;
@@ -66,6 +69,45 @@ public class BackpackSectionController : MonoBehaviour
         }
 
         currentSectionIndex = defaultSectionIndex;
+    }
+
+    private void Update()
+    {
+        if (isSwitching)
+            return;
+
+        if (backpackRoot == null || !backpackRoot.activeInHierarchy)
+            return;
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            SelectPreviousSection();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SelectNextSection();
+        }
+    }
+
+    private void SelectPreviousSection()
+    {
+        int previousIndex = currentSectionIndex - 1;
+
+        if (previousIndex < 0)
+            previousIndex = sections.Length - 1;
+
+        SelectSection(previousIndex);
+    }
+
+    private void SelectNextSection()
+    {
+        int nextIndex = currentSectionIndex + 1;
+
+        if (nextIndex >= sections.Length)
+            nextIndex = 0;
+
+        SelectSection(nextIndex);
     }
 
     public void OpenItemsSection()

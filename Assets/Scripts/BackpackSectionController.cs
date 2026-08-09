@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class BackpackSectionController : MonoBehaviour
 {
+    public static BackpackSectionController Instance;
+
     [Header("Input")]
     [SerializeField] private GameObject backpackRoot;
 
@@ -113,6 +115,12 @@ public class BackpackSectionController : MonoBehaviour
     public void OpenItemsSection()
     {
         SelectSectionInstant(defaultSectionIndex);
+    }
+
+    public void OpenCollectiblesSection()
+    {
+        OpenItemsSection();
+        SelectSectionInstant(1);
     }
 
     public void SelectSection(int targetIndex)

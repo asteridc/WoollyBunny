@@ -85,6 +85,11 @@ public class BackpackItemsPanel : MonoBehaviour
             Hide();
         }
 
+        if (Input.GetKeyDown(KeyCode.U) && isOpen)
+        {
+            BackpackSectionController.Instance.SelectSection(1);
+        }
+
         if (isOpen)
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))

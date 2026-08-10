@@ -94,4 +94,9 @@ public class TooltipTrigger : MonoBehaviour,
         // Если это не оружие
         damageText.text = "";
     }
+
+    public void SetTooltip(Tooltip tooltip)
+    {
+        this.tooltip = tooltip;
+    }
 }

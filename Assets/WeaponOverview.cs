@@ -31,6 +31,7 @@ public class WeaponOverview : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI armsMultiplier;
     [SerializeField] private TMPro.TextMeshProUGUI legsMultiplier;
 
+    [SerializeField] private GameObject thirdModule;
 
     private bool isVisible;
 
@@ -111,6 +112,8 @@ $"Final damage: {scaledDamage}");
         torsoMultiplier.text = data.torsoMultiplier.ToString();
         armsMultiplier.text = data.armsMultiplier.ToString();
         legsMultiplier.text = data.legsMultiplier.ToString();
+
+        thirdModule.SetActive(data.ModuleCount >= 3);
 
         rect.DOKill();
         canvasGroup.DOKill();

@@ -8,8 +8,11 @@ public class MeleeOverviewData
     public string weaponNameRu;
     public string weaponNameEn;
     public Sprite icon;
+
+    [Header("Ability")]
     public Sprite iconAbility;
     public Tooltip tooltipAbility;
+
     public string typeRu;
     public string typeEn;
 
@@ -21,9 +24,13 @@ public class MeleeOverviewData
     [Header("Stats")]
     public int damage;
 
+    [SerializeField] private int moduleCount = 2;
+    public int ModuleCount => moduleCount;
+
     [Header("Description")]
     [TextArea(3, 6)]
     public string descriptionRu;
+
     [TextArea(3, 6)]
     public string descriptionEn;
 }

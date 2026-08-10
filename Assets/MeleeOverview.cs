@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class MeleeOverview : MonoBehaviour
@@ -25,8 +26,13 @@ public class MeleeOverview : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI descriptionRu;
     [SerializeField] private TMPro.TextMeshProUGUI descriptionEn;
     [SerializeField] private UnityEngine.UI.Image icon;
-    [SerializeField] private UnityEngine.UI.Image iconAbility;
-    [SerializeField] private Tooltip tooltipAbility;
+    
+    [Header("Abilities")]
+    [SerializeField] private Image iconAbility;
+    [SerializeField] private TooltipTrigger abilityTrigger;
+
+
+    [SerializeField] private GameObject thirdModule;
 
     private bool isVisible;
 
@@ -54,7 +60,7 @@ public class MeleeOverview : MonoBehaviour
         }
 
         if (isVisible)
-            return;
+            Hide();
 
         isVisible = true;
 
@@ -86,7 +92,9 @@ public class MeleeOverview : MonoBehaviour
         }
         icon.sprite = data.icon;
         iconAbility.sprite = data.iconAbility;
-        tooltipAbility = data.tooltipAbility;
+        abilityTrigger.SetTooltip(data.tooltipAbility);
+
+        thirdModule.SetActive(data.ModuleCount >= 3);
 
         rect.DOKill();
         canvasGroup.DOKill();

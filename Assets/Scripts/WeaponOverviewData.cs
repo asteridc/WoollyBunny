@@ -31,6 +31,9 @@ public class WeaponOverviewData
     [Range(0f, 10f)]
     public float legsMultiplier = 0.7f;
 
+    [SerializeField] private int moduleCount = 2;
+    public int ModuleCount => moduleCount;
+
     [Header("Description")]
     [TextArea(3, 6)]
     public string descriptionRu;

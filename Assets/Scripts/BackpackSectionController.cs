@@ -37,6 +37,7 @@ public class BackpackSectionController : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         if (!ValidateReferences())
         {
             enabled = false;

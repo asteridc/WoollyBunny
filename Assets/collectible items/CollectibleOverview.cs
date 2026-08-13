@@ -12,6 +12,7 @@ public class CollectibleOverview : MonoBehaviour
     [SerializeField] private Image collectibleImage;
     [SerializeField] private TextMeshProUGUI titleText;
     [SerializeField] private TextMeshProUGUI descriptionText;
+    [SerializeField] private RectTransform contentRect;
 
     [Header("Animation")]
     [SerializeField] private float fadeDuration = 0.15f;
@@ -58,6 +59,18 @@ public class CollectibleOverview : MonoBehaviour
 
         if (descriptionText != null)
             descriptionText.text = description;
+
+        descriptionText.ForceMeshUpdate();
+
+        Canvas.ForceUpdateCanvases();
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(
+            descriptionText.rectTransform
+        );
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(
+            contentRect
+        );
 
         // Начальное состояние
         canvasGroup.alpha = 0f;

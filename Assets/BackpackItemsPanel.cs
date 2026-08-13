@@ -54,6 +54,7 @@ public class BackpackItemsPanel : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         canvasGroup = GetComponent<CanvasGroup>();
         rect = GetComponent<RectTransform>();
 

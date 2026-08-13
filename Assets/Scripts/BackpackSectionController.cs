@@ -35,6 +35,23 @@ public class BackpackSectionController : MonoBehaviour
     public int CurrentSectionIndex => currentSectionIndex;
     public bool IsSwitching => isSwitching;
 
+    public bool IsBackpackOpen()
+    {
+        if (BackpackItemsPanel.Instance != null &&
+            BackpackItemsPanel.Instance.IsOpen)
+        {
+            return true;
+        }
+
+        if (BackpackCollectiblesPanel.Instance != null &&
+            BackpackCollectiblesPanel.Instance.IsOpen)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     private void Awake()
     {
         Instance = this;
@@ -76,6 +93,8 @@ public class BackpackSectionController : MonoBehaviour
 
     private void Update()
     {
+        HandleSectionHotkeys();
+
         if (isSwitching)
             return;
 
@@ -91,6 +110,73 @@ public class BackpackSectionController : MonoBehaviour
         {
             SelectNextSection();
         }
+    }
+
+    private void HandleSectionHotkeys()
+    {
+        int targetIndex = -1;
+
+        if (Input.GetKeyDown(KeyCode.Y))
+            targetIndex = 0;
+        else if (Input.GetKeyDown(KeyCode.U))
+            targetIndex = 1;
+        else if (Input.GetKeyDown(KeyCode.I))
+            targetIndex = 2;
+        else if (Input.GetKeyDown(KeyCode.O))
+            targetIndex = 3;
+        else if (Input.GetKeyDown(KeyCode.P))
+            targetIndex = 4;
+
+        if (targetIndex < 0)
+            return;
+
+        // Рюкзак закрыт.
+        if (!IsBackpackOpen())
+        {
+            OpenBackpackAtSection(targetIndex);
+            return;
+        }
+
+        // Уже на этой секции → закрываем рюкзак.
+        if (currentSectionIndex == targetIndex)
+        {
+            CloseBackpack();
+            return;
+        }
+
+        // Другая секция → мгновенное переключение.
+        SelectSectionInstant(targetIndex);
+    }
+
+    private void CloseBackpack()
+    {
+        if (BackpackItemsPanel.Instance != null &&
+            BackpackItemsPanel.Instance.IsOpen)
+        {
+            BackpackItemsPanel.Instance.Hide();
+            return;
+        }
+
+        if (BackpackCollectiblesPanel.Instance != null &&
+            BackpackCollectiblesPanel.Instance.IsOpen)
+        {
+            BackpackCollectiblesPanel.Instance.Hide();
+            return;
+        }
+    }
+
+    private void OpenBackpackAtSection(int targetIndex)
+    {
+        if (BackpackItemsPanel.Instance == null)
+        {
+            Debug.LogWarning(
+                "BackpackSectionController: BackpackItemsPanel.Instance не найден.",
+                this);
+
+            return;
+        }
+
+        BackpackItemsPanel.Instance.Show(targetIndex);
     }
 
     private void SelectPreviousSection()

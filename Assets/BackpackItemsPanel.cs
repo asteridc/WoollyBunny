@@ -76,19 +76,10 @@ public class BackpackItemsPanel : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            Toggle();
-        }
 
         if (Input.GetKeyDown(KeyCode.Escape) && isOpen)
         {
             Hide();
-        }
-
-        if (Input.GetKeyDown(KeyCode.U) && isOpen)
-        {
-            BackpackSectionController.Instance.SelectSection(1);
         }
 
         if (isOpen)
@@ -115,7 +106,15 @@ public class BackpackItemsPanel : MonoBehaviour
 
     public void Show()
     {
+        Show(2);
+    }
+
+    public void Show(int targetSectionIndex)
+    {
         isOpen = true;
+
+        if (BackpackSectionController.Instance != null)
+            BackpackSectionController.Instance.IsBackpackOpen();
 
         screenFade.DOKill();
         canvasGroup.DOKill();
@@ -124,35 +123,35 @@ public class BackpackItemsPanel : MonoBehaviour
         screenFade.alpha = 0;
 
         screenFade.DOFade(1f, fadeTime)
-            .SetUpdate(true)
-            .OnComplete(() =>
-            {
-                gameObject.SetActive(true);
+        .SetUpdate(true)
+        .OnComplete(() =>
+        {
+            gameObject.SetActive(true);
 
-                if (sectionController != null)
-                    sectionController.OpenItemsSection();
+            if (sectionController != null)
+                sectionController.SelectSectionInstant(targetSectionIndex);
 
-                HideAllOverviews();
-                HideAllTexts();
+            HideAllOverviews();
+            HideAllTexts();
 
-                currentTab = ItemType.Weapons;
-                InitializeTab(currentTab);
+            currentTab = ItemType.Weapons;
+            InitializeTab(currentTab);
 
 
-                canvasGroup.alpha = 0;
-                rect.localScale = Vector3.one * 0.95f;
+            canvasGroup.alpha = 0;
+            rect.localScale = Vector3.one * 0.95f;
 
-                canvasGroup.DOFade(1, fadeTime)
-                    .SetUpdate(true);
+            canvasGroup.DOFade(1, fadeTime)
+                .SetUpdate(true);
 
-                rect.DOScale(1, scaleDuration)
-                    .SetEase(Ease.OutBack)
-                    .SetUpdate(true);
+            rect.DOScale(1, scaleDuration)
+                .SetEase(Ease.OutBack)
+                .SetUpdate(true);
 
-                screenFade.DOFade(0, fadeTime)
-                    .SetDelay(0.1f)
-                    .SetUpdate(true);
-            });
+            screenFade.DOFade(0, fadeTime)
+                .SetDelay(0.1f)
+                .SetUpdate(true);
+        });
 
 
         canvasGroup.interactable = true;
@@ -162,6 +161,9 @@ public class BackpackItemsPanel : MonoBehaviour
     public void Hide()
     {
         isOpen = false;
+
+        if (BackpackSectionController.Instance != null)
+            BackpackSectionController.Instance.IsBackpackOpen();
 
         HideAllOverviews();
         HideAllTexts();

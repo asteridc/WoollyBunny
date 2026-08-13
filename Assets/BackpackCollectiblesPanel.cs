@@ -60,11 +60,6 @@ public class BackpackCollectiblesPanel : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            Toggle();
-        }
-
         if (Input.GetKeyDown(KeyCode.Escape) && isOpen)
         {
             if (IsCollectibleOverviewOpen())
@@ -75,14 +70,6 @@ public class BackpackCollectiblesPanel : MonoBehaviour
             {
                 Hide();
             }
-        }
-
-        if (Input.GetKeyDown(KeyCode.I) && isOpen)
-        {
-            if (IsCollectibleOverviewOpen())
-                return;
-
-            BackpackSectionController.Instance.SelectSection(2);
         }
     }
 
@@ -97,6 +84,9 @@ public class BackpackCollectiblesPanel : MonoBehaviour
     public void Show()
     {
         isOpen = true;
+
+        if (BackpackSectionController.Instance != null)
+            BackpackSectionController.Instance.IsBackpackOpen();
 
         screenFade.DOKill();
         canvasGroup.DOKill();
@@ -135,6 +125,10 @@ public class BackpackCollectiblesPanel : MonoBehaviour
     public void Hide()
     {
         isOpen = false;
+
+        if (BackpackSectionController.Instance != null)
+            BackpackSectionController.Instance.IsBackpackOpen();
+
 
         if (IsCollectibleOverviewOpen())
             CloseCollectibleOverview();

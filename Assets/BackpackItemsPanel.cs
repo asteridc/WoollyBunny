@@ -76,12 +76,6 @@ public class BackpackItemsPanel : MonoBehaviour
 
     private void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Escape) && isOpen)
-        {
-            Hide();
-        }
-
         if (isOpen)
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -160,6 +154,11 @@ public class BackpackItemsPanel : MonoBehaviour
 
     public void Hide()
     {
+        Debug.Log(
+        "BACKPACK ITEMS HIDE CALLED\n" +
+        System.Environment.StackTrace,
+        this
+    );
         isOpen = false;
 
         if (BackpackSectionController.Instance != null)

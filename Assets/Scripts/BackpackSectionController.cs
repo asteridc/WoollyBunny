@@ -34,6 +34,9 @@ public class BackpackSectionController : MonoBehaviour
 
     public int CurrentSectionIndex => currentSectionIndex;
     public bool IsSwitching => isSwitching;
+    private bool justClosedBackpack;
+
+    public bool JustClosedBackpack => justClosedBackpack;
 
     public bool IsBackpackOpen()
     {
@@ -93,7 +96,10 @@ public class BackpackSectionController : MonoBehaviour
 
     private void Update()
     {
+        justClosedBackpack = false;
+
         HandleSectionHotkeys();
+        HandleEscape();
 
         if (isSwitching)
             return;
@@ -110,6 +116,26 @@ public class BackpackSectionController : MonoBehaviour
         {
             SelectNextSection();
         }
+    }
+
+    private void HandleEscape()
+    {
+        if (!Input.GetKeyDown(KeyCode.Escape))
+            return;
+
+        if (!IsBackpackOpen())
+            return;
+
+        // Сначала закрываем только Collectible Overview.
+        if (BackpackCollectiblesPanel.Instance != null &&
+            BackpackCollectiblesPanel.Instance.IsCollectibleOverviewOpen)
+        {
+            BackpackCollectiblesPanel.Instance.CloseCollectibleOverview();
+            return;
+        }
+
+        // Overview уже закрыт → закрываем весь Backpack.
+        CloseBackpack();
     }
 
     private void HandleSectionHotkeys()
@@ -150,18 +176,18 @@ public class BackpackSectionController : MonoBehaviour
 
     private void CloseBackpack()
     {
+        justClosedBackpack = true;
+
         if (BackpackItemsPanel.Instance != null &&
             BackpackItemsPanel.Instance.IsOpen)
         {
             BackpackItemsPanel.Instance.Hide();
-            return;
         }
 
         if (BackpackCollectiblesPanel.Instance != null &&
             BackpackCollectiblesPanel.Instance.IsOpen)
         {
             BackpackCollectiblesPanel.Instance.Hide();
-            return;
         }
     }
 

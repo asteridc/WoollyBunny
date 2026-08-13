@@ -58,7 +58,7 @@ public class PauseManager : MonoBehaviour
         HideInstant();
     }
 
-    void Update()
+    private void Update()
     {
         if (pauseRoot == null)
             return;
@@ -67,13 +67,14 @@ public class PauseManager : MonoBehaviour
             !Input.GetKeyDown(KeyCode.Space))
             return;
 
-        if (BackpackItemsPanel.Instance != null && BackpackItemsPanel.Instance.isOpen)
+        // Рюкзак сам обрабатывает Escape.
+        if (BackpackSectionController.Instance != null &&
+            BackpackSectionController.Instance.IsBackpackOpen() && Input.GetKeyDown(KeyCode.Escape))
         {
-            BackpackItemsPanel.Instance.Hide();
             return;
         }
 
-        // 1️⃣ Если активно подтверждение выхода
+        // Подтверждение выхода.
         if (isExitConfirmActive)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -82,12 +83,13 @@ public class PauseManager : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
-               HideExitConfirm();
+                HideExitConfirm();
             }
+
             return;
         }
 
-        // 2️⃣ Если открыты вложенные панели
+        // Вложенные панели.
         if (IsPanelActive(settingsPanel))
         {
             SwitchPanel(settingsPanel, mainPanel);
@@ -100,29 +102,20 @@ public class PauseManager : MonoBehaviour
             return;
         }
 
-        // 3️⃣ Пауза / продолжить
+        // Пауза.
         if (isPaused)
         {
             Resume();
             return;
         }
 
-        if (BackpackItemsPanel.Instance != null && BackpackItemsPanel.Instance.isOpen)
+        if (BackpackSectionController.Instance != null &&
+    BackpackSectionController.Instance.JustClosedBackpack)
         {
-            BackpackItemsPanel.Instance.Hide();
             return;
         }
-
-
-        if (DialogueManager.Instance != null && DialogueManager.Instance.isCollectibleOpen)
-        {
-            Debug.Log("Открыто окно коллекционного предмета");
-            return;
-        }
-
 
         Pause();
-
     }
 
 

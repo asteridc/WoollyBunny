@@ -58,21 +58,6 @@ public class BackpackCollectiblesPanel : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) && isOpen)
-        {
-            if (IsCollectibleOverviewOpen())
-            {
-                CloseCollectibleOverview();
-            }
-            else
-            {
-                Hide();
-            }
-        }
-    }
-
     public void Toggle()
     {
         if (isOpen)
@@ -124,38 +109,45 @@ public class BackpackCollectiblesPanel : MonoBehaviour
 
     public void Hide()
     {
+        Debug.Log("BACKPACK COLLECTIBLES HIDE CALLED");
+
         isOpen = false;
 
-        if (BackpackSectionController.Instance != null)
-            BackpackSectionController.Instance.IsBackpackOpen();
+        if (collectibleOverview != null &&
+            collectibleOverview.IsOpen)
+        {
+            collectibleOverview.Hide();
+        }
 
-
-        if (IsCollectibleOverviewOpen())
-            CloseCollectibleOverview();
+        collectiblesSectionCanvasGroup?.DOKill();
 
         screenFade.DOKill();
         canvasGroup.DOKill();
         rect.DOKill();
 
-        screenFade.DOFade(1f, fadeTime)
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+
+        screenFade
+            .DOFade(1f, fadeTime)
             .SetUpdate(true)
             .OnComplete(() =>
             {
-                canvasGroup.DOFade(0, fadeTime)
+                canvasGroup
+                    .DOFade(0f, fadeTime)
                     .SetUpdate(true);
 
-                rect.DOScale(0.95f, scaleDuration)
+                rect
+                    .DOScale(0.95f, scaleDuration)
                     .SetEase(Ease.InBack)
                     .SetUpdate(true)
                     .OnComplete(() =>
                     {
-                        screenFade.DOFade(0, fadeTime)
+                        screenFade
+                            .DOFade(0f, fadeTime)
                             .SetUpdate(true);
                     });
             });
-
-        canvasGroup.interactable = false;
-        canvasGroup.blocksRaycasts = false;
     }
 
 
@@ -194,7 +186,7 @@ public class BackpackCollectiblesPanel : MonoBehaviour
 
     public void CloseCollectibleOverview()
     {
-        if (!IsCollectibleOverviewOpen())
+        if (!IsCollectibleOverviewOpen)
             return;
 
         collectibleOverview.Hide();
@@ -247,11 +239,8 @@ public class BackpackCollectiblesPanel : MonoBehaviour
             .SetEase(Ease.OutQuad)
             .SetUpdate(true);
     }
-
-
-    private bool IsCollectibleOverviewOpen()
-    {
-        return collectibleOverview != null &&
-               collectibleOverview.IsOpen;
-    }
+  
+    public bool IsCollectibleOverviewOpen =>
+    collectibleOverview != null &&
+    collectibleOverview.IsOpen;
 }

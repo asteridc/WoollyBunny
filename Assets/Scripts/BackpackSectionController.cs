@@ -137,6 +137,10 @@ public class BackpackSectionController : MonoBehaviour
             return;
         }
 
+        // При любом переключении секции закрываем
+        // открытый Collectible Overview.
+        HideCollectibleOverview();
+
         if (targetIndex == currentSectionIndex)
             return;
 
@@ -153,15 +157,15 @@ public class BackpackSectionController : MonoBehaviour
         KillSectionTweens(previousIndex);
         KillSectionTweens(targetIndex);
 
-        // Если переход на вкладку с большим индексом:
-        // старая уходит влево, новая приходит справа.
         float direction = targetIndex > previousIndex ? 1f : -1f;
 
         Vector2 previousHiddenPosition =
-            shownPositions[previousIndex] + Vector2.left * slideDistance * direction;
+            shownPositions[previousIndex] +
+            Vector2.left * slideDistance * direction;
 
         Vector2 targetStartPosition =
-            shownPositions[targetIndex] + Vector2.right * slideDistance * direction;
+            shownPositions[targetIndex] +
+            Vector2.right * slideDistance * direction;
 
         previousSection.interactable = false;
         previousSection.blocksRaycasts = false;
@@ -209,6 +213,8 @@ public class BackpackSectionController : MonoBehaviour
 
             currentSectionIndex = targetIndex;
             isSwitching = false;
+
+            SyncCollectiblesPanelState(currentSectionIndex);
         });
     }
 
@@ -216,6 +222,8 @@ public class BackpackSectionController : MonoBehaviour
     {
         if (targetIndex < 0 || targetIndex >= sections.Length)
             return;
+
+        HideCollectibleOverview();
 
         for (int i = 0; i < sections.Length; i++)
         {
@@ -233,12 +241,22 @@ public class BackpackSectionController : MonoBehaviour
 
         currentSectionIndex = targetIndex;
         isSwitching = false;
+
+        SyncCollectiblesPanelState(currentSectionIndex);
     }
 
     private void KillSectionTweens(int index)
     {
         sections[index].DOKill();
         sectionRects[index].DOKill();
+    }
+
+    private void HideCollectibleOverview()
+    {
+        if (BackpackCollectiblesPanel.Instance == null)
+            return;
+
+        BackpackCollectiblesPanel.Instance.CloseCollectibleOverview();
     }
 
     private bool ValidateReferences()
@@ -302,5 +320,14 @@ public class BackpackSectionController : MonoBehaviour
         }
 
         return true;
+    }
+
+
+    private void SyncCollectiblesPanelState(int sectionIndex)
+    {
+        if (BackpackCollectiblesPanel.Instance == null)
+            return;
+
+        BackpackCollectiblesPanel.Instance.SetSectionOpenState(sectionIndex == 1);
     }
 }

@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.6279907, y: 54.827805}
+  m_AnchoredPosition: {x: 1.6279907, y: 56.3}
   m_SizeDelta: {x: 419.7316, y: 211.4375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4773691710767215605
@@ -249,7 +249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2423656065284720559, guid: 19931da71a2a5d44a869b0040f013f0d, type: 3}
       propertyPath: m_Name
-      value: "tooltip (\u0410\u043B\u043C\u0430\u0437\u044B) Variant"
+      value: "tooltip (\u0410\u043B\u043C\u0430\u0437\u044B)"
       objectReference: {fileID: 0}
     - target: {fileID: 2423656065284720559, guid: 19931da71a2a5d44a869b0040f013f0d, type: 3}
       propertyPath: m_IsActive
@@ -363,7 +363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5863813911248656445, guid: 19931da71a2a5d44a869b0040f013f0d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 327.88037
+      value: 267.8
       objectReference: {fileID: 0}
     - target: {fileID: 5863813911248656445, guid: 19931da71a2a5d44a869b0040f013f0d, type: 3}
       propertyPath: m_AnchoredPosition.y

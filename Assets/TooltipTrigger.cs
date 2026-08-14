@@ -91,9 +91,7 @@ public class TooltipTrigger : MonoBehaviour,
             }
 
             BackpackCollectiblesPanel.Instance.OpenCollectibleOverview(
-                collectibleItem.icon,
-                collectibleItem.GetTitle(),
-                collectibleItem.GetContent()
+                collectibleItem
             );
 
             return;

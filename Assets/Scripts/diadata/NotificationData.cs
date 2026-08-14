@@ -1,12 +1,22 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 [System.Serializable]
 public class NotificationData
 {
+    [Header("Collectible")]
     public bool showCollectibleView = false;
+
+    public CollectibleItemBase collectible;
+
+    // Старые поля пока оставляем,
+    // чтобы не ломать существующие DialogueLine/DialogueManager.
+
     public string collectibleTitle;
-    [TextArea(3, 10)] public string collectibleContent;
+
+    [TextArea(3, 10)]
+    public string collectibleContent;
+
     public Sprite collectibleIcon;
 
     public bool showItemNotification;
@@ -16,16 +26,23 @@ public class NotificationData
     public Sprite itemIcon;
 
     public bool showStoryNotification;
-    [TextArea(2, 4)] public string storyNotificationText;
+
+    [TextArea(2, 4)]
+    public string storyNotificationText;
+
     public float storyNotificationDuration = 5.5f;
+
     public Sprite storyNotificationIcon;
+
     public Color storyNotificationTextColor = Color.white;
     public Color storyNotificationIconColor = Color.white;
+
     public float storyNotificationFontSize = 36f;
 
     public bool isBold;
     public bool isItalic;
     public bool isUppercase;
+
     public bool useCustomFont;
     public TMP_FontAsset customFont;
 }

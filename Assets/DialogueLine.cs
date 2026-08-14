@@ -40,9 +40,8 @@ public class DialogueLine : IStoryNotificationSettings
 
     // ====== онйюг йнккейжхнммнцн опедлерю ======
     public bool showCollectibleView = false;
-    public string collectibleTitle;
-    [TextArea(3, 10)] public string collectibleContent;
-    public Sprite collectibleIcon;
+    [Header("Collectible")]
+    public CollectibleItemBase collectibleItem;
 
     // ====== опедлерш ======
     public bool showItemNotification;

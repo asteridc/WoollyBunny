@@ -1,9 +1,17 @@
-using System;
 using DG.Tweening;
+using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
+public enum CollectibleCategory
+{
+    FamilyLetters,
+    WorldLandmarks,
+    DocumentsAndInstructions
+}
 
 public class CollectibleCategoriesController : MonoBehaviour
 {
@@ -13,24 +21,26 @@ public class CollectibleCategoriesController : MonoBehaviour
         [Header("Category")]
         public string title;
 
-        [Tooltip("Главный объект плашки категории.")]
+        public CollectibleCategory category;
+
         public GameObject categoryObject;
 
-        [Tooltip("RectTransform объекта, который будет немного выезжать влево.")]
         public RectTransform visual;
 
-        [Tooltip("CanvasGroup белого свечения.")]
         public CanvasGroup glow;
 
         [Header("Content")]
-        [Tooltip("ScrollRect этой категории.")]
         public ScrollRect scrollRect;
 
-        [Tooltip("Необязательно. CanvasGroup ScrollRect для fade-анимации.")]
         public CanvasGroup contentCanvasGroup;
 
+        [Header("Initial Collectibles")]
+        public List<CollectibleItemBase> initiallyUnlockedCollectibles;
+
+        [Header("Collected Count")]
+        public TMP_Text collectedCountText;
+
         [Header("Animation")]
-        [Tooltip("Насколько выбранная категория выезжает влево.")]
         public float selectedOffset = 10f;
     }
 
@@ -59,10 +69,142 @@ public class CollectibleCategoriesController : MonoBehaviour
 
     private void Start()
     {
+        RegisterInitialCollectibles();
+
         if (categories == null || categories.Length == 0)
             return;
 
         SelectCategory(0, false);
+
+        RefreshAllCategoryCounts();
+        RefreshCategoryViews();
+    }
+
+    private void OnEnable()
+    {
+        if (CollectibleManager.Instance != null)
+        {
+            CollectibleManager.Instance.CollectibleAdded -=
+                OnCollectibleAdded;
+
+            CollectibleManager.Instance.CollectibleAdded +=
+                OnCollectibleAdded;
+        }
+
+        RefreshAllCategoryCounts();
+    }
+
+    private void OnDisable()
+    {
+        if (CollectibleManager.Instance != null)
+        {
+            CollectibleManager.Instance.CollectibleAdded -=
+                OnCollectibleAdded;
+        }
+    }
+
+    public void RefreshAllCategoryCounts()
+    {
+        if (CollectibleManager.Instance == null)
+            return;
+
+        if (categories == null)
+            return;
+
+        for (int i = 0; i < categories.Length; i++)
+        {
+            Category category = categories[i];
+
+            if (category == null ||
+                category.collectedCountText == null)
+            {
+                continue;
+            }
+
+            int count =
+                CollectibleManager.Instance.GetCollectedCount(
+                    category.category
+                );
+
+            category.collectedCountText.text =
+                count.ToString();
+        }
+    }
+
+    private void RefreshCategoryViews()
+    {
+        CollectibleCategoryView[] views =
+            FindObjectsByType<CollectibleCategoryView>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None
+            );
+
+        foreach (CollectibleCategoryView view in views)
+        {
+            view.Refresh();
+        }
+    }
+
+    private void OnCollectibleAdded(
+    CollectibleItemBase collectible)
+    {
+        RefreshAllCategoryCounts();
+    }
+
+    private void RegisterInitialCollectibles()
+    {
+        if (CollectibleManager.Instance == null)
+        {
+            Debug.LogWarning(
+                "CollectibleCategoriesController: " +
+                "CollectibleManager.Instance не найден.",
+                this
+            );
+
+            return;
+        }
+
+        if (categories == null)
+            return;
+
+        for (int i = 0; i < categories.Length; i++)
+        {
+            Category category = categories[i];
+
+            if (category == null ||
+                category.initiallyUnlockedCollectibles == null)
+            {
+                continue;
+            }
+
+            for (
+                int j = 0;
+                j < category.initiallyUnlockedCollectibles.Count;
+                j++
+            )
+            {
+                CollectibleItemBase collectible =
+                    category.initiallyUnlockedCollectibles[j];
+
+                if (collectible == null)
+                    continue;
+
+                if (collectible.Category != category.category)
+                {
+                    Debug.LogWarning(
+                        $"Collectible '{collectible.name}' " +
+                        $"имеет категорию {collectible.Category}, " +
+                        $"но находится в категории {category.category}.",
+                        collectible
+                    );
+
+                    continue;
+                }
+
+                CollectibleManager.Instance
+                    .RegisterCollectible(collectible);
+            }
+        }
     }
 
     /// <summary>

@@ -37,8 +37,18 @@ public class CollectibleOverview : MonoBehaviour
         rect.localScale = Vector3.one * startScale;
     }
 
-    public void Show(Sprite image, string title, string description)
+    public void Show(CollectibleItemBase collectible)
     {
+        if (collectible == null)
+        {
+            Debug.LogWarning(
+                "CollectibleOverview.Show: collectible == null.",
+                this
+            );
+
+            return;
+        }
+
         IsOpen = true;
 
         gameObject.SetActive(true);
@@ -46,40 +56,61 @@ public class CollectibleOverview : MonoBehaviour
         canvasGroup.DOKill();
         rect.DOKill();
 
-        // Контент
+        // =========================================================
+        // CONTENT
+        // =========================================================
+
+        Sprite icon = collectible.GetIcon();
+
         if (collectibleImage != null)
         {
-            collectibleImage.sprite = image;
-            collectibleImage.enabled = image != null;
+            collectibleImage.sprite = icon;
+            collectibleImage.enabled = icon != null;
             collectibleImage.preserveAspect = true;
         }
 
         if (titleText != null)
-            titleText.text = title;
+        {
+            titleText.text = collectible.GetTitle();
+        }
 
         if (descriptionText != null)
-            descriptionText.text = description;
+        {
+            descriptionText.text = collectible.GetContent();
+        }
 
-        descriptionText.ForceMeshUpdate();
+        // =========================================================
+        // LAYOUT
+        // =========================================================
 
-        Canvas.ForceUpdateCanvases();
+        if (descriptionText != null)
+        {
+            descriptionText.ForceMeshUpdate();
 
-        LayoutRebuilder.ForceRebuildLayoutImmediate(
-            descriptionText.rectTransform
-        );
+            Canvas.ForceUpdateCanvases();
 
-        LayoutRebuilder.ForceRebuildLayoutImmediate(
-            contentRect
-        );
+            LayoutRebuilder.ForceRebuildLayoutImmediate(
+                descriptionText.rectTransform
+            );
+        }
 
-        // Начальное состояние
+        if (contentRect != null)
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(
+                contentRect
+            );
+        }
+
+        // =========================================================
+        // ANIMATION
+        // =========================================================
+
         canvasGroup.alpha = 0f;
         rect.localScale = Vector3.one * startScale;
 
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
 
-        // Анимация появления
         canvasGroup
             .DOFade(1f, fadeDuration)
             .SetEase(Ease.OutQuad)

@@ -46,9 +46,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -106,9 +104,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -163,9 +159,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -220,9 +214,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -276,9 +268,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -339,9 +329,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -397,9 +385,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -456,9 +442,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -518,9 +502,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -576,9 +558,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -638,9 +618,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -695,9 +673,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -752,9 +728,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -808,9 +782,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -864,9 +836,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -921,9 +891,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -978,9 +946,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1038,9 +1004,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1095,9 +1059,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1155,9 +1117,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1218,9 +1178,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1276,9 +1234,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1335,9 +1291,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1393,9 +1347,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1459,9 +1411,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1517,30 +1467,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 1
-    collectibleTitle: "\u041F\u0440\u043E\u0449\u0430\u0439, \u0434\u043E\u0447\u043A\u0430..."
-    collectibleContent: "\u041F\u0440\u043E\u0441\u0442\u0438, \u0447\u0442\u043E
-      \u043D\u0435 \u0434\u043E\u0436\u0434\u0430\u043B\u0441\u044F. \u042F \u0431\u043E\u043B\u044C\u0448\u0435
-      \u0442\u0430\u043A \u043D\u0435 \u043C\u043E\u0433\u0443... \u041E\u0441\u0442\u0430\u043B\u043E\u0441\u044C
-      \u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0434\u043D\u043E - \u043F\u043E\u043F\u044B\u0442\u0430\u0442\u044C\u0441\u044F
-      \u0434\u043E\u0431\u0440\u0430\u0442\u044C\u0441\u044F \u0434\u043E \u0442\u0435\u0445,
-      \u043A\u0442\u043E \u0432\u0441\u0451 \u0435\u0449\u0451 \u0432\u043E \u0447\u0442\u043E-\u0442\u043E
-      \u0432\u0435\u0440\u0438\u0442 \u043D\u0430 \u044D\u0442\u043E\u0439 \u0431\u043E\u0433\u043E\u043C
-      \u0437\u0430\u0431\u044B\u0442\u043E\u0439 \u043F\u043B\u0430\u043D\u0435\u0442\u0435.
-      \n\n\u041F\u043E\u043C\u043D\u0438\u0448\u044C, \u043C\u044B \u043F\u0440\u044F\u0442\u0430\u043B\u0438
-      \u0435\u0434\u0443 \u0432 \u0442\u043E\u043C \u044F\u0449\u0438\u043A\u0435?.
-      \u0412 \u0442\u043E\u043C, \u0433\u0434\u0435 \u0446\u0438\u0444\u0440\u044B.
-      \u042F \u043F\u043E\u043C\u043D\u044E \u0442\u0443 \u0434\u0430\u0442\u0443,
-      18 \u044F\u043D\u0432\u0430\u0440\u044F, \u0442\u043E\u0442 \u0434\u0435\u043D\u044C,
-      \u043A\u043E\u0433\u0434\u0430 \u0442\u044B \u043F\u0435\u0440\u0432\u044B\u0439
-      \u0440\u0430\u0437 \u0441\u043A\u0430\u0437\u0430\u043B\u0430... \"\u043F\u0430\u043F\u0430\"...
-      \u0422\u0430\u043A\u043E\u0432 \u0438 \u043A\u043E\u0434.\n\n\u0415\u0441\u043B\u0438
-      \u0442\u044B \u043D\u0430\u0439\u0434\u0451\u0448\u044C \u044D\u0442\u043E
-      - \u0432\u043E\u0437\u044C\u043C\u0438 \u043A\u0430\u0440\u0442\u0443. \u041E\u043D\u0430
-      \u043C\u043E\u0436\u0435\u0442 \u043F\u0440\u0438\u0432\u0435\u0441\u0442\u0438
-      \u0442\u0435\u0431\u044F \u043A \u043D\u0438\u043C. \u0418\u043B\u0438 \u0445\u043E\u0442\u044F
-      \u0431\u044B \u043A \u043F\u043E\u043A\u043E\u044E.\n\n\u042F \u0443\u0441\u0442\u0430\u043B.
-      \u041F\u0440\u043E\u0441\u0442\u0438."
-    collectibleIcon: {fileID: 21300000, guid: a42c8ec0ff27c024fab127cffe55cef1, type: 3}
+    collectibleItem: {fileID: 11400000, guid: 5b2ad91e9d1f24044970a8250516931b, type: 2}
     showItemNotification: 1
     itemName: "\u041F\u0440\u043E\u0449\u0430\u0439, \u0434\u043E\u0447\u043A\u0430..."
     itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
@@ -1598,9 +1525,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1657,9 +1582,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1714,9 +1637,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1775,9 +1696,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1834,9 +1753,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1893,9 +1810,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -1953,9 +1868,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2009,9 +1922,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2088,9 +1999,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2146,9 +2055,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2205,9 +2112,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2265,9 +2170,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2321,9 +2224,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2378,9 +2279,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2436,9 +2335,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2492,9 +2389,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2548,9 +2443,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2604,9 +2497,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 1
     itemName: "\u041A\u0430\u0440\u0442\u0430 \u041C\u0438\u0440\u0430"
     itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
@@ -2663,9 +2554,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2720,9 +2609,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2776,9 +2663,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2837,9 +2722,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2893,9 +2776,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -2952,9 +2833,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3008,9 +2887,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3065,9 +2942,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3121,9 +2996,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3181,9 +3054,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3237,9 +3108,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3302,9 +3171,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3358,9 +3225,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3415,9 +3280,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3473,9 +3336,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3538,9 +3399,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3597,9 +3456,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3654,9 +3511,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3713,9 +3568,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3770,9 +3623,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3829,9 +3680,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3885,9 +3734,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -3975,9 +3822,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4035,9 +3880,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4093,9 +3936,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4150,9 +3991,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4209,9 +4048,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4265,9 +4102,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4324,9 +4159,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4384,9 +4217,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4440,9 +4271,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4496,9 +4325,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4552,9 +4379,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4610,9 +4435,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4666,9 +4489,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4729,9 +4550,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4790,9 +4609,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4846,9 +4663,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4902,9 +4717,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -4962,9 +4775,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5021,9 +4832,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5077,9 +4886,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5135,9 +4942,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5191,9 +4996,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5250,9 +5053,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5310,9 +5111,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5369,9 +5168,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5428,9 +5225,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5486,9 +5281,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5544,9 +5337,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5605,9 +5396,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5662,9 +5451,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5723,9 +5510,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5779,9 +5564,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5871,9 +5654,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5930,9 +5711,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -5989,9 +5768,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6046,9 +5823,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6104,9 +5879,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6162,9 +5935,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6221,9 +5992,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6278,9 +6047,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6335,9 +6102,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6397,9 +6162,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6458,9 +6221,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6517,9 +6278,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6573,9 +6332,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6631,9 +6388,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6687,9 +6442,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6744,9 +6497,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6800,9 +6551,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6858,9 +6607,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6919,9 +6666,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -6977,9 +6722,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7037,9 +6780,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7096,9 +6837,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7152,9 +6891,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7209,9 +6946,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7269,9 +7004,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7326,9 +7059,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7387,9 +7118,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7447,9 +7176,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7504,9 +7231,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7567,9 +7292,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7631,9 +7354,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7687,9 +7408,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7744,9 +7463,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7800,9 +7517,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7905,9 +7620,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -7965,9 +7678,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8022,9 +7733,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8082,9 +7791,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8146,9 +7853,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8202,9 +7907,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8313,9 +8016,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8371,9 +8072,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8431,9 +8130,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8490,9 +8187,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8550,9 +8245,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8615,9 +8308,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8673,9 +8364,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8729,9 +8418,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8785,9 +8472,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8841,9 +8526,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8923,9 +8606,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -8983,9 +8664,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9042,9 +8721,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9101,9 +8778,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9158,9 +8833,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9214,9 +8887,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9293,9 +8964,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9349,9 +9018,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9406,9 +9073,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9463,9 +9128,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9520,9 +9183,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9581,9 +9242,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9638,9 +9297,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9698,9 +9355,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9757,9 +9412,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9816,9 +9469,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9875,9 +9526,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9933,9 +9582,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -9991,9 +9638,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10055,9 +9700,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10111,9 +9754,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10171,9 +9812,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10232,9 +9871,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10290,9 +9927,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10351,9 +9986,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10412,9 +10045,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10470,9 +10101,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10528,9 +10157,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10588,9 +10215,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10648,9 +10273,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10708,9 +10331,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10766,9 +10387,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10825,9 +10444,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10884,43 +10501,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 1
-    collectibleTitle: "\u041F\u0438\u0441\u044C\u043C\u043E \u043E\u0442 \u0442\u0435\u0442\u0443\u0448\u043A\u0438
-      \u041C\u0438\u0440\u0435\u043B\u044C"
-    collectibleContent: "\u041E\u0442: \u041C\u0438\u0440\u0435\u043B\u044C \u0414\u0435\u2019\u041B\u0430\u043C\u043E\r\n\u041A\u043E\u043C\u0443:
-      \u0418\u043B\u0430\u0439 \u0425\u0430\u0440\u0440\u0435\u0434\r\n\r\n\xAB\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439,
-      \u0434\u043E\u0440\u043E\u0433\u043E\u0439 \u043F\u043B\u0435\u043C\u044F\u043D\u043D\u0438\u043A.\r\n\r\n\u042F
-      \u043D\u0435 \u0445\u043E\u0447\u0443 \u0442\u044F\u043D\u0443\u0442\u044C
-      \u0441 \u044D\u0442\u0438\u043C, \u043D\u0435 \u043C\u043E\u0433\u0443 \u0434\u0435\u0440\u0436\u0430\u0442\u044C
-      \u0442\u0430\u043A\u043E\u0435 \u0432 \u0441\u0435\u0431\u0435\u2026 \u0422\u0432\u043E\u0438
-      \u0440\u043E\u0434\u0438\u0442\u0435\u043B\u0438 \u043C\u0435\u0440\u0442\u0432\u044B.
-      \u041E\u043D\u0438 \u043F\u043E\u0433\u0438\u0431\u043B\u0438 \u0432 \u0430\u0432\u0438\u0430\u043A\u0430\u0442\u0430\u0441\u0442\u0440\u043E\u0444\u0435.
-      \u042F \u0431\u044B\u043B\u0430 \u0443\u0434\u0438\u0432\u043B\u0435\u043D\u0430,
-      \u0447\u0442\u043E \u0442\u044B \u0431\u044B\u043B \u043D\u0435 \u0441 \u043D\u0438\u043C\u0438.
-      \u0421\u043D\u0430\u0447\u0430\u043B\u0430 \u044F \u043F\u043E\u0434\u0443\u043C\u0430\u043B\u0430,
-      \u0447\u0442\u043E \u0442\u044B \u0447\u0443\u0434\u043E\u043C \u0432\u044B\u0436\u0438\u043B,
-      \u043D\u043E \u0442\u044B \u0431\u044B\u043B \u0432 \u043E\u0441\u0442\u0440\u043E\u0439
-      \u0437\u043E\u043D\u0435 \u0422\u0435\u043C\u043D\u043E\u0433\u043E \u0434\u043D\u044F
-      \u0432 \u0442\u043E \u0432\u0440\u0435\u043C\u044F.\r\n\r\n\u041A\u043E\u0433\u0434\u0430
-      \u0440\u0435\u0439\u0441, \u0432 \u043A\u043E\u0442\u043E\u0440\u043E\u043C
-      \u043D\u0430\u0445\u043E\u0434\u0438\u043B\u0438\u0441\u044C \u0442\u0432\u043E\u0438
-      \u0440\u043E\u0434\u0438\u0442\u0435\u043B\u0438, \u043F\u043E\u0442\u0435\u0440\u044F\u043B
-      \u0441\u0432\u044F\u0437\u044C \u0441 \u0431\u0430\u0437\u043E\u0439, \u0438\u043C\u2026
-      \u043D\u0435 \u043F\u043E\u0432\u0435\u0437\u043B\u043E: \u043F\u0440\u043E\u0438\u0437\u043E\u0448\u043B\u043E
-      \u0441\u0442\u043E\u043B\u043A\u043D\u043E\u0432\u0435\u043D\u0438\u0435 \u0434\u0432\u0443\u0445
-      \u0440\u0435\u0439\u0441\u043E\u0432. \u0412\u0442\u043E\u0440\u043E\u0439
-      \u0440\u0435\u0439\u0441 \u0441\u043F\u0430\u0441\u0441\u044F, \u043F\u0440\u0438\u0437\u0435\u043C\u043B\u0438\u0432\u0448\u0438\u0441\u044C
-      \u043D\u0430 \u043E\u0441\u0442\u0440\u043E\u0432. \u041C\u043D\u0435 \u043E\u0447\u0435\u043D\u044C
-      \u0436\u0430\u043B\u044C, \u0447\u0442\u043E \u0442\u0430\u043A \u0432\u0441\u0435
-      \u0441\u043B\u0443\u0447\u0438\u043B\u043E\u0441\u044C\u2026 \u0418\u0437\u0432\u0438\u043D\u0438,
-      \u0447\u0442\u043E \u0441\u043E\u043E\u0431\u0449\u0438\u043B\u0430 \u043D\u0435
-      \u0441\u0440\u0430\u0437\u0443\u2026\r\n\r\n\u0417\u043D\u0430\u0439, \u0447\u0442\u043E
-      \u0435\u0441\u043B\u0438 \u0441\u0443\u0434\u044C\u0431\u0430 \u0441\u044B\u0433\u0440\u0430\u0435\u0442
-      \u0432 \u0442\u0432\u043E\u044E \u043F\u043E\u043B\u044C\u0437\u0443, \u0438
-      \u043C\u044B \u0441\u043C\u043E\u0436\u0435\u043C \u0432\u0441\u0442\u0440\u0435\u0442\u0438\u0442\u044C\u0441\u044F,
-      \u044F \u0432\u0441\u0435\u0433\u0434\u0430 \u0431\u0443\u0434\u0443 \u0440\u0430\u0434\u0430
-      \u0442\u0432\u043E\u0435\u043C\u0443 \u043F\u0440\u0438\u0445\u043E\u0434\u0443.\r\n\r\n\u0422\u0435\u0442\u0443\u0448\u043A\u0430
-      \u041C\u0438\u0440\u0430\xBB\r"
-    collectibleIcon: {fileID: 21300000, guid: a42c8ec0ff27c024fab127cffe55cef1, type: 3}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -10976,9 +10557,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11035,9 +10614,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11091,9 +10668,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11152,9 +10727,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11210,9 +10783,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11268,9 +10839,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11326,9 +10895,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11386,9 +10953,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11442,9 +11007,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11534,9 +11097,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11593,9 +11154,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11650,9 +11209,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11707,9 +11264,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11765,9 +11320,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11821,9 +11374,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11879,9 +11430,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11936,9 +11485,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -11994,9 +11541,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12054,9 +11599,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12111,9 +11654,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12167,9 +11708,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12224,9 +11763,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12281,9 +11818,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12341,9 +11876,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12401,9 +11934,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12461,9 +11992,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12519,9 +12048,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12577,9 +12104,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12634,9 +12159,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12691,9 +12214,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12749,9 +12270,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12808,9 +12327,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12869,9 +12386,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12928,9 +12443,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -12985,9 +12498,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13045,9 +12556,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13106,9 +12615,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13166,9 +12673,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13225,9 +12730,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13286,9 +12789,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13344,9 +12845,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13402,9 +12901,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13458,9 +12955,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13516,9 +13011,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13574,9 +13067,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13632,9 +13123,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13694,9 +13183,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13754,9 +13241,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13812,9 +13297,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13868,9 +13351,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13928,9 +13409,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -13986,9 +13465,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14046,9 +13523,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14102,9 +13577,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14165,9 +13638,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14222,9 +13693,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14278,9 +13747,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14337,9 +13804,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14393,9 +13858,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14489,9 +13952,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14549,9 +14010,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14610,9 +14069,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14668,9 +14125,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14727,9 +14182,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14787,9 +14240,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14846,9 +14297,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14905,9 +14354,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -14966,9 +14413,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15026,9 +14471,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15087,9 +14530,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15146,9 +14587,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15206,9 +14645,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15267,9 +14704,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15326,9 +14761,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15386,9 +14819,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15442,9 +14873,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15499,9 +14928,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15560,9 +14987,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15623,9 +15048,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15681,9 +15104,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15740,9 +15161,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15800,9 +15219,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15859,9 +15276,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15920,9 +15335,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -15985,9 +15398,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16044,9 +15455,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16101,9 +15510,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16162,9 +15569,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16221,9 +15626,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16277,9 +15680,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16338,9 +15739,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16400,9 +15799,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16464,9 +15861,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16520,9 +15915,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16576,9 +15969,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16633,9 +16024,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16691,9 +16080,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16747,9 +16134,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16806,9 +16191,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16862,9 +16245,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16918,9 +16299,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -16974,64 +16353,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 1
-    collectibleTitle: "\u0417\u0430\u043C\u0435\u0442\u043A\u0438 \u043F\u043E \u0441\u0431\u043E\u0440\u043A\u0435
-      \u0433\u0435\u043D\u0435\u0440\u0430\u0442\u043E\u0440\u043D\u043E\u0433\u043E
-      \u0443\u0437\u043B\u0430"
-    collectibleContent: "\u041F\u043E\u0434\u043C\u0430\u0441\u0442\u0435\u0440\u044C\u044F\u043C
-      \u0434\u043B\u044F \u0440\u0430\u0431\u043E\u0442\u044B:\r\n\r\n\u0426\u0435\u043F\u044C
-      \u0441\u043E\u0431\u0438\u0440\u0430\u0435\u0442\u0441\u044F \u043E\u0434\u043D\u043E\u043B\u0438\u043D\u0435\u0439\u043D\u043E,
-      \u0441 \u043F\u043E\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u043C
-      \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435\u043C \u043A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442\u043E\u0432.
-      \u041D\u0430\u043F\u043E\u043C\u0438\u043D\u0430\u044E:\r\n\r\n1. \u0418\u0441\u0442\u043E\u0447\u043D\u0438\u043A
-      \u043F\u0438\u0442\u0430\u043D\u0438\u044F (\u0430\u043A\u043A\u0443\u043C\u0443\u043B\u044F\u0442\u043E\u0440)
-      - \u043E\u043D \u0438\u0434\u0451\u0442 \u043F\u0435\u0440\u0432\u044B\u043C
-      \u0432 \u0446\u0435\u043F\u0438 \u0438 \u043F\u043E\u0434\u0430\u0451\u0442
-      \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u0435. \u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435
-      \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0441\u044F \u043E\u0442
-      \u043F\u043E\u043B\u043E\u0436\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0439
-      \u043A\u043B\u0435\u043C\u043C\u044B (+), \u0438\u043D\u0430\u0447\u0435 \u043F\u043E\u043B\u0435\u0442\u044F\u0442
-      \u0434\u0438\u043E\u0434\u044B. \r\n\r\n2. \u041F\u0440\u043E\u0432\u043E\u0434
-      \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F \u0434\u043B\u044F
-      \u0441\u043E\u0435\u0434\u0438\u043D\u0435\u043D\u0438\u044F \u043A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442\u043E\u0432.
-      \u0415\u0433\u043E \u0441\u043E\u043F\u0440\u043E\u0442\u0438\u0432\u043B\u0435\u043D\u0438\u0435\u043C
-      \u043C\u043E\u0436\u043D\u043E \u043F\u0440\u0435\u043D\u0435\u0431\u0440\u0435\u0447\u044C,
-      \u043D\u043E \u043A\u043E\u043D\u0442\u0430\u043A\u0442 \u0434\u043E\u043B\u0436\u0435\u043D
-      \u0431\u044B\u0442\u044C \u043C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u043E
-      \u043F\u043B\u043E\u0442\u043D\u044B\u043C \u0438 \u0447\u0438\u0441\u0442\u044B\u043C,
-      \u0438\u043D\u0430\u0447\u0435 \u0431\u0443\u0434\u0443\u0442 \u043F\u0430\u0434\u0435\u043D\u0438\u044F
-      \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u044F.\r\n\r\n3. \u0420\u0435\u0437\u0438\u0441\u0442\u043E\u0440
-      \u0440\u0430\u0437\u043C\u0435\u0449\u0430\u0435\u0442\u0441\u044F \u0441\u0440\u0430\u0437\u0443
-      \u043F\u043E\u0441\u043B\u0435 \u043F\u0440\u043E\u0432\u043E\u0434\u0430.
-      \u0415\u0433\u043E \u0437\u0430\u0434\u0430\u0447\u0430 - \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0438\u0442\u044C
-      \u0442\u043E\u043A. \u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435
-      \u043D\u0430\u0433\u0440\u0443\u0437\u043A\u0438 \u043D\u0430\u043F\u0440\u044F\u043C\u0443\u044E
-      \u043D\u0435\u0434\u043E\u043F\u0443\u0441\u0442\u0438\u043C\u043E, \u0438\u043D\u0430\u0447\u0435
-      \u043F\u0435\u0440\u0435\u0433\u0440\u0435\u0435\u0442\u0441\u044F \u0438\u0441\u0442\u043E\u0447\u043D\u0438\u043A
-      \u0438\u043B\u0438 \u0441\u0433\u043E\u0440\u0438\u0442 \u043F\u0440\u0435\u0434\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435\u043B\u044C.\r\n\r\n4.
-      \u0412\u044B\u043A\u043B\u044E\u0447\u0430\u0442\u0435\u043B\u044C \u0441\u0442\u0430\u0432\u0438\u0442\u0441\u044F
-      \u0432 \u0441\u0430\u043C\u043E\u043C \u043A\u043E\u043D\u0446\u0435, \u043F\u0435\u0440\u0435\u0434
-      \u0441\u043E\u0435\u0434\u0438\u043D\u0435\u043D\u0438\u0435\u043C \u0441 \u043C\u0438\u043D\u0443\u0441\u043E\u0432\u043E\u0439
-      \u043A\u043B\u0435\u043C\u043C\u043E\u0439 (\u2013). \u041E\u043D \u0434\u043E\u043B\u0436\u0435\u043D
-      \u0440\u0430\u0437\u0440\u044B\u0432\u0430\u0442\u044C \u0432\u0441\u044E \u0446\u0435\u043F\u044C,
-      \u0430 \u043D\u0435 \u043E\u0442\u0434\u0435\u043B\u044C\u043D\u0443\u044E
-      \u0432\u0435\u0442\u043A\u0443. \u041F\u0440\u0438 \u043E\u0442\u043A\u043B\u044E\u0447\u0451\u043D\u043D\u043E\u043C
-      \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0438 \u2014 \u043D\u0438
-      \u043E\u0434\u0438\u043D \u044D\u043B\u0435\u043C\u0435\u043D\u0442 \u043D\u0435
-      \u0434\u043E\u043B\u0436\u0435\u043D \u043E\u0441\u0442\u0430\u0432\u0430\u0442\u044C\u0441\u044F
-      \u043F\u043E\u0434 \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u0435\u043C.\r\n\r\n\u0412\u0430\u0436\u043D\u043E:\r\n\r\n\u2022
-      \u0411\u0435\u0437 \u0440\u0435\u0437\u0438\u0441\u0442\u043E\u0440\u0430 \u0446\u0435\u043F\u044C
-      \u043D\u0435 \u0441\u0434\u0430\u0432\u0430\u0442\u044C.\r\n\u2022 \u0412\u044B\u043A\u043B\u044E\u0447\u0430\u0442\u0435\u043B\u044C
-      \u043D\u0435 \u0434\u043E\u043B\u0436\u0435\u043D \u0431\u044B\u0442\u044C
-      \u0434\u0435\u043A\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u044B\u043C -
-      \u043E\u043D \u0440\u0430\u0437\u0440\u044B\u0432\u0430\u0435\u0442 \u0446\u0435\u043F\u044C
-      \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E.\r\n\u2022 \u041F\u043E\u043B\u044F\u0440\u043D\u043E\u0441\u0442\u044C
-      \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u0430.\r\n\u2022
-      \u041F\u043E\u0441\u043B\u0435 \u0441\u0431\u043E\u0440\u043A\u0438 \u043F\u0440\u043E\u0432\u0435\u0440\u044C
-      \u0442\u0435\u0441\u0442\u0435\u0440\u043E\u043C: \u0442\u043E\u043A \u0434\u043E\u043B\u0436\u0435\u043D
-      \u0438\u0434\u0442\u0438 \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u043E\u0441\u043B\u0435
-      \u0437\u0430\u043C\u044B\u043A\u0430\u043D\u0438\u044F.\r\n\r\n\u041F\u043E\u0434\u043F\u0438\u0441\u044C:
-      \u041C\u0430\u0441\u0442\u0435\u0440 \u0413.\u0425.\r"
-    collectibleIcon: {fileID: 21300000, guid: a42c8ec0ff27c024fab127cffe55cef1, type: 3}
+    collectibleItem: {fileID: 0}
     showItemNotification: 1
     itemName: "\u0417\u0430\u043C\u0435\u0442\u043A\u0438 \u043F\u043E \u0441\u0431\u043E\u0440\u043A\u0435
       \u0433\u0435\u043D..."
@@ -17087,9 +16409,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17146,9 +16466,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17206,9 +16524,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17264,9 +16580,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17322,9 +16636,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17379,9 +16691,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17438,9 +16748,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17496,9 +16804,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17555,9 +16861,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17611,9 +16915,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17690,9 +16992,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17748,9 +17048,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17807,9 +17105,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17865,9 +17161,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17925,9 +17219,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -17986,9 +17278,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18046,9 +17336,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18106,9 +17394,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18164,9 +17450,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18220,9 +17504,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18298,9 +17580,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18355,9 +17635,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18411,9 +17689,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18468,9 +17744,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18526,9 +17800,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18585,9 +17857,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18643,9 +17913,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18700,9 +17968,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18757,9 +18023,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18818,9 +18082,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18874,9 +18136,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18931,9 +18191,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -18990,9 +18248,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 
@@ -19049,9 +18305,7 @@ MonoBehaviour:
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
-    collectibleTitle: 
-    collectibleContent: 
-    collectibleIcon: {fileID: 0}
+    collectibleItem: {fileID: 0}
     showItemNotification: 0
     itemName: 
     itemType: 

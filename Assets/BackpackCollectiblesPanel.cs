@@ -155,13 +155,17 @@ public class BackpackCollectiblesPanel : MonoBehaviour
     // COLLECTIBLE OVERVIEW
     // ============================================================
 
-    public void OpenCollectibleOverview(Sprite image, string title, string description)
+    public void OpenCollectibleOverview(
+    CollectibleItemBase collectible)
     {
         Debug.Log("OPEN COLLECTIBLE OVERVIEW");
 
         if (!isOpen)
         {
-            Debug.LogWarning("Collectibles panel is not open.");
+            Debug.LogWarning(
+                "Collectibles panel is not open."
+            );
+
             return;
         }
 
@@ -175,13 +179,19 @@ public class BackpackCollectiblesPanel : MonoBehaviour
             return;
         }
 
+        if (collectible == null)
+        {
+            Debug.LogWarning(
+                "Collectible is null.",
+                this
+            );
+
+            return;
+        }
+
         HideCollectiblesSection();
 
-        collectibleOverview.Show(
-            image,
-            title,
-            description
-        );
+        collectibleOverview.Show(collectible);
     }
 
     public void CloseCollectibleOverview()

@@ -1126,9 +1126,15 @@ public class DialogueManager : MonoBehaviour
         }
 
         // Просмотр коллекционного предмета (письмо и т. д.)
-        if (line.showCollectibleView && collectiblePanel != null)
+        if (line.collectibleItem != null)
         {
-            ShowCollectibleView(line.collectibleTitle, line.collectibleContent, line.collectibleIcon);
+            CollectibleManager.Instance.RegisterCollectible(line.collectibleItem);
+        }
+
+        if (line.showCollectibleView &&
+            line.collectibleItem != null)
+        {
+            ShowCollectibleView(line.collectibleItem);
         }
 
         if (extraActions != null && extraActions.showInteractionPoints)
@@ -1225,6 +1231,27 @@ public class DialogueManager : MonoBehaviour
 
         }
         illustrationTransitionCompleted = false;
+    }
+
+    private void RegisterCollectible(
+    CollectibleItemBase collectible)
+    {
+        if (collectible == null)
+            return;
+
+        if (CollectibleManager.Instance == null)
+        {
+            Debug.LogWarning(
+                "CollectibleManager.Instance не найден.",
+                this
+            );
+
+            return;
+        }
+
+        CollectibleManager.Instance.RegisterCollectible(
+            collectible
+        );
     }
 
     private void StartTypewriter(string line)
@@ -1903,27 +1930,60 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private GameObject[] characterObjects;
 
-    private void ShowCollectibleView(string title, string content, Sprite icon)
+    private void ShowCollectibleView(CollectibleItemBase collectible)
     {
+        if (collectible == null)
+        {
+            Debug.LogWarning(
+                "ShowCollectibleView: collectible == null.",
+                this
+            );
+
+            return;
+        }
+
+        if (collectiblePanel == null ||
+            collectibleCanvasGroup == null)
+        {
+            Debug.LogWarning(
+                "ShowCollectibleView: collectible UI не настроен.",
+                this
+            );
+
+            return;
+        }
+
         isCollectibleOpen = true;
-        // 1️⃣ Скрываем диалог с анимацией, а после запускаем открытие коллекции
+
+        // 1. Скрываем диалог с анимацией.
         HideDialoguePanel(() =>
         {
-            // 2️⃣ Подготовка панели коллекции
+            // 2. Подготавливаем панель.
             collectiblePanel.SetActive(true);
+
+            collectibleCanvasGroup.DOKill();
+
             collectibleCanvasGroup.alpha = 0f;
             collectibleCanvasGroup.interactable = false;
             collectibleCanvasGroup.blocksRaycasts = false;
 
-            // 3️⃣ Устанавливаем содержимое
-            collectibleTitleText.text = title;
-            collectibleContentText.text = content;
-            collectibleIconImage.sprite = icon;
+            // 3. Получаем данные непосредственно из ScriptableObject.
+            collectibleTitleText.text = collectible.GetTitle();
+            collectibleContentText.text = collectible.GetContent();
+            collectibleIconImage.sprite = collectible.GetIcon();
 
-            // 5️⃣ Плавное появление текста, иконки и крестика с задержкой
+            collectibleIconImage.enabled =
+                collectible.GetIcon() != null;
+
+            // 4. Показываем панель.
             DOTween.Sequence()
-                .AppendInterval(0.25f) // задержка, чтобы скрытие диалога успело завершиться
-                .Append(collectibleCanvasGroup.DOFade(1f, 0.25f))
+                .AppendInterval(0.25f)
+                .Append(
+                    collectibleCanvasGroup
+                        .DOFade(1f, 0.25f)
+                        .SetEase(Ease.OutQuad)
+                )
+                .SetUpdate(true)
                 .OnComplete(() =>
                 {
                     collectibleCanvasGroup.interactable = true;

@@ -5,8 +5,11 @@ public class ItemManager : MonoBehaviour
 {
     public static ItemManager Instance;
 
-    private HashSet<string> collectedItemNames = new HashSet<string>();
-    public List<ItemNotification> collectedItems = new List<ItemNotification>();
+    private HashSet<string> collectedItemNames =
+        new HashSet<string>();
+
+    public List<ItemNotification> collectedItems =
+        new List<ItemNotification>();
 
     [SerializeField] private ItemAddedUI itemUI;
 
@@ -15,7 +18,8 @@ public class ItemManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // сохраняется между сценами
+
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -25,23 +29,46 @@ public class ItemManager : MonoBehaviour
 
     public void AddItem(ItemNotification item)
     {
+        if (item == null)
+        {
+            Debug.LogWarning(
+                "ItemManager.AddItem: item == null.",
+                this
+            );
+
+            return;
+        }
+
         if (!collectedItemNames.Contains(item.itemName))
         {
             collectedItemNames.Add(item.itemName);
             collectedItems.Add(item);
 
-            Debug.Log("Предмет добавлен: " + item.itemName);
+            Debug.Log(
+                "Предмет добавлен: " + item.itemName
+            );
+
+            // -----------------------------------------------------
+            // ITEM NOTIFICATION
+            // -----------------------------------------------------
 
             if (itemUI != null)
             {
                 itemUI.ShowNotificationDirect(item);
             }
 
-            // Здесь можно сделать запись в сохранение
+            // -----------------------------------------------------
+            // COLLECTIBLE
+            // -----------------------------------------------------
+
+            // Здесь позже подключим сохранение.
         }
         else
         {
-            Debug.Log("Этот предмет уже был найден: " + item.itemName);
+            Debug.Log(
+                "Этот предмет уже был найден: " +
+                item.itemName
+            );
         }
     }
 

@@ -10,30 +10,46 @@ public class CollectibleTextItem : CollectibleItemBase
     public Sprite icon;
 
     [Header("Russian")]
-    [TextArea] public string titleRu;
-    [TextArea(5, 25)] public string contentRu;
+    [TextArea]
+    public string titleRu;
+
+    [TextArea(5, 25)]
+    public string contentRu;
 
     [Header("English")]
-    [TextArea] public string titleEn;
-    [TextArea(5, 25)] public string contentEn;
+    [TextArea]
+    public string titleEn;
 
-    private void OnEnable()
+    [TextArea(5, 25)]
+    public string contentEn;
+
+    public override Sprite GetIcon()
     {
-        type = CollectibleType.Note; // или Document — выбираешь в инспекторе при желании
+        return icon;
     }
 
-    public string GetTitle()
+    public override string GetTitle()
     {
-        if (LanguageManager.CurrentLanguage == Language.English && !string.IsNullOrEmpty(titleEn))
+        if (
+            LanguageManager.CurrentLanguage == Language.English &&
+            !string.IsNullOrEmpty(titleEn)
+        )
+        {
             return titleEn;
+        }
 
         return titleRu;
     }
 
-    public string GetContent()
+    public override string GetContent()
     {
-        if (LanguageManager.CurrentLanguage == Language.English && !string.IsNullOrEmpty(contentEn))
+        if (
+            LanguageManager.CurrentLanguage == Language.English &&
+            !string.IsNullOrEmpty(contentEn)
+        )
+        {
             return contentEn;
+        }
 
         return contentRu;
     }

@@ -156,7 +156,8 @@ public class BackpackCollectiblesPanel : MonoBehaviour
     // ============================================================
 
     public void OpenCollectibleOverview(
-    CollectibleItemBase collectible)
+    CollectibleItemBase collectible,
+    GameObject collectibleVisual)
     {
         Debug.Log("OPEN COLLECTIBLE OVERVIEW");
 
@@ -191,7 +192,10 @@ public class BackpackCollectiblesPanel : MonoBehaviour
 
         HideCollectiblesSection();
 
-        collectibleOverview.Show(collectible);
+        collectibleOverview.Show(
+            collectible,
+            collectibleVisual
+        );
     }
 
     public void CloseCollectibleOverview()

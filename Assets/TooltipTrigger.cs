@@ -9,7 +9,6 @@ public class TooltipTrigger : MonoBehaviour,
     [Header("Tooltip")]
     [SerializeField] private Tooltip tooltip;
 
-
     [Header("Overview")]
     [SerializeField] private bool canOpenWeaponOverview;
     [SerializeField] private bool canOpenMeleeOverview;
@@ -22,19 +21,21 @@ public class TooltipTrigger : MonoBehaviour,
 
     [SerializeField] private TMPro.TextMeshProUGUI damageText;
 
-
     [Header("Collectible")]
     [SerializeField] private bool canOpenCollectibleOverview;
     [SerializeField] private CollectibleTooltip collectibleTooltip;
 
     [SerializeField] private CollectibleTextItem collectibleItem;
 
+    [Tooltip("Готовый визуальный объект рамки этого коллекционного предмета.")]
+    [SerializeField] private GameObject collectibleItemContainer;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (canOpenCollectibleOverview)
         {
-            if (collectibleTooltip != null && collectibleItem != null)
+            if (collectibleTooltip != null &&
+                collectibleItem != null)
             {
                 collectibleTooltip.Show(
                     collectibleItem.icon,
@@ -52,10 +53,8 @@ public class TooltipTrigger : MonoBehaviour,
             tooltip.Show();
     }
 
-
     public void OnPointerExit(PointerEventData eventData)
     {
-        // Коллекционный предмет использует собственный tooltip.
         if (canOpenCollectibleOverview)
         {
             if (collectibleTooltip != null)
@@ -68,13 +67,15 @@ public class TooltipTrigger : MonoBehaviour,
             tooltip.Hide();
     }
 
-
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button != PointerEventData.InputButton.Left)
             return;
 
-        // Коллекционный предмет
+        // =========================================================
+        // COLLECTIBLE
+        // =========================================================
+
         if (canOpenCollectibleOverview)
         {
             if (collectibleTooltip != null)
@@ -91,13 +92,17 @@ public class TooltipTrigger : MonoBehaviour,
             }
 
             BackpackCollectiblesPanel.Instance.OpenCollectibleOverview(
-                collectibleItem
+                collectibleItem,
+                collectibleItemContainer
             );
 
             return;
         }
 
-        // Оружие
+        // =========================================================
+        // WEAPON
+        // =========================================================
+
         if (canOpenWeaponOverview)
         {
             if (weaponOverview != null)
@@ -106,7 +111,10 @@ public class TooltipTrigger : MonoBehaviour,
             return;
         }
 
-        // Холодное оружие
+        // =========================================================
+        // MELEE
+        // =========================================================
+
         if (canOpenMeleeOverview)
         {
             if (meleeOverview != null)
@@ -114,49 +122,45 @@ public class TooltipTrigger : MonoBehaviour,
         }
     }
 
-
     private void UpdateDamageDisplay()
     {
         if (damageText == null)
             return;
 
-
-        // Дальнобойное оружие.
-        if (canOpenWeaponOverview && overviewData != null)
+        if (canOpenWeaponOverview &&
+            overviewData != null)
         {
             int damage = overviewData.damage;
 
             if (AccountManager.Instance != null)
             {
                 damage =
-                    AccountManager.Instance.GetScaledWeaponDamage(damage);
+                    AccountManager.Instance
+                        .GetScaledWeaponDamage(damage);
             }
 
             damageText.text = damage.ToString();
             return;
         }
 
-
-        // Холодное оружие.
-        if (canOpenMeleeOverview && meleeOverviewData != null)
+        if (canOpenMeleeOverview &&
+            meleeOverviewData != null)
         {
             int damage = meleeOverviewData.damage;
 
             if (AccountManager.Instance != null)
             {
                 damage =
-                    AccountManager.Instance.GetScaledWeaponDamage(damage);
+                    AccountManager.Instance
+                        .GetScaledWeaponDamage(damage);
             }
 
             damageText.text = damage.ToString();
             return;
         }
 
-
-        // Если это не оружие.
         damageText.text = "";
     }
-
 
     public void SetTooltip(Tooltip tooltip)
     {

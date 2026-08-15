@@ -13,8 +13,13 @@ public class BackpackSectionController : MonoBehaviour
     [SerializeField] private CanvasGroup[] sections;
 
     [Header("Tabs")]
-    [Tooltip("Кнопки вкладок в том же порядке, что и секции.")]
-    [SerializeField] private BackpackTabButton[] tabs;
+    [SerializeField] private GameObject russianTabsRoot;
+    [SerializeField] private GameObject englishTabsRoot;
+
+    [SerializeField] private BackpackTabButton[] russianTabs;
+    [SerializeField] private BackpackTabButton[] englishTabs;
+
+    private BackpackTabButton[] tabs;
 
     [Header("Initial Section")]
     [Tooltip("0 — Дневник, 1 — Коллекции, 2 — Вещи, 3 - Крафтинг, 4 - Сюжет")]
@@ -58,6 +63,7 @@ public class BackpackSectionController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        SetupLanguageTabs();
         if (!ValidateReferences())
         {
             enabled = false;
@@ -115,6 +121,78 @@ public class BackpackSectionController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             SelectNextSection();
+        }
+    }
+
+    private void SetupLanguageTabs()
+    {
+        bool isEnglish =
+            LanguageManager.CurrentLanguage == Language.English;
+
+        if (russianTabsRoot != null)
+            russianTabsRoot.SetActive(!isEnglish);
+
+        if (englishTabsRoot != null)
+            englishTabsRoot.SetActive(isEnglish);
+
+        tabs = isEnglish
+            ? englishTabs
+            : russianTabs;
+    }
+
+    private void OnEnable()
+    {
+        LanguageManager.OnLanguageChanged += OnLanguageChanged;
+    }
+
+    private void OnDisable()
+    {
+        LanguageManager.OnLanguageChanged -= OnLanguageChanged;
+    }
+
+    private void OnLanguageChanged(Language language)
+    {
+        RefreshLanguageTabs();
+    }
+
+    private void RefreshLanguageTabs()
+    {
+        bool isEnglish =
+            LanguageManager.CurrentLanguage == Language.English;
+
+        if (russianTabsRoot != null)
+            russianTabsRoot.SetActive(!isEnglish);
+
+        if (englishTabsRoot != null)
+            englishTabsRoot.SetActive(isEnglish);
+
+        tabs = isEnglish
+            ? englishTabs
+            : russianTabs;
+
+        if (tabs == null ||
+            tabs.Length != sections.Length)
+        {
+            Debug.LogError(
+                "BackpackSectionController: количество вкладок " +
+                "не совпадает с количеством секций.",
+                this
+            );
+
+            return;
+        }
+
+        for (int i = 0; i < tabs.Length; i++)
+        {
+            tabs[i].Initialize(
+                this,
+                i
+            );
+
+            tabs[i].SetSelected(
+                i == currentSectionIndex,
+                true
+            );
         }
     }
 
@@ -378,25 +456,32 @@ public class BackpackSectionController : MonoBehaviour
         {
             Debug.LogError(
                 "BackpackSectionController: массив Sections не заполнен.",
-                this);
+                this
+            );
 
             return false;
         }
 
-        if (tabs == null || tabs.Length == 0)
+        if (russianTabs == null ||
+            russianTabs.Length != sections.Length)
         {
             Debug.LogError(
-                "BackpackSectionController: массив Tabs не заполнен.",
-                this);
+                "BackpackSectionController: количество русских вкладок " +
+                "должно совпадать с количеством секций.",
+                this
+            );
 
             return false;
         }
 
-        if (sections.Length != tabs.Length)
+        if (englishTabs == null ||
+            englishTabs.Length != sections.Length)
         {
             Debug.LogError(
-                "BackpackSectionController: количество секций и вкладок должно совпадать.",
-                this);
+                "BackpackSectionController: количество английских вкладок " +
+                "должно совпадать с количеством секций.",
+                this
+            );
 
             return false;
         }
@@ -405,8 +490,10 @@ public class BackpackSectionController : MonoBehaviour
             defaultSectionIndex >= sections.Length)
         {
             Debug.LogError(
-                "BackpackSectionController: Default Section Index вне диапазона.",
-                this);
+                "BackpackSectionController: Default Section Index " +
+                "вне диапазона.",
+                this
+            );
 
             return false;
         }
@@ -416,17 +503,32 @@ public class BackpackSectionController : MonoBehaviour
             if (sections[i] == null)
             {
                 Debug.LogError(
-                    $"BackpackSectionController: секция с индексом {i} не назначена.",
-                    this);
+                    $"BackpackSectionController: секция " +
+                    $"с индексом {i} не назначена.",
+                    this
+                );
 
                 return false;
             }
 
-            if (tabs[i] == null)
+            if (russianTabs[i] == null)
             {
                 Debug.LogError(
-                    $"BackpackSectionController: вкладка с индексом {i} не назначена.",
-                    this);
+                    $"BackpackSectionController: русская вкладка " +
+                    $"с индексом {i} не назначена.",
+                    this
+                );
+
+                return false;
+            }
+
+            if (englishTabs[i] == null)
+            {
+                Debug.LogError(
+                    $"BackpackSectionController: английская вкладка " +
+                    $"с индексом {i} не назначена.",
+                    this
+                );
 
                 return false;
             }

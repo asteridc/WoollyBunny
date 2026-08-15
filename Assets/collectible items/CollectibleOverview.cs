@@ -10,6 +10,7 @@ public class CollectibleOverview : MonoBehaviour
 
     [Header("Content")]
     [SerializeField] private Image collectibleImage;
+    [SerializeField] private GameObject collectibleImageContainer;
     [SerializeField] private TextMeshProUGUI titleText;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private RectTransform contentRect;
@@ -37,7 +38,9 @@ public class CollectibleOverview : MonoBehaviour
         rect.localScale = Vector3.one * startScale;
     }
 
-    public void Show(CollectibleItemBase collectible)
+    public void Show(
+    CollectibleItemBase collectible,
+    GameObject sourceVisual)
     {
         if (collectible == null)
         {
@@ -57,7 +60,56 @@ public class CollectibleOverview : MonoBehaviour
         rect.DOKill();
 
         // =========================================================
-        // CONTENT
+        // COLLECTIBLE VISUAL
+        // =========================================================
+
+        if (collectibleImageContainer != null)
+        {
+            // Удаляем предыдущий визуальный объект.
+            for (
+                int i = collectibleImageContainer.transform.childCount - 1;
+                i >= 0;
+                i--
+            )
+            {
+                Destroy(
+                    collectibleImageContainer.transform
+                        .GetChild(i)
+                        .gameObject
+                );
+            }
+
+            if (sourceVisual != null)
+            {
+                GameObject clone = Instantiate(
+                    sourceVisual,
+                    collectibleImageContainer.transform
+                );
+
+                clone.SetActive(true);
+
+                RectTransform cloneRect =
+                    clone.GetComponent<RectTransform>();
+
+                if (cloneRect != null)
+                {
+                    cloneRect.localPosition = Vector3.zero;
+                    cloneRect.localRotation = Quaternion.identity;
+                    cloneRect.localScale = Vector3.one;
+                }
+            }
+            else
+            {
+                Debug.LogWarning(
+                    $"Для collectible '{collectible.name}' " +
+                    "не передан sourceVisual.",
+                    this
+                );
+            }
+        }
+
+        // =========================================================
+        // TEXT / IMAGE
         // =========================================================
 
         Sprite icon = collectible.GetIcon();

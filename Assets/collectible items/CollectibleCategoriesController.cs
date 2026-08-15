@@ -19,7 +19,9 @@ public class CollectibleCategoriesController : MonoBehaviour
     private class Category
     {
         [Header("Category")]
-        public string title;
+        public string titleRu;
+
+        public string titleEn;
 
         public CollectibleCategory category;
 
@@ -501,6 +503,14 @@ public class CollectibleCategoriesController : MonoBehaviour
             return;
         }
 
-        categoryTitle.text = category.title;
+        if (LanguageManager.CurrentLanguage == Language.English)
+        {
+            categoryTitle.text = category.titleEn;
+            return;
+        }
+        else
+        {
+            categoryTitle.text = category.titleRu;
+        }
     }
 }

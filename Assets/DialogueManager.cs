@@ -181,6 +181,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] public LocalizedStory storySelector;
     public static bool IsReady;
 
+    private bool goingToNextChapter = false;
 
     public bool IsDialogueTransitioning { get; private set; }
 
@@ -2370,6 +2371,11 @@ public class DialogueManager : MonoBehaviour
     {
         StartCoroutine(OnContinueToNextChapter());
     }
+    public void OnContinueToNextChapterButton()
+    {
+        goingToNextChapter = true;
+        StartCoroutine(OnContinueToNextChapter());
+    }
 
     private IEnumerator ShowEndOfChapterRoutine()
     {
@@ -2411,7 +2417,15 @@ public class DialogueManager : MonoBehaviour
 
         float fadeDurationToMenu = 6f; // другая длительность для этой анимации
         yield return blackOverlay.DOFade(1f, fadeDurationToMenu).WaitForCompletion();
-        SceneManager.LoadScene("woollybunny_PC");
+        if (goingToNextChapter)
+        {
+            goingToNextChapter = false;
+            SceneManager.LoadScene("Chapter_02");
+        }
+        else 
+        { 
+            SceneManager.LoadScene("woollybunny_PC"); 
+        }
     }
 
     public DialogueSaveData CaptureDialogueState()

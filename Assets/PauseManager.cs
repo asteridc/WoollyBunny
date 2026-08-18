@@ -186,6 +186,16 @@ public class PauseManager : MonoBehaviour
         SwitchPanel(mainPanel, savePanel);
     }
 
+    public void CloseSettings()
+    {
+        SwitchPanel(settingsPanel, mainPanel);
+    }
+
+    public void CloseSave()
+    {
+        SwitchPanel(savePanel, mainPanel);
+    }
+
     private void SwitchPanel(CanvasGroup from, CanvasGroup to)
     {
         if (from == to || isAnimating) return;
@@ -300,7 +310,7 @@ public class PauseManager : MonoBehaviour
         StartCoroutine(Fade(exitConfirmPanel, 0f, 1f, confirmFadeDuration));
     }
 
-    private void HideExitConfirm()
+    public void HideExitConfirm()
     {
         isExitConfirmActive = false;
 
@@ -313,7 +323,7 @@ public class PauseManager : MonoBehaviour
         mainPanel.blocksRaycasts = true;
     }
 
-    private void ConfirmExit()
+    public void ConfirmExit()
     {
         Time.timeScale = 1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene("woollybunny_PC");

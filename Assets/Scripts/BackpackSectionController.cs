@@ -196,7 +196,7 @@ public class BackpackSectionController : MonoBehaviour
         }
     }
 
-    private void HandleEscape()
+    public void HandleEscape()
     {
         if (!Input.GetKeyDown(KeyCode.Escape))
             return;
@@ -216,7 +216,7 @@ public class BackpackSectionController : MonoBehaviour
         CloseBackpack();
     }
 
-    private void HandleSectionHotkeys()
+    public void HandleSectionHotkeys()
     {
         int targetIndex = -1;
 
@@ -252,7 +252,7 @@ public class BackpackSectionController : MonoBehaviour
         SelectSectionInstant(targetIndex);
     }
 
-    private void CloseBackpack()
+    public void CloseBackpack()
     {
         justClosedBackpack = true;
 

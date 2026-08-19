@@ -27,8 +27,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -82,8 +82,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -136,8 +136,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -190,8 +190,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -241,11 +241,11 @@ MonoBehaviour:
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: 947da9e569c0a434ead6f8ffa4ac2f97, type: 3}
+    backgroundId: i1
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -301,7 +301,7 @@ MonoBehaviour:
     backgroundTransition: 0
     characterSprite: {fileID: 0}
     backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundId: i1
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -351,11 +351,11 @@ MonoBehaviour:
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -568,11 +568,11 @@ MonoBehaviour:
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: f98284294cbfb204aabf44d331779355, type: 3}
+    backgroundId: i2
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -626,7 +626,7 @@ MonoBehaviour:
     backgroundTransition: 0
     characterSprite: {fileID: 0}
     backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundId: i2
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -681,7 +681,7 @@ MonoBehaviour:
     backgroundTransition: 0
     characterSprite: {fileID: 0}
     backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundId: i2
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -731,11 +731,11 @@ MonoBehaviour:
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -839,7 +839,7 @@ MonoBehaviour:
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
+    changeBackground: 1
     backgroundTransition: 0
     characterSprite: {fileID: 0}
     backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
@@ -2933,9 +2933,8 @@ MonoBehaviour:
     showCollectibleView: 0
     collectibleItem: {fileID: 11400000, guid: 2c7a72403ab58104990635bc5f9d39be, type: 2}
     showItemNotification: 1
-    itemName: World Map
-    itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
-      \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
+    itemName: New World Map
+    itemType: Collectible Item
     itemRarity: 3
     itemIcon: {fileID: 21300000, guid: 97bf93ec83c026947b0335bd13368724, type: 3}
     showStoryNotification: 0
@@ -3619,19 +3618,19 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "\u2026?"
     speakerName: Eli
-    characterName: "\u0418\u043B\u0430\u0439"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: 6f55c789aa1d3ca4b875296f2635806f, type: 3}
+    backgroundId: i3
     isOnRight: 0
     flipSpeakerImage: 0
-    listenerCharacterName: "\u041A\u0435\u0439\u043D"
-    isListenerOnRight: 1
+    listenerCharacterName: 
+    isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
     collectibleItem: {fileID: 0}
@@ -3680,8 +3679,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: 6f55c789aa1d3ca4b875296f2635806f, type: 3}
+    backgroundId: i3
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -3734,8 +3733,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: 6f55c789aa1d3ca4b875296f2635806f, type: 3}
+    backgroundId: i3
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -3788,8 +3787,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: 6f55c789aa1d3ca4b875296f2635806f, type: 3}
+    backgroundId: i3
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -3835,18 +3834,18 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: Kh-
     speakerName: Kane
-    characterName: "\u041A\u0435\u0439\u043D"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: 6f55c789aa1d3ca4b875296f2635806f, type: 3}
+    backgroundId: i3
     isOnRight: 1
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    listenerCharacterName: 
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
@@ -3889,18 +3888,18 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "Eli\u2026 kill that rat\u2026"
     speakerName: Kane
-    characterName: "\u041A\u0435\u0439\u043D"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: 6f55c789aa1d3ca4b875296f2635806f, type: 3}
+    backgroundId: i3
     isOnRight: 1
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    listenerCharacterName: 
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
@@ -3947,11 +3946,11 @@ MonoBehaviour:
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -4006,8 +4005,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -4060,8 +4059,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -4114,8 +4113,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -4161,18 +4160,18 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "Who were you planning to \u201Cdeal with\u201D silently?"
     speakerName: Peacekeeper
-    characterName: "\u041C\u0422 \u0410\u0441\u0441\u0430\u0441\u0438\u043D"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
-    backgroundId: 0
+    backgroundSprite: {fileID: 21300000, guid: a05442fe204633a48804ded127b59875, type: 3}
+    backgroundId: i0
     isOnRight: 1
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    listenerCharacterName: 
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
@@ -4219,8 +4218,8 @@ MonoBehaviour:
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
     backgroundSprite: {fileID: 21300000, guid: 9444dc73ca7df3543a6aa9b3fe83968a, type: 3}
     backgroundId: 0
@@ -10456,18 +10455,18 @@ MonoBehaviour:
   - text: A long time ago, they were going to Australia. An adventure trip. Risk
       was just part of who they were.
     speakerName: Eli
-    characterName: "\u0418\u043B\u0430\u0439"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
-    backgroundId: 2
+    backgroundSprite: {fileID: 21300000, guid: 7a066a1cd01f3f047958caa2d79d27a3, type: 3}
+    backgroundId: i4
     isOnRight: 0
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    listenerCharacterName: 
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
@@ -10510,18 +10509,18 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "I stayed home. They said they\u2019d be back soon."
     speakerName: Eli
-    characterName: "\u0418\u043B\u0430\u0439"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
-    backgroundId: 2
+    backgroundSprite: {fileID: 21300000, guid: 7a066a1cd01f3f047958caa2d79d27a3, type: 3}
+    backgroundId: i4
     isOnRight: 0
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    listenerCharacterName: 
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
@@ -10571,8 +10570,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
-    backgroundId: 2
+    backgroundSprite: {fileID: 21300000, guid: 7a066a1cd01f3f047958caa2d79d27a3, type: 3}
+    backgroundId: i4
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -10618,18 +10617,18 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: That was the night it started. Dark Day. Electrical surges. Riots. Terror.
     speakerName: Eli
-    characterName: "\u0418\u043B\u0430\u0439"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
-    backgroundId: 2
+    backgroundSprite: {fileID: 21300000, guid: 3e3814971fa6b33448dd69af1b9f6a1b, type: 3}
+    backgroundId: i5
     isOnRight: 0
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    listenerCharacterName: 
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
@@ -10673,18 +10672,18 @@ MonoBehaviour:
   - text: Their flight went down. Two planes collided midair - and one of them was
       theirs.
     speakerName: Eli
-    characterName: "\u0418\u043B\u0430\u0439"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
-    backgroundId: 2
+    backgroundSprite: {fileID: 21300000, guid: 3e3814971fa6b33448dd69af1b9f6a1b, type: 3}
+    backgroundId: i5
     isOnRight: 0
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    listenerCharacterName: 
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
@@ -10727,18 +10726,18 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: It happened off the coast. They almost made it to the runway.
     speakerName: Eli
-    characterName: "\u0418\u043B\u0430\u0439"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
-    backgroundId: 2
+    backgroundSprite: {fileID: 21300000, guid: 3e3814971fa6b33448dd69af1b9f6a1b, type: 3}
+    backgroundId: i5
     isOnRight: 0
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0425\u0430\u043D\u043D\u0430"
+    listenerCharacterName: 
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 0
@@ -10785,8 +10784,8 @@ MonoBehaviour:
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
     backgroundSprite: {fileID: 21300000, guid: afcd93e18c7bb494a973d10cd043c365, type: 3}
     backgroundId: 2
@@ -10959,7 +10958,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 1
-    collectibleItem: {fileID: 0}
+    collectibleItem: {fileID: 11400000, guid: de47266fe44563f49b8bfc07346983ac, type: 2}
     showItemNotification: 0
     itemName: 
     itemType: 

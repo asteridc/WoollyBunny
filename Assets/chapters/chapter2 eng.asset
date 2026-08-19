@@ -727,11 +727,11 @@ MonoBehaviour:
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 47867614c7d983b408c7cfc1995f4c89, type: 3}
-    backgroundId: 6
+    backgroundSprite: {fileID: 21300000, guid: e1e6d871d1165364cb5d27f4eb64d542, type: 3}
+    backgroundId: i6
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -785,8 +785,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: 47867614c7d983b408c7cfc1995f4c89, type: 3}
-    backgroundId: 6
+    backgroundSprite: {fileID: 21300000, guid: e1e6d871d1165364cb5d27f4eb64d542, type: 3}
+    backgroundId: i6
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -837,6 +837,225 @@ MonoBehaviour:
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
+    backgroundTransition: 0
+    characterSprite: {fileID: 0}
+    backgroundSprite: {fileID: 21300000, guid: e1e6d871d1165364cb5d27f4eb64d542, type: 3}
+    backgroundId: i6
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleItem: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 0
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationIconColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationFontSize: 0
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    unlockChoiceKeys: []
+    isJumpLine: 1
+    gotoLineIndex: 13
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    useFallbackIfNoRequired: 0
+    fallbackLineIndex: 0
+    choices: []
+    extraActions:
+      isImportantStoryChoice: 0
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: The boy held a three-legged woolly bunny that looked strangely familiar,
+      yet utterly alien.
+    speakerName: ...
+    characterName: ...
+    isRadio: 0
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    backgroundTransition: 0
+    characterSprite: {fileID: 0}
+    backgroundSprite: {fileID: 21300000, guid: e1e6d871d1165364cb5d27f4eb64d542, type: 3}
+    backgroundId: i6
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleItem: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 0
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationIconColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationFontSize: 0
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    unlockChoiceKeys: []
+    isJumpLine: 1
+    gotoLineIndex: 13
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    useFallbackIfNoRequired: 0
+    fallbackLineIndex: 0
+    choices: []
+    extraActions:
+      isImportantStoryChoice: 0
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: '"There''s something wrong with this photo. And why does the toy only have
+      three legs?"'
+    speakerName: Eli
+    characterName: 
+    isRadio: 0
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    backgroundTransition: 0
+    characterSprite: {fileID: 0}
+    backgroundSprite: {fileID: 21300000, guid: e1e6d871d1165364cb5d27f4eb64d542, type: 3}
+    backgroundId: i6
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleItem: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 0
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationIconColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationFontSize: 0
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    unlockChoiceKeys: []
+    isJumpLine: 1
+    gotoLineIndex: 13
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    useFallbackIfNoRequired: 0
+    fallbackLineIndex: 0
+    choices: []
+    extraActions:
+      isImportantStoryChoice: 0
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: A primal fear seized Eli when he realized the boy's pupils were tracking
+      his every move.
+    speakerName: ...
+    characterName: ...
+    isRadio: 0
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 0
+    backgroundTransition: 0
+    characterSprite: {fileID: 0}
+    backgroundSprite: {fileID: 21300000, guid: e1e6d871d1165364cb5d27f4eb64d542, type: 3}
+    backgroundId: i6
+    isOnRight: 0
+    flipSpeakerImage: 0
+    listenerCharacterName: 
+    isListenerOnRight: 0
+    flipListenerImage: 0
+    showCollectibleView: 0
+    collectibleItem: {fileID: 0}
+    showItemNotification: 0
+    itemName: 
+    itemType: 
+    itemRarity: 0
+    itemIcon: {fileID: 0}
+    showStoryNotification: 0
+    storyNotificationText: 
+    storyNotificationDuration: 0
+    storyNotificationIcon: {fileID: 0}
+    storyNotificationTextColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationIconColor: {r: 0, g: 0, b: 0, a: 0}
+    storyNotificationFontSize: 0
+    isBold: 0
+    isItalic: 0
+    isUppercase: 0
+    useCustomFont: 0
+    customFont: {fileID: 0}
+    unlockChoiceKeys: []
+    isJumpLine: 1
+    gotoLineIndex: 13
+    hasChoices: 0
+    hasPathConsequences: 0
+    isEndOfChapter: 0
+    pathVarients: []
+    useFallbackIfNoRequired: 0
+    fallbackLineIndex: 0
+    choices: []
+    extraActions:
+      isImportantStoryChoice: 0
+      showCodePanel: 0
+      showNotePanel: 0
+      stopDialogueAfterThisLine: 0
+      objectToActivate: {fileID: 0}
+      showElectroSubstationMinigame: 0
+      showInteractionPoints: 0
+      isEndOfChapter: 0
+  - text: '"Better safe than sorry... Maybe I''m just seeing things?"'
+    speakerName: Eli
+    characterName: "\u0418\u043B\u0430\u0439"
+    isRadio: 0
+    changeSpeakerName: 0
+    changeCharacterSprite: 0
+    changeBackground: 1
     backgroundTransition: 0
     characterSprite: {fileID: 0}
     backgroundSprite: {fileID: 21300000, guid: 47867614c7d983b408c7cfc1995f4c89, type: 3}
@@ -32887,11 +33106,11 @@ MonoBehaviour:
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: c06e9a9be1ce0c74a8964134270d46be, type: 3}
-    backgroundId: 20
+    backgroundSprite: {fileID: 21300000, guid: 7dbf35fce5004ce4393ca63e925a7173, type: 3}
+    backgroundId: i7
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -32944,8 +33163,8 @@ MonoBehaviour:
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: c06e9a9be1ce0c74a8964134270d46be, type: 3}
-    backgroundId: 20
+    backgroundSprite: {fileID: 21300000, guid: 7dbf35fce5004ce4393ca63e925a7173, type: 3}
+    backgroundId: i7
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -32991,15 +33210,15 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: What is this?!
     speakerName: Eli
-    characterName: "\u0418\u043B\u0430\u0439"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: c06e9a9be1ce0c74a8964134270d46be, type: 3}
-    backgroundId: 20
+    backgroundSprite: {fileID: 21300000, guid: 7dbf35fce5004ce4393ca63e925a7173, type: 3}
+    backgroundId: i7
     isOnRight: 0
     flipSpeakerImage: 0
     listenerCharacterName: 
@@ -33045,18 +33264,18 @@ MonoBehaviour:
       isEndOfChapter: 0
   - text: "You\u2019re becoming Infected."
     speakerName: Kerem
-    characterName: "\u041A\u0435\u0440\u0435\u043C"
+    characterName: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
     changeBackground: 0
     backgroundTransition: 0
     characterSprite: {fileID: 0}
-    backgroundSprite: {fileID: 21300000, guid: c06e9a9be1ce0c74a8964134270d46be, type: 3}
-    backgroundId: 20
+    backgroundSprite: {fileID: 21300000, guid: 7dbf35fce5004ce4393ca63e925a7173, type: 3}
+    backgroundId: i7
     isOnRight: 1
     flipSpeakerImage: 0
-    listenerCharacterName: "\u0418\u043B\u0430\u0439"
+    listenerCharacterName: 
     isListenerOnRight: 0
     flipListenerImage: 0
     showCollectibleView: 0
@@ -33103,8 +33322,8 @@ MonoBehaviour:
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
-    changeBackground: 0
-    backgroundTransition: 0
+    changeBackground: 1
+    backgroundTransition: 1
     characterSprite: {fileID: 0}
     backgroundSprite: {fileID: 21300000, guid: c06e9a9be1ce0c74a8964134270d46be, type: 3}
     backgroundId: 20

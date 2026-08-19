@@ -153,7 +153,7 @@ public class MainMenuManager : MonoBehaviour
         StartCoroutine(Fade(panel, 0f, 1f, panelFadeDuration));
     }
 
-    private IEnumerator ClosePanel(CanvasGroup panel)
+    public IEnumerator ClosePanel(CanvasGroup panel)
     {
         if (panel == null || isAnimating) yield break;
 

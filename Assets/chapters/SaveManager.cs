@@ -257,7 +257,7 @@ public class SaveManager : MonoBehaviour
         {
             sceneName = SceneManager.GetActiveScene().name,
             dialogueData = dm.CaptureDialogueState(),
-            saveTime = System.DateTime.Now.ToString("dd.MM.yyyy HH:mm"),
+            saveTime = System.DateTime.Now.ToString("MM.dd.yyyy HH:mm"),
 
             electroMinigameActive =
                 ElectroChainManager.Instance != null &&
@@ -477,4 +477,151 @@ public class SaveManager : MonoBehaviour
         File.WriteAllText(GetChapterProgressPath(), JsonUtility.ToJson(data, true));
     }
 
+    public void CompleteChapterAndPrepareNext(int chapterNumber)
+    {
+        Debug.Log(
+            $"[SaveManager] Завершаем главу {chapterNumber} и подготавливаем переход в следующую.");
+
+        // 1. Фиксируем завершение главы.
+        // Здесь же автоматически выдается XP.
+        MarkChapterCompleted(chapterNumber);
+
+        // 2. AccountManager уже хранит постоянный прогресс отдельно
+        // от обычного сохранения слота.
+        AccountManager accountManager = AccountManager.GetOrCreate();
+
+        if (accountManager == null)
+        {
+            Debug.LogError(
+                "[SaveManager] Не удалось получить AccountManager при переходе между главами.");
+            return;
+        }
+
+        Debug.Log(
+            $"[SaveManager] Постоянный прогресс подготовлен для перехода после главы {chapterNumber}.");
+    }
+
+    [Serializable]
+    private class ChapterTransitionData
+    {
+        public int completedChapter;
+        public int bloodthirst;
+        public int nobility;
+        public int love;
+    }
+
+    private const string ChapterTransitionFileName = "chapter_transition.json";
+
+    public void SaveChapterTransition(int completedChapter)
+    {
+        if (completedChapter < 1)
+        {
+            Debug.LogWarning("[SaveManager] Некорректный номер главы.");
+            return;
+        }
+
+        if (DialogueManager.Instance == null)
+        {
+            Debug.LogError(
+                "[SaveManager] DialogueManager.Instance == null.");
+            return;
+        }
+
+        // Сначала фиксируем завершение главы.
+        // Здесь же выдаётся XP и открывается следующая глава.
+        MarkChapterCompleted(completedChapter);
+
+        // Получаем текущие очки путей прямо из DialogueManager.
+        var pathPoints = DialogueManager.Instance.GetPathPoints();
+
+        ChapterTransitionData data = new ChapterTransitionData
+        {
+            completedChapter = completedChapter,
+            bloodthirst = pathPoints.bloodthirst,
+            nobility = pathPoints.nobility,
+            love = pathPoints.love
+        };
+
+        string path = GetChapterTransitionPath();
+        string json = JsonUtility.ToJson(data, true);
+
+        File.WriteAllText(path, json);
+
+        Debug.Log(
+            $"[SaveManager] Прогресс перехода сохранён: " +
+            $"Chapter={completedChapter}, " +
+            $"Bloodthirst={data.bloodthirst}, " +
+            $"Nobility={data.nobility}, " +
+            $"Love={data.love}");
+    }
+
+    public void LoadChapterTransition(int expectedChapter)
+    {
+        string path = GetChapterTransitionPath();
+
+        if (!File.Exists(path))
+        {
+            Debug.Log("[SaveManager] Сохранение перехода между главами не найдено.");
+            return;
+        }
+
+        if (DialogueManager.Instance == null)
+        {
+            Debug.LogError(
+                "[SaveManager] DialogueManager.Instance == null.");
+            return;
+        }
+
+        try
+        {
+            string json = File.ReadAllText(path);
+
+            ChapterTransitionData data =
+                JsonUtility.FromJson<ChapterTransitionData>(json);
+
+            if (data == null)
+            {
+                Debug.LogWarning(
+                    "[SaveManager] Не удалось прочитать данные перехода.");
+                return;
+            }
+
+            if (data.completedChapter + 1 != expectedChapter)
+            {
+                Debug.LogWarning(
+                    $"[SaveManager] Данные перехода относятся не к этой главе. " +
+                    $"Saved={data.completedChapter}, Expected={expectedChapter}");
+                return;
+            }
+
+            DialogueManager.Instance.SetPathPoints(
+                data.bloodthirst,
+                data.nobility,
+                data.love
+            );
+
+            Debug.Log(
+                $"[SaveManager] Очки путей восстановлены: " +
+                $"Bloodthirst={data.bloodthirst}, " +
+                $"Nobility={data.nobility}, " +
+                $"Love={data.love}");
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError(
+                $"[SaveManager] Ошибка загрузки перехода между главами: {ex.Message}");
+        }
+    }
+
+    private string GetChapterTransitionPath()
+    {
+        return Path.Combine(
+            Application.persistentDataPath,
+            "chapter_transition.json");
+    }
+
 }
+
+
+
+

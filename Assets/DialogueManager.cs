@@ -22,6 +22,19 @@ public class DialogueManager : MonoBehaviour
     private int bloodthirst = 0;
     private int nobility = 0;
     private int love = 0;
+
+    public (int bloodthirst, int nobility, int love) GetPathPoints()
+    {
+        return (bloodthirst, nobility, love);
+    }
+
+    public void SetPathPoints(int bloodthirst, int nobility, int love)
+    {
+        this.bloodthirst = bloodthirst;
+        this.nobility = nobility;
+        this.love = love;
+    }
+
     private bool specialChoiceMade = false;
 
     [Header("Тестовый запуск")]
@@ -209,6 +222,15 @@ public class DialogueManager : MonoBehaviour
 
         if (!skipAutoStart)
             LoadChapter(currentChapter, startLineNumber - 1);
+        StartCoroutine(LoadChapterTransitionData());
+    }
+
+    private IEnumerator LoadChapterTransitionData()
+    {
+        while (SaveManager.Instance == null)
+            yield return null;
+
+        SaveManager.Instance.LoadChapterTransition(2);
     }
 
     public DialogueLine[] runtimeLines;
@@ -2398,33 +2420,44 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator OnContinueToNextChapter()
     {
-        // Выдаем опыт за завершенную главу
-        Debug.Log($"[DialogueManager] OnContinueToNextChapter начата");
-        Debug.Log($"[DialogueManager] currentChapter: {(currentChapter != null ? currentChapter.ChapterNumber.ToString() : "NULL")}");
-        Debug.Log($"[DialogueManager] SaveManager.Instance: {(SaveManager.Instance != null ? "EXISTS" : "NULL")}");
+        Debug.Log("[DialogueManager] Переход в следующую главу.");
 
-        if (currentChapter != null && SaveManager.Instance != null)
+        if (currentChapter == null)
         {
-            SaveManager.Instance.MarkChapterCompleted(currentChapter.ChapterNumber);
-            Debug.Log($"[DialogueManager] Опыт выдан за главу {currentChapter.ChapterNumber}");
-            // Даем время на сохранение данных аккаунта
-            yield return new WaitForSeconds(0.5f);
-        }
-        else
-        {
-            Debug.LogError($"[DialogueManager] Не могли выдать опыт: currentChapter={currentChapter != null}, SaveManager={SaveManager.Instance != null}");
+            Debug.LogError("[DialogueManager] currentChapter == null!");
+            yield break;
         }
 
-        float fadeDurationToMenu = 6f; // другая длительность для этой анимации
-        yield return blackOverlay.DOFade(1f, fadeDurationToMenu).WaitForCompletion();
+        if (SaveManager.Instance == null)
+        {
+            Debug.LogError("[DialogueManager] SaveManager.Instance == null!");
+            yield break;
+        }
+
+        // Сохраняем весь постоянный прогресс текущей главы.
+        SaveManager.Instance.SaveChapterTransition(
+            currentChapter.ChapterNumber
+        );
+
+        yield return new WaitForSeconds(0.25f);
+
+        // Затемнение.
+        if (blackOverlay != null)
+        {
+            yield return blackOverlay
+                .DOFade(1f, 1.5f)
+                .WaitForCompletion();
+        }
+
         if (goingToNextChapter)
         {
             goingToNextChapter = false;
+
             SceneManager.LoadScene("Chapter_02");
         }
-        else 
-        { 
-            SceneManager.LoadScene("woollybunny_PC"); 
+        else
+        {
+            SceneManager.LoadScene("woollybunny_PC");
         }
     }
 

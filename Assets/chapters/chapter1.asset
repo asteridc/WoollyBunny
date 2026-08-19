@@ -2499,7 +2499,8 @@ MonoBehaviour:
     showCollectibleView: 0
     collectibleItem: {fileID: 11400000, guid: 2c7a72403ab58104990635bc5f9d39be, type: 2}
     showItemNotification: 1
-    itemName: "\u041A\u0430\u0440\u0442\u0430 \u041C\u0438\u0440\u0430"
+    itemName: "\u041A\u0430\u0440\u0442\u0430 \u041D\u043E\u0432\u043E\u0433\u043E
+      \u041C\u0438\u0440\u0430"
     itemType: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0439
       \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
     itemRarity: 3
@@ -10501,7 +10502,7 @@ MonoBehaviour:
     isListenerOnRight: 1
     flipListenerImage: 1
     showCollectibleView: 1
-    collectibleItem: {fileID: 0}
+    collectibleItem: {fileID: 11400000, guid: de47266fe44563f49b8bfc07346983ac, type: 2}
     showItemNotification: 0
     itemName: 
     itemType: 

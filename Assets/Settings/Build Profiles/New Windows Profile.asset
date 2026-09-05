@@ -28,6 +28,8 @@ MonoBehaviour:
     m_path: Assets/Scenes/Chapter_02.unity
   - m_enabled: 0
     m_path: Assets/Scenes/Testing/CombatTest.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/KyleRoom_test.unity
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
@@ -178,7 +180,7 @@ MonoBehaviour:
     - line: '|   loadStoreDebugModeEnabled: 0'
     - line: '|   visionOSBundleVersion: 1.0'
     - line: '|   tvOSBundleVersion: 1.0'
-    - line: '|   bundleVersion: 0.13.0 (135)'
+    - line: '|   bundleVersion: 0.0.1b'
     - line: '|   preloadedAssets: []'
     - line: '|   metroInputSource: 0'
     - line: '|   wsaTransparentSwapchain: 0'

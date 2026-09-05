@@ -12,6 +12,12 @@ public class Tooltip : MonoBehaviour
     [Header("Animation")]
     [SerializeField] private float fadeDuration = 0.15f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource addictScreamSource;
+    [SerializeField] private AudioSource childScreamSource;
+    [SerializeField] private float finalEventDelay = 0.5f;
+    [SerializeField] private float childScreamDelay = 0.35f;
+
     private RectTransform rect;
     [SerializeField] private Canvas canvas;
     private CanvasGroup canvasGroup;

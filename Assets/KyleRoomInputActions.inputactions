@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "KyleRoomInputActions",
+    "maps": [
+        {
+            "name": "KyleRoom",
+            "id": "47174911-7ae3-4058-8071-bf2f7cf55a28",
+            "actions": [
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "26f20e9a-1dad-4bb9-adf7-df69b7e60297",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ac18003a-3b70-4589-b196-c6be227f419e",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

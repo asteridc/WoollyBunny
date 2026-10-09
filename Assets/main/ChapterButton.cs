@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -57,7 +56,10 @@ public class ChapterButton : MonoBehaviour
 
         if (!string.IsNullOrEmpty(sceneName))
         {
-            SceneManager.LoadScene(sceneName);
+            if (SceneTransitionManager.Instance != null)
+                SceneTransitionManager.Instance.LoadScene(sceneName);
+            else
+                Debug.LogError("SceneTransitionManager не найден.");
         }
         else
         {

@@ -1,9 +1,21 @@
 using System.Collections;
+using System;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneTransitionManager : MonoBehaviour
 {
+    [Serializable]
+    private class LoadingTip
+    {
+        [TextArea] public string russianTitle;
+        [TextArea] public string russianDescription;
+        [TextArea] public string englishTitle;
+        [TextArea] public string englishDescription;
+    }
+
     public static SceneTransitionManager Instance { get; private set; }
 
     [Header("Transition")]
@@ -11,8 +23,17 @@ public class SceneTransitionManager : MonoBehaviour
     [SerializeField] private CanvasGroup loadingIndicator;
     [SerializeField] private RectTransform loadingArc;
 
+    [Header("Loading Tips")]
+    [SerializeField] private CanvasGroup tipsGroup;
+    [SerializeField] private TMP_Text tipTitle;
+    [SerializeField] private TMP_Text tipDescription;
+    [SerializeField] private LoadingTip[] tips;
+    [SerializeField] private float tipDuration = 8f;
+
     [Header("Loading")]
     [SerializeField] private float minimumLoadingTime = 4f;
+    [SerializeField] private float maximumLoadingTime = 10f;
+    [SerializeField] private float weakDeviceMaximumLoadingTime = 22f;
     [SerializeField] private float rotationDuration = 1.2f;
 
     [Header("Fade")]
@@ -20,7 +41,10 @@ public class SceneTransitionManager : MonoBehaviour
     [SerializeField] private float blackOverlayFadeDuration = 1f;
 
     private Coroutine spinnerCoroutine;
+    private Coroutine tipsCoroutine;
     private bool isLoading;
+    private int lastTipIndex = -1;
+    private readonly HashSet<int> shownTipIndices = new HashSet<int>();
 
 
     private void Awake()
@@ -42,27 +66,47 @@ public class SceneTransitionManager : MonoBehaviour
 
         loadingIndicator.alpha = 0f;
         loadingIndicator.gameObject.SetActive(false);
+
+        if (tipsGroup != null)
+        {
+            tipsGroup.alpha = 0f;
+            tipsGroup.gameObject.SetActive(false);
+        }
+
+        LanguageManager.OnLanguageChanged += UpdateCurrentTip;
+    }
+
+    private void OnDestroy()
+    {
+        LanguageManager.OnLanguageChanged -= UpdateCurrentTip;
     }
 
 
-    public void LoadScene(string sceneName)
+    public void LoadScene(
+        string sceneName,
+        Action onSceneLoaded = null,
+        bool showTips = true)
     {
         if (isLoading)
             return;
 
         StartCoroutine(
-            LoadSceneRoutine(sceneName)
+            LoadSceneRoutine(sceneName, onSceneLoaded, showTips)
         );
     }
 
 
     private IEnumerator LoadSceneRoutine(
-        string sceneName)
+        string sceneName,
+        Action onSceneLoaded,
+        bool showTips)
     {
         isLoading = true;
 
         float startTime =
             Time.unscaledTime;
+
+        float targetLoadingTime = GetTargetLoadingTime();
 
 
         // =====================================================
@@ -84,6 +128,11 @@ public class SceneTransitionManager : MonoBehaviour
             StartCoroutine(
                 AnimateSpinner()
             );
+
+        if (showTips)
+        {
+            tipsCoroutine = StartCoroutine(ShowTips());
+        }
 
 
         // =====================================================
@@ -107,16 +156,16 @@ public class SceneTransitionManager : MonoBehaviour
 
 
         // =====================================================
-        // 4. МИНИМУМ 4 СЕКУНДЫ
+        // 4. Минимальная и адаптивная длительность загрузочного экрана.
         // =====================================================
 
         float elapsed =
             Time.unscaledTime - startTime;
 
-        if (elapsed < minimumLoadingTime)
+        if (elapsed < targetLoadingTime)
         {
             yield return new WaitForSecondsRealtime(
-                minimumLoadingTime - elapsed
+                targetLoadingTime - elapsed
             );
         }
 
@@ -141,6 +190,8 @@ public class SceneTransitionManager : MonoBehaviour
         // Даём MainMenu один кадр.
         yield return null;
 
+        onSceneLoaded?.Invoke();
+
 
         // =====================================================
         // 7. УБИРАЕМ SPINNER
@@ -154,6 +205,14 @@ public class SceneTransitionManager : MonoBehaviour
 
             spinnerCoroutine = null;
         }
+
+        if (tipsCoroutine != null)
+        {
+            StopCoroutine(tipsCoroutine);
+            tipsCoroutine = null;
+        }
+
+        HideTips();
 
         yield return StartCoroutine(
             FadeCanvasGroup(
@@ -178,12 +237,142 @@ public class SceneTransitionManager : MonoBehaviour
 
 
         // =====================================================
-        // 9. TRANSITION MANAGER БОЛЬШЕ НЕ НУЖЕН
+        // 9. Менеджер остаётся доступным для следующих переходов.
         // =====================================================
 
         isLoading = false;
+    }
 
-        Destroy(gameObject);
+    private float GetTargetLoadingTime()
+    {
+        int score = GetDevicePerformanceScore();
+        float upperBound;
+
+        switch (score)
+        {
+            case 0:
+                upperBound = weakDeviceMaximumLoadingTime;
+                break;
+            case 1:
+                upperBound = Mathf.Lerp(
+                    maximumLoadingTime,
+                    weakDeviceMaximumLoadingTime,
+                    0.65f);
+                break;
+            case 2:
+                upperBound = maximumLoadingTime;
+                break;
+            default:
+                upperBound = Mathf.Lerp(
+                    minimumLoadingTime,
+                    maximumLoadingTime,
+                    0.5f);
+                break;
+        }
+
+        return UnityEngine.Random.Range(
+            minimumLoadingTime,
+            Mathf.Max(minimumLoadingTime, upperBound));
+    }
+
+    private int GetDevicePerformanceScore()
+    {
+        int score = 0;
+
+        if (SystemInfo.processorCount >= 8)
+            score++;
+
+        if (SystemInfo.systemMemorySize >= 8192)
+            score++;
+
+        if (SystemInfo.graphicsMemorySize >= 4096)
+            score++;
+
+        return score;
+    }
+
+    private IEnumerator ShowTips()
+    {
+        if (tipsGroup == null || tipTitle == null ||
+            tipDescription == null || tips == null || tips.Length == 0)
+            yield break;
+
+        tipsGroup.gameObject.SetActive(true);
+        tipsGroup.alpha = 1f;
+        ShowNextTip();
+
+        while (true)
+        {
+            yield return new WaitForSecondsRealtime(tipDuration);
+            ShowNextTip();
+        }
+    }
+
+    private void ShowNextTip()
+    {
+        if (tips == null || tips.Length == 0 || tipTitle == null ||
+            tipDescription == null)
+            return;
+
+        int nextIndex = GetRandomTipIndex();
+        LoadingTip tip = tips[nextIndex];
+        bool isEnglish = LanguageManager.CurrentLanguage == Language.English;
+
+        tipTitle.text = isEnglish ? tip.englishTitle : tip.russianTitle;
+        tipDescription.text = isEnglish
+            ? tip.englishDescription
+            : tip.russianDescription;
+
+        lastTipIndex = nextIndex;
+    }
+
+    private int GetRandomTipIndex()
+    {
+        if (tips.Length == 1)
+            return 0;
+
+        if (shownTipIndices.Count >= tips.Length)
+            shownTipIndices.Clear();
+
+        int nextIndex;
+        do
+        {
+            nextIndex = UnityEngine.Random.Range(0, tips.Length);
+        }
+        while (shownTipIndices.Contains(nextIndex) ||
+               (tips.Length > 1 && nextIndex == lastTipIndex));
+
+        shownTipIndices.Add(nextIndex);
+
+        return nextIndex;
+    }
+
+    private void UpdateCurrentTip(Language language)
+    {
+        if (isLoading && tipsGroup != null && tipsGroup.gameObject.activeSelf)
+            ShowCurrentTip();
+    }
+
+    private void ShowCurrentTip()
+    {
+        if (lastTipIndex < 0 || lastTipIndex >= tips.Length)
+            return;
+
+        LoadingTip tip = tips[lastTipIndex];
+        bool isEnglish = LanguageManager.CurrentLanguage == Language.English;
+        tipTitle.text = isEnglish ? tip.englishTitle : tip.russianTitle;
+        tipDescription.text = isEnglish
+            ? tip.englishDescription
+            : tip.russianDescription;
+    }
+
+    private void HideTips()
+    {
+        if (tipsGroup == null)
+            return;
+
+        tipsGroup.alpha = 0f;
+        tipsGroup.gameObject.SetActive(false);
     }
 
 

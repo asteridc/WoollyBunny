@@ -91,7 +91,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void OnNewGameClicked()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Chapter_01");
+        SceneTransitionManager.Instance.LoadScene("Chapter_01");
     }
 
     public void OnSaveClicked()

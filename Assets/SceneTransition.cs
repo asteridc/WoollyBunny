@@ -1,23 +1,18 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using DG.Tweening;
 
 public class SceneTransition : MonoBehaviour
 {
-    public CanvasGroup fadePanel;
     public string sceneToLoad = "Chapter";
 
     public void OnNewGameClicked()
     {
-        fadePanel.gameObject.SetActive(true); // включение панели
-
-        // затемнение за 0.5 секунды
-        fadePanel.DOFade(1f, 2f).OnComplete(() =>
+        if (SceneTransitionManager.Instance != null)
         {
-            DOVirtual.DelayedCall(2f, () =>
-            {
-               SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Single);
-            });
-        });
+            SceneTransitionManager.Instance.LoadScene(sceneToLoad);
+        }
+        else
+        {
+            Debug.LogError("SceneTransitionManager не найден.");
+        }
     }
 }

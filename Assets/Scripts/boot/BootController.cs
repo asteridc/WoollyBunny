@@ -56,6 +56,16 @@ public class BootController : MonoBehaviour
         InitializeVisualState();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F9))
+        {
+            PlayerPrefs.DeleteKey(agreementPlayerPrefsKey);
+            PlayerPrefs.Save();
+
+            Debug.Log("AgreementAccepted was reset.");
+        }
+    }
 
     private void Start()
     {
@@ -182,7 +192,9 @@ public class BootController : MonoBehaviour
         // сначала запускаем TransitionManager.
         // Он сразу накрывает экран чёрным.
         SceneTransitionManager.Instance.LoadScene(
-            mainMenuSceneName
+            mainMenuSceneName,
+            null,
+            false
         );
 
         // После этого можем убрать Logo.

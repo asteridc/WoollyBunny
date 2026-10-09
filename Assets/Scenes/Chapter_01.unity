@@ -17498,7 +17498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63648dd5ea9ae1341ab60d45615b10fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadePanel: {fileID: 690874485}
   sceneToLoad: woollybunny_PC
 --- !u!1 &519414537
 GameObject:

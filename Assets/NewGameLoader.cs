@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class NewGameLoader : MonoBehaviour
 {
@@ -8,6 +7,10 @@ public class NewGameLoader : MonoBehaviour
     public void StartNewGame()
     {
         PlayerPrefs.DeleteAll(); // сброс прогресса
-        SceneManager.LoadScene(firstSceneName);
+
+        if (SceneTransitionManager.Instance != null)
+            SceneTransitionManager.Instance.LoadScene(firstSceneName);
+        else
+            Debug.LogError("SceneTransitionManager не найден.");
     }
 }

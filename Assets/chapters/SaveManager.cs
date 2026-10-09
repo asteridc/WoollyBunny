@@ -307,13 +307,22 @@ public class SaveManager : MonoBehaviour
         // 🔹 Новая сцена
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != data.sceneName)
         {
-            UnityEngine.SceneManagement.SceneManager.sceneLoaded += (scene, mode) =>
+            Action restoreAfterSceneLoad = () =>
             {
-                UnityEngine.SceneManagement.SceneManager.sceneLoaded -= null;
                 if (data.dialogueData != null)
                     StartCoroutine(RestoreDialogueWhenReady(data.dialogueData));
             };
-            UnityEngine.SceneManagement.SceneManager.LoadScene(data.sceneName);
+
+            if (SceneTransitionManager.Instance != null)
+            {
+                SceneTransitionManager.Instance.LoadScene(
+                    data.sceneName,
+                    restoreAfterSceneLoad);
+            }
+            else
+            {
+                Debug.LogError("[SAVE MANAGER] SceneTransitionManager не найден.");
+            }
         }
         else
         {
@@ -340,9 +349,22 @@ public class SaveManager : MonoBehaviour
         // 1️⃣ Загрузка сцены
         if (SceneManager.GetActiveScene().name != data.sceneName)
         {
-            SceneManager.LoadScene(data.sceneName);
-            yield return null;
-            yield return null;
+            bool sceneLoaded = false;
+
+            if (SceneTransitionManager.Instance != null)
+            {
+                SceneTransitionManager.Instance.LoadScene(
+                    data.sceneName,
+                    () => sceneLoaded = true);
+            }
+            else
+            {
+                Debug.LogError("[SAVE MANAGER] SceneTransitionManager не найден.");
+                yield break;
+            }
+
+            while (!sceneLoaded)
+                yield return null;
         }
 
         // 2️⃣ Ждём DialogueManager

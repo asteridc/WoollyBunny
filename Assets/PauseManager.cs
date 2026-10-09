@@ -326,7 +326,10 @@ public class PauseManager : MonoBehaviour
     public void ConfirmExit()
     {
         Time.timeScale = 1f;
-        UnityEngine.SceneManagement.SceneManager.LoadScene("woollybunny_PC");
+        if (SceneTransitionManager.Instance != null)
+            SceneTransitionManager.Instance.LoadScene("woollybunny_PC");
+        else
+            Debug.LogError("[PauseManager] SceneTransitionManager не найден.");
     }
 
     #endregion

@@ -514,11 +514,17 @@ public partial class DialogueManager : MonoBehaviour
         {
             goingToNextChapter = false;
 
-            SceneManager.LoadScene("Chapter_02");
+            if (SceneTransitionManager.Instance != null)
+                SceneTransitionManager.Instance.LoadScene("Chapter_02");
+            else
+                Debug.LogError("[DialogueManager] SceneTransitionManager.Instance == null!");
         }
         else
         {
-            SceneManager.LoadScene("woollybunny_PC");
+            if (SceneTransitionManager.Instance != null)
+                SceneTransitionManager.Instance.LoadScene("woollybunny_PC");
+            else
+                Debug.LogError("[DialogueManager] SceneTransitionManager.Instance == null!");
         }
     }
 

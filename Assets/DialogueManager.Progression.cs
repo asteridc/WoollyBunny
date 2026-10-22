@@ -510,6 +510,15 @@ public partial class DialogueManager : MonoBehaviour
                 .WaitForCompletion();
         }
 
+        DailyQuestManager.Instance?.RegisterActionOncePerDay(
+            $"ChapterCompleted:{currentChapter.ChapterNumber}");
+
+        Debug.Log(
+            $"[DailyQuest] Завершение главы {currentChapter.ChapterNumber} " +
+            "зарегистрировано независимо от общего прогресса прохождения.");
+
+        DailyQuestManager.Instance?.CommitPendingChapterActions();
+
         if (goingToNextChapter)
         {
             goingToNextChapter = false;

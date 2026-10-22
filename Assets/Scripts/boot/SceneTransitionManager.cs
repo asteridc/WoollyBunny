@@ -39,6 +39,7 @@ public class SceneTransitionManager : MonoBehaviour
     [Header("Fade")]
     [SerializeField] private float loadingIndicatorFadeDuration = 0.3f;
     [SerializeField] private float blackOverlayFadeDuration = 1f;
+    [SerializeField] private float preLoadingFadeDuration = 0.35f;
 
     private Coroutine spinnerCoroutine;
     private Coroutine tipsCoroutine;
@@ -85,13 +86,14 @@ public class SceneTransitionManager : MonoBehaviour
     public void LoadScene(
         string sceneName,
         Action onSceneLoaded = null,
-        bool showTips = true)
+        bool showTips = true,
+        bool fadeBeforeLoading = false)
     {
         if (isLoading)
             return;
 
         StartCoroutine(
-            LoadSceneRoutine(sceneName, onSceneLoaded, showTips)
+            LoadSceneRoutine(sceneName, onSceneLoaded, showTips, fadeBeforeLoading)
         );
     }
 
@@ -99,7 +101,8 @@ public class SceneTransitionManager : MonoBehaviour
     private IEnumerator LoadSceneRoutine(
         string sceneName,
         Action onSceneLoaded,
-        bool showTips)
+        bool showTips,
+        bool fadeBeforeLoading)
     {
         isLoading = true;
 
@@ -108,6 +111,13 @@ public class SceneTransitionManager : MonoBehaviour
 
         float targetLoadingTime = GetTargetLoadingTime();
 
+        if (fadeBeforeLoading)
+        {
+            blackOverlay.gameObject.SetActive(true);
+            blackOverlay.alpha = 0f;
+            yield return StartCoroutine(
+                FadeCanvasGroup(blackOverlay, 1f, preLoadingFadeDuration));
+        }
 
         // =====================================================
         // 1. МГНОВЕННО ЗАКРЫВАЕМ ТЕКУЩУЮ СЦЕНУ

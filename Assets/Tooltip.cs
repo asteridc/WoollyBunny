@@ -1,9 +1,11 @@
 using DG.Tweening;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(CanvasGroup))]
-public class Tooltip : MonoBehaviour
+public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("Location")]
     [SerializeField] private Vector2 cursorOffset = new(24, 24);
@@ -23,6 +25,11 @@ public class Tooltip : MonoBehaviour
     private CanvasGroup canvasGroup;
 
     private bool isVisible;
+    private bool pointerInside;
+    private Coroutine pendingHideCoroutine;
+    [SerializeField] private float pointerTransferDelay = 0.12f;
+
+    public bool IsPointerInside => pointerInside;
 
 
 
@@ -45,6 +52,12 @@ public class Tooltip : MonoBehaviour
 
     public void Show()
     {
+        if (pendingHideCoroutine != null)
+        {
+            StopCoroutine(pendingHideCoroutine);
+            pendingHideCoroutine = null;
+        }
+
         gameObject.SetActive(true);
 
         canvasGroup.DOKill();
@@ -58,14 +71,49 @@ public class Tooltip : MonoBehaviour
         isVisible = true;
     }
 
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        pointerInside = true;
+        if (pendingHideCoroutine != null)
+        {
+            StopCoroutine(pendingHideCoroutine);
+            pendingHideCoroutine = null;
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        pointerInside = false;
+        Hide();
+    }
+
 
     public void Hide()
     {
+        if (!gameObject.activeInHierarchy)
+        {
+            isVisible = false;
+            return;
+        }
+
+        if (pendingHideCoroutine != null)
+            StopCoroutine(pendingHideCoroutine);
+
+        pendingHideCoroutine = StartCoroutine(HideAfterPointerTransfer());
+    }
+
+    private IEnumerator HideAfterPointerTransfer()
+    {
+        yield return new WaitForSecondsRealtime(pointerTransferDelay);
+        pendingHideCoroutine = null;
+
+        if (pointerInside)
+            yield break;
+
         isVisible = false;
         canvasGroup.DOKill();
 
         canvasGroup.DOFade(0, fadeDuration).OnComplete(() => gameObject.SetActive(false)).SetUpdate(true);
-
     }
 
 

@@ -18,6 +18,7 @@ public class DialogueLine : IStoryNotificationSettings
 
     public string speakerName;
     public string characterName;
+    public string questTriggerId;
 
     public bool isRadio = false;
     public bool changeSpeakerName = true;
@@ -257,6 +258,8 @@ public class DialogueLine : IStoryNotificationSettings
                 isEndOfChapter = extraActions.isEndOfChapter
             };
         }
+
+        clone.questTriggerId = questTriggerId;
 
         return clone;
     }

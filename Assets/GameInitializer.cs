@@ -22,6 +22,15 @@ public class GameInitializer : MonoBehaviour
         }
         Debug.Log("[GameInitializer] AccountManager: OK");
 
+        if (DailyQuestManager.Instance != null)
+        {
+            DailyQuestManager.Instance.RegisterActionOncePerDay("GameEntered");
+        }
+        else
+        {
+            Debug.LogWarning("[GameInitializer] DailyQuestManager не настроен в стартовой сцене; вход в игру не зарегистрирован.");
+        }
+
         Debug.Log("[GameInitializer] Инициализация завершена");
     }
 }

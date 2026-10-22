@@ -44,6 +44,22 @@ public class HeroStats : MonoBehaviour
                 break;
         }
 
-        Debug.Log($"Добавлено {amount} очков к пути {path}");
+        if (amount > 0)
+        {
+            switch (path)
+            {
+                case HeroPath.Bloodthirst:
+                    DailyQuestManager.Instance?.RegisterAction("BloodthirstPoints", amount);
+                    break;
+                case HeroPath.Noble:
+                    DailyQuestManager.Instance?.RegisterAction("NobilityPoints", amount);
+                    break;
+                case HeroPath.Love:
+                    DailyQuestManager.Instance?.RegisterAction("LovePoints", amount);
+                    break;
+            }
+        }
+
+        Debug.Log($"Добавлено {amount} очков в путь {path}");
     }
 }

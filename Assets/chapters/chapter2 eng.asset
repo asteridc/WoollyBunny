@@ -18,6 +18,7 @@ MonoBehaviour:
   - text: He opened his eyes - and saw light.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -73,6 +74,7 @@ MonoBehaviour:
       everything had been left out too long.'
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -127,6 +129,7 @@ MonoBehaviour:
   - text: Eli stood in a room he was supposed to know.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -182,6 +185,7 @@ MonoBehaviour:
       corridor shifted, longer than it should be, then longer again.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -236,6 +240,7 @@ MonoBehaviour:
   - text: A photograph sat on the nightstand.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -290,6 +295,7 @@ MonoBehaviour:
   - text: A man and a woman. Between them, a boy clutching a gray rabbit.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -345,6 +351,7 @@ MonoBehaviour:
       crossed tight - like someone meant to keep them closed.'
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -399,6 +406,7 @@ MonoBehaviour:
   - text: For a moment, the picture changed.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -453,6 +461,7 @@ MonoBehaviour:
   - text: The rabbit turned brown. The colors warmed. The faces looked softer.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -507,6 +516,7 @@ MonoBehaviour:
   - text: Then it slid back to what it was.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -561,6 +571,7 @@ MonoBehaviour:
   - text: 'The floor creaked under him. Ahead: a long, dark passage, stretched thin.'
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -616,6 +627,7 @@ MonoBehaviour:
       at the edges.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -670,6 +682,7 @@ MonoBehaviour:
   - text: 
     speakerName: 
     characterName: 
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -724,6 +737,7 @@ MonoBehaviour:
   - text: He reached out. The glass was cold - like it had been underground for years.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -779,6 +793,7 @@ MonoBehaviour:
       hold. Everything softened, like he was looking through water."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -833,6 +848,7 @@ MonoBehaviour:
   - text: Only the boy in the center stayed sharp. Looking straight at Eli.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -888,6 +904,7 @@ MonoBehaviour:
       yet utterly alien.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -943,6 +960,7 @@ MonoBehaviour:
       three legs?"'
     speakerName: Eli
     characterName: 
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -998,6 +1016,7 @@ MonoBehaviour:
       his every move.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1052,6 +1071,7 @@ MonoBehaviour:
   - text: '"Better safe than sorry... Maybe I''m just seeing things?"'
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1107,6 +1127,7 @@ MonoBehaviour:
       fog.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1162,6 +1183,7 @@ MonoBehaviour:
       like the eyes were trying to force themselves open.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1216,6 +1238,7 @@ MonoBehaviour:
   - text: For an instant, a whisper slid past his ear...
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1270,6 +1293,7 @@ MonoBehaviour:
   - text: "\u201CDon\u2019t look\u2026\u201D"
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1325,6 +1349,7 @@ MonoBehaviour:
       the walls stretched too far.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1379,6 +1404,7 @@ MonoBehaviour:
   - text: A mug sat on the table. He knew that mug. Not how - just knew.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1433,6 +1459,7 @@ MonoBehaviour:
   - text: Warm bread, somewhere in the air.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1488,6 +1515,7 @@ MonoBehaviour:
       blurred again, like it was being erased."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1542,6 +1570,7 @@ MonoBehaviour:
   - text: The corridor kept extending.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1596,6 +1625,7 @@ MonoBehaviour:
   - text: Each step came back as an echo, like the space was hollow.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1651,6 +1681,7 @@ MonoBehaviour:
       farther.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1705,6 +1736,7 @@ MonoBehaviour:
   - text: The dark ahead thickened. He kept going.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1759,6 +1791,7 @@ MonoBehaviour:
   - text: His steps grew heavier.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1813,6 +1846,7 @@ MonoBehaviour:
   - text: "The corridor still wouldn\u2019t end."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1868,6 +1902,7 @@ MonoBehaviour:
       close.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1922,6 +1957,7 @@ MonoBehaviour:
   - text: Then the whispers.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -1976,6 +2012,7 @@ MonoBehaviour:
   - text: 'At first: quiet, indistinct - like distant static.'
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2030,6 +2067,7 @@ MonoBehaviour:
   - text: Then closer.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2084,6 +2122,7 @@ MonoBehaviour:
   - text: Now all around - ahead, behind, near his ear.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2138,6 +2177,7 @@ MonoBehaviour:
   - text: Voices over voices, overlapping into a single, shapeless noise.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2193,6 +2233,7 @@ MonoBehaviour:
       catch."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2247,6 +2288,7 @@ MonoBehaviour:
   - text: And then one word, clean and flat.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2301,6 +2343,7 @@ MonoBehaviour:
   - text: "\u201CBack.\u201D"
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2355,6 +2398,7 @@ MonoBehaviour:
   - text: Pain flashed in his temples.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2409,6 +2453,7 @@ MonoBehaviour:
   - text: He stopped and grabbed his head.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2463,6 +2508,7 @@ MonoBehaviour:
   - text: The world lurched; the walls bent, turning into dark waves.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2517,6 +2563,7 @@ MonoBehaviour:
   - text: The last thing he felt - a touch, light on his shoulder.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2571,6 +2618,7 @@ MonoBehaviour:
   - text: He turned. No one.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2625,6 +2673,7 @@ MonoBehaviour:
   - text: Everything went dark.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2679,6 +2728,7 @@ MonoBehaviour:
   - text: He opened his eyes a second time - this time for real.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2734,6 +2784,7 @@ MonoBehaviour:
       the wind.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2789,6 +2840,7 @@ MonoBehaviour:
       someone else\u2019s reality."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2844,6 +2896,7 @@ MonoBehaviour:
       half-closed."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2898,6 +2951,7 @@ MonoBehaviour:
   - text: You were tossing and turning all night. Did you dream about something?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -2952,6 +3006,7 @@ MonoBehaviour:
   - text: 
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3028,6 +3083,7 @@ MonoBehaviour:
   - text: "Yeah. But I can\u2019t quite tell what it was."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3082,6 +3138,7 @@ MonoBehaviour:
   - text: "I only remember a hallway\u2026"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3136,6 +3193,7 @@ MonoBehaviour:
   - text: Hannah shifted closer, suddenly alert, interested in the dream.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3190,6 +3248,7 @@ MonoBehaviour:
   - text: A hallway? To where?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3245,6 +3304,7 @@ MonoBehaviour:
       words.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3300,6 +3360,7 @@ MonoBehaviour:
       remember what that place was."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3354,6 +3415,7 @@ MonoBehaviour:
   - text: Like time had worn it down.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3409,6 +3471,7 @@ MonoBehaviour:
       asked just one."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3463,6 +3526,7 @@ MonoBehaviour:
   - text: "What was in that \u201CNowhere\u201D?"
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3517,6 +3581,7 @@ MonoBehaviour:
   - text: Voices. Strained voices. Like they were trying to say something.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3571,6 +3636,7 @@ MonoBehaviour:
   - text: "The only word I remember - clear as day - was: \u201CBack.\u201D"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3626,6 +3692,7 @@ MonoBehaviour:
       to mind, but she kept every one of them to herself."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3681,6 +3748,7 @@ MonoBehaviour:
       quite daring to say it out loud.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3735,6 +3803,7 @@ MonoBehaviour:
   - text: Just a nightmare.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3789,6 +3858,7 @@ MonoBehaviour:
   - text: What was it about? Do you remember?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3843,6 +3913,7 @@ MonoBehaviour:
   - text: "Nothing. Nothing special. It\u2019s not the first time."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3898,6 +3969,7 @@ MonoBehaviour:
       bring herself to speak."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -3952,6 +4024,7 @@ MonoBehaviour:
   - text: "\u201CWhat am I supposed to say\u2026?\u201D"
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4006,6 +4079,7 @@ MonoBehaviour:
   - text: "Anxiety burned through her, but she didn\u2019t let it show."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4060,6 +4134,7 @@ MonoBehaviour:
   - text: "Well\u2026 ready?"
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4114,6 +4189,7 @@ MonoBehaviour:
   - text: Ready.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4168,6 +4244,7 @@ MonoBehaviour:
   - text: "I\u2019m going to clean up a bit. Then we go see Kerem, okay?"
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4222,6 +4299,7 @@ MonoBehaviour:
   - text: Okay.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4276,6 +4354,7 @@ MonoBehaviour:
   - text: Hannah shut herself in the bathroom, leaving Eli alone.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4330,6 +4409,7 @@ MonoBehaviour:
   - text: "\u201CGood. One less weight to carry.\u201D"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4384,6 +4464,7 @@ MonoBehaviour:
   - text: "\u201CI couldn\u2019t put what I saw into words, Hannah. I\u2019m sorry\u2026\u201D "
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4439,6 +4520,7 @@ MonoBehaviour:
       room. They\u2019d passed out instantly."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4494,6 +4576,7 @@ MonoBehaviour:
       that wouldn\u2019t let go."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4549,6 +4632,7 @@ MonoBehaviour:
       the occasional wind outside the window reminded him the world was still there.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4604,6 +4688,7 @@ MonoBehaviour:
       drifted through them so slowly it felt like time had stalled.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4659,6 +4744,7 @@ MonoBehaviour:
       seemed to press in, demanding attention.'
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4713,6 +4799,7 @@ MonoBehaviour:
   - text: "Eli\u2019s gaze wandered. Every object held a grain of the past."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4767,6 +4854,7 @@ MonoBehaviour:
   - text: 
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4866,6 +4954,7 @@ MonoBehaviour:
       looked asleep, but the air didn\u2019t."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4920,6 +5009,7 @@ MonoBehaviour:
   - text: A shadow flickered below, and Eli instinctively stepped back from the sill.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -4975,6 +5065,7 @@ MonoBehaviour:
       with a faded label.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5030,6 +5121,7 @@ MonoBehaviour:
       line: \u201CDon\u2019t look.\u201D"
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5085,6 +5177,7 @@ MonoBehaviour:
       thrum.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5140,6 +5233,7 @@ MonoBehaviour:
       start.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5194,6 +5288,7 @@ MonoBehaviour:
   - text: Eli set the guitar aside, left with the sound echoing in his head.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5249,6 +5344,7 @@ MonoBehaviour:
       like he could shut down, but his thoughts surfaced again, thick and sticky.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5303,6 +5399,7 @@ MonoBehaviour:
   - text: And when the silence became almost unbearable, it snapped.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5357,6 +5454,7 @@ MonoBehaviour:
   - text: A sharp burst of radio static pulled Eli out of it.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5411,6 +5509,7 @@ MonoBehaviour:
   - text: "Eli\u2014! Up and moving!"
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5465,6 +5564,7 @@ MonoBehaviour:
   - text: "I\u2019m here, Kerem. What\u2019s going on?"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5520,6 +5620,7 @@ MonoBehaviour:
       say over the radio.
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5574,6 +5675,7 @@ MonoBehaviour:
   - text: Where do we meet?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5628,6 +5730,7 @@ MonoBehaviour:
   - text: "I\u2019ll come to you."
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5682,6 +5785,7 @@ MonoBehaviour:
   - text: 'Hannah finished up and stepped out of the steamy bathroom. '
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5736,6 +5840,7 @@ MonoBehaviour:
   - text: By then, someone was knocking. Through the peephole, Eli saw Kerem.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5790,6 +5895,7 @@ MonoBehaviour:
   - text: Eli opened the door.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5845,6 +5951,7 @@ MonoBehaviour:
       killing people.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5899,6 +6006,7 @@ MonoBehaviour:
   - text: 
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -5975,6 +6083,7 @@ MonoBehaviour:
   - text: What kind of bandits?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6029,6 +6138,7 @@ MonoBehaviour:
   - text: "The Enforcers. Kyle\u2019s soldiers."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6083,6 +6193,7 @@ MonoBehaviour:
   - text: Who are they?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6137,6 +6248,7 @@ MonoBehaviour:
   - text: "Now it gets interesting\u2026 Kerem, stop stalling."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6192,6 +6304,7 @@ MonoBehaviour:
       tone.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6247,6 +6360,7 @@ MonoBehaviour:
       son - but I\u2019ll tell you about those two over a cup of tea."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6302,6 +6416,7 @@ MonoBehaviour:
       Don\u2019t let them use you."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6356,6 +6471,7 @@ MonoBehaviour:
   - text: "What\u2019s Elysium?"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6411,6 +6527,7 @@ MonoBehaviour:
       people live there - not exactly flashing what little they\u2019ve got."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6466,6 +6583,7 @@ MonoBehaviour:
       there supposed to be equality here?"
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6521,6 +6639,7 @@ MonoBehaviour:
       words, it\u2019s out of reach."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6575,6 +6694,7 @@ MonoBehaviour:
   - text: "Oh\u2014and Eli. I\u2019ve got something for you."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6630,6 +6750,7 @@ MonoBehaviour:
       handgun."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6685,6 +6806,7 @@ MonoBehaviour:
       a good shot, this old girl won\u2019t give you trouble."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6740,6 +6862,7 @@ MonoBehaviour:
       \u201CLittle Pete,\u201D Hannah\u2019s sniper rifle."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6794,6 +6917,7 @@ MonoBehaviour:
   - text: And for you, Hannah. Your rifle. Upgraded.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6848,6 +6972,7 @@ MonoBehaviour:
   - text: My Pete!
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6902,6 +7027,7 @@ MonoBehaviour:
   - text: They each looked over their gift.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -6957,6 +7083,7 @@ MonoBehaviour:
       trouble."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7011,6 +7138,7 @@ MonoBehaviour:
   - text: Look at you, Kerem. You even figured out what kind of gun I like.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7065,6 +7193,7 @@ MonoBehaviour:
   - text: "I knew you\u2019d appreciate it."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7119,6 +7248,7 @@ MonoBehaviour:
   - text: "What\u2019s your secret?"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7173,6 +7303,7 @@ MonoBehaviour:
   - text: Kerem smirked.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7227,6 +7358,7 @@ MonoBehaviour:
   - text: "You\u2019ll learn. With time."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7281,6 +7413,7 @@ MonoBehaviour:
   - text: Alright. Enough talk. Every minute counts.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7335,6 +7468,7 @@ MonoBehaviour:
   - text: Report anything you learn over the radio. Anything at all.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7390,6 +7524,7 @@ MonoBehaviour:
       the other side of the city - Elysium.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7444,6 +7579,7 @@ MonoBehaviour:
   - text: The moment they stepped into Elysium, something felt off.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7499,6 +7635,7 @@ MonoBehaviour:
       really did live here.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7553,6 +7690,7 @@ MonoBehaviour:
   - text: "Except\u2026"
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7607,6 +7745,7 @@ MonoBehaviour:
   - text: "Doesn\u2019t look like the Enforcers have been through here."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7661,6 +7800,7 @@ MonoBehaviour:
   - text: You feel it too?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7715,6 +7855,7 @@ MonoBehaviour:
   - text: "Yeah. It\u2019s like everything\u2019s too normal. Too calm."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7769,6 +7910,7 @@ MonoBehaviour:
   - text: Maybe Kerem lied.
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7823,6 +7965,7 @@ MonoBehaviour:
   - text: "I don\u2019t think so."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7877,6 +8020,7 @@ MonoBehaviour:
   - text: They moved deeper into Elysium.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7932,6 +8076,7 @@ MonoBehaviour:
       noticeably darker. The paths and alleys were empty.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -7986,6 +8131,7 @@ MonoBehaviour:
   - text: Unease crept in - slow, pressing.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8041,6 +8187,7 @@ MonoBehaviour:
       around the corner."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8095,6 +8242,7 @@ MonoBehaviour:
   - text: "Quiet. Someone\u2019s there. And they\u2019re hiding from us."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8149,6 +8297,7 @@ MonoBehaviour:
   - text: "Eli drew his pistol, expecting to find a bandit around the corner, or\u2026"
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8203,6 +8352,7 @@ MonoBehaviour:
   - text: '*static*'
     speakerName: Radio
     characterName: ...
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8257,6 +8407,7 @@ MonoBehaviour:
   - text: After a short burst of harsh interference, they heard ceramic shatter.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8311,6 +8462,7 @@ MonoBehaviour:
   - text: "Fuck\u2026 damn it!"
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8365,6 +8517,7 @@ MonoBehaviour:
   - text: "Kerem, don\u2019t scare us like that!"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8419,6 +8572,7 @@ MonoBehaviour:
   - text: Huh? Eli?
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8473,6 +8627,7 @@ MonoBehaviour:
   - text: "Pardon. Didn\u2019t mean to spook you."
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8527,6 +8682,7 @@ MonoBehaviour:
   - text: "Ah\u2026 what am I supposed to do about the plate\u2026 my favorite one\u2026"
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8581,6 +8737,7 @@ MonoBehaviour:
   - text: We can still hear you.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8635,6 +8792,7 @@ MonoBehaviour:
   - text: "Right\u2026 Yeah. I keep forgetting to let go of the push-to-talk button."
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8690,6 +8848,7 @@ MonoBehaviour:
       World, honestly. Knew I\u2019d forget something important\u2026"
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8744,6 +8903,7 @@ MonoBehaviour:
   - text: "Besides the Enforcers\u2026 there\u2019s someone else?"
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8798,6 +8958,7 @@ MonoBehaviour:
   - text: "Absolutely. This city\u2019s crawling with Dependents - up to its ass."
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8852,6 +9013,7 @@ MonoBehaviour:
   - text: We ran into them outside the walls too.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8907,6 +9069,7 @@ MonoBehaviour:
       the virus burned out.
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -8961,6 +9124,7 @@ MonoBehaviour:
   - text: So it used to be much worse than it is now?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9015,6 +9179,7 @@ MonoBehaviour:
   - text: Worse? Yeah. Unimaginably worse.
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9069,6 +9234,7 @@ MonoBehaviour:
   - text: "I\u2019ve got a lot of questions\u2026"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9123,6 +9289,7 @@ MonoBehaviour:
   - text: "I\u2019ll explain when\u2014"
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9177,6 +9344,7 @@ MonoBehaviour:
   - text: The familiar interference returned.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9231,6 +9399,7 @@ MonoBehaviour:
   - text: '*static*'
     speakerName: Radio
     characterName: ...
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9285,6 +9454,7 @@ MonoBehaviour:
   - text: When? Kerem?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9339,6 +9509,7 @@ MonoBehaviour:
   - text: The static lasted longer than usual.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9394,6 +9565,7 @@ MonoBehaviour:
       cacophony.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9449,6 +9621,7 @@ MonoBehaviour:
       wasn\u2019t Kerem."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9503,6 +9676,7 @@ MonoBehaviour:
   - text: Kerem? You there?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9557,6 +9731,7 @@ MonoBehaviour:
   - text: "This isn\u2019t Kerem."
     speakerName: ???
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9612,6 +9787,7 @@ MonoBehaviour:
       from someone.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9666,6 +9842,7 @@ MonoBehaviour:
   - text: Who are you? How did you get on our channel? How did you cut Kerem off?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9720,6 +9897,7 @@ MonoBehaviour:
   - text: "Name\u2019s Bars. It\u2019s a handle - a codename. It\u2019s all you need."
     speakerName: ???
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9775,6 +9953,7 @@ MonoBehaviour:
       years later, and hacking\u2019s still in style."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9829,6 +10008,7 @@ MonoBehaviour:
   - text: In World, knowing how to code is survival.
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9884,6 +10064,7 @@ MonoBehaviour:
       or even cut in and talk."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9938,6 +10119,7 @@ MonoBehaviour:
   - text: Okay, hacker. So why hijack our channel?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -9992,6 +10174,7 @@ MonoBehaviour:
   - text: Kerem put the word out about what you did.
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10046,6 +10229,7 @@ MonoBehaviour:
   - text: "\u201CEli Harred saved World from the terrifying darkness!\u201D"
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10100,6 +10284,7 @@ MonoBehaviour:
   - text: Got famous overnight, did I?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10156,6 +10341,7 @@ MonoBehaviour:
       new \u201Chero\u201D."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10210,6 +10396,7 @@ MonoBehaviour:
   - text: "Here\u2019s the point: I need us to meet."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10264,6 +10451,7 @@ MonoBehaviour:
   - text: And how exactly do you see that happening?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10319,6 +10507,7 @@ MonoBehaviour:
       a couple of fun little toys\u2026"
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10373,6 +10562,7 @@ MonoBehaviour:
   - text: Cheats?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10427,6 +10617,7 @@ MonoBehaviour:
   - text: "Come on, grandpa. I\u2019ve got something better than cheat codes."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10482,6 +10673,7 @@ MonoBehaviour:
       lure and they swarm to it, like flies to light."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10537,6 +10729,7 @@ MonoBehaviour:
       them a little \u201Ctickle\u201D."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10591,6 +10784,7 @@ MonoBehaviour:
   - text: "It doesn\u2019t last long, but it helps you push through a crowd of Dependents."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10645,6 +10839,7 @@ MonoBehaviour:
   - text: "Bars\u2019s tone shifted."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10699,6 +10894,7 @@ MonoBehaviour:
   - text: "This is why I hate Elysium\u2026 there are Dependents in PACKS out here."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10753,6 +10949,7 @@ MonoBehaviour:
   - text: "We haven\u2019t seen a single one."
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10807,6 +11004,7 @@ MonoBehaviour:
   - text: Because they move in packs. You almost never run into just one or two.
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10862,6 +11060,7 @@ MonoBehaviour:
       why they stick together."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10916,6 +11115,7 @@ MonoBehaviour:
   - text: "You\u2019re not in the darkest part of Elysium yet. I am."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -10970,6 +11170,7 @@ MonoBehaviour:
   - text: I went too far in. I need you to help me.
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11024,6 +11225,7 @@ MonoBehaviour:
   - text: Ever heard of a gun? Or even a basic knife?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11078,6 +11280,7 @@ MonoBehaviour:
   - text: "I\u2019ve got nothing."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11132,6 +11335,7 @@ MonoBehaviour:
   - text: Idiot, Eli thought.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11186,6 +11390,7 @@ MonoBehaviour:
   - text: From the other end of the line came a heavy crash, then a roar.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11240,6 +11445,7 @@ MonoBehaviour:
   - text: Just get over here!
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11294,6 +11500,7 @@ MonoBehaviour:
   - text: Alright. Just calm down.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11349,6 +11556,7 @@ MonoBehaviour:
       It\u2019s pointless."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11403,6 +11611,7 @@ MonoBehaviour:
   - text: So they wander around out there in hordes?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11457,6 +11666,7 @@ MonoBehaviour:
   - text: Not just wander. They hunt. They sniff things out.
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11512,6 +11722,7 @@ MonoBehaviour:
       way."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11567,6 +11778,7 @@ MonoBehaviour:
       still infected."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11622,6 +11834,7 @@ MonoBehaviour:
       up?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11676,6 +11889,7 @@ MonoBehaviour:
   - text: Not exactly. Something strange happened. Stranger than just a new strain.
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11730,6 +11944,7 @@ MonoBehaviour:
   - text: Then how did they get infected?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11784,6 +11999,7 @@ MonoBehaviour:
   - text: "They\u2014"
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11838,6 +12054,7 @@ MonoBehaviour:
   - text: The crash and roar came again, louder than before.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11893,6 +12110,7 @@ MonoBehaviour:
       pain had hit all at once.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -11948,6 +12166,7 @@ MonoBehaviour:
       in unison as he ran.'
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12002,6 +12221,7 @@ MonoBehaviour:
   - text: "They\u2019re here! Hurry\u2014move!!"
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12056,6 +12276,7 @@ MonoBehaviour:
   - text: "Bars\u2019s pleading snapped Eli out of it."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12110,6 +12331,7 @@ MonoBehaviour:
   - text: Run.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12165,6 +12387,7 @@ MonoBehaviour:
       empty. Eli chose the one straight ahead without hesitating.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12219,6 +12442,7 @@ MonoBehaviour:
   - text: Fuck it. Straight ahead.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12273,6 +12497,7 @@ MonoBehaviour:
   - text: A little farther down the path, they spotted dark shapes in the distance.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12327,6 +12552,7 @@ MonoBehaviour:
   - text: "Those aren\u2019t people."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12381,6 +12607,7 @@ MonoBehaviour:
   - text: "People\u2026 not themselves."
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12435,6 +12662,7 @@ MonoBehaviour:
   - text: Eli lowered his voice.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12489,6 +12717,7 @@ MonoBehaviour:
   - text: "It\u2019d be stupid to go through that crowd. Back up - slow and quiet\u2026"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12543,6 +12772,7 @@ MonoBehaviour:
   - text: Watching the shapes ahead, Eli and Hannah carefully backed away.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12597,6 +12827,7 @@ MonoBehaviour:
   - text: "The crowd didn\u2019t notice them, but\u2014"
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12652,6 +12883,7 @@ MonoBehaviour:
     speakerName: Dependent
     characterName: "\u0417\u0430\u0432\u0438\u0441\u0438\u043C\u044B\u0439 1 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12707,6 +12939,7 @@ MonoBehaviour:
     speakerName: Dependent
     characterName: "\u0417\u0430\u0432\u0438\u0441\u0438\u043C\u044B\u0439 2 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12761,6 +12994,7 @@ MonoBehaviour:
   - text: They looked up. The silhouettes froze.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12815,6 +13049,7 @@ MonoBehaviour:
   - text: Two Dependents crawled out of the rubble and lunged at them.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12869,6 +13104,7 @@ MonoBehaviour:
   - text: "One of them grabbed for Eli\u2019s arm."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12923,6 +13159,7 @@ MonoBehaviour:
   - text: Get the fuck off me!
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -12979,6 +13216,7 @@ MonoBehaviour:
     speakerName: Dependent
     characterName: "\u0417\u0430\u0432\u0438\u0441\u0438\u043C\u044B\u0439 1 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13034,6 +13272,7 @@ MonoBehaviour:
       second one in the head, but he dodged it fast.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13089,6 +13328,7 @@ MonoBehaviour:
       the dusty road.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13144,6 +13384,7 @@ MonoBehaviour:
       one thing left to do - run.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13198,6 +13439,7 @@ MonoBehaviour:
   - text: Oh, fuck!!
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13252,6 +13494,7 @@ MonoBehaviour:
   - text: "Eli grabbed Hannah\u2019s hand and took off."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13306,6 +13549,7 @@ MonoBehaviour:
   - text: This way!
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13360,6 +13604,7 @@ MonoBehaviour:
   - text: "They\u2019re getting closer!"
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13414,6 +13659,7 @@ MonoBehaviour:
   - text: Eli turned left into a narrow alley. Dead end.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13468,6 +13714,7 @@ MonoBehaviour:
   - text: "We\u2019re fucked!"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13522,6 +13769,7 @@ MonoBehaviour:
   - text: Hey! Grab the ladder!
     speakerName: ???
     characterName: "\u041D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u044B\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13576,6 +13824,7 @@ MonoBehaviour:
   - text: Someone on the roof of a low building tossed down a folded ladder.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13630,6 +13879,7 @@ MonoBehaviour:
   - text: They started climbing immediately. Adrenaline spiked.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13685,6 +13935,7 @@ MonoBehaviour:
       to claim their prey, began climbing the ladder after them.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13739,6 +13990,7 @@ MonoBehaviour:
   - text: "Predators are usually faster than their victims\u2026"
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13794,6 +14046,7 @@ MonoBehaviour:
       the Dependents grabbed her leg.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13848,6 +14101,7 @@ MonoBehaviour:
   - text: "Don\u2019t try to hit him!"
     speakerName: ???
     characterName: "\u041D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u044B\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13902,6 +14156,7 @@ MonoBehaviour:
   - text: What are you waiting for?! Shoot him - take his leg out!
     speakerName: ???
     characterName: "\u041D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u044B\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -13957,6 +14212,7 @@ MonoBehaviour:
       down the ladder, releasing Hannah. The others fell with it, crashing below."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14011,6 +14267,7 @@ MonoBehaviour:
   - text: Move!
     speakerName: ???
     characterName: "\u041D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u044B\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14065,6 +14322,7 @@ MonoBehaviour:
   - text: As Hannah got back on her feet, the stranger pulled the pin from a grenade.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14119,6 +14377,7 @@ MonoBehaviour:
   - text: "Get out of here! I\u2019ll hold them off!"
     speakerName: ???
     characterName: "\u041D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u044B\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14173,6 +14432,7 @@ MonoBehaviour:
   - text: He kicked the ladder away and threw the grenade into the crowd.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14228,6 +14488,7 @@ MonoBehaviour:
       and the blast behind them. What became of their rescuer remained unknown.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14282,6 +14543,7 @@ MonoBehaviour:
   - text: Hannah glanced back for a split second - the stranger was gone.
     speakerName: ...
     characterName: ...
+    questTriggerId: Orda
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14337,6 +14599,7 @@ MonoBehaviour:
       mass of the Dependents, hungry for blood.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14392,6 +14655,7 @@ MonoBehaviour:
       go.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14447,6 +14711,7 @@ MonoBehaviour:
       contacted Bars.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14501,6 +14766,7 @@ MonoBehaviour:
   - text: Bars, come in. This is Eli.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14555,6 +14821,7 @@ MonoBehaviour:
   - text: We see the collapse at the grocery store. Are you there?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14609,6 +14876,7 @@ MonoBehaviour:
   - text: '*static*'
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14663,6 +14931,7 @@ MonoBehaviour:
   - text: "No response. Let\u2019s move."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14718,6 +14987,7 @@ MonoBehaviour:
       nearby - they hadn\u2019t been heard."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14772,6 +15042,7 @@ MonoBehaviour:
   - text: Hannah looked toward the wreckage and froze in shock.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14826,6 +15097,7 @@ MonoBehaviour:
   - text: "There are bodies everywhere\u2026"
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14880,6 +15152,7 @@ MonoBehaviour:
   - text: I see. Bars has to be there.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14935,6 +15208,7 @@ MonoBehaviour:
       pierced the ruined structure.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -14989,6 +15263,7 @@ MonoBehaviour:
   - text: The shelves were stripped bare, only outdated price tags remained.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15043,6 +15318,7 @@ MonoBehaviour:
   - text: Sudden footsteps echoed behind them - someone was running up fast.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15097,6 +15373,7 @@ MonoBehaviour:
   - text: Hannah, watch out!
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15152,6 +15429,7 @@ MonoBehaviour:
     speakerName: Enforcer
     characterName: "\u0412\u0435\u0440\u0448\u0438\u0442\u0435\u043B\u044C 1 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15206,6 +15484,7 @@ MonoBehaviour:
   - text: Seriously? This is how you greet guests?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15262,6 +15541,7 @@ MonoBehaviour:
     speakerName: Enforcer
     characterName: "\u0412\u0435\u0440\u0448\u0438\u0442\u0435\u043B\u044C 2 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15317,6 +15597,7 @@ MonoBehaviour:
       an overturned shelf.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15371,6 +15652,7 @@ MonoBehaviour:
   - text: "Pete, don\u2019t let me down\u2026"
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15425,6 +15707,7 @@ MonoBehaviour:
   - text: She fired and hit the raider in the shoulder.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15480,6 +15763,7 @@ MonoBehaviour:
     speakerName: Enforcer
     characterName: "\u0412\u0435\u0440\u0448\u0438\u0442\u0435\u043B\u044C 1 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15535,6 +15819,7 @@ MonoBehaviour:
       in the leg.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15589,6 +15874,7 @@ MonoBehaviour:
   - text: The raider went down, his weapon skittering across the floor.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15644,6 +15930,7 @@ MonoBehaviour:
     speakerName: Enforcer
     characterName: "\u0412\u0435\u0440\u0448\u0438\u0442\u0435\u043B\u044C 2 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15698,6 +15985,7 @@ MonoBehaviour:
   - text: "Eli\u2014he\u2019s getting up!"
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15753,6 +16041,7 @@ MonoBehaviour:
       shot to the head, not letting him finish the move.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15808,6 +16097,7 @@ MonoBehaviour:
       raider."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15862,6 +16152,7 @@ MonoBehaviour:
   - text: So you call yourselves the Enforcers?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15917,6 +16208,7 @@ MonoBehaviour:
   - text: 'Coughing and laughing, the Enforcer answered:'
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -15972,6 +16264,7 @@ MonoBehaviour:
     speakerName: Enforcer
     characterName: "\u0412\u0435\u0440\u0448\u0438\u0442\u0435\u043B\u044C 1 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16026,6 +16319,7 @@ MonoBehaviour:
   - text: "Where\u2019s your boss? Why are you terrorizing Elysium?"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16082,6 +16376,7 @@ MonoBehaviour:
     speakerName: Enforcer
     characterName: "\u0412\u0435\u0440\u0448\u0438\u0442\u0435\u043B\u044C 1 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16137,6 +16432,7 @@ MonoBehaviour:
     speakerName: Enforcer
     characterName: "\u0412\u0435\u0440\u0448\u0438\u0442\u0435\u043B\u044C 1 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16192,6 +16488,7 @@ MonoBehaviour:
     speakerName: Enforcer
     characterName: "\u0412\u0435\u0440\u0448\u0438\u0442\u0435\u043B\u044C 1 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16247,6 +16544,7 @@ MonoBehaviour:
       few seconds left.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16301,6 +16599,7 @@ MonoBehaviour:
   - text: "Hey, wait. Don\u2019t go out on me. You didn\u2019t answer my questions. "
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16357,6 +16656,7 @@ MonoBehaviour:
     speakerName: Enforcer
     characterName: "\u0412\u0435\u0440\u0448\u0438\u0442\u0435\u043B\u044C 1 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16411,6 +16711,7 @@ MonoBehaviour:
   - text: "The Enforcer didn\u2019t move again. No pulse."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16467,6 +16768,7 @@ MonoBehaviour:
       stockroom and the break room."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16521,6 +16823,7 @@ MonoBehaviour:
   - text: Then Bars is hiding behind one of that doors.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16575,6 +16878,7 @@ MonoBehaviour:
   - text: 
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16651,6 +16955,7 @@ MonoBehaviour:
   - text: The break room door was slightly ajar. They slipped inside without trouble.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16706,6 +17011,7 @@ MonoBehaviour:
       old and metallic, like rust left to decay.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16762,6 +17068,7 @@ MonoBehaviour:
       stain.'
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16817,6 +17124,7 @@ MonoBehaviour:
       the window. A few lockers had been ripped off their hinges.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16872,6 +17180,7 @@ MonoBehaviour:
       - still wet. Someone had been here recently.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16927,6 +17236,7 @@ MonoBehaviour:
       the corner of something sticking out from beneath a pile of boxes.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -16981,6 +17291,7 @@ MonoBehaviour:
   - text: She shoved the boxes aside and picked up a document.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17035,6 +17346,7 @@ MonoBehaviour:
   - text: Look, Eli. This was written a long time ago.
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17091,6 +17403,7 @@ MonoBehaviour:
   - text: What does it say?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17146,6 +17459,7 @@ MonoBehaviour:
       so bad I could barely make it out."
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17200,6 +17514,7 @@ MonoBehaviour:
   - text: Anything stand out?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17255,6 +17570,7 @@ MonoBehaviour:
       does?"
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17309,6 +17625,7 @@ MonoBehaviour:
   - text: Dependents, I guess.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17363,6 +17680,7 @@ MonoBehaviour:
   - text: "That\u2019s\u2026 strange."
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17417,6 +17735,7 @@ MonoBehaviour:
   - text: "Maybe once we\u2019re done with the job, Kerem will explain everything."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17471,6 +17790,7 @@ MonoBehaviour:
   - text: Or Bars.
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17527,6 +17847,7 @@ MonoBehaviour:
   - text: Eli smirked.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17582,6 +17903,7 @@ MonoBehaviour:
       either way."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17636,6 +17958,7 @@ MonoBehaviour:
   - text: Finding nothing else of interest, they left the break room.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17690,6 +18013,7 @@ MonoBehaviour:
   - text: 
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17755,6 +18079,7 @@ MonoBehaviour:
   - text: They stopped at the door to the stockroom.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17809,6 +18134,7 @@ MonoBehaviour:
   - text: Eli knocked.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17863,6 +18189,7 @@ MonoBehaviour:
   - text: Silence.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17917,6 +18244,7 @@ MonoBehaviour:
   - text: Eli knocked again.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -17971,6 +18299,7 @@ MonoBehaviour:
   - text: "Whoever\u2019s in there - open up."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18025,6 +18354,7 @@ MonoBehaviour:
   - text: Eli? Hannah?
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18079,6 +18409,7 @@ MonoBehaviour:
   - text: Bars cracked the door open, cautious and jumpy.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18133,6 +18464,7 @@ MonoBehaviour:
   - text: Thank God. Finally.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: Hacker
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18187,6 +18519,7 @@ MonoBehaviour:
   - text: 
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18263,6 +18596,7 @@ MonoBehaviour:
   - text: What happened to this place?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18318,6 +18652,7 @@ MonoBehaviour:
       move together."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18372,6 +18707,7 @@ MonoBehaviour:
   - text: We noticed.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18426,6 +18762,7 @@ MonoBehaviour:
   - text: You two hurt?
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18481,6 +18818,7 @@ MonoBehaviour:
       and he was wearing a hood."
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18536,6 +18874,7 @@ MonoBehaviour:
       out - but so far, no luck.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18590,6 +18929,7 @@ MonoBehaviour:
   - text: This grocery store was intact until I blew it to get away.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18644,6 +18984,7 @@ MonoBehaviour:
   - text: "You said you didn\u2019t have a weapon."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18699,6 +19040,7 @@ MonoBehaviour:
       on me."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18753,6 +19095,7 @@ MonoBehaviour:
   - text: "But now? I\u2019ve got nothing. Not anymore."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18807,6 +19150,7 @@ MonoBehaviour:
   - text: 
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18895,6 +19239,7 @@ MonoBehaviour:
   - text: Are Dependents afraid of light?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -18950,6 +19295,7 @@ MonoBehaviour:
       in daylight.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19004,6 +19350,7 @@ MonoBehaviour:
   - text: "Because the light\u2019s so dim?"
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19059,6 +19406,7 @@ MonoBehaviour:
       you need a source that\u2019s bright enough to matter."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19114,6 +19462,7 @@ MonoBehaviour:
       abandoned high-rises and towers - sunlight barely reaches the street."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19168,6 +19517,7 @@ MonoBehaviour:
   - text: Are there stages to this infection?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19222,6 +19572,7 @@ MonoBehaviour:
   - text: Yeah. There are other types too. Like a Mauler.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19276,6 +19627,7 @@ MonoBehaviour:
   - text: Maulers are afraid even of dim light, so they only come out at night.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19330,6 +19682,7 @@ MonoBehaviour:
   - text: "Why do you call them \u201CMaulers\u201D?"
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19385,6 +19738,7 @@ MonoBehaviour:
       - truly strong."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19439,6 +19793,7 @@ MonoBehaviour:
   - text: Does this shit stay inside Elysium?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19493,6 +19848,7 @@ MonoBehaviour:
   - text: At night, the only safe place is near light. Nowhere else.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19547,6 +19903,7 @@ MonoBehaviour:
   - text: "Hannah handed Bars the document she\u2019d found in the break room."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19601,6 +19958,7 @@ MonoBehaviour:
   - text: "Point six says light \u201Cdraws them in.\u201D"
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19655,6 +20013,7 @@ MonoBehaviour:
   - text: 
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19731,6 +20090,7 @@ MonoBehaviour:
   - text: Who does it draw in?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19785,6 +20145,7 @@ MonoBehaviour:
   - text: Bars looked at Hannah, then back at the paper.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19840,6 +20201,7 @@ MonoBehaviour:
       the past, and handed it back.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19894,6 +20256,7 @@ MonoBehaviour:
   - text: Back then, light drew in the Dependents.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -19948,6 +20311,7 @@ MonoBehaviour:
   - text: That was a long time ago - right at the start of the disaster.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20002,6 +20366,7 @@ MonoBehaviour:
   - text: Kerem said the virus has burned out by now.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20056,6 +20421,7 @@ MonoBehaviour:
   - text: "Exactly. Now it\u2019s just a scrap of paper."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20110,6 +20476,7 @@ MonoBehaviour:
   - text: 
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20175,6 +20542,7 @@ MonoBehaviour:
   - text: "How could light \u201Cdraw them in\u201D? "
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20229,6 +20597,7 @@ MonoBehaviour:
   - text: Bars looked at Hannah, then back at the paper.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20284,6 +20653,7 @@ MonoBehaviour:
       the past, and handed it back.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20338,6 +20708,7 @@ MonoBehaviour:
   - text: Back then, light drew in the Dependents.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20393,6 +20764,7 @@ MonoBehaviour:
       surge - almost euphoria.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20447,6 +20819,7 @@ MonoBehaviour:
   - text: Then why did they attack people?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20501,6 +20874,7 @@ MonoBehaviour:
   - text: Bars lowered his eyes, like he was looking for a simpler way to say it.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20557,6 +20931,7 @@ MonoBehaviour:
       They wanted the stimulus itself."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20611,6 +20986,7 @@ MonoBehaviour:
   - text: "So\u2026 they were chasing the rush?"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20665,6 +21041,7 @@ MonoBehaviour:
   - text: "Yeah. That\u2019s what it was. Addiction - literally."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20719,6 +21096,7 @@ MonoBehaviour:
   - text: How long have you been in here?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20773,6 +21151,7 @@ MonoBehaviour:
   - text: About twenty minutes.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20827,6 +21206,7 @@ MonoBehaviour:
   - text: I locked myself in when the Enforcers started tearing this place apart.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20882,6 +21262,7 @@ MonoBehaviour:
       up and passed it to their boss\u2026"
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20936,6 +21317,7 @@ MonoBehaviour:
   - text: Cain?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -20991,6 +21373,7 @@ MonoBehaviour:
       him - the Enforcers."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21045,6 +21428,7 @@ MonoBehaviour:
   - text: "He\u2019s a real asshole."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21100,6 +21484,7 @@ MonoBehaviour:
       isn\u2019t a good man."
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21154,6 +21539,7 @@ MonoBehaviour:
   - text: "But there\u2019s still a lot we don\u2019t know. Bars, tell us\u2026"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21208,6 +21594,7 @@ MonoBehaviour:
   - text: 
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21295,6 +21682,7 @@ MonoBehaviour:
   - text: Why did he send the Enforcers to attack people?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21349,6 +21737,7 @@ MonoBehaviour:
   - text: Hell if I know. Probably to get rid of anyone who might be infected.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21403,6 +21792,7 @@ MonoBehaviour:
   - text: It almost sounded like Bars was trying to justify it.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21458,6 +21848,7 @@ MonoBehaviour:
       dark and they never make it home.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21512,6 +21903,7 @@ MonoBehaviour:
   - text: "Still. That\u2019s inhuman."
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21567,6 +21959,7 @@ MonoBehaviour:
       the same story - but the suspicion on Eli\u2019s face made him switch gears."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21621,6 +22014,7 @@ MonoBehaviour:
   - text: "I\u2019m not arguing. But we can\u2019t do anything about it."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21675,6 +22069,7 @@ MonoBehaviour:
   - text: Why does he call himself Cain?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21729,6 +22124,7 @@ MonoBehaviour:
   - text: His father preached Christianity. Kyle probably grew up on the Bible.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21783,6 +22179,7 @@ MonoBehaviour:
   - text: Where is he? We have to put an end to this.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21837,6 +22234,7 @@ MonoBehaviour:
   - text: "It\u2019s not that simple."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21892,6 +22290,7 @@ MonoBehaviour:
       heir to the city\u2019s founder."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -21946,6 +22345,7 @@ MonoBehaviour:
   - text: Eli asked the obvious question.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22000,6 +22400,7 @@ MonoBehaviour:
   - text: Huh?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22055,6 +22456,7 @@ MonoBehaviour:
       to keep pushing his mission - bringing civilization back."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22110,6 +22512,7 @@ MonoBehaviour:
       to do right by everyone\u2026"
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22164,6 +22567,7 @@ MonoBehaviour:
   - text: "You\u2019re full of patriotism."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22218,6 +22622,7 @@ MonoBehaviour:
   - text: "You just don\u2019t know his father, Eli."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22273,6 +22678,7 @@ MonoBehaviour:
       I still live in.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22327,6 +22733,7 @@ MonoBehaviour:
   - text: With a half-smirk, and a hint of suspicion, Eli asked...
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22381,6 +22788,7 @@ MonoBehaviour:
   - text: "So what, you\u2019re his \u201Csecret agent\u201D?"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22435,6 +22843,7 @@ MonoBehaviour:
   - text: "Nah. I\u2019m one of World\u2019s three Golden Programmers."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22489,6 +22898,7 @@ MonoBehaviour:
   - text: Wow. What an honor to breathe the same air as you.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22543,6 +22953,7 @@ MonoBehaviour:
   - text: "Bars was offended by Eli\u2019s sarcasm, but he kept quiet."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22597,6 +23008,7 @@ MonoBehaviour:
   - text: "Alright, don\u2019t sulk. We need Kyle. Cain. Whatever."
     speakerName: Bars
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22651,6 +23063,7 @@ MonoBehaviour:
   - text: "Kyle\u2019s in the city center."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22705,6 +23118,7 @@ MonoBehaviour:
   - text: Great. Lead the way.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22759,6 +23173,7 @@ MonoBehaviour:
   - text: "Slow down. You can\u2019t just walk into the Center."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22813,6 +23228,7 @@ MonoBehaviour:
   - text: Then how do we get in?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22867,6 +23283,7 @@ MonoBehaviour:
   - text: We go through Bear Prowess and Wolf Courage.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22921,6 +23338,7 @@ MonoBehaviour:
   - text: 
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -22997,6 +23415,7 @@ MonoBehaviour:
   - text: "What\u2019s Bear Prowess?"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23051,6 +23470,7 @@ MonoBehaviour:
   - text: "It\u2019s a checkpoint. Closest one to us. The Knights guard it."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23106,6 +23526,7 @@ MonoBehaviour:
       Peacekeepers forever."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23160,6 +23581,7 @@ MonoBehaviour:
   - text: "Ironic. World\u2019s stuck in constant wars."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23215,6 +23637,7 @@ MonoBehaviour:
       renamed it World. Said he\u2019d make it a world the way he saw it."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23269,6 +23692,7 @@ MonoBehaviour:
   - text: "Yeah. Like the blind man said: \u201CWe\u2019ll see.\u201D"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23324,6 +23748,7 @@ MonoBehaviour:
       playing both sides."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23378,6 +23803,7 @@ MonoBehaviour:
   - text: So what are the Knights like?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23433,6 +23859,7 @@ MonoBehaviour:
       but they\u2019re not."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23487,6 +23914,7 @@ MonoBehaviour:
   - text: 
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23563,6 +23991,7 @@ MonoBehaviour:
   - text: Wolf Courage is a checkpoint too?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23617,6 +24046,7 @@ MonoBehaviour:
   - text: "Exactly. Like Bear Prowess, it\u2019s one of the ways into the Center."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23672,6 +24102,7 @@ MonoBehaviour:
       Their goal is to take Bear Prowess, since it belongs to the Knights, not them.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23726,6 +24157,7 @@ MonoBehaviour:
   - text: "That\u2019s why they don\u2019t get along."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23780,6 +24212,7 @@ MonoBehaviour:
   - text: So what started all this, anyway?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23834,6 +24267,7 @@ MonoBehaviour:
   - text: "Peacekeepers don\u2019t like deviants. And to them, the Knights are deviants."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23889,6 +24323,7 @@ MonoBehaviour:
       They\u2019re the \u201Cact first\u201D type."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23943,6 +24378,7 @@ MonoBehaviour:
   - text: "Nice names\u2026"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -23998,6 +24434,7 @@ MonoBehaviour:
       and into the Center, you have to prove you\u2019ve got courage and prowess."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24052,6 +24489,7 @@ MonoBehaviour:
   - text: "\u201CYeah. And you sure as hell don\u2019t.\u201D"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24106,6 +24544,7 @@ MonoBehaviour:
   - text: Hannah thought the same.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24160,6 +24599,7 @@ MonoBehaviour:
   - text: Then how are you supposed to get into the Center?
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24215,6 +24655,7 @@ MonoBehaviour:
       to personal cards. Each of you needs your own."
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24269,6 +24710,7 @@ MonoBehaviour:
   - text: Fuck. So what do we do?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24323,6 +24765,7 @@ MonoBehaviour:
   - text: Earn the trust of both factions.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24377,6 +24820,7 @@ MonoBehaviour:
   - text: Both? One should be enough.
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24432,6 +24876,7 @@ MonoBehaviour:
       card.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24486,6 +24931,7 @@ MonoBehaviour:
   - text: "Then we split up. We\u2019ll stay in touch over the radio."
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24540,6 +24986,7 @@ MonoBehaviour:
   - text: Good idea.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24594,6 +25041,7 @@ MonoBehaviour:
   - text: "I\u2019ll go to the Knights."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24648,6 +25096,7 @@ MonoBehaviour:
   - text: Alright. Hannah and I will go to the Peacekeepers.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24703,6 +25152,7 @@ MonoBehaviour:
       thought of being alone in a place like this\u2026"
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24758,6 +25208,7 @@ MonoBehaviour:
       herself, she\u2019d make it through this too."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24813,6 +25264,7 @@ MonoBehaviour:
       sunset.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24867,6 +25319,7 @@ MonoBehaviour:
   - text: "It\u2019s beautiful."
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24922,6 +25375,7 @@ MonoBehaviour:
       soon.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -24976,6 +25430,7 @@ MonoBehaviour:
   - text: Hannah stepped up to Eli and hugged him.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25030,6 +25485,7 @@ MonoBehaviour:
   - text: "Don\u2019t disappear on me."
     speakerName: Hannah
     characterName: "\u0425\u0430\u043D\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25084,6 +25540,7 @@ MonoBehaviour:
   - text: You too.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25138,6 +25595,7 @@ MonoBehaviour:
   - text: See you, Eli.
     speakerName: Bars
     characterName: "\u0411\u0430\u0440\u0441"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25192,6 +25650,7 @@ MonoBehaviour:
   - text: And just like that, they went their separate ways - for a long while.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25246,6 +25705,7 @@ MonoBehaviour:
   - text: "\u201CI need to reach the Knights. Fast. Night\u2019s close.\u201D"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25301,6 +25761,7 @@ MonoBehaviour:
       the horizon.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25355,6 +25816,7 @@ MonoBehaviour:
   - text: A roar carried from deeper in Elysium.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25409,6 +25871,7 @@ MonoBehaviour:
   - text: Dependents are waking up.
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25463,6 +25926,7 @@ MonoBehaviour:
   - text: "Holy shit. That doesn\u2019t sound like a regular Dependent."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25517,6 +25981,7 @@ MonoBehaviour:
   - text: "You\u2019re right. Watch out for Maulers - that sounds like them."
     speakerName: Bars
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u0411\u0430\u0440\u0441)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25571,6 +26036,7 @@ MonoBehaviour:
   - text: Eli moved more carefully. For a moment, he glanced back.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25625,6 +26091,7 @@ MonoBehaviour:
   - text: A chill ran down his spine. His throat tightened.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25679,6 +26146,7 @@ MonoBehaviour:
   - text: Eli pushed himself to move faster.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25733,6 +26201,7 @@ MonoBehaviour:
   - text: And then - he was at the door to the Holy of Holies.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25787,6 +26256,7 @@ MonoBehaviour:
   - text: Copy. Eli? Hannah?
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25842,6 +26312,7 @@ MonoBehaviour:
       to Wolf Courage."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25897,6 +26368,7 @@ MonoBehaviour:
       What are you doing there?"
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -25951,6 +26423,7 @@ MonoBehaviour:
   - text: I need to get into the Center.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26006,6 +26479,7 @@ MonoBehaviour:
       myself\u2026"
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26060,6 +26534,7 @@ MonoBehaviour:
   - text: 
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26136,6 +26611,7 @@ MonoBehaviour:
   - text: Eli figured talking to his newest contact might take the edge off the fear.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26190,6 +26666,7 @@ MonoBehaviour:
   - text: Tell me the story.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26244,6 +26721,7 @@ MonoBehaviour:
   - text: "Heh. No one\u2019s asked me that in a long time."
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26298,6 +26776,7 @@ MonoBehaviour:
   - text: You remember me telling you about Sapphire?
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26352,6 +26831,7 @@ MonoBehaviour:
   - text: "You didn\u2019t. Who\u2019s that?"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26407,6 +26887,7 @@ MonoBehaviour:
       from the Holy of Holies."
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26461,6 +26942,7 @@ MonoBehaviour:
   - text: She helps me out - old friendship. Your weapons went through her shop.
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26515,6 +26997,7 @@ MonoBehaviour:
   - text: "If I were younger\u2026 ah\u2014look at me, rambling."
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26569,6 +27052,7 @@ MonoBehaviour:
   - text: "I\u2019ll tell you the rest when we meet. For now - go."
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26626,6 +27110,7 @@ MonoBehaviour:
   - text: How I can get in?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26680,6 +27165,7 @@ MonoBehaviour:
   - text: Just tell me how to get in.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26734,6 +27220,7 @@ MonoBehaviour:
   - text: "Knock. Maybe they\u2019ll open - it\u2019s night, after all."
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26788,6 +27275,7 @@ MonoBehaviour:
   - text: "And if they don\u2019t?"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26842,6 +27330,7 @@ MonoBehaviour:
   - text: Knock again.
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26897,6 +27386,7 @@ MonoBehaviour:
       it, in red: \u201CHOLY OF HOLIES.\u201D"
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -26951,6 +27441,7 @@ MonoBehaviour:
   - text: Fast, heavy footsteps approached from the other side.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27005,6 +27496,7 @@ MonoBehaviour:
   - text: Then silence. Like someone was watching Eli through the peephole.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27060,6 +27552,7 @@ MonoBehaviour:
     speakerName: Knight
     characterName: "\u0420\u044B\u0446\u0430\u0440\u044C \u043F\u043E \u0442\u0443
       \u0441\u0442\u043E\u0440\u043E\u043D\u0443 \u0434\u0432\u0435\u0440\u0438"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27114,6 +27607,7 @@ MonoBehaviour:
   - text: What?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27170,6 +27664,7 @@ MonoBehaviour:
     speakerName: Knight
     characterName: "\u0420\u044B\u0446\u0430\u0440\u044C \u043F\u043E \u0442\u0443
       \u0441\u0442\u043E\u0440\u043E\u043D\u0443 \u0434\u0432\u0435\u0440\u0438"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27224,6 +27719,7 @@ MonoBehaviour:
   - text: "I don\u2019t know it. I came from outside the walls."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27279,6 +27775,7 @@ MonoBehaviour:
   - text: No answer. Footsteps retreated from the door.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27334,6 +27831,7 @@ MonoBehaviour:
       either."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27389,6 +27887,7 @@ MonoBehaviour:
       this time.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27443,6 +27942,7 @@ MonoBehaviour:
   - text: Just what I needed.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27497,6 +27997,7 @@ MonoBehaviour:
   - text: "Eli turned. No one. Dead silence\u2026"
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27551,6 +28052,7 @@ MonoBehaviour:
   - text: "He stood still, waiting\u2026 for something."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27606,6 +28108,7 @@ MonoBehaviour:
       straight at him.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27661,6 +28164,7 @@ MonoBehaviour:
     speakerName: Mauler
     characterName: "\u0421\u0438\u043B\u0430\u0447 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27715,6 +28219,7 @@ MonoBehaviour:
   - text: "Fuck\u2014a Mauler!"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27769,6 +28274,7 @@ MonoBehaviour:
   - text: Did it work?
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27824,6 +28330,7 @@ MonoBehaviour:
       on my ass!"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27878,6 +28385,7 @@ MonoBehaviour:
   - text: "That\u2019s a Mauler. Run!"
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27932,6 +28440,7 @@ MonoBehaviour:
   - text: "What do you think I\u2019m doing?!"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -27987,6 +28496,7 @@ MonoBehaviour:
       and close.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28042,6 +28552,7 @@ MonoBehaviour:
       is close to the Holy of Holies."
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28096,6 +28607,7 @@ MonoBehaviour:
   - text: I see it.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28151,6 +28663,7 @@ MonoBehaviour:
       have to."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28206,6 +28719,7 @@ MonoBehaviour:
       under an old train car, listening.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28260,6 +28774,7 @@ MonoBehaviour:
   - text: "\u201CGo away, you freak\u2026\u201D"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28315,6 +28830,7 @@ MonoBehaviour:
       wasn\u2019t giving them anything."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28370,6 +28886,7 @@ MonoBehaviour:
       above, skipping the stairs entirely.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28425,6 +28942,7 @@ MonoBehaviour:
     speakerName: Mauler
     characterName: "\u0421\u0438\u043B\u0430\u0447 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28479,6 +28997,7 @@ MonoBehaviour:
   - text: "\u201CIt doesn\u2019t care about the drop?!\u201D"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28533,6 +29052,7 @@ MonoBehaviour:
   - text: All Eli could do was wonder what else it could do.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28587,6 +29107,7 @@ MonoBehaviour:
   - text: "Silence\u2026 for nearly two minutes, nothing moved."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28641,6 +29162,7 @@ MonoBehaviour:
   - text: Then footsteps - moving away fast, deeper into the tunnels.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28695,6 +29217,7 @@ MonoBehaviour:
   - text: "\u2026Gone."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28749,6 +29272,7 @@ MonoBehaviour:
   - text: Still expecting danger nearby, Eli spoke much quieter now - almost a whisper.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28803,6 +29327,7 @@ MonoBehaviour:
   - text: "Kerem. You there? The Mauler\u2019s gone. I\u2019m in the subway station."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28858,6 +29383,7 @@ MonoBehaviour:
       be a hatch.
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28912,6 +29438,7 @@ MonoBehaviour:
   - text: "Once you\u2019re up, you\u2019ll be inside the Holy of Holies."
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -28966,6 +29493,7 @@ MonoBehaviour:
   - text: On my way.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29021,6 +29549,7 @@ MonoBehaviour:
       a clean reputation."
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29076,6 +29605,7 @@ MonoBehaviour:
       about me.\u201D"
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29130,6 +29660,7 @@ MonoBehaviour:
   - text: "And don\u2019t disappear on me, kid."
     speakerName: Kerem
     characterName: "\u0420\u0430\u0446\u0438\u044F (\u041A\u0435\u0440\u0435\u043C)"
+    questTriggerId: 
     isRadio: 1
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29184,6 +29715,7 @@ MonoBehaviour:
   - text: 
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29282,6 +29814,7 @@ MonoBehaviour:
   - text: He quickened his pace.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29336,6 +29869,7 @@ MonoBehaviour:
   - text: "\"Once I\u2019m inside the Holy of Holies, I\u2019ll radio Bars.\""
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29390,6 +29924,7 @@ MonoBehaviour:
   - text: After a few minutes, Eli found a staircase leading up to a hatch.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29445,6 +29980,7 @@ MonoBehaviour:
       body was used to.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29499,6 +30035,7 @@ MonoBehaviour:
   - text: "The hatch didn\u2019t give at first, but he got it open."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29553,6 +30090,7 @@ MonoBehaviour:
   - text: He climbed up and, just like Kerem said, he was inside the Holy of Holies.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29607,6 +30145,7 @@ MonoBehaviour:
   - text: Ahead was a short corridor. He turned the corner.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29662,6 +30201,7 @@ MonoBehaviour:
       working together like ants - was immense.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29717,6 +30257,7 @@ MonoBehaviour:
       him - and immediately panicked.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29772,6 +30313,7 @@ MonoBehaviour:
     speakerName: Knight
     characterName: "\u0420\u044B\u0446\u0430\u0440\u044C 1 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29826,6 +30368,7 @@ MonoBehaviour:
   - text: "I\u2026 I\u2019m Eli\u2026 It\u2019s so bright\u2026"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29882,6 +30425,7 @@ MonoBehaviour:
     speakerName: Knight
     characterName: "\u0420\u044B\u0446\u0430\u0440\u044C 2 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29937,6 +30481,7 @@ MonoBehaviour:
       from behind.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -29992,6 +30537,7 @@ MonoBehaviour:
     speakerName: Knight
     characterName: "\u0420\u044B\u0446\u0430\u0440\u044C 3 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30046,6 +30592,7 @@ MonoBehaviour:
   - text: No! Stop! Please!
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30101,6 +30648,7 @@ MonoBehaviour:
       the church, making sure everyone would witness the execution.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30156,6 +30704,7 @@ MonoBehaviour:
     speakerName: Knight
     characterName: "\u0420\u044B\u0446\u0430\u0440\u044C 3 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30211,6 +30760,7 @@ MonoBehaviour:
     speakerName: Knight
     characterName: "\u0420\u044B\u0446\u0430\u0440\u044C 4 (\u0433\u043B\u0430\u0432\u0430
       2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30265,6 +30815,7 @@ MonoBehaviour:
   - text: Hang the outsider!
     speakerName: Maiden
     characterName: "\u0414\u0435\u0432\u0430 1 (\u0433\u043B\u0430\u0432\u0430 2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30320,6 +30871,7 @@ MonoBehaviour:
       dying right before their eyes - perhaps a Dependent, or a Peacekeeper spy.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30374,6 +30926,7 @@ MonoBehaviour:
   - text: That was exactly what these people believed.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30428,6 +30981,7 @@ MonoBehaviour:
   - text: He counted the final seconds of his life.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30482,6 +31036,7 @@ MonoBehaviour:
   - text: What are you doing?! Cut him down!
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30537,6 +31092,7 @@ MonoBehaviour:
       Eli hit the floor hard.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30591,6 +31147,7 @@ MonoBehaviour:
   - text: He gasped for air. The crushing pressure around his neck was gone.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30645,6 +31202,7 @@ MonoBehaviour:
   - text: "Kerem, have you lost your mind?! He\u2019s an outsider!"
     speakerName: Maiden
     characterName: "\u0414\u0435\u0432\u0430 1 (\u0433\u043B\u0430\u0432\u0430 2)"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30699,6 +31257,7 @@ MonoBehaviour:
   - text: "Calm down. He\u2019s with me. "
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30754,6 +31313,7 @@ MonoBehaviour:
   - text: I told you not to wander off too far, pal. Did you forget?
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30808,6 +31368,7 @@ MonoBehaviour:
   - text: "The Knights shouted after Kerem in protest, but he didn\u2019t care."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30862,6 +31423,7 @@ MonoBehaviour:
   - text: "Breathe. You\u2019re safe now. I\u2019ll take you to the workshop."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30916,6 +31478,7 @@ MonoBehaviour:
   - text: After that, Eli lost consciousness.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -30970,6 +31533,7 @@ MonoBehaviour:
   - text: When he came to, Kerem and Sapphire were standing over him.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31024,6 +31588,7 @@ MonoBehaviour:
   - text: "You awake? This is Sapphire. Sapphire\u2014Eli. Eli\u2014Sapphire."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31078,6 +31643,7 @@ MonoBehaviour:
   - text: Sapphire greeted him with an easy, friendly nod.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31132,6 +31698,7 @@ MonoBehaviour:
   - text: Hey.
     speakerName: Sapphire
     characterName: "\u0421\u0430\u043F\u0444\u0438\u0440"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31186,6 +31753,7 @@ MonoBehaviour:
   - text: "Eli\u2019s head and neck ached badly."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31240,6 +31808,7 @@ MonoBehaviour:
   - text: "Huh\u2026 ngh\u2026"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31294,6 +31863,7 @@ MonoBehaviour:
   - text: You took a pretty hard hit.
     speakerName: Sapphire
     characterName: "\u0421\u0430\u043F\u0444\u0438\u0440"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31348,6 +31918,7 @@ MonoBehaviour:
   - text: What time is it?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31402,6 +31973,7 @@ MonoBehaviour:
   - text: Morning. Nine, give or take.
     speakerName: Sapphire
     characterName: "\u0421\u0430\u043F\u0444\u0438\u0440"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31456,6 +32028,7 @@ MonoBehaviour:
   - text: "Eli jolted. He\u2019d been out all night."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31511,6 +32084,7 @@ MonoBehaviour:
       at the Peacekeepers\u2019 base."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31565,6 +32139,7 @@ MonoBehaviour:
   - text: "Okay\u2026 Where are we?"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31619,6 +32194,7 @@ MonoBehaviour:
   - text: In my room.
     speakerName: Sapphire
     characterName: "\u0421\u0430\u043F\u0444\u0438\u0440"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31673,6 +32249,7 @@ MonoBehaviour:
   - text: Oh. Sorry for barging in.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31727,6 +32304,7 @@ MonoBehaviour:
   - text: "It\u2019s fine. I knew we\u2019d meet sooner or later."
     speakerName: Sapphire
     characterName: "\u0421\u0430\u043F\u0444\u0438\u0440"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31781,6 +32359,7 @@ MonoBehaviour:
   - text: Thanks, Sapphire.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31835,6 +32414,7 @@ MonoBehaviour:
   - text: Here. Eat.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31889,6 +32469,7 @@ MonoBehaviour:
   - text: Kerem handed Eli a plate of hot stewed meat. The smell was familiar.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31943,6 +32524,7 @@ MonoBehaviour:
   - text: Eli took the plate and a fork and sat at the table with Sapphire and Kerem.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -31997,6 +32579,7 @@ MonoBehaviour:
   - text: Seriously. I owe you.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32051,6 +32634,7 @@ MonoBehaviour:
   - text: "Don\u2019t thank me. Eat while it\u2019s hot."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32105,6 +32689,7 @@ MonoBehaviour:
   - text: 
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32181,6 +32766,7 @@ MonoBehaviour:
   - text: So what happened to your plate?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32235,6 +32821,7 @@ MonoBehaviour:
   - text: Kerem smiled when Eli asked.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32289,6 +32876,7 @@ MonoBehaviour:
   - text: Broke. Had it since I was a kid - gift from my parents.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32343,6 +32931,7 @@ MonoBehaviour:
   - text: "Guess my hands aren\u2019t what they used to be."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32397,6 +32986,7 @@ MonoBehaviour:
   - text: Still shot that rope like a pro.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32451,6 +33041,7 @@ MonoBehaviour:
   - text: Kerem laughed.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32505,6 +33096,7 @@ MonoBehaviour:
   - text: "That\u2019s not something you forget, Eli."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32559,6 +33151,7 @@ MonoBehaviour:
   - text: 'He fell quiet for a moment, then said:'
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32613,6 +33206,7 @@ MonoBehaviour:
   - text: "Thanks for asking. Really. Didn\u2019t think anyone would care. "
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32667,6 +33261,7 @@ MonoBehaviour:
   - text: You knew they were going to hang me?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32722,6 +33317,7 @@ MonoBehaviour:
       Things aren\u2019t easy for them right now."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32777,6 +33373,7 @@ MonoBehaviour:
       still treat that like a tradition."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32832,6 +33429,7 @@ MonoBehaviour:
       Kerem pushed back from the table to get a look at him.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32886,6 +33484,7 @@ MonoBehaviour:
   - text: "You don\u2019t look good, kid."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32940,6 +33539,7 @@ MonoBehaviour:
   - text: "What\u2019s happening to me?"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -32994,6 +33594,7 @@ MonoBehaviour:
   - text: "Your eyes are filling with blood. That\u2019s not good."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33048,6 +33649,7 @@ MonoBehaviour:
   - text: What?!
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33103,6 +33705,7 @@ MonoBehaviour:
       had spread - burst capillaries leaving bloody streaks.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33157,6 +33760,7 @@ MonoBehaviour:
   - text: His pupils were blown wide, swallowing the entire iris.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33211,6 +33815,7 @@ MonoBehaviour:
   - text: What is this?!
     speakerName: Eli
     characterName: 
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33265,6 +33870,7 @@ MonoBehaviour:
   - text: "You\u2019re becoming Infected."
     speakerName: Kerem
     characterName: 
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33319,6 +33925,7 @@ MonoBehaviour:
   - text: Becoming what?!
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33373,6 +33980,7 @@ MonoBehaviour:
   - text: A Dependent.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33427,6 +34035,7 @@ MonoBehaviour:
   - text: Nobody bit me!
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33483,6 +34092,7 @@ MonoBehaviour:
       is saliva."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33539,6 +34149,7 @@ MonoBehaviour:
       it on Dark Day."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33593,6 +34204,7 @@ MonoBehaviour:
   - text: Then why do they still act like people?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33647,6 +34259,7 @@ MonoBehaviour:
   - text: Self-control. They fight the urge, and they stay human.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33702,6 +34315,7 @@ MonoBehaviour:
       lets you hold on longer."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33757,6 +34371,7 @@ MonoBehaviour:
       step into shadow. You hear me? Never."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33811,6 +34426,7 @@ MonoBehaviour:
   - text: Light is your lifeline. Light - especially bright light - slows the infection.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33865,6 +34481,7 @@ MonoBehaviour:
   - text: So how do people tell how far the infection has gone?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33920,6 +34537,7 @@ MonoBehaviour:
       has spread.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -33974,6 +34592,7 @@ MonoBehaviour:
   - text: "I\u2019ll get a lamp."
     speakerName: Sapphire
     characterName: "\u0421\u0430\u043F\u0444\u0438\u0440"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34028,6 +34647,7 @@ MonoBehaviour:
   - text: "And that\u2019s your answer to why going out at night is dangerous."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34083,6 +34703,7 @@ MonoBehaviour:
       up - and they can reach even the walls of the Center.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34138,6 +34759,7 @@ MonoBehaviour:
       didn\u2019t abandon the district. So there are rules. You follow them."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34192,6 +34814,7 @@ MonoBehaviour:
   - text: Like not going outside at night.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34246,6 +34869,7 @@ MonoBehaviour:
   - text: Yeah. Because now you can lose yourself to the infection.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34301,6 +34925,7 @@ MonoBehaviour:
       vanished.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34355,6 +34980,7 @@ MonoBehaviour:
   - text: See? Your eyes look better already. Light helps.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34409,6 +35035,7 @@ MonoBehaviour:
   - text: Thanks for saving me.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34464,6 +35091,7 @@ MonoBehaviour:
       one of us."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34518,6 +35146,7 @@ MonoBehaviour:
   - text: Welcome to hell.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34573,6 +35202,7 @@ MonoBehaviour:
       spilled out over dead Elysium, still trying to survive.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34627,6 +35257,7 @@ MonoBehaviour:
   - text: 
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34703,6 +35334,7 @@ MonoBehaviour:
   - text: How old is this place?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34757,6 +35389,7 @@ MonoBehaviour:
   - text: Old. This church was here long before us. The Knights made it their refuge.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34812,6 +35445,7 @@ MonoBehaviour:
       And everything here answers to the Queen."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34866,6 +35500,7 @@ MonoBehaviour:
   - text: The Queen?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34921,6 +35556,7 @@ MonoBehaviour:
       Hard, decisive. Just like her mother."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -34976,6 +35612,7 @@ MonoBehaviour:
       only heir - and she\u2019s been ruling ever since."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35030,6 +35667,7 @@ MonoBehaviour:
   - text: What happened to the last Queen?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35084,6 +35722,7 @@ MonoBehaviour:
   - text: "Age. When she set her order here, she wasn\u2019t young even then."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35138,6 +35777,7 @@ MonoBehaviour:
   - text: 
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35214,6 +35854,7 @@ MonoBehaviour:
   - text: "If you were a Knight\u2026 why aren\u2019t you one now?"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35269,6 +35910,7 @@ MonoBehaviour:
       time. They\u2019ve been at each other\u2019s throats for years."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35325,6 +35967,7 @@ MonoBehaviour:
       their propaganda."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35379,6 +36022,7 @@ MonoBehaviour:
   - text: Yeah, I know all that. What about you?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35433,6 +36077,7 @@ MonoBehaviour:
   - text: Let me finish.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35488,6 +36133,7 @@ MonoBehaviour:
       my people and took me prisoner.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35543,6 +36189,7 @@ MonoBehaviour:
       them everything."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35597,6 +36244,7 @@ MonoBehaviour:
   - text: "Rina didn\u2019t believe me. She cast me out."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35651,6 +36299,7 @@ MonoBehaviour:
   - text: "Her mother would\u2019ve believed me\u2026 if she\u2019d been here."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35706,6 +36355,7 @@ MonoBehaviour:
       it - how much it hurts when no one believes you."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35760,6 +36410,7 @@ MonoBehaviour:
   - text: 
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35836,6 +36487,7 @@ MonoBehaviour:
   - text: "When we were running from the Dependents in Elysium, some guy showed up\u2026"
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35891,6 +36543,7 @@ MonoBehaviour:
       glowing eyes."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -35946,6 +36599,7 @@ MonoBehaviour:
       him that night."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36000,6 +36654,7 @@ MonoBehaviour:
   - text: "He was on the edge\u2026"
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36054,6 +36709,7 @@ MonoBehaviour:
   - text: Eli knew where Kerem was going.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36108,6 +36764,7 @@ MonoBehaviour:
   - text: On the edge of turning.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36162,6 +36819,7 @@ MonoBehaviour:
   - text: "Don\u2019t let it get that far."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36217,6 +36875,7 @@ MonoBehaviour:
       Eli with a few guesses of his own."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36271,6 +36930,7 @@ MonoBehaviour:
   - text: Where can I find Rina?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36325,6 +36985,7 @@ MonoBehaviour:
   - text: Where can I find the one in charge?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36380,6 +37041,7 @@ MonoBehaviour:
       with a big guy in a plaid shirt.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36434,6 +37096,7 @@ MonoBehaviour:
   - text: "Over there. She\u2019s always with Mike, talking about something."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36488,6 +37151,7 @@ MonoBehaviour:
   - text: 'Kerem said with a laugh:'
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36542,6 +37206,7 @@ MonoBehaviour:
   - text: The whole Holy of Holies is whispering about how close those two are.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36596,6 +37261,7 @@ MonoBehaviour:
   - text: Heh. People still do gossip like that?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36651,6 +37317,7 @@ MonoBehaviour:
       blush when someone catches them at a bad moment."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36705,6 +37372,7 @@ MonoBehaviour:
   - text: Eli smiled.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36759,6 +37427,7 @@ MonoBehaviour:
   - text: Glad I cheered you up.
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36815,6 +37484,7 @@ MonoBehaviour:
       much as look at Rina wrong."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36869,6 +37539,7 @@ MonoBehaviour:
   - text: Good to know.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36924,6 +37595,7 @@ MonoBehaviour:
       headed for the shed.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -36978,6 +37650,7 @@ MonoBehaviour:
   - text: Hello, Kerem. Hello, Eli.
     speakerName: Rina
     characterName: "\u0420\u0438\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37032,6 +37705,7 @@ MonoBehaviour:
   - text: Mike gave Eli a disapproving look.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37086,6 +37760,7 @@ MonoBehaviour:
   - text: "It\u2019s fine, Mike. I\u2019ve been waiting to meet him."
     speakerName: Rina
     characterName: "\u0420\u0438\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37140,6 +37815,7 @@ MonoBehaviour:
   - text: "I\u2019ll leave you two."
     speakerName: Kerem
     characterName: "\u041A\u0435\u0440\u0435\u043C"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37194,6 +37870,7 @@ MonoBehaviour:
   - text: Eli studied Rina, trying to get a read on her.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37249,6 +37926,7 @@ MonoBehaviour:
       small nose. Full lips.
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37304,6 +37982,7 @@ MonoBehaviour:
       to get. It was striking. Hard to forget."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37358,6 +38037,7 @@ MonoBehaviour:
   - text: 'Finally, Eli asked:'
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37412,6 +38092,7 @@ MonoBehaviour:
   - text: How do you know my name?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37467,6 +38148,7 @@ MonoBehaviour:
       too.
     speakerName: Rina
     characterName: "\u0420\u0438\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37521,6 +38203,7 @@ MonoBehaviour:
   - text: "Alright. Let\u2019s get to it. I need into the Center."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37576,6 +38259,7 @@ MonoBehaviour:
       in through a back way.
     speakerName: Rina
     characterName: "\u0420\u0438\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37631,6 +38315,7 @@ MonoBehaviour:
       have."
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37685,6 +38370,7 @@ MonoBehaviour:
   - text: Precautions.
     speakerName: Rina
     characterName: "\u0420\u0438\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37740,6 +38426,7 @@ MonoBehaviour:
       me I can trust you."
     speakerName: Rina
     characterName: "\u0420\u0438\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37794,6 +38481,7 @@ MonoBehaviour:
   - text: Seriously? You were about to hang me!
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37849,6 +38537,7 @@ MonoBehaviour:
       a Dependent. Or a spy."
     speakerName: Rina
     characterName: "\u0420\u0438\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37903,6 +38592,7 @@ MonoBehaviour:
   - text: Wrong on both counts.
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -37957,6 +38647,7 @@ MonoBehaviour:
   - text: "Fine. Then here\u2019s the deal: you help me - I help you."
     speakerName: Rina
     characterName: "\u0420\u0438\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -38011,6 +38702,7 @@ MonoBehaviour:
   - text: Okay. What do you want?
     speakerName: Eli
     characterName: "\u0418\u043B\u0430\u0439"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -38066,6 +38758,7 @@ MonoBehaviour:
       radio."
     speakerName: Rina
     characterName: "\u0420\u0438\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -38120,6 +38813,7 @@ MonoBehaviour:
   - text: "Rina handed Eli his radio. He hadn\u2019t even noticed it was missing."
     speakerName: ...
     characterName: ...
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -38174,6 +38868,7 @@ MonoBehaviour:
   - text: In the meantime, talk to people here. Someone might have work for you.
     speakerName: Rina
     characterName: "\u0420\u0438\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0
@@ -38228,6 +38923,7 @@ MonoBehaviour:
   - text: See you soon.
     speakerName: Rina
     characterName: "\u0420\u0438\u043D\u0430"
+    questTriggerId: 
     isRadio: 0
     changeSpeakerName: 0
     changeCharacterSprite: 0

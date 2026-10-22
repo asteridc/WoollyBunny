@@ -213,6 +213,14 @@ public partial class DialogueManager : MonoBehaviour
         nameText.text = line.speakerName;
         DialogueLine.ExtraActions extraActions = line.extraActions;
 
+        if (!string.IsNullOrWhiteSpace(line.questTriggerId))
+            DailyQuestManager.Instance?.RegisterAction(line.questTriggerId);
+
+        DailyQuestManager.Instance?.RegisterReachedDialogueLine(
+            currentChapter != null ? currentChapter.ChapterId : string.Empty,
+            currentChapter != null ? currentChapter.ChapterNumber : 0,
+            currentLineIndex);
+
         fullCurrentLine = finalText;
         typingCoroutine = StartCoroutine(TypeLine(fullCurrentLine));
 

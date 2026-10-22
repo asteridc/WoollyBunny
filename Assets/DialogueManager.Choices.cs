@@ -347,6 +347,8 @@ public partial class DialogueManager : MonoBehaviour
         runtimeLines[currentLineIndex].choices,
         choice
         );
+        DailyQuestManager.Instance?.RegisterAction("DialogueChoiceMade");
+
         DominantPath rewardPath = ResolveChoiceRewardPath(choice);
 
         switch (rewardPath)
@@ -362,6 +364,14 @@ public partial class DialogueManager : MonoBehaviour
                 break;
             case DominantPath.None:
                 break;
+        }
+
+        if (rewardPath == DominantPath.Nobility)
+        {
+            DailyQuestManager.Instance?.RegisterAction("NobilityPoints");
+
+            Debug.Log(
+                "[DailyQuest] Очко Благородства засчитано в ежедневный квест.");
         }
 
         Debug.Log($"Выбран путь: {rewardPath}");

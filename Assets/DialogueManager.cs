@@ -127,6 +127,10 @@ public partial class DialogueManager : MonoBehaviour
     public Sprite knight4_Chapter2;
     public Sprite maiden1_Chapter2;
     public Sprite maulerSprite_Chapter2;
+    public Sprite jackSprite;
+    public Sprite sidneySprite;
+    public Sprite loriSprite;
+    public Sprite chrisSprite;
 
     [Header("Hide Dialogue")]
     [SerializeField] private CanvasGroup dialogueCanvasGroup;
@@ -401,6 +405,12 @@ public partial class DialogueManager : MonoBehaviour
             case "Рыцарь 4 (глава 2)": return knight4_Chapter2;
             case "Дева 1 (глава 2)": return maiden1_Chapter2;
             case "Силач (глава 2)": return maulerSprite_Chapter2;
+
+
+            case "Джек": return jackSprite;
+            case "Сидни": return sidneySprite;
+            case "Лори": return loriSprite;
+            case "Крис": return chrisSprite;
             default: return null;
         }
     }

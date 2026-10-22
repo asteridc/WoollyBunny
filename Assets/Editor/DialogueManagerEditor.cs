@@ -22,7 +22,7 @@ public class DialogueChapterEditor : Editor
 
         fields = new string[]
         {
-            "text","speakerName","characterName","isRadio","changeSpeakerName",
+            "text","speakerName","characterName", "questTriggerId", "isRadio","changeSpeakerName",
             "changeCharacterSprite","changeBackground","characterSprite","backgroundSprite", "backgroundId",
             "backgroundTransition",
             "isOnRight","flipSpeakerImage","listenerCharacterName","isListenerOnRight",

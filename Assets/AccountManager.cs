@@ -80,7 +80,248 @@ public class AccountManager : MonoBehaviour
 
         if (accountData.rewardedChapterNumbers == null)
             accountData.rewardedChapterNumbers = new System.Collections.Generic.List<int>();
+        if (accountData.inventoryAmounts == null)
+            accountData.inventoryAmounts = new List<AccountInventoryAmount>();
+        if (accountData.ownedUniqueInventoryItems == null)
+            accountData.ownedUniqueInventoryItems = new List<string>();
 
+        NormalizeInventoryData();
+        SaveAccountData();
+    }
+
+    public int GetInventoryAmount(string id)
+    {
+        string normalizedId = NormalizeInventoryId(id);
+        if (normalizedId == null)
+            return 0;
+
+        int total = 0;
+        foreach (AccountInventoryAmount entry in accountData.inventoryAmounts)
+        {
+            if (entry != null && InventoryIdsEqual(entry.id, normalizedId))
+                total += Mathf.Max(0, entry.amount);
+        }
+
+        return total;
+    }
+
+    public bool HasInventoryAmountRecord(string id)
+    {
+        string normalizedId = NormalizeInventoryId(id);
+        return normalizedId != null && accountData.inventoryAmounts.Exists(
+            item => item != null && InventoryIdsEqual(item.id, normalizedId));
+    }
+
+    public bool SetInventoryAmount(string id, int amount)
+    {
+        string normalizedId = NormalizeInventoryId(id);
+        if (normalizedId == null || amount < 0)
+            return false;
+
+        AccountInventoryAmount entry = GetOrCreateInventoryAmount(normalizedId);
+        entry.amount = amount;
+        SaveAccountData();
+        return true;
+    }
+
+    public bool ExchangeInventoryAmounts(
+        string fromId,
+        int fromAmount,
+        string toId,
+        int toAmount)
+    {
+        string normalizedFromId = NormalizeInventoryId(fromId);
+        string normalizedToId = NormalizeInventoryId(toId);
+        if (normalizedFromId == null || normalizedToId == null ||
+            InventoryIdsEqual(normalizedFromId, normalizedToId) ||
+            fromAmount <= 0 || toAmount <= 0 ||
+            GetInventoryAmount(normalizedFromId) < fromAmount)
+            return false;
+
+        AccountInventoryAmount from = GetOrCreateInventoryAmount(normalizedFromId);
+        AccountInventoryAmount to = GetOrCreateInventoryAmount(normalizedToId);
+        from.amount -= fromAmount;
+        to.amount += toAmount;
+        SaveAccountData();
+        return true;
+    }
+
+    public bool ExchangeUniqueInventoryItems(string fromId, string toId)
+    {
+        string normalizedFromId = NormalizeInventoryId(fromId);
+        string normalizedToId = NormalizeInventoryId(toId);
+        if (normalizedFromId == null || normalizedToId == null ||
+            InventoryIdsEqual(normalizedFromId, normalizedToId) ||
+            !HasUniqueInventoryItem(normalizedFromId) ||
+            HasUniqueInventoryItem(normalizedToId))
+            return false;
+
+        RemoveUniqueInventoryItem(normalizedFromId);
+        accountData.ownedUniqueInventoryItems.Add(normalizedToId);
+        SaveAccountData();
+        return true;
+    }
+
+    public AccountData GetAccountDataSnapshot()
+    {
+        return JsonUtility.FromJson<AccountData>(JsonUtility.ToJson(accountData));
+    }
+
+    public void RestoreAccountDataSnapshot(AccountData snapshot)
+    {
+        if (snapshot == null)
+            return;
+
+        accountData = snapshot;
+        if (accountData.inventoryAmounts == null)
+            accountData.inventoryAmounts = new List<AccountInventoryAmount>();
+        if (accountData.ownedUniqueInventoryItems == null)
+            accountData.ownedUniqueInventoryItems = new List<string>();
+        NormalizeInventoryData();
+        SaveAccountData();
+    }
+
+    private AccountInventoryAmount GetOrCreateInventoryAmount(string id)
+    {
+        string normalizedId = NormalizeInventoryId(id);
+        AccountInventoryAmount entry = null;
+        for (int i = 0; i < accountData.inventoryAmounts.Count;)
+        {
+            AccountInventoryAmount candidate = accountData.inventoryAmounts[i];
+            if (candidate == null || !InventoryIdsEqual(candidate.id, normalizedId))
+            {
+                i++;
+                continue;
+            }
+
+            if (entry == null)
+            {
+                entry = candidate;
+                entry.id = normalizedId;
+                entry.amount = Mathf.Max(0, entry.amount);
+                i++;
+            }
+            else
+            {
+                entry.amount += Mathf.Max(0, candidate.amount);
+                accountData.inventoryAmounts.RemoveAt(i);
+            }
+        }
+
+        if (entry != null)
+            return entry;
+
+        entry = new AccountInventoryAmount { id = normalizedId, amount = 0 };
+        accountData.inventoryAmounts.Add(entry);
+        return entry;
+    }
+
+    public bool HasUniqueInventoryItem(string id)
+    {
+        string normalizedId = NormalizeInventoryId(id);
+        return normalizedId != null && accountData.ownedUniqueInventoryItems.Exists(
+            item => InventoryIdsEqual(item, normalizedId));
+    }
+
+    public bool SetUniqueInventoryItemOwned(string id, bool owned)
+    {
+        string normalizedId = NormalizeInventoryId(id);
+        if (normalizedId == null)
+            return false;
+
+        if (owned)
+        {
+            if (!HasUniqueInventoryItem(normalizedId))
+                accountData.ownedUniqueInventoryItems.Add(normalizedId);
+        }
+        else
+        {
+            RemoveUniqueInventoryItem(normalizedId);
+        }
+
+        SaveAccountData();
+        return true;
+    }
+
+    public void MarkInventoryInitialized()
+    {
+        if (accountData.inventoryInitialized)
+            return;
+
+        accountData.inventoryInitialized = true;
+        SaveAccountData();
+    }
+
+    public bool IsInventoryInitialized => accountData.inventoryInitialized;
+
+    private void NormalizeInventoryData()
+    {
+        Dictionary<string, AccountInventoryAmount> amountsById =
+            new Dictionary<string, AccountInventoryAmount>(StringComparer.OrdinalIgnoreCase);
+        List<AccountInventoryAmount> normalizedAmounts = new List<AccountInventoryAmount>();
+
+        foreach (AccountInventoryAmount amount in accountData.inventoryAmounts)
+        {
+            if (amount == null)
+                continue;
+
+            string normalizedId = NormalizeInventoryId(amount.id);
+            if (normalizedId == null)
+                continue;
+
+            if (amountsById.TryGetValue(normalizedId, out AccountInventoryAmount existing))
+            {
+                existing.amount += Mathf.Max(0, amount.amount);
+                continue;
+            }
+
+            amount.id = normalizedId;
+            amount.amount = Mathf.Max(0, amount.amount);
+            amountsById.Add(normalizedId, amount);
+            normalizedAmounts.Add(amount);
+        }
+
+        accountData.inventoryAmounts = normalizedAmounts;
+
+        List<string> normalizedUniqueItems = new List<string>();
+        foreach (string itemId in accountData.ownedUniqueInventoryItems)
+        {
+            string normalizedId = NormalizeInventoryId(itemId);
+            if (normalizedId != null && !normalizedUniqueItems.Exists(
+                existing => InventoryIdsEqual(existing, normalizedId)))
+                normalizedUniqueItems.Add(normalizedId);
+        }
+
+        accountData.ownedUniqueInventoryItems = normalizedUniqueItems;
+    }
+
+    private void RemoveUniqueInventoryItem(string id)
+    {
+        accountData.ownedUniqueInventoryItems.RemoveAll(
+            item => InventoryIdsEqual(item, id));
+    }
+
+    private static string NormalizeInventoryId(string id)
+    {
+        return string.IsNullOrWhiteSpace(id) ? null : id.Trim();
+    }
+
+    private static bool InventoryIdsEqual(string first, string second)
+    {
+        string normalizedFirst = NormalizeInventoryId(first);
+        string normalizedSecond = NormalizeInventoryId(second);
+        return normalizedFirst != null && normalizedSecond != null &&
+            string.Equals(normalizedFirst, normalizedSecond, StringComparison.OrdinalIgnoreCase);
+    }
+
+    public string GetDailyQuestProgressJson()
+    {
+        return accountData.dailyQuestProgressJson;
+    }
+
+    public void SaveDailyQuestProgress(string json)
+    {
+        accountData.dailyQuestProgressJson = json;
         SaveAccountData();
     }
 

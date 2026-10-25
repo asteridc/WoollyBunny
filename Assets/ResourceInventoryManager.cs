@@ -78,7 +78,7 @@ public class ResourceInventoryManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject);
+            Destroy(this);
             return;
         }
 
@@ -350,6 +350,36 @@ public class ResourceInventoryManager : MonoBehaviour
     public bool GrantCustomReward(string rewardId, int amount)
     {
         return GrantReward(rewardId, amount);
+    }
+
+    public bool TryCollectPumpkinLantern(
+        string id,
+        int amount,
+        long nextAccrualUnixTimestamp,
+        out int newAmount)
+    {
+        newAmount = 0;
+        InventoryEntryDefinition definition = GetDefinition(id);
+
+        if (definition == null ||
+            definition.type == InventoryEntryType.UniqueItem ||
+            amount <= 0 ||
+            IsExpired(id))
+            return false;
+
+        AccountManager accountManager = AccountManager.GetOrCreate();
+        string entryId = definition.id.Trim();
+
+        if (!accountManager.TryCollectPumpkinLantern(
+                entryId,
+                amount,
+                nextAccrualUnixTimestamp,
+                out newAmount))
+            return false;
+
+        AmountChanged?.Invoke(entryId, newAmount);
+        InventoryChanged?.Invoke();
+        return true;
     }
 
     public bool GrantUniqueItem(string id)

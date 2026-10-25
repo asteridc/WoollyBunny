@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
+[DefaultExecutionOrder(-200)]
 public class AccountManager : MonoBehaviour
 {
     public static AccountManager Instance { get; private set; }
@@ -18,7 +19,7 @@ public class AccountManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject);
+            Destroy(this);
             return;
         }
 
@@ -250,6 +251,75 @@ public class AccountManager : MonoBehaviour
 
         accountData.inventoryInitialized = true;
         SaveAccountData();
+    }
+
+    public long GetPumpkinLanternLastAccrualUnixSeconds()
+    {
+        return accountData != null
+            ? accountData.pumpkinLanternLastAccrualUnixSeconds
+            : 0;
+    }
+
+    public bool InitializePumpkinLanternIfNeeded(long initialUnixTimestamp)
+    {
+        if (accountData == null || initialUnixTimestamp <= 0)
+            return false;
+
+        if (accountData.pumpkinLanternLastAccrualUnixSeconds > 0)
+            return true;
+
+        accountData.pumpkinLanternLastAccrualUnixSeconds = initialUnixTimestamp;
+        try
+        {
+            SaveAccountData();
+            return true;
+        }
+        catch (Exception exception)
+        {
+            accountData.pumpkinLanternLastAccrualUnixSeconds = 0;
+            Debug.LogError($"[AccountManager] Не удалось инициализировать фонарь: {exception.Message}", this);
+            return false;
+        }
+    }
+
+    // Баланс и время следующего накопления сохраняются одной записью аккаунта.
+    // Это не позволяет выдать конфеты повторно, если игра завершится между двумя отдельными сохранениями.
+    public bool TryCollectPumpkinLantern(
+        string resourceId,
+        int amount,
+        long nextAccrualUnixTimestamp,
+        out int newBalance)
+    {
+        newBalance = 0;
+        string normalizedId = NormalizeInventoryId(resourceId);
+
+        if (accountData == null || normalizedId == null || amount <= 0 ||
+            nextAccrualUnixTimestamp <= 0)
+            return false;
+
+        AccountInventoryAmount entry = GetOrCreateInventoryAmount(normalizedId);
+        int previousAmount = Mathf.Max(0, entry.amount);
+        long previousTimestamp = accountData.pumpkinLanternLastAccrualUnixSeconds;
+
+        if (previousAmount > int.MaxValue - amount)
+            return false;
+
+        entry.amount = previousAmount + amount;
+        accountData.pumpkinLanternLastAccrualUnixSeconds = nextAccrualUnixTimestamp;
+
+        try
+        {
+            SaveAccountData();
+            newBalance = entry.amount;
+            return true;
+        }
+        catch (Exception exception)
+        {
+            entry.amount = previousAmount;
+            accountData.pumpkinLanternLastAccrualUnixSeconds = previousTimestamp;
+            Debug.LogError($"[AccountManager] Не удалось сохранить сбор фонаря: {exception.Message}", this);
+            return false;
+        }
     }
 
     public bool IsInventoryInitialized => accountData.inventoryInitialized;

@@ -17,6 +17,9 @@ public class AccountData
     public bool inventoryInitialized;
     public string dailyQuestProgressJson;
 
+    [Header("Halloween Event")]
+    public long pumpkinLanternLastAccrualUnixSeconds;
+
     public AccountData()
     {
         storyLevelData = new StoryLevelData();

@@ -6864,11 +6864,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0441\u0435\u0431\u0435
-    \u0432\u0441\u0435\u043E\u0431\u0449\u0438\u0439 \u0447\u0435\u043B\u043E\u0432\u0435\u0447\u0435\u0441\u043A\u0438\u0439
-    \u043A\u043E\u043B\u043B\u0430\u043F\u0441, \u0432\u044B\u0437\u0432\u0430\u043D\u043D\u044B\u0439
-    \u043E\u0441\u0442\u0440\u043E\u0439 \u043B\u043E\u043C\u043A\u043E\u0439, -
-    \u0437\u0430\u0432\u0438\u0441\u0438\u043C\u043E\u0441\u0442\u044C\u044E."
+  m_text: "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435! \u042D\u0442\u0430 \u0438\u0441\u0442\u043E\u0440\u0438\u044F
+    \u043D\u0435 \u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u043E\u0442\u0432\u0435\u0442\u0432\u043B\u0435\u043D\u0438\u0435\u043C
+    \u043E\u0441\u043D\u043E\u0432\u043D\u043E\u0433\u043E \u0441\u044E\u0436\u0435\u0442\u0430
+    \u0438 \u043D\u0438\u043A\u0430\u043A \u043D\u0435 \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0435\u0442
+    \u0435\u0433\u043E."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3a1f716603c5fab40a412e1f5d3a5f9e, type: 2}
   m_sharedMaterial: {fileID: -362943841761185241, guid: 3a1f716603c5fab40a412e1f5d3a5f9e, type: 2}
@@ -22169,7 +22169,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2077997909}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -28803,8 +28803,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2058033248}
   m_HandleRect: {fileID: 2058033246}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.9783599
+  m_Value: 0.999995
+  m_Size: 0.9783598
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -29051,7 +29051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fee7c761eeb703428f4ca33c44a679a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLineNumber: 1
+  startLineNumber: 13
   currentBackgroundId: i0
   skipLineDelay: 0.2
   skipButton: {fileID: 697922010}
@@ -29183,7 +29183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   russian: {fileID: 11400000, guid: 2410a9bf10e7ebf4dbffad61dbb6eb10, type: 2}
-  english: {fileID: 11400000, guid: e86fcd1fa1c91dd4eae5bbb09d2e6940, type: 2}
+  english: {fileID: 11400000, guid: 2410a9bf10e7ebf4dbffad61dbb6eb10, type: 2}
 --- !u!114 &789832478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39756,7 +39756,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 143.24, y: -50}
-  m_SizeDelta: {x: 82.48, y: 50}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1017064747
 MonoBehaviour:
@@ -50641,7 +50641,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329422287}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -52048,7 +52048,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1636798317}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -52228,7 +52228,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1939262961}
   m_HandleRect: {fileID: 1939262959}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -64977,7 +64977,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 88.725, y: -50}
-  m_SizeDelta: {x: 16.55, y: 50}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1670922513
 MonoBehaviour:

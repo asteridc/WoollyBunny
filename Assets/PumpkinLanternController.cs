@@ -34,6 +34,8 @@ public sealed class PumpkinLanternController : MonoBehaviour
     [SerializeField] private string englishReadyText = "The lantern is full! Collect your candy.";
     [SerializeField] private string russianUnavailableText = "Фонарь пока недоступен";
     [SerializeField] private string englishUnavailableText = "The lantern is unavailable";
+    [SerializeField] private string russianExpiredText = "Событие завершено";
+    [SerializeField] private string englishExpiredText = "Event ended";
 
     private const long UnixTimestampMinimum = 1;
     private float nextUiRefreshTime;
@@ -167,6 +169,36 @@ public sealed class PumpkinLanternController : MonoBehaviour
         long lastAccrual = AccountManager.Instance != null
             ? AccountManager.Instance.GetPumpkinLanternLastAccrualUnixSeconds()
             : 0;
+
+        ResourceInventoryManager inventory = ResourceInventoryManager.Instance;
+        InventoryEntryDefinition definition = inventory != null
+            ? inventory.GetDefinition(resourceId)
+            : null;
+
+        if (definition == null)
+        {
+            SetUI(0, MaximumStoredAmount, false,
+                LanguageManager.CurrentLanguage == Language.English
+                    ? englishUnavailableText
+                    : russianUnavailableText);
+            return;
+        }
+
+        if (inventory.IsExpired(resourceId))
+        {
+            int accrued = 0;
+            if (lastAccrual >= UnixTimestampMinimum)
+            {
+                long nowExpired = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                accrued = CalculateAccrual(lastAccrual, nowExpired).availableAmount;
+            }
+
+            SetUI(accrued, MaximumStoredAmount, false,
+                LanguageManager.CurrentLanguage == Language.English
+                    ? englishExpiredText
+                    : russianExpiredText);
+            return;
+        }
 
         if (lastAccrual < UnixTimestampMinimum)
         {

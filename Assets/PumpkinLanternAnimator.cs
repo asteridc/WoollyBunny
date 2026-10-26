@@ -1,6 +1,8 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System.Collections.Generic;
 
 /// <summary>
 /// Handles only the animated visibility of the pumpkin lantern UI.
@@ -20,6 +22,14 @@ public sealed class PumpkinLanternAnimator : MonoBehaviour
     [SerializeField, Min(0.01f)] private float animationDuration = 0.25f;
     [SerializeField, Range(0.8f, 0.99f)] private float hiddenScale = 0.94f;
 
+    [Header("Sidney Phrases")]
+    [SerializeField] private TMP_Text sidneyPhraseText;
+
+    [TextArea(2, 4)]
+    [SerializeField] private string[] sidneyPhrases;
+
+    private int lastSidneyPhraseIndex = -1;
+
     private Sequence currentAnimation;
     private bool isOpen;
     private bool isAnimating;
@@ -29,6 +39,17 @@ public sealed class PumpkinLanternAnimator : MonoBehaviour
         HideInstant();
     }
 
+    private void Update()
+    {
+        // Если окно закрыто или сейчас проигрывается анимация,
+        // ничего не делаем.
+        if (!isOpen || isAnimating)
+            return;
+
+        // Закрываем окно при нажатии Escape.
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Close();
+    }
     private void OnEnable()
     {
         if (openButton != null)
@@ -62,6 +83,8 @@ public sealed class PumpkinLanternAnimator : MonoBehaviour
     {
         if (isOpen || isAnimating || !ReferencesAreValid())
             return;
+
+        ShowRandomSidneyPhrase();
 
         isOpen = true;
         isAnimating = true;
@@ -117,6 +140,60 @@ public sealed class PumpkinLanternAnimator : MonoBehaviour
         });
     }
 
+    private void ShowRandomSidneyPhrase()
+    {
+        if (sidneyPhraseText == null)
+        {
+            Debug.LogWarning(
+                "PumpkinLanternAnimator: assign Sidney Phrase Text in the Inspector.",
+                this);
+            return;
+        }
+
+        if (sidneyPhrases == null || sidneyPhrases.Length == 0)
+        {
+            Debug.LogWarning(
+                "PumpkinLanternAnimator: add phrases to Sidney Phrases in the Inspector.",
+                this);
+            return;
+        }
+
+        // Собираем только непустые фразы.
+        List<int> candidates = new List<int>();
+
+        for (int i = 0; i < sidneyPhrases.Length; i++)
+        {
+            if (!string.IsNullOrWhiteSpace(sidneyPhrases[i]) &&
+                i != lastSidneyPhraseIndex)
+            {
+                candidates.Add(i);
+            }
+        }
+
+        // Если все подходящие фразы исключены из-за прошлого выбора,
+        // разрешаем выбрать любую непустую фразу.
+        if (candidates.Count == 0)
+        {
+            for (int i = 0; i < sidneyPhrases.Length; i++)
+            {
+                if (!string.IsNullOrWhiteSpace(sidneyPhrases[i]))
+                    candidates.Add(i);
+            }
+        }
+
+        if (candidates.Count == 0)
+        {
+            Debug.LogWarning(
+                "PumpkinLanternAnimator: all Sidney phrases are empty.",
+                this);
+            return;
+        }
+
+        int randomCandidate = Random.Range(0, candidates.Count);
+        lastSidneyPhraseIndex = candidates[randomCandidate];
+
+        sidneyPhraseText.text = sidneyPhrases[lastSidneyPhraseIndex];
+    }
     private bool ReferencesAreValid()
     {
         if (panelCanvasGroup == null || panelTransform == null)

@@ -7420,8 +7420,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1582572528}
   m_HandleRect: {fileID: 1582572526}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.9783599
+  m_Value: 0.999995
+  m_Size: 0.9783598
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11127,6 +11127,137 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 44.2505
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 44.5836
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Each pellet has a 50% chance to ricochet and hit a nearby enemy, dealing
+        80% less damage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u043E\u0434\u043D\u0430
+        \u0438\u0437 \u0434\u0440\u043E\u0431\u0435\u0439 \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442
+        \u0438 \u043F\u043E\u0440\u0430\u0436\u0430\u0435\u0442 \u0441\u043E\u0441\u0435\u0434\u043D\u0435\u0433\u043E
+        \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430, \u043D\u0430\u043D\u043E\u0441\u044F
+        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494990909483315104, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Name
+      value: "\u043A\u0430\u0440\u0442\u0430 (\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511854449278106621, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u0434\u0440\u043E\u0431\u044C
+        (\u043B\u044E\u0431\u0430\u044F \u0438\u0437 \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u0432\u0448\u0435\u0439)
+        \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442 \u0438 \u043D\u0430\u043D\u043E\u0441\u0438\u0442
+        \u0441\u043E\u0441\u0435\u0434\u043D\u0438\u043C \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430\u043C
+        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Deadly bounce
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+        \u0431\u0430\u0442\u0443\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3911262212847260985, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Rare shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341923250173004777, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 166
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492019315059402116, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+        \u0431\u0430\u0442\u0443\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434521224328650303, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -145.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7629929497560902110, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214766107104669404, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299690661519436530, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Bouncer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 43c3c093681b53c4d8313e32ddace5bf, type: 3}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 296097964919789946, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -11359,137 +11490,6 @@ PrefabInstance:
     - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -372.82843
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 44.2505
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 44.5836
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Each pellet has a 50% chance to ricochet and hit a nearby enemy, dealing
-        80% less damage.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u043E\u0434\u043D\u0430
-        \u0438\u0437 \u0434\u0440\u043E\u0431\u0435\u0439 \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442
-        \u0438 \u043F\u043E\u0440\u0430\u0436\u0430\u0435\u0442 \u0441\u043E\u0441\u0435\u0434\u043D\u0435\u0433\u043E
-        \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430, \u043D\u0430\u043D\u043E\u0441\u044F
-        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494990909483315104, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Name
-      value: "\u043A\u0430\u0440\u0442\u0430 (\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1511854449278106621, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u0434\u0440\u043E\u0431\u044C
-        (\u043B\u044E\u0431\u0430\u044F \u0438\u0437 \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u0432\u0448\u0435\u0439)
-        \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442 \u0438 \u043D\u0430\u043D\u043E\u0441\u0438\u0442
-        \u0441\u043E\u0441\u0435\u0434\u043D\u0438\u043C \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430\u043C
-        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Deadly bounce
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
-        \u0431\u0430\u0442\u0443\u0442"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3911262212847260985, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Rare shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5341923250173004777, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 166
-      objectReference: {fileID: 0}
-    - target: {fileID: 6492019315059402116, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
-        \u0431\u0430\u0442\u0443\u0442"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434521224328650303, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -145.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7629929497560902110, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8214766107104669404, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299690661519436530, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Bouncer
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 43c3c093681b53c4d8313e32ddace5bf, type: 3}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.r
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -31924,7 +31924,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1279667846}
   m_HandleRect: {fileID: 1279667844}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -36320,6 +36320,137 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 44.2505
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 44.5836
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Each pellet has a 50% chance to ricochet and hit a nearby enemy, dealing
+        80% less damage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u043E\u0434\u043D\u0430
+        \u0438\u0437 \u0434\u0440\u043E\u0431\u0435\u0439 \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442
+        \u0438 \u043F\u043E\u0440\u0430\u0436\u0430\u0435\u0442 \u0441\u043E\u0441\u0435\u0434\u043D\u0435\u0433\u043E
+        \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430, \u043D\u0430\u043D\u043E\u0441\u044F
+        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494990909483315104, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Name
+      value: "\u043A\u0430\u0440\u0442\u0430 (\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511854449278106621, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u0434\u0440\u043E\u0431\u044C
+        (\u043B\u044E\u0431\u0430\u044F \u0438\u0437 \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u0432\u0448\u0435\u0439)
+        \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442 \u0438 \u043D\u0430\u043D\u043E\u0441\u0438\u0442
+        \u0441\u043E\u0441\u0435\u0434\u043D\u0438\u043C \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430\u043C
+        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Deadly bounce
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+        \u0431\u0430\u0442\u0443\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3911262212847260985, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Rare shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341923250173004777, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 166
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492019315059402116, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+        \u0431\u0430\u0442\u0443\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434521224328650303, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -145.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7629929497560902110, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214766107104669404, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299690661519436530, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Bouncer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 43c3c093681b53c4d8313e32ddace5bf, type: 3}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 296097964919789946, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -36569,137 +36700,6 @@ PrefabInstance:
     - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -372.82843
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 44.2505
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 44.5836
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Each pellet has a 50% chance to ricochet and hit a nearby enemy, dealing
-        80% less damage.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u043E\u0434\u043D\u0430
-        \u0438\u0437 \u0434\u0440\u043E\u0431\u0435\u0439 \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442
-        \u0438 \u043F\u043E\u0440\u0430\u0436\u0430\u0435\u0442 \u0441\u043E\u0441\u0435\u0434\u043D\u0435\u0433\u043E
-        \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430, \u043D\u0430\u043D\u043E\u0441\u044F
-        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494990909483315104, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Name
-      value: "\u043A\u0430\u0440\u0442\u0430 (\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1511854449278106621, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u0434\u0440\u043E\u0431\u044C
-        (\u043B\u044E\u0431\u0430\u044F \u0438\u0437 \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u0432\u0448\u0435\u0439)
-        \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442 \u0438 \u043D\u0430\u043D\u043E\u0441\u0438\u0442
-        \u0441\u043E\u0441\u0435\u0434\u043D\u0438\u043C \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430\u043C
-        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Deadly bounce
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
-        \u0431\u0430\u0442\u0443\u0442"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3911262212847260985, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Rare shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5341923250173004777, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 166
-      objectReference: {fileID: 0}
-    - target: {fileID: 6492019315059402116, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
-        \u0431\u0430\u0442\u0443\u0442"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434521224328650303, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -145.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7629929497560902110, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8214766107104669404, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299690661519436530, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Bouncer
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 43c3c093681b53c4d8313e32ddace5bf, type: 3}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.r
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -41325,126 +41325,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 75
       objectReference: {fileID: 0}
-    - target: {fileID: 3277278917030379782, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_Name
-      value: "tooltip (\u041A\u0430\u0440\u0430\u0442\u0435\u043B\u044C)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3277278917030379782, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5341923250173004777, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 170.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866357470187699741, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -373.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6594674238282428920, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: canvas
-      value: 
-      objectReference: {fileID: 1785659677}
-    - target: {fileID: 6594674238282428920, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: screenPadding
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6594674238282428920, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: cursorOffset.x
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 6594674238282428920, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: cursorOffset.y
-      value: -24
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_Pivot.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 443.817
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 469.8867
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -983
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -564
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7053010014295437697, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -372.82855
-      objectReference: {fileID: 0}
-    - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -372.82855
-      objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
       propertyPath: m_SizeDelta.x
       value: 44.2505
@@ -41575,6 +41455,126 @@ PrefabInstance:
     - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277278917030379782, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_Name
+      value: "tooltip (\u041A\u0430\u0440\u0430\u0442\u0435\u043B\u044C)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277278917030379782, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341923250173004777, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 170.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866357470187699741, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -373.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594674238282428920, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1785659677}
+    - target: {fileID: 6594674238282428920, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: screenPadding
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594674238282428920, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: cursorOffset.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594674238282428920, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: cursorOffset.y
+      value: -24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 443.817
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 469.8867
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -983
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -564
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753647065316007572, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7053010014295437697, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -372.82855
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -372.82855
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -43079,6 +43079,137 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 44.2505
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 44.5836
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Each pellet has a 50% chance to ricochet and hit a nearby enemy, dealing
+        80% less damage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u043E\u0434\u043D\u0430
+        \u0438\u0437 \u0434\u0440\u043E\u0431\u0435\u0439 \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442
+        \u0438 \u043F\u043E\u0440\u0430\u0436\u0430\u0435\u0442 \u0441\u043E\u0441\u0435\u0434\u043D\u0435\u0433\u043E
+        \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430, \u043D\u0430\u043D\u043E\u0441\u044F
+        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494990909483315104, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Name
+      value: "\u043A\u0430\u0440\u0442\u0430 (\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511854449278106621, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u0434\u0440\u043E\u0431\u044C
+        (\u043B\u044E\u0431\u0430\u044F \u0438\u0437 \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u0432\u0448\u0435\u0439)
+        \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442 \u0438 \u043D\u0430\u043D\u043E\u0441\u0438\u0442
+        \u0441\u043E\u0441\u0435\u0434\u043D\u0438\u043C \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430\u043C
+        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Deadly bounce
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+        \u0431\u0430\u0442\u0443\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3911262212847260985, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Rare shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341923250173004777, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 166
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492019315059402116, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+        \u0431\u0430\u0442\u0443\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434521224328650303, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -145.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7629929497560902110, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214766107104669404, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299690661519436530, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Bouncer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 43c3c093681b53c4d8313e32ddace5bf, type: 3}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_SizeDelta.x
       value: 48.5957
@@ -43292,137 +43423,6 @@ PrefabInstance:
     - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -392.0285
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 44.2505
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 44.5836
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Each pellet has a 50% chance to ricochet and hit a nearby enemy, dealing
-        80% less damage.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u043E\u0434\u043D\u0430
-        \u0438\u0437 \u0434\u0440\u043E\u0431\u0435\u0439 \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442
-        \u0438 \u043F\u043E\u0440\u0430\u0436\u0430\u0435\u0442 \u0441\u043E\u0441\u0435\u0434\u043D\u0435\u0433\u043E
-        \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430, \u043D\u0430\u043D\u043E\u0441\u044F
-        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494990909483315104, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Name
-      value: "\u043A\u0430\u0440\u0442\u0430 (\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1511854449278106621, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u0434\u0440\u043E\u0431\u044C
-        (\u043B\u044E\u0431\u0430\u044F \u0438\u0437 \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u0432\u0448\u0435\u0439)
-        \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442 \u0438 \u043D\u0430\u043D\u043E\u0441\u0438\u0442
-        \u0441\u043E\u0441\u0435\u0434\u043D\u0438\u043C \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430\u043C
-        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Deadly bounce
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
-        \u0431\u0430\u0442\u0443\u0442"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3911262212847260985, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Rare shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5341923250173004777, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 166
-      objectReference: {fileID: 0}
-    - target: {fileID: 6492019315059402116, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
-        \u0431\u0430\u0442\u0443\u0442"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434521224328650303, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -145.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7629929497560902110, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8214766107104669404, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299690661519436530, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Bouncer
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 43c3c093681b53c4d8313e32ddace5bf, type: 3}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.r
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -47439,6 +47439,137 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 44.2505
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 44.5836
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Each pellet has a 50% chance to ricochet and hit a nearby enemy, dealing
+        80% less damage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u043E\u0434\u043D\u0430
+        \u0438\u0437 \u0434\u0440\u043E\u0431\u0435\u0439 \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442
+        \u0438 \u043F\u043E\u0440\u0430\u0436\u0430\u0435\u0442 \u0441\u043E\u0441\u0435\u0434\u043D\u0435\u0433\u043E
+        \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430, \u043D\u0430\u043D\u043E\u0441\u044F
+        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494990909483315104, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Name
+      value: "\u043A\u0430\u0440\u0442\u0430 (\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511854449278106621, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u0434\u0440\u043E\u0431\u044C
+        (\u043B\u044E\u0431\u0430\u044F \u0438\u0437 \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u0432\u0448\u0435\u0439)
+        \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442 \u0438 \u043D\u0430\u043D\u043E\u0441\u0438\u0442
+        \u0441\u043E\u0441\u0435\u0434\u043D\u0438\u043C \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430\u043C
+        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Deadly bounce
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+        \u0431\u0430\u0442\u0443\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3911262212847260985, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Rare shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341923250173004777, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 166
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492019315059402116, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+        \u0431\u0430\u0442\u0443\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434521224328650303, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -145.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7629929497560902110, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214766107104669404, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299690661519436530, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Bouncer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 43c3c093681b53c4d8313e32ddace5bf, type: 3}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 296097964919789946, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -47680,137 +47811,6 @@ PrefabInstance:
     - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -372.82843
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 44.2505
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 44.5836
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Each pellet has a 50% chance to ricochet and hit a nearby enemy, dealing
-        80% less damage.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u043E\u0434\u043D\u0430
-        \u0438\u0437 \u0434\u0440\u043E\u0431\u0435\u0439 \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442
-        \u0438 \u043F\u043E\u0440\u0430\u0436\u0430\u0435\u0442 \u0441\u043E\u0441\u0435\u0434\u043D\u0435\u0433\u043E
-        \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430, \u043D\u0430\u043D\u043E\u0441\u044F
-        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494990909483315104, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Name
-      value: "\u043A\u0430\u0440\u0442\u0430 (\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1511854449278106621, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u0434\u0440\u043E\u0431\u044C
-        (\u043B\u044E\u0431\u0430\u044F \u0438\u0437 \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u0432\u0448\u0435\u0439)
-        \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442 \u0438 \u043D\u0430\u043D\u043E\u0441\u0438\u0442
-        \u0441\u043E\u0441\u0435\u0434\u043D\u0438\u043C \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430\u043C
-        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Deadly bounce
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
-        \u0431\u0430\u0442\u0443\u0442"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3911262212847260985, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Rare shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5341923250173004777, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 166
-      objectReference: {fileID: 0}
-    - target: {fileID: 6492019315059402116, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
-        \u0431\u0430\u0442\u0443\u0442"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434521224328650303, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -145.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7629929497560902110, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8214766107104669404, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299690661519436530, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Bouncer
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 43c3c093681b53c4d8313e32ddace5bf, type: 3}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.r
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -57000,6 +57000,137 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 44.2505
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 44.5836
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Each pellet has a 50% chance to ricochet and hit a nearby enemy, dealing
+        80% less damage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u043E\u0434\u043D\u0430
+        \u0438\u0437 \u0434\u0440\u043E\u0431\u0435\u0439 \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442
+        \u0438 \u043F\u043E\u0440\u0430\u0436\u0430\u0435\u0442 \u0441\u043E\u0441\u0435\u0434\u043D\u0435\u0433\u043E
+        \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430, \u043D\u0430\u043D\u043E\u0441\u044F
+        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494990909483315104, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Name
+      value: "\u043A\u0430\u0440\u0442\u0430 (\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511854449278106621, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u0434\u0440\u043E\u0431\u044C
+        (\u043B\u044E\u0431\u0430\u044F \u0438\u0437 \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u0432\u0448\u0435\u0439)
+        \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442 \u0438 \u043D\u0430\u043D\u043E\u0441\u0438\u0442
+        \u0441\u043E\u0441\u0435\u0434\u043D\u0438\u043C \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430\u043C
+        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Deadly bounce
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+        \u0431\u0430\u0442\u0443\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3911262212847260985, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Rare shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341923250173004777, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 166
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492019315059402116, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+        \u0431\u0430\u0442\u0443\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434521224328650303, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -145.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7629929497560902110, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214766107104669404, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299690661519436530, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_text
+      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: englishText
+      value: Bouncer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: russianText
+      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 43c3c093681b53c4d8313e32ddace5bf, type: 3}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 555658253330542811, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_SizeDelta.x
       value: 47
@@ -57200,137 +57331,6 @@ PrefabInstance:
     - target: {fileID: 8791698705858156567, guid: be8062737a686524584c274b20d03795, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -372.82843
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 44.2505
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 44.5836
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 555658253330542811, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Each pellet has a 50% chance to ricochet and hit a nearby enemy, dealing
-        80% less damage.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255120884401598652, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u043E\u0434\u043D\u0430
-        \u0438\u0437 \u0434\u0440\u043E\u0431\u0435\u0439 \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442
-        \u0438 \u043F\u043E\u0440\u0430\u0436\u0430\u0435\u0442 \u0441\u043E\u0441\u0435\u0434\u043D\u0435\u0433\u043E
-        \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430, \u043D\u0430\u043D\u043E\u0441\u044F
-        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494990909483315104, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Name
-      value: "\u043A\u0430\u0440\u0442\u0430 (\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1511854449278106621, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0421 \u0448\u0430\u043D\u0441\u043E\u043C 50% \u0434\u0440\u043E\u0431\u044C
-        (\u043B\u044E\u0431\u0430\u044F \u0438\u0437 \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u0432\u0448\u0435\u0439)
-        \u0440\u0438\u043A\u043E\u0448\u0435\u0442\u0438\u0442 \u0438 \u043D\u0430\u043D\u043E\u0441\u0438\u0442
-        \u0441\u043E\u0441\u0435\u0434\u043D\u0438\u043C \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430\u043C
-        \u043D\u0430 80% \u043C\u0435\u043D\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Deadly bounce
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432678867078292327, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
-        \u0431\u0430\u0442\u0443\u0442"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3911262212847260985, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Rare shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412327391306480830, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 4475192721877271350, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u0414\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5341923250173004777, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 166
-      objectReference: {fileID: 0}
-    - target: {fileID: 6492019315059402116, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
-        \u0431\u0430\u0442\u0443\u0442"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671189307748159689, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434521224328650303, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -145.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7629929497560902110, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8214766107104669404, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299690661519436530, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_text
-      value: "\u0420\u0435\u0434\u043A\u0438\u0439 \u0434\u0440\u043E\u0431\u043E\u0432\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: englishText
-      value: Bouncer
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575781726263167566, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: russianText
-      value: "\u041F\u043E\u043F\u0440\u044B\u0433\u0443\u043D\u0447\u0438\u043A"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 43c3c093681b53c4d8313e32ddace5bf, type: 3}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750197654523610294, guid: be9652d8045824b4c88e74d22dc29b84, type: 3}
-      propertyPath: m_Color.r
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

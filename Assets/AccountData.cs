@@ -19,6 +19,13 @@ public class AccountData
 
     [Header("Halloween Event")]
     public long pumpkinLanternLastAccrualUnixSeconds;
+   
+    [Header("Halloween Exchange")]
+    public int halloweenBasketCapacityUsed;
+
+    public List<HalloweenPromoCodeRecord> halloweenPromoCodes =
+        new List<HalloweenPromoCodeRecord>();
+
 
     public AccountData()
     {

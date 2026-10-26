@@ -330,6 +330,45 @@ public class ResourceInventoryManager : MonoBehaviour
         return true;
     }
 
+    /// <summary>
+    /// Сообщает UI, что обычный баланс был изменён
+    /// внешней транзакцией в AccountManager.
+    /// </summary>
+    public void NotifyAccountAmountChanged(string id)
+    {
+        InventoryEntryDefinition definition = GetDefinition(id);
+
+        if (definition == null ||
+            definition.type == InventoryEntryType.UniqueItem)
+            return;
+
+        AmountChanged?.Invoke(
+            definition.id.Trim(),
+            GetAmount(definition.id));
+
+        InventoryChanged?.Invoke();
+    }
+
+    /// <summary>
+    /// Обновляет отображение уникального предмета,
+    /// который был добавлен через AccountManager.
+    /// Не записывает предмет повторно в сохранение.
+    /// </summary>
+    public void RefreshUniqueItemViewAfterExternalGrant(string id)
+    {
+        InventoryEntryDefinition definition = GetDefinition(id);
+
+        if (definition != null &&
+            definition.type == InventoryEntryType.UniqueItem &&
+            IsOwned(definition.id))
+        {
+            CreateUniqueItemView(definition);
+            ConfigureExpiryTimer(definition);
+        }
+
+        InventoryChanged?.Invoke();
+    }
+
     public bool GrantReward(string id, int amount)
     {
         InventoryEntryDefinition definition = GetDefinition(id);

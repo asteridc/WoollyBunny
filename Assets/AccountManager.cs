@@ -86,6 +86,13 @@ public class AccountManager : MonoBehaviour
         if (accountData.ownedUniqueInventoryItems == null)
             accountData.ownedUniqueInventoryItems = new List<string>();
 
+        if (accountData.halloweenPromoCodes == null)
+            accountData.halloweenPromoCodes =
+                new List<HalloweenPromoCodeRecord>();
+
+        accountData.halloweenBasketCapacityUsed =
+            Mathf.Clamp(accountData.halloweenBasketCapacityUsed,0,100);
+
         NormalizeInventoryData();
         SaveAccountData();
     }
@@ -253,6 +260,78 @@ public class AccountManager : MonoBehaviour
         SaveAccountData();
     }
 
+    
+    // ----- Halloween Exchange: account-level persistence -----
+
+    public int GetHalloweenBasketCapacityUsed()
+    {
+        return accountData == null
+            ? 0
+            : Mathf.Clamp(
+                accountData.halloweenBasketCapacityUsed,
+                0,
+                100);
+    }
+
+    public List<HalloweenPromoCodeRecord>
+        GetHalloweenPromoCodeSnapshot()
+    {
+        List<HalloweenPromoCodeRecord> snapshot =
+            new List<HalloweenPromoCodeRecord>();
+
+        if (accountData == null ||
+            accountData.halloweenPromoCodes == null)
+            return snapshot;
+
+        foreach (HalloweenPromoCodeRecord record
+                 in accountData.halloweenPromoCodes)
+        {
+            if (record != null)
+                snapshot.Add(record.Copy());
+        }
+
+        return snapshot;
+    }
+
+    public HalloweenPromoCodeRecord FindHalloweenPromoCode(
+        string code)
+    {
+        if (accountData == null ||
+            accountData.halloweenPromoCodes == null ||
+            string.IsNullOrWhiteSpace(code))
+            return null;
+
+        HalloweenPromoCodeRecord record =
+            accountData.halloweenPromoCodes.Find(item =>
+                item != null &&
+                string.Equals(
+                    item.code,
+                    code.Trim(),
+                    StringComparison.OrdinalIgnoreCase));
+
+        return record != null ? record.Copy() : null;
+    }
+
+    public bool HasHalloweenPromoCode(string code)
+    {
+        return FindHalloweenPromoCode(code) != null;
+    }
+
+    public bool HasHalloweenPromoForReward(
+        string rewardInventoryId)
+    {
+        if (accountData == null ||
+            accountData.halloweenPromoCodes == null ||
+            string.IsNullOrWhiteSpace(rewardInventoryId))
+            return false;
+
+        return accountData.halloweenPromoCodes.Exists(record =>
+            record != null &&
+            InventoryIdsEqual(
+                record.rewardInventoryId,
+                rewardInventoryId));
+    }
+
     public long GetPumpkinLanternLastAccrualUnixSeconds()
     {
         return accountData != null
@@ -320,6 +399,231 @@ public class AccountManager : MonoBehaviour
             Debug.LogError($"[AccountManager] Не удалось сохранить сбор фонаря: {exception.Message}", this);
             return false;
         }
+    }
+
+    public bool TryPurchaseHalloweenOffer(
+    string currencyId,
+    string offerId,
+    string rewardInventoryId,
+    int price,
+    int capacityPercent,
+    string code,
+    long createdAtUnixSeconds,
+    long expiresAtUnixSeconds,
+    out string failureReason)
+    {
+        failureReason = string.Empty;
+
+        string normalizedCurrencyId =
+            NormalizeInventoryId(currencyId);
+        string normalizedOfferId =
+            NormalizeInventoryId(offerId);
+        string normalizedRewardId =
+            NormalizeInventoryId(rewardInventoryId);
+
+        string normalizedCode = string.IsNullOrWhiteSpace(code)
+            ? string.Empty
+            : code.Trim().ToUpperInvariant();
+
+        if (accountData == null ||
+            normalizedCurrencyId == null ||
+            normalizedOfferId == null ||
+            normalizedRewardId == null ||
+            price <= 0 ||
+            capacityPercent < 1 ||
+            capacityPercent > 100)
+        {
+            return FailHalloweenExchange(
+                "Некорректные параметры покупки.",
+                out failureReason);
+        }
+
+        if (!HalloweenPromoCodeService.IsValidFormat(normalizedCode) ||
+            HasHalloweenPromoCode(normalizedCode))
+        {
+            return FailHalloweenExchange(
+                "Промокод имеет неверный формат или уже существует.",
+                out failureReason);
+        }
+
+        if (createdAtUnixSeconds <= 0 ||
+            expiresAtUnixSeconds <= createdAtUnixSeconds)
+        {
+            return FailHalloweenExchange(
+                "Некорректный срок действия промокода.",
+                out failureReason);
+        }
+
+        if (GetHalloweenBasketCapacityUsed() + capacityPercent > 100)
+        {
+            return FailHalloweenExchange(
+                "В корзине недостаточно места.",
+                out failureReason);
+        }
+
+        if (HasUniqueInventoryItem(normalizedRewardId) ||
+            HasHalloweenPromoForReward(normalizedRewardId))
+        {
+            return FailHalloweenExchange(
+                "Эта уникальная награда уже получена или куплена.",
+                out failureReason);
+        }
+
+        if (GetInventoryAmount(normalizedCurrencyId) < price)
+        {
+            return FailHalloweenExchange(
+                "Недостаточно Конфетыкв.",
+                out failureReason);
+        }
+
+        AccountInventoryAmount currencyEntry =
+            GetOrCreateInventoryAmount(normalizedCurrencyId);
+
+        int previousBalance = currencyEntry.amount;
+        int previousCapacity = accountData.halloweenBasketCapacityUsed;
+
+        HalloweenPromoCodeRecord record =
+            new HalloweenPromoCodeRecord
+            {
+                code = normalizedCode,
+                offerId = normalizedOfferId,
+                rewardInventoryId = normalizedRewardId,
+                pricePaid = price,
+                basketCapacityPercent = capacityPercent,
+                createdAtUnixSeconds = createdAtUnixSeconds,
+                expiresAtUnixSeconds = expiresAtUnixSeconds,
+                isRedeemed = false,
+                redeemedAtUnixSeconds = 0
+            };
+
+        currencyEntry.amount = previousBalance - price;
+
+        accountData.halloweenBasketCapacityUsed =
+            previousCapacity + capacityPercent;
+
+        accountData.halloweenPromoCodes.Add(record);
+
+        try
+        {
+            SaveAccountData();
+            return true;
+        }
+        catch (Exception exception)
+        {
+            currencyEntry.amount = previousBalance;
+
+            accountData.halloweenBasketCapacityUsed =
+                previousCapacity;
+
+            accountData.halloweenPromoCodes.Remove(record);
+
+            Debug.LogError(
+                $"[AccountManager] Не удалось сохранить покупку " +
+                $"Хеллоуинского обмена: {exception.Message}",
+                this);
+
+            failureReason =
+                "Не удалось сохранить покупку. " +
+                "Конфеты и корзина не должны измениться.";
+
+            return false;
+        }
+    }
+
+    public bool TryRedeemHalloweenPromoCode(
+    string code,
+    string expectedRewardInventoryId,
+    long nowUnixSeconds,
+    out string failureReason)
+    {
+        failureReason = string.Empty;
+
+        if (accountData == null ||
+            accountData.halloweenPromoCodes == null ||
+            string.IsNullOrWhiteSpace(code) ||
+            string.IsNullOrWhiteSpace(expectedRewardInventoryId))
+        {
+            return FailHalloweenExchange(
+                "Промокод или ID награды не заданы.",
+                out failureReason);
+        }
+
+        string normalizedCode = code.Trim().ToUpperInvariant();
+
+        string rewardId =
+            NormalizeInventoryId(expectedRewardInventoryId);
+
+        HalloweenPromoCodeRecord record =
+            accountData.halloweenPromoCodes.Find(item =>
+                item != null &&
+                string.Equals(
+                    item.code,
+                    normalizedCode,
+                    StringComparison.OrdinalIgnoreCase));
+
+        if (record == null)
+            return FailHalloweenExchange(
+                "Промокод не найден в текущем аккаунте.",
+                out failureReason);
+
+        if (record.isRedeemed)
+            return FailHalloweenExchange(
+                "Этот промокод уже использован.",
+                out failureReason);
+
+        if (nowUnixSeconds >= record.expiresAtUnixSeconds)
+            return FailHalloweenExchange(
+                "Срок действия промокода истёк.",
+                out failureReason);
+
+        if (!InventoryIdsEqual(record.rewardInventoryId, rewardId))
+            return FailHalloweenExchange(
+                "ID награды не совпадает с данными промокода.",
+                out failureReason);
+
+        if (HasUniqueInventoryItem(rewardId))
+            return FailHalloweenExchange(
+                "Этот уникальный предмет уже есть в инвентаре.",
+                out failureReason);
+
+        bool previousRedeemed = record.isRedeemed;
+        long previousRedeemedAt = record.redeemedAtUnixSeconds;
+
+        record.isRedeemed = true;
+        record.redeemedAtUnixSeconds = nowUnixSeconds;
+
+        accountData.ownedUniqueInventoryItems.Add(rewardId);
+
+        try
+        {
+            SaveAccountData();
+            return true;
+        }
+        catch (Exception exception)
+        {
+            record.isRedeemed = previousRedeemed;
+            record.redeemedAtUnixSeconds = previousRedeemedAt;
+
+            RemoveUniqueInventoryItem(rewardId);
+
+            Debug.LogError(
+                $"[AccountManager] Не удалось сохранить погашение " +
+                $"промокода: {exception.Message}",
+                this);
+
+            failureReason =
+                "Не удалось сохранить награду. Попробуй ещё раз.";
+
+            return false;
+        }
+    }
+
+    private static bool FailHalloweenExchange(
+        string message,
+        out string failureReason)
+    {
+        failureReason = message;
+        return false;
     }
 
     public bool IsInventoryInitialized => accountData.inventoryInitialized;

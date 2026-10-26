@@ -29051,7 +29051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fee7c761eeb703428f4ca33c44a679a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLineNumber: 13
+  startLineNumber: 81
   currentBackgroundId: i0
   skipLineDelay: 0.2
   skipButton: {fileID: 697922010}

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -618,7 +618,86 @@ public class AccountManager : MonoBehaviour
         }
     }
 
-    private static bool FailHalloweenExchange(
+        /// <summary>
+    /// Test-only reset for the Halloween exchange pool. It removes promo records
+    /// related to the supplied offers/rewards and clears basket capacity.
+    /// Optionally removes the offer rewards from the owned-unique-item list.
+    /// </summary>
+    public bool ResetHalloweenExchangeState(
+        IReadOnlyList<string> offerIds,
+        IReadOnlyList<string> rewardIds,
+        bool removeOwnedRewards)
+    {
+        if (accountData == null)
+            return false;
+
+        if (accountData.halloweenPromoCodes == null)
+            accountData.halloweenPromoCodes = new List<HalloweenPromoCodeRecord>();
+        if (accountData.ownedUniqueInventoryItems == null)
+            accountData.ownedUniqueInventoryItems = new List<string>();
+
+        HashSet<string> normalizedOfferIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        HashSet<string> normalizedRewardIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+        AddHalloweenIds(normalizedOfferIds, offerIds);
+        AddHalloweenIds(normalizedRewardIds, rewardIds);
+
+        int oldCapacity = accountData.halloweenBasketCapacityUsed;
+        List<string> oldOwnedItems = new List<string>(accountData.ownedUniqueInventoryItems);
+        List<HalloweenPromoCodeRecord> oldPromoCodes =
+            new List<HalloweenPromoCodeRecord>(accountData.halloweenPromoCodes);
+
+        accountData.halloweenBasketCapacityUsed = 0;
+        accountData.halloweenPromoCodes.RemoveAll(record =>
+            record != null &&
+            (ContainsHalloweenId(normalizedOfferIds, record.offerId) ||
+             ContainsHalloweenId(normalizedRewardIds, record.rewardInventoryId)));
+
+        if (removeOwnedRewards)
+        {
+            accountData.ownedUniqueInventoryItems.RemoveAll(id =>
+                ContainsHalloweenId(normalizedRewardIds, id));
+        }
+
+        try
+        {
+            SaveAccountData();
+            return true;
+        }
+        catch (Exception exception)
+        {
+            accountData.halloweenBasketCapacityUsed = oldCapacity;
+            accountData.ownedUniqueInventoryItems = oldOwnedItems;
+            accountData.halloweenPromoCodes = oldPromoCodes;
+            Debug.LogError(
+                "[AccountManager] Не удалось сбросить состояние Halloween Exchange: " +
+                exception.Message,
+                this);
+            return false;
+        }
+    }
+
+    private static void AddHalloweenIds(
+        HashSet<string> destination,
+        IReadOnlyList<string> ids)
+    {
+        if (destination == null || ids == null)
+            return;
+
+        for (int i = 0; i < ids.Count; i++)
+        {
+            string normalized = NormalizeInventoryId(ids[i]);
+            if (normalized != null)
+                destination.Add(normalized);
+        }
+    }
+
+    private static bool ContainsHalloweenId(HashSet<string> ids, string id)
+    {
+        string normalized = NormalizeInventoryId(id);
+        return normalized != null && ids != null && ids.Contains(normalized);
+    }
+private static bool FailHalloweenExchange(
         string message,
         out string failureReason)
     {

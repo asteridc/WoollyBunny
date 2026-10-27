@@ -12,7 +12,6 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
     [Header("Exchange")]
     [SerializeField] private HalloweenExchangeManager exchangeManager;
     [SerializeField] private Transform offersContent;
-    [SerializeField] private HalloweenExchangeOfferView offerViewPrefab;
     [SerializeField] private TMP_Text currencyBalanceText;
     [SerializeField] private TMP_Text basketCapacityText;
     [SerializeField] private Slider basketCapacitySlider;
@@ -24,6 +23,12 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
     [SerializeField] private TMP_Text confirmationErrorText;
     [SerializeField] private Button confirmPurchaseButton;
     [SerializeField] private Button cancelPurchaseButton;
+
+    [Header("Purchase warning (assign the existing warning frame here)")]
+    [SerializeField] private CanvasGroup warningGroup;
+    [SerializeField] private RectTransform warningFrame;
+    [SerializeField] private TMP_Text warningMessageText;
+    [SerializeField] private Button closeWarningButton;
 
     [Header("New promo code")]
     [SerializeField] private CanvasGroup promoResultGroup;
@@ -63,9 +68,46 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
 
     private void Awake()
     {
+        CacheOfferViews();
+
         HidePanelInstant(confirmationGroup, confirmationFrame);
+        HidePanelInstant(warningGroup, warningFrame);
         HidePanelInstant(promoResultGroup, promoResultFrame);
+
+        if (confirmationText == null)
+        {
+            Debug.LogWarning(
+                "HalloweenExchangeUI: не назначен Confirmation Text. " +
+                "Перетащи сюда TMP_Text, в котором должен меняться текст подтверждения.",
+                this);
+        }
+
+        if (warningGroup == null || warningFrame == null || warningMessageText == null)
+        {
+            Debug.LogWarning(
+                "HalloweenExchangeUI: назначь Warning Group, Warning Frame и Warning Message Text, " +
+                "чтобы показывать причины недоступной покупки.",
+                this);
+        }
         HidePanelInstant(historyGroup, historyFrame);
+    }
+
+    private void CacheOfferViews()
+    {
+        offerViews.Clear();
+
+        if (offersContent == null)
+        {
+            Debug.LogWarning(
+                "HalloweenExchangeUI: assign Offers Content in the Inspector.",
+                this);
+            return;
+        }
+
+        // Use the offer views already placed in the scene.
+        // This component no longer creates or destroys offer-card objects.
+        offerViews.AddRange(
+            offersContent.GetComponentsInChildren<HalloweenExchangeOfferView>(true));
     }
 
     private void OnEnable()
@@ -76,6 +118,9 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
 
         if (cancelPurchaseButton != null)
             cancelPurchaseButton.onClick.AddListener(CancelPurchase);
+
+        if (closeWarningButton != null)
+            closeWarningButton.onClick.AddListener(CloseWarning);
 
         if (copyPromoCodeButton != null)
             copyPromoCodeButton.onClick.AddListener(CopyLatestCode);
@@ -101,11 +146,6 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
         RefreshAll();
     }
 
-    private void Start()
-    {
-        RefreshAll();
-    }
-
     private void OnDisable()
     {
         if (confirmPurchaseButton != null)
@@ -114,6 +154,9 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
 
         if (cancelPurchaseButton != null)
             cancelPurchaseButton.onClick.RemoveListener(CancelPurchase);
+
+        if (closeWarningButton != null)
+            closeWarningButton.onClick.RemoveListener(CloseWarning);
 
         if (copyPromoCodeButton != null)
             copyPromoCodeButton.onClick.RemoveListener(CopyLatestCode);
@@ -137,6 +180,7 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
             exchangeManager.ExchangeChanged -= RefreshAll;
 
         KillPanelTweens(confirmationGroup, confirmationFrame);
+        KillPanelTweens(warningGroup, warningFrame);
         KillPanelTweens(promoResultGroup, promoResultFrame);
         KillPanelTweens(historyGroup, historyFrame);
     }
@@ -148,6 +192,8 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
 
         if (IsPanelVisible(confirmationGroup))
             CancelPurchase();
+        else if (IsPanelVisible(warningGroup))
+            CloseWarning();
         else if (IsPanelVisible(promoResultGroup))
             ClosePromoResult();
         else if (IsPanelVisible(historyGroup))
@@ -173,13 +219,13 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
 
         if (currencyBalanceText != null)
             currencyBalanceText.text = english
-                ? $"Balance: {balance} Scandy"
-                : $"Баланс: {balance} Конфетыкв";
+                ? $"{balance}"
+                : $"{balance}";
 
         if (basketCapacityText != null)
             basketCapacityText.text = english
-                ? $"Basket: {usedCapacity} / 100%"
-                : $"Корзина: {usedCapacity} / 100%";
+                ? $"{usedCapacity}%"
+                : $"{usedCapacity}%";
 
         if (basketCapacitySlider != null)
         {
@@ -192,21 +238,13 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
 
     private void RefreshOfferList()
     {
-        if (exchangeManager == null ||
-            offersContent == null ||
-            offerViewPrefab == null)
+        if (exchangeManager == null || offersContent == null)
             return;
-
-        foreach (HalloweenExchangeOfferView view in offerViews)
-        {
-            if (view != null)
-                Destroy(view.gameObject);
-        }
-
-        offerViews.Clear();
 
         IReadOnlyList<HalloweenExchangeOffer> offers =
             exchangeManager.Offers;
+
+        int viewIndex = 0;
 
         for (int i = 0; i < offers.Count; i++)
         {
@@ -215,8 +253,20 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
             if (offer == null)
                 continue;
 
-            HalloweenExchangeOfferView view =
-                Instantiate(offerViewPrefab, offersContent);
+            if (viewIndex >= offerViews.Count)
+            {
+                Debug.LogWarning(
+                    $"HalloweenExchangeUI: there are {offers.Count} offers, " +
+                    $"but only {offerViews.Count} pre-placed offer views. " +
+                    "Add a HalloweenExchangeOfferView under Offers Content for each offer.",
+                    this);
+                break;
+            }
+
+            HalloweenExchangeOfferView view = offerViews[viewIndex++];
+
+            if (view == null)
+                continue;
 
             InventoryEntryDefinition reward =
                 ResourceInventoryManager.Instance != null
@@ -227,14 +277,20 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
             bool canPurchase =
                 exchangeManager.CanPurchase(offer, out string reason);
 
+            view.gameObject.SetActive(true);
             view.Bind(
                 offer,
                 reward,
                 canPurchase,
                 reason,
                 OnOfferSelected);
+        }
 
-            offerViews.Add(view);
+        // Hide any pre-placed views that do not have a corresponding offer.
+        for (int i = viewIndex; i < offerViews.Count; i++)
+        {
+            if (offerViews[i] != null)
+                offerViews[i].gameObject.SetActive(false);
         }
     }
 
@@ -245,39 +301,32 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
 
         if (!exchangeManager.CanPurchase(offer, out string reason))
         {
-            if (confirmationErrorText != null)
-                confirmationErrorText.text = reason;
-
+            selectedOffer = null;
+            ShowWarning(reason);
             RefreshAll();
             return;
         }
 
-        InventoryEntryDefinition reward =
-            ResourceInventoryManager.Instance.GetDefinition(
-                offer.RewardInventoryId);
+        ResourceInventoryManager inventory = ResourceInventoryManager.Instance;
+        InventoryEntryDefinition reward = inventory != null
+            ? inventory.GetDefinition(offer.RewardInventoryId)
+            : null;
 
         if (reward == null)
+        {
+            selectedOffer = null;
+            ShowWarning(LanguageManager.CurrentLanguage == Language.English
+                ? "The reward is missing from the inventory catalog."
+                : "Предмет награды не найден в каталоге инвентаря.");
             return;
+        }
 
         selectedOffer = offer;
-
-        bool english =
-            LanguageManager.CurrentLanguage == Language.English;
-
-        string rewardName = english
-            ? reward.englishName
-            : reward.russianName;
-
-        string rarityName =
-            HalloweenRarityColorUtility.GetLocalizedName(
-                reward.rarity,
-                english);
-
-        string color =
-            HalloweenRarityColorUtility.ToHex(reward.rarity);
-
-        string highlightedReward =
-            $"<color=#{color}>{rewardName} ({rarityName})</color>";
+        bool english = LanguageManager.CurrentLanguage == Language.English;
+        string rewardName = english ? reward.englishName : reward.russianName;
+        string rarityName = HalloweenRarityColorUtility.GetLocalizedName(reward.rarity, english);
+        string color = HalloweenRarityColorUtility.ToHex(reward.rarity);
+        string highlightedReward = $"<color=#{color}>{rewardName} ({rarityName})</color>";
 
         if (confirmationText != null)
         {
@@ -285,22 +334,44 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
                 ? $"Are you sure you want to purchase {highlightedReward} " +
                   $"for {offer.CandyPrice} Scandy? It will use " +
                   $"{offer.BasketCapacityPercent}% of your basket. " +
-                  $"The promo code expires in " +
-                  $"{exchangeManager.PromoCodeLifetimeDays} days."
-                : $"Вы уверены, что хотите приобрести " +
-                  $"{highlightedReward} за {offer.CandyPrice} Конфетыкв? " +
-                  $"Предмет займёт {offer.BasketCapacityPercent}% корзины. " +
-                  $"Промокод истечёт через " +
+                  $"The promo code expires in {exchangeManager.PromoCodeLifetimeDays} days."
+                : $"Ты действительно хочешь приобрести {highlightedReward} " +
+                  $"за {offer.CandyPrice} Конфетыкв? Предмет займёт " +
+                  $"{offer.BasketCapacityPercent}% корзины. Промокод истечёт через " +
                   $"{exchangeManager.PromoCodeLifetimeDays} дн.";
+        }
+        else
+        {
+            Debug.LogError("HalloweenExchangeUI: Confirmation Text не назначен в Inspector.", this);
         }
 
         if (confirmationErrorText != null)
             confirmationErrorText.text = string.Empty;
 
-        ShowPanel(
-            confirmationGroup,
-            confirmationFrame,
-            confirmPurchaseButton);
+        HidePanelInstant(warningGroup, warningFrame);
+        ShowPanel(confirmationGroup, confirmationFrame, confirmPurchaseButton);
+    }
+
+    private void ShowWarning(string message)
+    {
+        if (warningMessageText != null)
+            warningMessageText.text = message;
+
+        if (warningGroup == null || warningFrame == null)
+        {
+            Debug.LogWarning(
+                "HalloweenExchangeUI: фрейм предупреждения не назначен. Причина: " + message,
+                this);
+            return;
+        }
+
+        HidePanelInstant(confirmationGroup, confirmationFrame);
+        ShowPanel(warningGroup, warningFrame, closeWarningButton);
+    }
+
+    private void CloseWarning()
+    {
+        HidePanel(warningGroup, warningFrame, null);
     }
 
     private void ConfirmSelectedPurchase()
@@ -313,9 +384,9 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
                 out HalloweenPromoCodeRecord record,
                 out string reason))
         {
-            if (confirmationErrorText != null)
-                confirmationErrorText.text = reason;
-
+            selectedOffer = null;
+            HidePanelInstant(confirmationGroup, confirmationFrame);
+            ShowWarning(reason);
             RefreshAll();
             return;
         }

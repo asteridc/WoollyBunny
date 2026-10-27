@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -540,7 +540,23 @@ public class ResourceInventoryManager : MonoBehaviour
             string.Equals(first.Trim(), second.Trim(), StringComparison.OrdinalIgnoreCase);
     }
 
-    private void BuildOwnedUniqueItems()
+        /// <summary>
+    /// Rebuilds the tracked unique-item inventory views after the Halloween
+    /// exchange debug reset changed ownership in AccountManager.
+    /// </summary>
+    public void RefreshOwnedUniqueItemViewsAfterDebugReset()
+    {
+        foreach (KeyValuePair<string, ResourceItemView> pair in uniqueItemViews)
+        {
+            if (pair.Value != null)
+                Destroy(pair.Value.gameObject);
+        }
+
+        uniqueItemViews.Clear();
+        BuildOwnedUniqueItems();
+        InventoryChanged?.Invoke();
+    }
+private void BuildOwnedUniqueItems()
     {
         if (uniqueItemsContainer == null || uniqueItemPrefab == null)
             return;

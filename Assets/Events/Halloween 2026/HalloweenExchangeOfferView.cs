@@ -2,8 +2,10 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public sealed class HalloweenExchangeOfferView : MonoBehaviour
+/// <summary>UI одного предложения магазина. Расчёты и сохранение сюда не помещаем.</summary>
+public sealed class HalloweenExchangeOfferView : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private Image iconImage;
     [SerializeField] private TMP_Text nameText;
@@ -36,9 +38,7 @@ public sealed class HalloweenExchangeOfferView : MonoBehaviour
         offer = offerDefinition;
         purchaseCallback = onPurchase;
 
-        bool english =
-            LanguageManager.CurrentLanguage == Language.English;
-
+        bool english = LanguageManager.CurrentLanguage == Language.English;
         if (reward != null)
         {
             if (iconImage != null)
@@ -47,48 +47,30 @@ public sealed class HalloweenExchangeOfferView : MonoBehaviour
                 iconImage.enabled = reward.icon != null;
             }
 
-            string name = english
-                ? reward.englishName
-                : reward.russianName;
-
-            string color =
-                HalloweenRarityColorUtility.ToHex(reward.rarity);
-
+            string name = english ? reward.englishName : reward.russianName;
+            string color = HalloweenRarityColorUtility.ToHex(reward.rarity);
             if (nameText != null)
                 nameText.text = $"<color=#{color}>{name}</color>";
-
             if (rarityText != null)
-            {
-                rarityText.text =
-                    $"<color=#{color}>" +
-                    $"{HalloweenRarityColorUtility.GetLocalizedName(reward.rarity, english)}" +
-                    $"</color>";
-            }
+                rarityText.text = $"<color=#{color}>{HalloweenRarityColorUtility.GetLocalizedName(reward.rarity, english)}</color>";
         }
         else
         {
             if (nameText != null)
-                nameText.text = english
-                    ? "Reward not configured"
-                    : "Награда не настроена";
-
+                nameText.text = english ? "Reward not configured" : "Награда не настроена";
             if (rarityText != null)
                 rarityText.text = string.Empty;
         }
 
         if (priceText != null && offerDefinition != null)
-        {
             priceText.text = english
-                ? $"{offerDefinition.CandyPrice} Scandy"
-                : $"{offerDefinition.CandyPrice} Конфетыкв";
-        }
+                ? $"/ {offerDefinition.CandyPrice}"
+                : $"/ {offerDefinition.CandyPrice}";
 
         if (capacityText != null && offerDefinition != null)
-        {
             capacityText.text = english
-                ? $"Basket: {offerDefinition.BasketCapacityPercent}%"
-                : $"Корзина: {offerDefinition.BasketCapacityPercent}%";
-        }
+                ? $"{offerDefinition.BasketCapacityPercent}%"
+                : $"{offerDefinition.BasketCapacityPercent}%";
 
         if (availabilityText != null)
             availabilityText.text = canPurchase
@@ -100,15 +82,36 @@ public sealed class HalloweenExchangeOfferView : MonoBehaviour
 
         if (purchaseButton != null)
         {
-            purchaseButton.interactable = canPurchase;
+            // A disabled purchase button prevents the player from opening the warning
+            // panel. Keep it clickable; the manager validates the offer on click.
+            purchaseButton.interactable = offerDefinition != null;
             purchaseButton.onClick.AddListener(HandlePurchaseClick);
         }
+    }
+
+    // Clicking a child label/icon bubbles to this handler, so the whole card responds.
+    // A click directly on a child Button is handled by that Button and invokes the
+    // listener above; Unity does not also execute this parent handler for the same click.
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData == null || eventData.button != PointerEventData.InputButton.Left)
+            return;
+
+        // If the Button is on this same GameObject, its own onClick listener is
+        // responsible for the click. Avoid invoking the callback twice.
+        if (purchaseButton != null && purchaseButton.gameObject == gameObject)
+            return;
+
+        HandlePurchaseClick();
     }
 
     private void HandlePurchaseClick()
     {
         if (offer != null)
+        {
+            Debug.Log($"[Halloween Exchange] Выбран оффер: {offer.OfferId}", this);
             purchaseCallback?.Invoke(offer);
+        }
     }
 }
 
@@ -118,33 +121,23 @@ public static class HalloweenRarityColorUtility
     {
         switch (rarity)
         {
-            case ResourceRarity.Common: return "7A7A7A";
             case ResourceRarity.Rare: return "63C7FF";
             case ResourceRarity.Epic: return "C77DFF";
             case ResourceRarity.Relic: return "FFD54A";
             case ResourceRarity.Unique: return "FF6868";
-            default: return "7A7A7A";
+            default: return "EEEEEE";
         }
     }
 
-    public static string GetLocalizedName(ResourceRarity rarity,bool english)
+    public static string GetLocalizedName(ResourceRarity rarity, bool english)
     {
         switch (rarity)
         {
-            case ResourceRarity.Rare:
-                return english ? "Rare" : "Редкий";
-
-            case ResourceRarity.Epic:
-                return english ? "Epic" : "Эпический";
-
-            case ResourceRarity.Relic:
-                return english ? "Relic" : "Реликтовый";
-
-            case ResourceRarity.Unique:
-                return english ? "Unique" : "Уникальный";
-
-            default:
-                return english ? "Common" : "Обычный";
+            case ResourceRarity.Rare: return english ? "Rare" : "Редкий";
+            case ResourceRarity.Epic: return english ? "Epic" : "Эпический";
+            case ResourceRarity.Relic: return english ? "Relic" : "Реликтовый";
+            case ResourceRarity.Unique: return english ? "Unique" : "Уникальный";
+            default: return english ? "Common" : "Обычный";
         }
     }
 }

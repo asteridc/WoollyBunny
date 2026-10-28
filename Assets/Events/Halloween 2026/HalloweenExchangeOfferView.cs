@@ -13,6 +13,7 @@ public sealed class HalloweenExchangeOfferView : MonoBehaviour, IPointerClickHan
     [SerializeField] private TMP_Text priceText;
     [SerializeField] private TMP_Text capacityText;
     [SerializeField] private TMP_Text availabilityText;
+    [SerializeField] private TMP_Text rewardAmountText;
     [SerializeField] private Button purchaseButton;
     [SerializeField] private TMP_Text purchaseButtonText;
 
@@ -39,6 +40,7 @@ public sealed class HalloweenExchangeOfferView : MonoBehaviour, IPointerClickHan
         purchaseCallback = onPurchase;
 
         bool english = LanguageManager.CurrentLanguage == Language.English;
+
         if (reward != null)
         {
             if (iconImage != null)
@@ -47,58 +49,70 @@ public sealed class HalloweenExchangeOfferView : MonoBehaviour, IPointerClickHan
                 iconImage.enabled = reward.icon != null;
             }
 
-            string name = english ? reward.englishName : reward.russianName;
+            string rewardName = english ? reward.englishName : reward.russianName;
             string color = HalloweenRarityColorUtility.ToHex(reward.rarity);
+
             if (nameText != null)
-                nameText.text = $"<color=#{color}>{name}</color>";
+                nameText.text = $"<color=#{color}>{rewardName}</color>";
+
             if (rarityText != null)
-                rarityText.text = $"<color=#{color}>{HalloweenRarityColorUtility.GetLocalizedName(reward.rarity, english)}</color>";
+            {
+                rarityText.text =
+                    $"<color=#{color}>{HalloweenRarityColorUtility.GetLocalizedName(reward.rarity, english)}</color>";
+            }
         }
         else
         {
             if (nameText != null)
                 nameText.text = english ? "Reward not configured" : "Награда не настроена";
+
             if (rarityText != null)
                 rarityText.text = string.Empty;
+
+            if (iconImage != null)
+            {
+                iconImage.sprite = null;
+                iconImage.enabled = false;
+            }
         }
 
         if (priceText != null && offerDefinition != null)
-            priceText.text = english
-                ? $"/ {offerDefinition.CandyPrice}"
-                : $"/ {offerDefinition.CandyPrice}";
+            priceText.text = $"/ {offerDefinition.CandyPrice}";
 
         if (capacityText != null && offerDefinition != null)
-            capacityText.text = english
-                ? $"{offerDefinition.BasketCapacityPercent}%"
-                : $"{offerDefinition.BasketCapacityPercent}%";
+            capacityText.text = $"{offerDefinition.BasketCapacityPercent}%";
+
+        if (rewardAmountText != null)
+        {
+            bool isStackable = reward != null &&
+                               reward.type == InventoryEntryType.StackableResource &&
+                               offerDefinition != null;
+            rewardAmountText.text = isStackable
+                ? $"{offerDefinition.RewardAmount}"
+                : string.Empty;
+        }
 
         if (availabilityText != null)
-            availabilityText.text = canPurchase
-                ? string.Empty
-                : unavailableReason;
+            availabilityText.text = canPurchase ? string.Empty : unavailableReason;
 
         if (purchaseButtonText != null)
             purchaseButtonText.text = english ? "Choose" : "Выбрать";
 
         if (purchaseButton != null)
         {
-            // A disabled purchase button prevents the player from opening the warning
-            // panel. Keep it clickable; the manager validates the offer on click.
+            // The button must remain clickable even when CanPurchase is false,
+            // so the warning panel can explain the reason.
             purchaseButton.interactable = offerDefinition != null;
             purchaseButton.onClick.AddListener(HandlePurchaseClick);
         }
     }
 
-    // Clicking a child label/icon bubbles to this handler, so the whole card responds.
-    // A click directly on a child Button is handled by that Button and invokes the
-    // listener above; Unity does not also execute this parent handler for the same click.
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData == null || eventData.button != PointerEventData.InputButton.Left)
             return;
 
-        // If the Button is on this same GameObject, its own onClick listener is
-        // responsible for the click. Avoid invoking the callback twice.
+        // If the Button is on this same GameObject, its own onClick listener handles it.
         if (purchaseButton != null && purchaseButton.gameObject == gameObject)
             return;
 
@@ -107,11 +121,11 @@ public sealed class HalloweenExchangeOfferView : MonoBehaviour, IPointerClickHan
 
     private void HandlePurchaseClick()
     {
-        if (offer != null)
-        {
-            Debug.Log($"[Halloween Exchange] Выбран оффер: {offer.OfferId}", this);
-            purchaseCallback?.Invoke(offer);
-        }
+        if (offer == null)
+            return;
+
+        Debug.Log($"[Halloween Exchange] Выбран оффер: {offer.OfferId}", this);
+        purchaseCallback?.Invoke(offer);
     }
 }
 

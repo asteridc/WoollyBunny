@@ -21,9 +21,7 @@ public sealed class HalloweenPromoCodeHistoryItemView : MonoBehaviour
             return;
         }
 
-        bool english =
-            LanguageManager.CurrentLanguage == Language.English;
-
+        bool english = LanguageManager.CurrentLanguage == Language.English;
         codeToCopy = record.code ?? string.Empty;
 
         if (codeText != null)
@@ -33,21 +31,18 @@ public sealed class HalloweenPromoCodeHistoryItemView : MonoBehaviour
         {
             InventoryEntryDefinition reward =
                 ResourceInventoryManager.Instance != null
-                    ? ResourceInventoryManager.Instance.GetDefinition(
-                        record.rewardInventoryId)
+                    ? ResourceInventoryManager.Instance.GetDefinition(record.rewardInventoryId)
                     : null;
 
             if (reward != null)
             {
-                string rewardName = english
-                    ? reward.englishName
-                    : reward.russianName;
+                string rewardName = english ? reward.englishName : reward.russianName;
+                string color = HalloweenRarityColorUtility.ToHex(reward.rarity);
+                string quantity = reward.type == InventoryEntryType.StackableResource
+                    ? $" × {Mathf.Max(0, record.rewardAmount)}"
+                    : string.Empty;
 
-                string color =
-                    HalloweenRarityColorUtility.ToHex(reward.rarity);
-
-                rewardText.text =
-                    $"<color=#{color}>{rewardName}</color>";
+                rewardText.text = $"<color=#{color}>{rewardName}</color>{quantity}";
             }
             else
             {
@@ -55,20 +50,14 @@ public sealed class HalloweenPromoCodeHistoryItemView : MonoBehaviour
             }
         }
 
-        bool expired =
-            DateTimeOffset.UtcNow.ToUnixTimeSeconds()
-            >= record.expiresAtUnixSeconds;
-
+        bool expired = DateTimeOffset.UtcNow.ToUnixTimeSeconds() >= record.expiresAtUnixSeconds;
         string status;
-
         if (record.isRedeemed)
             status = english ? "Redeemed" : "Использован";
         else if (expired)
             status = english ? "Expired" : "Истёк";
         else
-            status = english
-                ? "Not redeemed"
-                : "Не использован";
+            status = english ? "Not redeemed" : "Не использован";
 
         if (statusText != null)
             statusText.text = status;
@@ -76,9 +65,7 @@ public sealed class HalloweenPromoCodeHistoryItemView : MonoBehaviour
         if (expiryText != null)
         {
             DateTimeOffset expiration =
-                DateTimeOffset
-                    .FromUnixTimeSeconds(record.expiresAtUnixSeconds)
-                    .ToLocalTime();
+                DateTimeOffset.FromUnixTimeSeconds(record.expiresAtUnixSeconds).ToLocalTime();
 
             expiryText.text = english
                 ? $"Expires: {expiration:yyyy-MM-dd HH:mm}"
@@ -89,9 +76,7 @@ public sealed class HalloweenPromoCodeHistoryItemView : MonoBehaviour
         {
             copyButton.onClick.RemoveListener(CopyCode);
             copyButton.onClick.AddListener(CopyCode);
-
-            copyButton.interactable =
-                !string.IsNullOrEmpty(codeToCopy);
+            copyButton.interactable = !string.IsNullOrEmpty(codeToCopy);
         }
     }
 

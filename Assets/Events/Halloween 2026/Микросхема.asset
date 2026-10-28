@@ -15,5 +15,6 @@ MonoBehaviour:
   offerId: 6
   available: 1
   rewardInventoryId: "\u041C\u0438\u043A\u0440\u043E\u0441\u0445\u0435\u043C\u0430"
+  rewardAmount: 2
   candyPrice: 400
   basketCapacityPercent: 40

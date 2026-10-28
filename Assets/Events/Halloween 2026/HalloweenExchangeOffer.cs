@@ -10,8 +10,11 @@ public sealed class HalloweenExchangeOffer : ScriptableObject
     [SerializeField] private bool available = true;
 
     [Header("Reward")]
-    [Tooltip("ID уникального предмета из каталога ResourceInventoryManager")]
+    [Tooltip("ID предмета из каталога ResourceInventoryManager. Поддерживаются UniqueItem и StackableResource.")]
     [SerializeField] private string rewardInventoryId;
+
+    [Tooltip("Количество для StackableResource. Для UniqueItem всегда выдаётся 1.")]
+    [SerializeField, Min(1)] private int rewardAmount = 1;
 
     [Header("Cost and basket")]
     [SerializeField, Min(1)] private int candyPrice = 1500;
@@ -20,6 +23,7 @@ public sealed class HalloweenExchangeOffer : ScriptableObject
     public string OfferId => offerId;
     public bool Available => available;
     public string RewardInventoryId => rewardInventoryId;
+    public int RewardAmount => Mathf.Max(1, rewardAmount);
     public int CandyPrice => candyPrice;
     public int BasketCapacityPercent => basketCapacityPercent;
 
@@ -32,9 +36,9 @@ public sealed class HalloweenExchangeOffer : ScriptableObject
         if (!string.IsNullOrWhiteSpace(rewardInventoryId))
             rewardInventoryId = rewardInventoryId.Trim();
 
+        rewardAmount = Mathf.Max(1, rewardAmount);
         candyPrice = Mathf.Max(1, candyPrice);
-        basketCapacityPercent =
-            Mathf.Clamp(basketCapacityPercent, 1, 100);
+        basketCapacityPercent = Mathf.Clamp(basketCapacityPercent, 1, 100);
     }
 #endif
 }

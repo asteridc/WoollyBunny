@@ -101,31 +101,63 @@ public sealed class HalloweenExchangeManager : MonoBehaviour
                 "Системы аккаунта или инвентаря ещё не готовы.",
                 "Account or inventory systems are not ready yet."), out reason);
 
-        InventoryEntryDefinition reward = inventory.GetDefinition(offer.RewardInventoryId);
+        InventoryEntryDefinition reward =
+    inventory.GetDefinition(offer.RewardInventoryId);
+
         if (reward == null)
+        {
             return Fail(Localized(
                 "Награда отсутствует в каталоге ResourceInventoryManager.",
-                "The reward is missing from the ResourceInventoryManager catalog."), out reason);
+                "The reward is missing from the ResourceInventoryManager catalog."),
+                out reason);
+        }
 
-        if (reward.type != InventoryEntryType.UniqueItem)
+        // Допустимы уникальные предметы и стакабельные ресурсы.
+        if (reward.type != InventoryEntryType.UniqueItem &&
+            reward.type != InventoryEntryType.StackableResource)
+        {
             return Fail(Localized(
-                "Награда должна иметь тип UniqueItem.",
-                "The reward must use the UniqueItem type."), out reason);
+                "Обмен поддерживает только UniqueItem и StackableResource.",
+                "The exchange supports UniqueItem and StackableResource rewards only."),
+                out reason);
+        }
 
         if (inventory.IsExpired(reward.id))
+        {
             return Fail(Localized(
                 "Срок действия этой награды закончился.",
-                "This reward has expired."), out reason);
+                "This reward has expired."),
+                out reason);
+        }
 
-        if (account.HasUniqueInventoryItem(reward.id))
+        // Каждый конкретный оффер можно купить только один раз.
+        if (account.HasHalloweenPromoForOffer(offer.OfferId))
+        {
             return Fail(Localized(
-                "Этот уникальный предмет у тебя уже есть.",
-                "You already own this unique item."), out reason);
+                "Это предложение уже было куплено.",
+                "This offer has already been purchased."),
+                out reason);
+        }
 
-        if (account.HasHalloweenPromoForReward(reward.id))
-            return Fail(Localized(
-                "Ты уже покупал промокод на этот предмет. Повторная покупка недоступна.",
-                "A promo code for this item has already been purchased."), out reason);
+        // Проверки владения применяются только к UniqueItem.
+        if (reward.type == InventoryEntryType.UniqueItem)
+        {
+            if (account.HasUniqueInventoryItem(reward.id))
+            {
+                return Fail(Localized(
+                    "Этот уникальный предмет у тебя уже есть.",
+                    "You already own this unique item."),
+                    out reason);
+            }
+
+            if (account.HasHalloweenPromoForReward(reward.id))
+            {
+                return Fail(Localized(
+                    "Ты уже покупал промокод на этот предмет. Повторная покупка недоступна.",
+                    "A promo code for this unique item has already been purchased."),
+                    out reason);
+            }
+        }
 
         // Accumulate both resource-related failures so the warning can tell the player
         // about insufficient candy and insufficient basket capacity at the same time.

@@ -530,6 +530,20 @@ public class AccountManager : MonoBehaviour
         }
     }
 
+    public bool HasHalloweenPromoForOffer(string offerId)
+    {
+        if (accountData == null ||
+            accountData.halloweenPromoCodes == null ||
+            string.IsNullOrWhiteSpace(offerId))
+        {
+            return false;
+        }
+
+        return accountData.halloweenPromoCodes.Exists(record =>
+            record != null &&
+            InventoryIdsEqual(record.offerId, offerId));
+    }
+
     public bool TryRedeemHalloweenPromoCode(
     string code,
     string expectedRewardInventoryId,

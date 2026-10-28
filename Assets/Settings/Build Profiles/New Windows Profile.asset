@@ -28,6 +28,8 @@ MonoBehaviour:
     m_path: Assets/Scenes/Chapter_01.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Chapter_02.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/the house that wasnt there.unity
   - m_enabled: 0
     m_path: Assets/Scenes/Testing/CombatTest.unity
   - m_enabled: 0

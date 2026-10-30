@@ -521,13 +521,13 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
         RefreshHistoryIfOpen();
     }
 
-    private void OpenHistory()
+    public void OpenHistory()
     {
         RefreshHistoryItems();
         ShowPanel(historyGroup, historyFrame, closeHistoryButton);
     }
 
-    private void CloseHistory()
+    public void CloseHistory()
     {
         HidePanel(historyGroup, historyFrame, null);
     }

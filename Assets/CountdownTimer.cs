@@ -20,6 +20,10 @@ public class CountdownTimer : MonoBehaviour
     [SerializeField, Range(0, 59)] private int minute;
     [SerializeField, Range(0, 59)] private int second;
 
+    [Header("Expired UI")]
+    [Tooltip("Эти GameObject будут отключены, когда установленная дата наступит.")]
+    [SerializeField] private GameObject[] objectsToHideOnExpiry;
+
     [Header("Expired Text")]
     [SerializeField] private string russianExpiredText = "Событие завершено";
     [SerializeField] private string englishExpiredText = "Event ended";
@@ -27,11 +31,14 @@ public class CountdownTimer : MonoBehaviour
     private DateTime endTimeUtc;
     private bool hasValidEndTime;
     private bool hasRuntimeTarget;
+    private bool hasInitializedEndTime;
+    private bool hasAppliedExpiry;
     private float nextUpdateTime;
 
     private void OnEnable()
     {
         LanguageManager.OnLanguageChanged += OnLanguageChanged;
+
         InitializeEndTime();
         UpdateCountdown();
     }
@@ -51,8 +58,10 @@ public class CountdownTimer : MonoBehaviour
 
     private void InitializeEndTime()
     {
-        if (hasRuntimeTarget)
+        if (hasRuntimeTarget || hasInitializedEndTime)
             return;
+
+        hasInitializedEndTime = true;
 
         try
         {
@@ -66,6 +75,10 @@ public class CountdownTimer : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Устанавливает дату окончания во время выполнения.
+    /// Если таймер уже завершился, ранее скрытые элементы будут показаны снова.
+    /// </summary>
     public void SetTargetUtc(DateTime targetUtc)
     {
         endTimeUtc = targetUtc.Kind == DateTimeKind.Utc
@@ -78,28 +91,82 @@ public class CountdownTimer : MonoBehaviour
         hour = endTimeUtc.Hour;
         minute = endTimeUtc.Minute;
         second = endTimeUtc.Second;
+
         hasValidEndTime = true;
         hasRuntimeTarget = true;
+        hasInitializedEndTime = true;
+
+        if (hasAppliedExpiry)
+            RestoreExpiredObjects();
+
         UpdateCountdown();
+    }
+
+    /// <summary>
+    /// Returns the currently configured UTC deadline. Initializes the Inspector date
+    /// on demand, so other systems can safely read it even before the first UI update.
+    /// </summary>
+    public bool TryGetTargetUtc(out DateTime targetUtc)
+    {
+        InitializeEndTime();
+        targetUtc = endTimeUtc;
+        return hasValidEndTime;
     }
 
     private void UpdateCountdown()
     {
         nextUpdateTime = Time.unscaledTime + 1f;
 
-        if (countdownText == null || !hasValidEndTime)
+        // Скрытие UI не должно зависеть от наличия текста таймера.
+        if (!hasValidEndTime)
             return;
 
         TimeSpan remaining = endTimeUtc - DateTime.UtcNow;
+
         if (remaining <= TimeSpan.Zero)
         {
-            countdownText.text = GetExpiredText(LanguageManager.CurrentLanguage);
+            if (countdownText != null)
+                countdownText.text = GetExpiredText(LanguageManager.CurrentLanguage);
+
+            HideExpiredObjects();
             return;
         }
+
+        if (countdownText == null)
+            return;
 
         countdownText.text = FormatRemainingTime(
             remaining,
             LanguageManager.CurrentLanguage);
+    }
+
+    private void HideExpiredObjects()
+    {
+        hasAppliedExpiry = true;
+
+        if (objectsToHideOnExpiry == null)
+            return;
+
+        foreach (GameObject target in objectsToHideOnExpiry)
+        {
+            // Повторно выключаем элемент, если другой скрипт случайно включил его обратно.
+            if (target != null && target.activeSelf)
+                target.SetActive(false);
+        }
+    }
+
+    private void RestoreExpiredObjects()
+    {
+        if (objectsToHideOnExpiry != null)
+        {
+            foreach (GameObject target in objectsToHideOnExpiry)
+            {
+                if (target != null)
+                    target.SetActive(true);
+            }
+        }
+
+        hasAppliedExpiry = false;
     }
 
     private void OnLanguageChanged(Language language)

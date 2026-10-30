@@ -367,7 +367,7 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
         ShowPanel(confirmationGroup, confirmationFrame, confirmPurchaseButton);
     }
 
-    private void ShowWarning(string message)
+    public void ShowWarning(string message)
     {
         if (warningMessageText != null)
             warningMessageText.text = message;
@@ -384,12 +384,17 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
         ShowPanel(warningGroup, warningFrame, closeWarningButton);
     }
 
-    private void CloseWarning()
+    public void ClosePromo()
+    {
+        HidePanel(promoResultGroup, promoResultFrame, null);
+    }
+
+    public void CloseWarning()
     {
         HidePanel(warningGroup, warningFrame, null);
     }
 
-    private void ConfirmSelectedPurchase()
+    public void ConfirmSelectedPurchase()
     {
         if (exchangeManager == null || selectedOffer == null)
             return;
@@ -420,7 +425,7 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
         RefreshAll();
     }
 
-    private void CancelPurchase()
+    public void CancelPurchase()
     {
         HidePanel(
             confirmationGroup,

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 /// <summary>
 /// Offline-friendly Halloween lantern. Progress is calculated from UTC timestamps
 /// saved in AccountData; candy is granted through ResourceInventoryManager.
+/// Completed accumulation intervals before the bonus deadline grant extra candy.
 /// </summary>
 [DefaultExecutionOrder(100)]
 public sealed class PumpkinLanternController : MonoBehaviour
@@ -17,6 +18,12 @@ public sealed class PumpkinLanternController : MonoBehaviour
     [SerializeField, Min(1)] private int candiesPerInterval = 1;
     [SerializeField, Min(1)] private int intervalMinutes = 15;
     [SerializeField, Min(1)] private int maximumStoredHours = 8;
+
+    [Header("Temporary Candy Bonus")]
+    [Tooltip("CountdownTimer, дата которого определяет окончание двойного накопления.")]
+    [SerializeField] private CountdownTimer doubleCandyCountdownTimer;
+    [Tooltip("Количество конфет за завершённый интервал во время бонуса. Для двойного накопления оставь 2.")]
+    [SerializeField, Min(2)] private int doubleCandyMultiplier = 2;
 
     [Header("UI")]
     [SerializeField] private TMP_Text amountText;
@@ -43,11 +50,12 @@ public sealed class PumpkinLanternController : MonoBehaviour
     private long IntervalSeconds => Math.Max(1L, (long)intervalMinutes * 60L);
     private long MaximumCycleSeconds => Math.Max(1L, (long)maximumStoredHours * 3600L);
     private long MaximumIntervals => Math.Max(1L, MaximumCycleSeconds / IntervalSeconds);
+
     private int MaximumStoredAmount
     {
         get
         {
-            long amount = MaximumIntervals * Math.Max(1, candiesPerInterval);
+            long amount = MaximumIntervals * Math.Max(1, doubleCandyMultiplier * candiesPerInterval);
             return amount > int.MaxValue ? int.MaxValue : (int)amount;
         }
     }
@@ -80,6 +88,13 @@ public sealed class PumpkinLanternController : MonoBehaviour
         {
             Debug.LogError(
                 "[PumpkinLantern] ResourceInventoryManager не найден. Проверь сцену и каталог ресурсов.",
+                this);
+        }
+
+        if (doubleCandyCountdownTimer == null)
+        {
+            Debug.LogWarning(
+                "[PumpkinLantern] CountdownTimer для двойного накопления не назначен. Фонарь будет выдавать обычное количество конфет.",
                 this);
         }
 
@@ -236,18 +251,58 @@ public sealed class PumpkinLanternController : MonoBehaviour
     {
         long elapsed = Math.Max(0L, now - lastAccrual);
         long wholeIntervals = elapsed / IntervalSeconds;
-        bool isFull = wholeIntervals >= MaximumIntervals;
         long cappedIntervals = Math.Min(wholeIntervals, MaximumIntervals);
-        long rawAmount = cappedIntervals * Math.Max(1, candiesPerInterval);
-        int amount = rawAmount > MaximumStoredAmount ? MaximumStoredAmount : (int)rawAmount;
+
+        long bonusIntervals = 0;
+        if (TryGetBonusEndUnixTimestamp(out long bonusEndUnixTimestamp) &&
+            bonusEndUnixTimestamp > lastAccrual)
+        {
+            // Only intervals fully completed by the bonus deadline receive the multiplier.
+            // An interval that finishes after the deadline is paid at the normal rate.
+            long intervalsCompletedBeforeBonusEnd =
+                (bonusEndUnixTimestamp - lastAccrual) / IntervalSeconds;
+
+            bonusIntervals = Math.Min(cappedIntervals, intervalsCompletedBeforeBonusEnd);
+        }
+
+        long regularIntervals = cappedIntervals - bonusIntervals;
+        long multiplier = Math.Max(2, doubleCandyMultiplier);
+        long rewardIntervals = regularIntervals + bonusIntervals * multiplier;
+        long rewardPerInterval = Math.Max(1, candiesPerInterval);
+        long maximumAmount = MaximumStoredAmount;
+
+        // Determine whether the storage cap has been reached before multiplying,
+        // so the intermediate calculation cannot overflow for extreme Inspector values.
+        long intervalsToFillStorage =
+            (maximumAmount + rewardPerInterval - 1L) / rewardPerInterval;
+        bool isFull = rewardIntervals >= intervalsToFillStorage ||
+            wholeIntervals >= MaximumIntervals;
+
+        long rawAmount = isFull
+            ? maximumAmount
+            : rewardIntervals * rewardPerInterval;
 
         return new AccrualState
         {
             elapsedSeconds = elapsed,
             elapsedIntervals = cappedIntervals,
-            availableAmount = amount,
+            availableAmount = (int)rawAmount,
             isFull = isFull
         };
+    }
+
+    private bool TryGetBonusEndUnixTimestamp(out long timestamp)
+    {
+        timestamp = 0;
+
+        if (doubleCandyCountdownTimer == null)
+            return false;
+
+        if (!doubleCandyCountdownTimer.TryGetTargetUtc(out DateTime targetUtc))
+            return false;
+
+        timestamp = new DateTimeOffset(targetUtc).ToUnixTimeSeconds();
+        return true;
     }
 
     private void SetUI(int available, int maximum, bool canCollect, string status)

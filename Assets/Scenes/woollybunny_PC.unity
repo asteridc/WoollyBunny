@@ -41535,7 +41535,7 @@ MonoBehaviour:
   countdownText: {fileID: 1211366283}
   year: 2026
   month: 11
-  day: 20
+  day: 27
   hour: 0
   minute: 0
   second: 0
@@ -60926,7 +60926,7 @@ MonoBehaviour:
   countdownText: {fileID: 1784402709}
   year: 2026
   month: 11
-  day: 20
+  day: 27
   hour: 0
   minute: 0
   second: 0

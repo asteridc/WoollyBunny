@@ -199,6 +199,11 @@ public sealed class HalloweenExchangeManager : MonoBehaviour
     /// Покупка только создаёт промокод и фиксирует цену/вместимость.
     /// Сам уникальный предмет будет добавлен после успешного ввода кода.
     /// </summary>
+    // HALLOWEEN_HISTORY_QUANTITY_FIX_PURCHASE
+    /// <summary>
+    /// Покупка создаёт промокод и фиксирует стоимость, вместимость и количество награды.
+    /// Награда выдаётся только после успешного погашения промокода.
+    /// </summary>
     public bool TryPurchaseOffer(
         HalloweenExchangeOffer offer,
         out HalloweenPromoCodeRecord createdRecord,
@@ -209,12 +214,35 @@ public sealed class HalloweenExchangeManager : MonoBehaviour
             return false;
 
         AccountManager account = AccountManager.Instance;
+        ResourceInventoryManager inventory = ResourceInventoryManager.Instance;
+        InventoryEntryDefinition reward = inventory != null
+            ? inventory.GetDefinition(offer.RewardInventoryId)
+            : null;
+
+        if (reward == null)
+            return Fail(Localized(
+                "Награда отсутствует в каталоге инвентаря.",
+                "The reward is missing from the inventory catalog."), out failureReason);
+
+        int rewardAmount = reward.type == InventoryEntryType.UniqueItem
+            ? 1
+            : offer.RewardAmount;
+
+        if (rewardAmount < 1)
+            return Fail(Localized(
+                "Количество награды должно быть не меньше 1.",
+                "Reward amount must be at least 1."), out failureReason);
+
         if (!HalloweenPromoCodeService.TryGenerateUniqueCode(account, out string code))
-            return Fail("Не удалось создать уникальный промокод. Попробуй ещё раз.", out failureReason);
+            return Fail(Localized(
+                "Не удалось создать уникальный промокод. Попробуй ещё раз.",
+                "Could not generate a unique promo code. Please try again."), out failureReason);
 
         long now = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
         if (!HalloweenPromoCodeService.TryCalculateExpiry(now, PromoCodeLifetimeDays, out long expiresAt))
-            return Fail("Не удалось рассчитать срок действия промокода.", out failureReason);
+            return Fail(Localized(
+                "Не удалось рассчитать срок действия промокода.",
+                "Could not calculate the promo-code expiry."), out failureReason);
 
         bool purchased = account.TryPurchaseHalloweenOffer(
             currencyId,
@@ -222,6 +250,7 @@ public sealed class HalloweenExchangeManager : MonoBehaviour
             offer.RewardInventoryId,
             offer.CandyPrice,
             offer.BasketCapacityPercent,
+            rewardAmount,
             code,
             now,
             expiresAt,
@@ -230,17 +259,14 @@ public sealed class HalloweenExchangeManager : MonoBehaviour
         if (!purchased)
             return false;
 
-        // Создание записи уже подтверждено аккаунтом. Формируем локальную копию
-        // из тех же значений, чтобы UI мог показать код без дополнительного чтения.
-        // Баланс изменился внутри AccountManager одной транзакцией; отправляем
-        // событие, чтобы существующие ResourceAmountDisplay обновились.
-        ResourceInventoryManager.Instance.NotifyAccountAmountChanged(currencyId);
+        inventory.NotifyAccountAmountChanged(currencyId);
 
         createdRecord = new HalloweenPromoCodeRecord
         {
             code = code,
             offerId = offer.OfferId,
             rewardInventoryId = offer.RewardInventoryId,
+            rewardAmount = rewardAmount,
             pricePaid = offer.CandyPrice,
             basketCapacityPercent = offer.BasketCapacityPercent,
             createdAtUnixSeconds = now,
@@ -248,60 +274,115 @@ public sealed class HalloweenExchangeManager : MonoBehaviour
             isRedeemed = false,
             redeemedAtUnixSeconds = 0
         };
+
         ExchangeChanged?.Invoke();
         return true;
     }
-
     /// <summary>
     /// Погашение проверяется по локальной истории текущего аккаунта.
     /// Для общих между устройствами кодов требуется серверная база данных.
     /// </summary>
+    // HALLOWEEN_HISTORY_QUANTITY_FIX_REDEEM
+    /// <summary>Погашает промокод и выдаёт сохранённое в нём количество награды.</summary>
     public bool TryRedeemCode(
         string rawCode,
         out InventoryEntryDefinition reward,
         out string failureReason)
     {
+        return TryRedeemCode(rawCode, out reward, out _, out failureReason);
+    }
+
+    public bool TryRedeemCode(
+        string rawCode,
+        out InventoryEntryDefinition reward,
+        out int rewardAmount,
+        out string failureReason)
+    {
         reward = null;
+        rewardAmount = 0;
         failureReason = string.Empty;
 
         string code = HalloweenPromoCodeService.Normalize(rawCode);
         if (!HalloweenPromoCodeService.IsValidFormat(code))
-            return Fail("Промокод должен состоять из 8 символов: A–Z и 0–9.", out failureReason);
+            return Fail(Localized(
+                "Промокод должен состоять из 8 символов: A–Z и 0–9.",
+                "The promo code must contain 8 characters: A–Z and 0–9."), out failureReason);
 
         AccountManager account = AccountManager.Instance;
         ResourceInventoryManager inventory = ResourceInventoryManager.Instance;
         if (account == null || inventory == null)
-            return Fail("Системы аккаунта или инвентаря ещё не готовы.", out failureReason);
+            return Fail(Localized(
+                "Системы аккаунта или инвентаря ещё не готовы.",
+                "Account or inventory systems are not ready yet."), out failureReason);
 
         HalloweenPromoCodeRecord record = account.FindHalloweenPromoCode(code);
         if (record == null)
-            return Fail("Такой промокод не найден в этом сохранении аккаунта.", out failureReason);
+            return Fail(Localized(
+                "Такой промокод не найден в этом сохранении аккаунта.",
+                "This promo code was not found in this account save."), out failureReason);
 
         long now = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
         if (!HalloweenPromoCodeService.ValidateForRedemption(record, now, out failureReason))
             return false;
 
         reward = inventory.GetDefinition(record.rewardInventoryId);
-        if (reward == null || reward.type != InventoryEntryType.UniqueItem)
-            return Fail("Предмет награды не найден или не является уникальным.", out failureReason);
-
-        if (inventory.IsExpired(reward.id))
-            return Fail("Срок доступности этой награды закончился.", out failureReason);
-
-        if (account.HasUniqueInventoryItem(reward.id))
-            return Fail("Этот уникальный предмет уже есть в инвентаре.", out failureReason);
-
-        if (!account.TryRedeemHalloweenPromoCode(code, reward.id, now, out failureReason))
+        if (reward == null ||
+            (reward.type != InventoryEntryType.UniqueItem &&
+             reward.type != InventoryEntryType.StackableResource))
         {
             reward = null;
+            return Fail(Localized(
+                "Награда не найдена или имеет неподдерживаемый тип.",
+                "The reward is missing or has an unsupported type."), out failureReason);
+        }
+
+        if (inventory.IsExpired(reward.id))
+        {
+            reward = null;
+            return Fail(Localized(
+                "Срок доступности этой награды закончился.",
+                "This reward has expired."), out failureReason);
+        }
+
+        if (reward.type == InventoryEntryType.UniqueItem)
+        {
+            if (account.HasUniqueInventoryItem(reward.id))
+            {
+                reward = null;
+                return Fail(Localized(
+                    "Этот уникальный предмет уже есть в инвентаре.",
+                    "You already own this unique item."), out failureReason);
+            }
+            rewardAmount = 1;
+        }
+        else
+        {
+            rewardAmount = record.rewardAmount;
+            if (rewardAmount < 1)
+            {
+                reward = null;
+                return Fail(Localized(
+                    "В промокоде не указано корректное количество награды.",
+                    "The promo code does not contain a valid reward quantity."), out failureReason);
+            }
+        }
+
+        if (!account.TryRedeemHalloweenPromoCode(
+                code, reward.id, reward.type, now, out failureReason))
+        {
+            reward = null;
+            rewardAmount = 0;
             return false;
         }
 
-        inventory.RefreshUniqueItemViewAfterExternalGrant(reward.id);
+        if (reward.type == InventoryEntryType.UniqueItem)
+            inventory.RefreshUniqueItemViewAfterExternalGrant(reward.id);
+        else
+            inventory.NotifyAccountAmountChanged(reward.id);
+
         ExchangeChanged?.Invoke();
         return true;
     }
-
     /// <summary>Добавляет указанное количество обычного ресурса для тестирования.</summary>
     public bool DebugAddResource()
     {

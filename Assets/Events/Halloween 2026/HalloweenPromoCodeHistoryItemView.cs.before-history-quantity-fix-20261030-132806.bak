@@ -1,0 +1,148 @@
+using System;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+public sealed class HalloweenPromoCodeHistoryItemView : MonoBehaviour
+{
+    [SerializeField] private TMP_Text codeText;
+    [SerializeField] private TMP_Text rewardText;
+    [SerializeField] private TMP_Text statusText;
+    [SerializeField] private TMP_Text expiryText;
+    [SerializeField] private Button copyButton;
+
+    private string codeToCopy;
+
+    public void Bind(HalloweenPromoCodeRecord record)
+    {
+        if (record == null)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+
+        // HALLOWEEN_HISTORY_VISUAL_FIX
+        // The history panel is activated before rows are created. Re-enable
+        // inactive child objects and UI components serialized in the prefab.
+        if (!gameObject.activeSelf)
+            gameObject.SetActive(true);
+        EnableHistoryUIElements();
+
+        bool english = LanguageManager.CurrentLanguage == Language.English;
+        codeToCopy = record.code ?? string.Empty;
+
+        if (codeText != null)
+            codeText.text = codeToCopy;
+
+        if (rewardText != null)
+        {
+            InventoryEntryDefinition reward =
+                ResourceInventoryManager.Instance != null
+                    ? ResourceInventoryManager.Instance.GetDefinition(record.rewardInventoryId)
+                    : null;
+
+            if (reward != null)
+            {
+                string rewardName = english ? reward.englishName : reward.russianName;
+                string color = HalloweenRarityColorUtility.ToHex(reward.rarity);
+                string quantity = reward.type == InventoryEntryType.StackableResource
+                    ? $" × {Mathf.Max(0, record.rewardAmount)}"
+                    : string.Empty;
+
+                rewardText.text = $"<color=#{color}>{rewardName}</color>{quantity}";
+            }
+            else
+            {
+                rewardText.text = record.rewardInventoryId;
+            }
+        }
+
+        bool expired = DateTimeOffset.UtcNow.ToUnixTimeSeconds() >= record.expiresAtUnixSeconds;
+        string status;
+        if (record.isRedeemed)
+            status = english ? "Redeemed" : "Использован";
+        else if (expired)
+            status = english ? "Expired" : "Истёк";
+        else
+            status = english ? "Not redeemed" : "Не использован";
+
+        if (statusText != null)
+            statusText.text = status;
+
+        if (expiryText != null)
+        {
+            DateTimeOffset expiration =
+                DateTimeOffset.FromUnixTimeSeconds(record.expiresAtUnixSeconds).ToLocalTime();
+
+            expiryText.text = english
+                ? $"Expires: {expiration:yyyy-MM-dd HH:mm}"
+                : $"Действует до: {expiration:dd.MM.yyyy HH:mm}";
+        }
+
+        if (copyButton != null)
+        {
+            copyButton.onClick.RemoveListener(CopyCode);
+            copyButton.onClick.AddListener(CopyCode);
+            copyButton.interactable = !string.IsNullOrEmpty(codeToCopy);
+        }
+    }
+
+    private void EnableHistoryUIElements()
+    {
+        // History entries are simple UI rows, so all nested visual objects
+        // are expected to be visible when a row is bound.
+        Transform[] children = GetComponentsInChildren<Transform>(true);
+        foreach (Transform child in children)
+        {
+            if (child != null && !child.gameObject.activeSelf)
+                child.gameObject.SetActive(true);
+        }
+
+        Graphic[] graphics = GetComponentsInChildren<Graphic>(true);
+        foreach (Graphic graphic in graphics)
+        {
+            if (graphic == null)
+                continue;
+
+            if (!graphic.gameObject.activeSelf)
+                graphic.gameObject.SetActive(true);
+
+            graphic.enabled = true;
+        }
+
+        Selectable[] selectables = GetComponentsInChildren<Selectable>(true);
+        foreach (Selectable selectable in selectables)
+        {
+            if (selectable == null)
+                continue;
+
+            if (!selectable.gameObject.activeSelf)
+                selectable.gameObject.SetActive(true);
+
+            selectable.enabled = true;
+        }
+
+        CanvasGroup[] groups = GetComponentsInChildren<CanvasGroup>(true);
+        foreach (CanvasGroup group in groups)
+        {
+            if (group == null)
+                continue;
+
+            group.alpha = 1f;
+            group.interactable = true;
+            group.blocksRaycasts = true;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (copyButton != null)
+            copyButton.onClick.RemoveListener(CopyCode);
+    }
+
+    private void CopyCode()
+    {
+        if (!string.IsNullOrEmpty(codeToCopy))
+            GUIUtility.systemCopyBuffer = codeToCopy;
+    }
+}

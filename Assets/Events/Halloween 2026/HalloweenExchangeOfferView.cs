@@ -1,4 +1,6 @@
+
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,6 +9,7 @@ using UnityEngine.EventSystems;
 /// <summary>UI одного предложения магазина. Расчёты и сохранение сюда не помещаем.</summary>
 public sealed class HalloweenExchangeOfferView : MonoBehaviour, IPointerClickHandler
 {
+    [Header("Offer visuals")]
     [SerializeField] private Image iconImage;
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private TMP_Text rarityText;
@@ -14,11 +17,98 @@ public sealed class HalloweenExchangeOfferView : MonoBehaviour, IPointerClickHan
     [SerializeField] private TMP_Text capacityText;
     [SerializeField] private TMP_Text availabilityText;
     [SerializeField] private TMP_Text rewardAmountText;
+
+    [Header("Purchase button")]
     [SerializeField] private Button purchaseButton;
     [SerializeField] private TMP_Text purchaseButtonText;
 
+    [Header("Purchased visual")]
+    [SerializeField] private Image purchasedTintTarget;
+    [SerializeField] private Image purchasedCheckmark;
+    [SerializeField] private Color purchasedTint = new Color(0.3490196f, 0.7490196f, 0.4509804f, 0.7137255f);
+
+    private readonly List<Graphic> purchasedTintGraphics = new();
+    private readonly List<Color> originalTintColors = new();
+
     private HalloweenExchangeOffer offer;
     private Action<HalloweenExchangeOffer> purchaseCallback;
+
+    private readonly List<Graphic> tintTargets = new List<Graphic>();
+    private readonly List<Color> originalColors = new List<Color>();
+
+    private bool tintTargetsCached;
+
+    private void Awake()
+    {
+        CachePurchasedTintTarget();
+    }
+
+    private void OnValidate()
+    {
+        purchasedTint.a = 1f;
+    }
+
+    private void CachePurchasedTintTarget()
+    {
+        purchasedTintGraphics.Clear();
+        originalTintColors.Clear();
+
+        if (purchasedTintTarget == null)
+        {
+            Debug.LogWarning(
+                $"[{nameof(HalloweenExchangeOfferView)}] Не назначен объект Purchased Tint Target.",
+                this);
+
+            return;
+        }
+
+        Graphic[] graphics = purchasedTintTarget.GetComponentsInChildren<Graphic>(true);
+
+        foreach (Graphic graphic in graphics)
+        {
+            if (graphic == null)
+                continue;
+
+            // Не затемняем кнопку покупки.
+            if (purchaseButton != null &&
+                (graphic.transform == purchaseButton.transform ||
+                 graphic.transform.IsChildOf(purchaseButton.transform)))
+                continue;
+
+            // Не затемняем галочку покупки.
+            if (purchasedCheckmark != null &&
+                (graphic.transform == purchasedCheckmark.transform ||
+                 graphic.transform.IsChildOf(purchasedCheckmark.transform)))
+                continue;
+
+            purchasedTintGraphics.Add(graphic);
+            originalTintColors.Add(graphic.color);
+        }
+    }
+
+    public void SetPurchasedVisual(bool isPurchased)
+    {
+        for (int i = 0; i < purchasedTintGraphics.Count; i++)
+        {
+            Graphic graphic = purchasedTintGraphics[i];
+
+            if (graphic == null)
+                continue;
+
+            Color original = originalTintColors[i];
+
+            graphic.color = isPurchased
+                ? new Color(
+                    purchasedTint.r,
+                    purchasedTint.g,
+                    purchasedTint.b,
+                    original.a)
+                : original;
+        }
+
+        if (purchasedCheckmark != null)
+            purchasedCheckmark.gameObject.SetActive(isPurchased);
+    }
 
     private void OnDestroy()
     {
@@ -31,7 +121,8 @@ public sealed class HalloweenExchangeOfferView : MonoBehaviour, IPointerClickHan
         InventoryEntryDefinition reward,
         bool canPurchase,
         string unavailableReason,
-        Action<HalloweenExchangeOffer> onPurchase)
+        Action<HalloweenExchangeOffer> onPurchase,
+        bool isPurchased = false)
     {
         if (purchaseButton != null)
             purchaseButton.onClick.RemoveListener(HandlePurchaseClick);
@@ -87,6 +178,7 @@ public sealed class HalloweenExchangeOfferView : MonoBehaviour, IPointerClickHan
             bool isStackable = reward != null &&
                                reward.type == InventoryEntryType.StackableResource &&
                                offerDefinition != null;
+
             rewardAmountText.text = isStackable
                 ? $"{offerDefinition.RewardAmount}"
                 : string.Empty;
@@ -98,10 +190,11 @@ public sealed class HalloweenExchangeOfferView : MonoBehaviour, IPointerClickHan
         if (purchaseButtonText != null)
             purchaseButtonText.text = english ? "Choose" : "Выбрать";
 
+        SetPurchasedVisual(isPurchased);
+
         if (purchaseButton != null)
         {
-            // The button must remain clickable even when CanPurchase is false,
-            // so the warning panel can explain the reason.
+            // Кнопка остаётся доступной, чтобы показывать причину отказа.
             purchaseButton.interactable = offerDefinition != null;
             purchaseButton.onClick.AddListener(HandlePurchaseClick);
         }
@@ -109,11 +202,12 @@ public sealed class HalloweenExchangeOfferView : MonoBehaviour, IPointerClickHan
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData == null || eventData.button != PointerEventData.InputButton.Left)
+        if (eventData == null ||
+            eventData.button != PointerEventData.InputButton.Left)
             return;
 
-        // If the Button is on this same GameObject, its own onClick listener handles it.
-        if (purchaseButton != null && purchaseButton.gameObject == gameObject)
+        if (purchaseButton != null &&
+            purchaseButton.gameObject == gameObject)
             return;
 
         HandlePurchaseClick();

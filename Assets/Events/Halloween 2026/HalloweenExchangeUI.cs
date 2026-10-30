@@ -50,6 +50,7 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
     [SerializeField] private RectTransform historyFrame;
     [SerializeField] private Transform historyContent;
     [SerializeField] private HalloweenPromoCodeHistoryItemView historyItemPrefab;
+    [SerializeField, Min(1f)] private float historyItemVerticalSpacing = 146f;
     [SerializeField] private TMP_Text historyEmptyText;
     [SerializeField] private Button closeHistoryButton;
 
@@ -65,6 +66,9 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
 
     private readonly List<HalloweenExchangeOfferView> offerViews =
         new List<HalloweenExchangeOfferView>();
+
+    private readonly List<HalloweenPromoCodeHistoryItemView> historyItemViews =
+        new List<HalloweenPromoCodeHistoryItemView>();
 
     private void Awake()
     {
@@ -204,6 +208,7 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
     {
         RefreshBalanceAndBasket();
         RefreshOfferList();
+        RefreshHistoryIfOpen();
     }
 
     private void RefreshBalanceAndBasket()
@@ -277,13 +282,23 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
             bool canPurchase =
                 exchangeManager.CanPurchase(offer, out string reason);
 
+            // Stackable rewards are marked per offer. Unique rewards are also
+            // marked when already owned or reserved by another promo code.
+            AccountManager account = AccountManager.Instance;
+            bool isPurchased = account != null &&
+                (account.HasHalloweenPromoForOffer(offer.OfferId) ||
+                 (reward != null && reward.type == InventoryEntryType.UniqueItem &&
+                  (account.HasUniqueInventoryItem(reward.id) ||
+                   account.HasHalloweenPromoForReward(reward.id))));
+
             view.gameObject.SetActive(true);
             view.Bind(
                 offer,
                 reward,
                 canPurchase,
                 reason,
-                OnOfferSelected);
+                OnOfferSelected,
+                isPurchased);
         }
 
         // Hide any pre-placed views that do not have a corresponding offer.
@@ -475,56 +490,48 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
         RedeemEnteredCode();
     }
 
+    // HALLOWEEN_REDEEM_QUANTITY_FEEDBACK_FIX
     private void RedeemEnteredCode()
     {
         if (exchangeManager == null || promoCodeInput == null)
             return;
 
         string enteredCode = promoCodeInput.text;
-
         if (string.IsNullOrWhiteSpace(enteredCode))
             return;
 
         if (!exchangeManager.TryRedeemCode(
                 enteredCode,
                 out InventoryEntryDefinition reward,
+                out int rewardAmount,
                 out string reason))
         {
             if (redeemFeedbackText != null)
                 redeemFeedbackText.text = reason;
-
             return;
         }
 
-        bool english =
-            LanguageManager.CurrentLanguage == Language.English;
-
-        string rewardName = english
-            ? reward.englishName
-            : reward.russianName;
-
-        string color =
-            HalloweenRarityColorUtility.ToHex(reward.rarity);
+        bool english = LanguageManager.CurrentLanguage == Language.English;
+        string rewardName = english ? reward.englishName : reward.russianName;
+        string color = HalloweenRarityColorUtility.ToHex(reward.rarity);
+        string quantity = reward.type == InventoryEntryType.StackableResource
+            ? $" × {rewardAmount}"
+            : string.Empty;
 
         if (redeemFeedbackText != null)
         {
             redeemFeedbackText.text = english
-                ? $"Code accepted! You received " +
-                  $"<color=#{color}>{rewardName}</color>."
-                : $"Промокод принят! Получен предмет " +
-                  $"<color=#{color}>{rewardName}</color>.";
+                ? $"Code accepted! You received <color=#{color}>{rewardName}</color>{quantity}."
+                : $"Промокод принят! Получен предмет <color=#{color}>{rewardName}</color>{quantity}.";
         }
 
         promoCodeInput.text = string.Empty;
-
         RefreshAll();
-        RefreshHistoryIfOpen();
     }
-
     public void OpenHistory()
     {
-        RefreshHistoryItems();
         ShowPanel(historyGroup, historyFrame, closeHistoryButton);
+        RefreshHistoryItems();
     }
 
     public void CloseHistory()
@@ -538,46 +545,143 @@ public sealed class HalloweenExchangeUI : MonoBehaviour
             RefreshHistoryItems();
     }
 
+    // HALLOWEEN_HISTORY_LAYOUT_FIX
+    // HALLOWEEN_PURCHASED_VISUAL_FIX
+    // HALLOWEEN_HISTORY_QUANTITY_FIX
     private void RefreshHistoryItems()
     {
-        if (exchangeManager == null ||
-            historyContent == null ||
-            historyItemPrefab == null)
+        if (exchangeManager == null || historyContent == null || historyItemPrefab == null)
             return;
 
-        HalloweenPromoCodeHistoryItemView[] oldItems =
-            historyContent.GetComponentsInChildren<
-                HalloweenPromoCodeHistoryItemView>(true);
+        historyContent.gameObject.SetActive(true);
 
-        foreach (HalloweenPromoCodeHistoryItemView oldItem in oldItems)
-            Destroy(oldItem.gameObject);
+        // Adopt existing rows once, then reuse them instead of Destroy/Instantiate
+        // on every refresh. This prevents delayed Destroy calls from interfering
+        // with subsequent refreshes while the history panel is open.
+        if (historyItemViews.Count == 0)
+        {
+            historyItemViews.AddRange(
+                historyContent.GetComponentsInChildren<HalloweenPromoCodeHistoryItemView>(true));
+        }
 
-        List<HalloweenPromoCodeRecord> history =
-            exchangeManager.GetPromoHistory();
+        List<HalloweenPromoCodeRecord> history = exchangeManager.GetPromoHistory();
+        Debug.Log($"[HalloweenExchangeUI] Записей промокодов в сохранении: {history.Count}", this);
 
         if (historyEmptyText != null)
         {
             bool hasHistory = history.Count > 0;
             historyEmptyText.gameObject.SetActive(!hasHistory);
-
             if (!hasHistory)
             {
-                historyEmptyText.text =
-                    LanguageManager.CurrentLanguage == Language.English
-                        ? "No promo codes yet"
-                        : "Промокодов пока нет";
+                historyEmptyText.text = LanguageManager.CurrentLanguage == Language.English
+                    ? "No promo codes yet"
+                    : "Промокодов пока нет";
             }
         }
 
-        foreach (HalloweenPromoCodeRecord record in history)
+        RectTransform contentRect = historyContent as RectTransform;
+        RectTransform prefabRect = historyItemPrefab.GetComponent<RectTransform>();
+        Vector2 prefabPosition = prefabRect != null ? prefabRect.anchoredPosition : Vector2.zero;
+        float rowHeight = Mathf.Max(1f, historyItemVerticalSpacing);
+
+        VerticalLayoutGroup verticalLayout = historyContent.GetComponent<VerticalLayoutGroup>();
+        LayoutGroup anyLayout = historyContent.GetComponent<LayoutGroup>();
+
+        if (verticalLayout != null)
         {
-            HalloweenPromoCodeHistoryItemView item =
-                Instantiate(historyItemPrefab, historyContent);
-
-            item.Bind(record);
+            verticalLayout.enabled = true;
+            verticalLayout.childControlHeight = true;
+            verticalLayout.childForceExpandHeight = false;
+            verticalLayout.spacing = 0f;
         }
-    }
+        else if (anyLayout != null)
+        {
+            // Horizontal/Grid layouts would override our vertical positions.
+            anyLayout.enabled = false;
+        }
 
+        for (int i = 0; i < history.Count; i++)
+        {
+            HalloweenPromoCodeHistoryItemView item;
+            if (i < historyItemViews.Count)
+            {
+                item = historyItemViews[i];
+                if (item == null)
+                {
+                    item = Instantiate(historyItemPrefab, historyContent, false);
+                    historyItemViews[i] = item;
+                }
+            }
+            else
+            {
+                item = Instantiate(historyItemPrefab, historyContent, false);
+                historyItemViews.Add(item);
+            }
+
+            item.gameObject.SetActive(true);
+            item.transform.SetAsLastSibling();
+            item.Bind(history[i]);
+
+            RectTransform itemRect = item.GetComponent<RectTransform>();
+            if (itemRect == null)
+                continue;
+
+            if (verticalLayout != null)
+            {
+                LayoutElement layoutElement = item.GetComponent<LayoutElement>();
+                if (layoutElement == null)
+                    layoutElement = item.gameObject.AddComponent<LayoutElement>();
+
+                layoutElement.minHeight = rowHeight;
+                layoutElement.preferredHeight = rowHeight;
+                layoutElement.flexibleHeight = 0f;
+            }
+            else
+            {
+                itemRect.anchorMin = new Vector2(itemRect.anchorMin.x, 1f);
+                itemRect.anchorMax = new Vector2(itemRect.anchorMax.x, 1f);
+                itemRect.pivot = new Vector2(itemRect.pivot.x, 1f);
+                itemRect.anchoredPosition = new Vector2(
+                    prefabPosition.x,
+                    prefabPosition.y - i * rowHeight);
+            }
+        }
+
+        // Hide cached rows that are not needed now, but keep them for the next refresh.
+        for (int i = history.Count; i < historyItemViews.Count; i++)
+        {
+            if (historyItemViews[i] != null)
+                historyItemViews[i].gameObject.SetActive(false);
+        }
+
+        if (contentRect != null)
+        {
+            if (verticalLayout != null)
+            {
+                int count = history.Count;
+                float requiredHeight = verticalLayout.padding.top + verticalLayout.padding.bottom +
+                    count * rowHeight + Mathf.Max(0, count - 1) * verticalLayout.spacing;
+
+                contentRect.SetSizeWithCurrentAnchors(
+                    RectTransform.Axis.Vertical,
+                    Mathf.Max(rowHeight, requiredHeight));
+                LayoutRebuilder.ForceRebuildLayoutImmediate(contentRect);
+            }
+            else
+            {
+                float requiredHeight = Mathf.Max(
+                    rowHeight,
+                    Mathf.Max(0f, -prefabPosition.y) + history.Count * rowHeight + 8f);
+                contentRect.SetSizeWithCurrentAnchors(
+                    RectTransform.Axis.Vertical,
+                    requiredHeight);
+            }
+        }
+
+        Canvas.ForceUpdateCanvases();
+        if (contentRect != null && verticalLayout != null)
+            LayoutRebuilder.ForceRebuildLayoutImmediate(contentRect);
+    }
     private void ShowPanel(
         CanvasGroup group,
         RectTransform frame,

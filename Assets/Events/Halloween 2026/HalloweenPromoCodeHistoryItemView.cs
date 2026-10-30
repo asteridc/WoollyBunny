@@ -21,6 +21,13 @@ public sealed class HalloweenPromoCodeHistoryItemView : MonoBehaviour
             return;
         }
 
+        // HALLOWEEN_HISTORY_VISUAL_FIX
+        // The history panel is activated before rows are created. Re-enable
+        // inactive child objects and UI components serialized in the prefab.
+        if (!gameObject.activeSelf)
+            gameObject.SetActive(true);
+        EnableHistoryUIElements();
+
         bool english = LanguageManager.CurrentLanguage == Language.English;
         codeToCopy = record.code ?? string.Empty;
 
@@ -39,7 +46,7 @@ public sealed class HalloweenPromoCodeHistoryItemView : MonoBehaviour
                 string rewardName = english ? reward.englishName : reward.russianName;
                 string color = HalloweenRarityColorUtility.ToHex(reward.rarity);
                 string quantity = reward.type == InventoryEntryType.StackableResource
-                    ? $" × {Mathf.Max(0, record.rewardAmount)}"
+                    ? $" × {Mathf.Max(1, record.rewardAmount)}"
                     : string.Empty;
 
                 rewardText.text = $"<color=#{color}>{rewardName}</color>{quantity}";
@@ -77,6 +84,53 @@ public sealed class HalloweenPromoCodeHistoryItemView : MonoBehaviour
             copyButton.onClick.RemoveListener(CopyCode);
             copyButton.onClick.AddListener(CopyCode);
             copyButton.interactable = !string.IsNullOrEmpty(codeToCopy);
+        }
+    }
+
+    private void EnableHistoryUIElements()
+    {
+        // History entries are simple UI rows, so all nested visual objects
+        // are expected to be visible when a row is bound.
+        Transform[] children = GetComponentsInChildren<Transform>(true);
+        foreach (Transform child in children)
+        {
+            if (child != null && !child.gameObject.activeSelf)
+                child.gameObject.SetActive(true);
+        }
+
+        Graphic[] graphics = GetComponentsInChildren<Graphic>(true);
+        foreach (Graphic graphic in graphics)
+        {
+            if (graphic == null)
+                continue;
+
+            if (!graphic.gameObject.activeSelf)
+                graphic.gameObject.SetActive(true);
+
+            graphic.enabled = true;
+        }
+
+        Selectable[] selectables = GetComponentsInChildren<Selectable>(true);
+        foreach (Selectable selectable in selectables)
+        {
+            if (selectable == null)
+                continue;
+
+            if (!selectable.gameObject.activeSelf)
+                selectable.gameObject.SetActive(true);
+
+            selectable.enabled = true;
+        }
+
+        CanvasGroup[] groups = GetComponentsInChildren<CanvasGroup>(true);
+        foreach (CanvasGroup group in groups)
+        {
+            if (group == null)
+                continue;
+
+            group.alpha = 1f;
+            group.interactable = true;
+            group.blocksRaycasts = true;
         }
     }
 

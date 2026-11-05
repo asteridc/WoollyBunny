@@ -282,6 +282,9 @@ public partial class DialogueManager : MonoBehaviour
             CollectibleManager.Instance.RegisterCollectible(line.collectibleItem);
         }
 
+        if (line.unlockEliNote)
+            EliDiaryNoteSlot.UnlockFromStory(line.eliNoteId);
+
         if (line.showCollectibleView &&
             line.collectibleItem != null)
         {

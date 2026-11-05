@@ -44,6 +44,10 @@ public class DialogueLine : IStoryNotificationSettings
     [Header("Collectible")]
     public CollectibleItemBase collectibleItem;
 
+    [Header("Eli's Diary")]
+    public bool unlockEliNote;
+    public string eliNoteId;
+
     // ====== опедлерш ======
     public bool showItemNotification;
     public string itemName;
@@ -260,6 +264,8 @@ public class DialogueLine : IStoryNotificationSettings
         }
 
         clone.questTriggerId = questTriggerId;
+        clone.unlockEliNote = unlockEliNote;
+        clone.eliNoteId = eliNoteId;
 
         return clone;
     }
